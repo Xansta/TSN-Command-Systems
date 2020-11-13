@@ -1,8 +1,11 @@
 <mission_data version="1.7" background_id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4" playerShipNames_arme="TSN Sabre\TSN Valiant\TSN Lancer\TSN Stalker\TSN Viper\TSN Horizon\TSN Necessity\TSN Hunter">
-  <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4" />
+  <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
+    <set_variable name="Coordinate X" value="188.0" integer="yes" />
+    <set_variable name="Coordinate Y" value="500.0" integer="yes" />
+  </start>
   <folder_arme name="Ashia System" id_arme="1a9c3075-78c5-4da2-8642-21ec266e1a77" />
-  <folder_arme name="Ashia Settings" id_arme="11e9ee7d-f5ac-403b-be11-c1aff306d2e6" parent_id_arme="1a9c3075-78c5-4da2-8642-21ec266e1a77" />
-  <folder_arme name="Ashia Menu" id_arme="b26b22e8-d915-4e87-b174-46aae791c78f" parent_id_arme="11e9ee7d-f5ac-403b-be11-c1aff306d2e6" />
+  <folder_arme name="Ashia Settings" id_arme="11e9ee7d-f5ac-403b-be11-c1aff306d2e6" parent_id_arme="1a9c3075-78c5-4da2-8642-21ec266e1a77" expanded_arme="" />
+  <folder_arme name="Ashia Menu" id_arme="b26b22e8-d915-4e87-b174-46aae791c78f" parent_id_arme="11e9ee7d-f5ac-403b-be11-c1aff306d2e6" expanded_arme="" />
   <event name="Ashia Active" id_arme="337134ea-f9d6-433b-9cce-8a40014d2f9b" parent_id_arme="b26b22e8-d915-4e87-b174-46aae791c78f">
     <if_variable name="Activation Menu" comparator="EQUALS" value="1.0" />
     <set_gm_button text="Lower Arc/Ashia System" />
@@ -75,7 +78,7 @@
     <set_variable name="Corner E1 Transition Enabled" value="0.0" />
     <set_variable name="Corner E5 Transition Enabled" value="1.0" />
   </event>
-  <folder_arme name="Navigation" id_arme="124ef15c-7fb9-41c8-b401-8371942c8f62" parent_id_arme="631780f0-f1ed-42e2-9f7e-1c34fe43f97f" />
+  <folder_arme name="Navigation" id_arme="124ef15c-7fb9-41c8-b401-8371942c8f62" parent_id_arme="631780f0-f1ed-42e2-9f7e-1c34fe43f97f" expanded_arme="" />
   <event name="Transition to Sector II" id_arme="5b108269-5dbb-4867-b7c3-b6c2e68176c9" parent_id_arme="124ef15c-7fb9-41c8-b401-8371942c8f62">
     <if_variable name="Ashia System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="1.0" />
@@ -109,14 +112,14 @@
     <set_timer name="Transition" seconds="0.5" />
     <set_variable name="Corner E5 Transition" value="0.0" />
   </event>
-  <folder_arme name="System - Jump Gate Settings" id_arme="6616da75-b3fe-42e9-aa95-779c79e6a575" parent_id_arme="124ef15c-7fb9-41c8-b401-8371942c8f62" />
+  <folder_arme name="System - Jump Gate Settings" id_arme="6616da75-b3fe-42e9-aa95-779c79e6a575" parent_id_arme="124ef15c-7fb9-41c8-b401-8371942c8f62" expanded_arme="" />
   <event name="Gate Offline" id_arme="91e384b0-05d9-42ea-865c-2c72b0878019" parent_id_arme="6616da75-b3fe-42e9-aa95-779c79e6a575">
     <if_variable name="Sector" comparator="EQUALS" value="1" />
     <if_variable name="Ashia System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="0.0" />
     <set_object_property property="rollDelta" value="0.3" name="Tyr Gate" />
   </event>
-  <folder_arme name="Tracking System" id_arme="03564ffa-87ec-4762-bd0f-32c933472f76" parent_id_arme="6616da75-b3fe-42e9-aa95-779c79e6a575" />
+  <folder_arme name="Tracking System" id_arme="03564ffa-87ec-4762-bd0f-32c933472f76" parent_id_arme="6616da75-b3fe-42e9-aa95-779c79e6a575" expanded_arme="" />
   <event name="Ship1 Activation Range" id_arme="1a71c5f7-f8d2-4e33-81d4-4be02139d37e" parent_id_arme="03564ffa-87ec-4762-bd0f-32c933472f76">
     <if_variable name="Sector" comparator="EQUALS" value="1" />
     <if_variable name="Ashia System" comparator="EQUALS" value="2.0" />
@@ -705,7 +708,7 @@
     <set_variable name="Corner E1 Transition Enabled" value="1.0" />
     <set_variable name="Corner E5 Transition Enabled" value="1.0" />
   </event>
-  <folder_arme name="Navigation" id_arme="087fbcfb-d0dd-4e9d-9ff1-ea7990f09950" parent_id_arme="67894017-ed10-47d0-afe2-56c91e9bca0c" />
+  <folder_arme name="Navigation" id_arme="087fbcfb-d0dd-4e9d-9ff1-ea7990f09950" parent_id_arme="67894017-ed10-47d0-afe2-56c91e9bca0c" expanded_arme="" />
   <event name="Transition to Sector VI" id_arme="b4ad0195-2f42-4814-a192-3f1227418413" parent_id_arme="087fbcfb-d0dd-4e9d-9ff1-ea7990f09950">
     <if_variable name="Grid 5 Transition" comparator="EQUALS" value="1.0" />
     <if_variable name="Sector" comparator="EQUALS" value="5.0" />
@@ -794,14 +797,14 @@
     <set_variable name="Ashia System" value="3.0" integer="yes" />
     <set_variable name="Sector" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="System - Jump Gate Settings" id_arme="ac548ba6-7088-4636-a92a-73b2b6ce1731" parent_id_arme="087fbcfb-d0dd-4e9d-9ff1-ea7990f09950" />
+  <folder_arme name="System - Jump Gate Settings" id_arme="ac548ba6-7088-4636-a92a-73b2b6ce1731" parent_id_arme="087fbcfb-d0dd-4e9d-9ff1-ea7990f09950" expanded_arme="" />
   <event name="Gate Offline" id_arme="998e406b-2cdb-4fe1-aa06-890ef9b6fe38" parent_id_arme="ac548ba6-7088-4636-a92a-73b2b6ce1731">
     <if_variable name="Sector" comparator="EQUALS" value="sectorNumber" />
     <if_variable name="Ashia System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="0.0" />
     <set_object_property property="rollDelta" value="0.3" name="Acantha Gate" />
   </event>
-  <folder_arme name="Tracking System" id_arme="d48e4a01-6d95-4c0c-9493-e97392a41107" parent_id_arme="ac548ba6-7088-4636-a92a-73b2b6ce1731" />
+  <folder_arme name="Tracking System" id_arme="d48e4a01-6d95-4c0c-9493-e97392a41107" parent_id_arme="ac548ba6-7088-4636-a92a-73b2b6ce1731" expanded_arme="" />
   <event name="Ship1 Activation Range" id_arme="44910ce0-6a30-4abd-b8b5-fce410a791a3" parent_id_arme="d48e4a01-6d95-4c0c-9493-e97392a41107">
     <if_variable name="Sector" comparator="EQUALS" value="sectorNumber" />
     <if_variable name="Ashia System" comparator="EQUALS" value="2.0" />

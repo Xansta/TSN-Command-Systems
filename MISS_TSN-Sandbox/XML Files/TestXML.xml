@@ -1,0 +1,17 @@
+<mission_data version="1.0" background_id_arme="f2e63c1e-42b6-4ae9-9eec-2c3e078e2f55" playerShipNames_arme="Artemis\Intrepid\Aegis\Horatio\Excalibur\Hera\Ceres\Diana">
+  <start id_arme="f2e63c1e-42b6-4ae9-9eec-2c3e078e2f55">
+    <create type="player" x="50000" y="0" z="50000" name="Artemis" />
+    <set_difficulty_level value="5" />
+    <set_skybox_index index="10" />
+    <set_object_property property="nebulaIsOpaque" value="0" />
+    <set_object_property property="sensorSetting" value="1" />
+    <set_object_property property="nonPlayerSpeed" value="100" />
+    <set_object_property property="nonPlayerShield" value="100" />
+    <set_object_property property="nonPlayerWeapon" value="100" />
+    <set_object_property property="playerWeapon" value="100" />
+    <set_object_property property="playerShields" value="100" />
+    <big_message title="Unnamed mission" subtitle1="by Unknown Author" subtitle2="adventure for Artemis 2.7" />
+    <set_timer name="start_mission_timer_1" seconds="10" />
+    <set_variable name="chapter_1" value="1" />
+  </start>
+</mission_data>

@@ -1,5 +1,8 @@
 <mission_data version="1.7" background_id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4" playerShipNames_arme="TSN Sabre\TSN Valiant\TSN Lancer\TSN Stalker\TSN Viper\TSN Horizon\TSN Necessity\TSN Hunter">
-  <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4" />
+  <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
+    <set_variable name="Coordinate X" value="365.0" integer="yes" />
+    <set_variable name="Coordinate Y" value="343.0" integer="yes" />
+  </start>
   <folder_arme name="Eulis System" id_arme="bc33602e-ec48-4b64-8156-3f1c9ac0f8a0" />
   <folder_arme name="Eulis Settings" id_arme="3d60fee4-9c78-4717-aac3-2dd895dab426" parent_id_arme="bc33602e-ec48-4b64-8156-3f1c9ac0f8a0" expanded_arme="" />
   <folder_arme name="Eulis Menu" id_arme="5b3bbef5-7529-4395-941b-7321a10b17d3" parent_id_arme="3d60fee4-9c78-4717-aac3-2dd895dab426" expanded_arme="" />

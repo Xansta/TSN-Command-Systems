@@ -1,5 +1,7 @@
 <mission_data version="1.7" background_id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4" playerShipNames_arme="TSN Sabre\TSN Valiant\TSN Lancer\TSN Stalker\TSN Viper\TSN Horizon\TSN Necessity\TSN Hunter">
-  <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4" />
+  <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
+    <!---->
+  </start>
   <folder_arme name="Elements" id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <folder_arme name="Random Elements" id_arme="e5a3ec26-6d23-4bb8-9698-be3f70d38947" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <event name="Random Coordinates" id_arme="7c7265dd-f0de-4d29-9f42-9f23d1e09a4e" parent_id_arme="e5a3ec26-6d23-4bb8-9698-be3f70d38947">

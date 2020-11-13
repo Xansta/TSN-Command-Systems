@@ -1,8 +1,11 @@
 <mission_data version="1.7" background_id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4" playerShipNames_arme="TSN Sabre\TSN Valiant\TSN Lancer\TSN Stalker\TSN Viper\TSN Horizon\TSN Necessity\TSN Hunter">
-  <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4" />
-  <folder_arme name="Acantha System" id_arme="8699bae6-3874-420f-91ff-380772d038bf" />
-  <folder_arme name="Acantha Settings" id_arme="e12965cc-4adf-447b-9c58-37de11bbe78f" parent_id_arme="8699bae6-3874-420f-91ff-380772d038bf" />
-  <folder_arme name="Acantha Menu" id_arme="15031bf4-211a-41db-8a94-8db570ab16ce" parent_id_arme="e12965cc-4adf-447b-9c58-37de11bbe78f" />
+  <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
+    <set_variable name="Coordinate X" value="89.0" integer="yes" />
+    <set_variable name="Coordinate Y" value="405.0" integer="yes" />
+  </start>
+  <folder_arme name="Acantha System" id_arme="8699bae6-3874-420f-91ff-380772d038bf" expanded_arme="" />
+  <folder_arme name="Acantha Settings" id_arme="e12965cc-4adf-447b-9c58-37de11bbe78f" parent_id_arme="8699bae6-3874-420f-91ff-380772d038bf" expanded_arme="" />
+  <folder_arme name="Acantha Menu" id_arme="15031bf4-211a-41db-8a94-8db570ab16ce" parent_id_arme="e12965cc-4adf-447b-9c58-37de11bbe78f" expanded_arme="" />
   <event name="Acantha Active" id_arme="337134ea-f9d6-433b-9cce-8a40014d2f9b" parent_id_arme="15031bf4-211a-41db-8a94-8db570ab16ce">
     <if_variable name="Activation Menu" comparator="EQUALS" value="1.0" />
     <set_gm_button text="Lower Arc/Acantha System" />
