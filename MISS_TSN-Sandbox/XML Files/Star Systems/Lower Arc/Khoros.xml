@@ -2,6 +2,7 @@
   <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
     <set_variable name="Coordinate X" value="542.0" integer="yes" />
     <set_variable name="Coordinate Y" value="321.0" integer="yes" />
+    <set_variable name="Alignment" value="0.0" integer="yes" />
   </start>
   <folder_arme name="Khoros System" id_arme="4a9dfea1-09d6-44ef-9991-96e133c795d8" />
   <folder_arme name="Khoros Settings" id_arme="bbd1585e-667a-4151-a42c-1b0ed5f22a81" parent_id_arme="4a9dfea1-09d6-44ef-9991-96e133c795d8" />

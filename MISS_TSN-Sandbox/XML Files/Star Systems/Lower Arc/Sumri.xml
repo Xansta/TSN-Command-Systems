@@ -2,6 +2,7 @@
   <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
     <set_variable name="Coordinate X" value="266.0" integer="yes" />
     <set_variable name="Coordinate Y" value="376.0" integer="yes" />
+    <set_variable name="Alignment" value="0.0" integer="yes" />
   </start>
   <folder_arme name="Sumri System" id_arme="285898d5-6b7d-48b7-b9c5-643cc6cff3f9" />
   <folder_arme name="Sumri Settings" id_arme="1bfb2f53-8b19-41e0-8f1c-2ed34742c50d" parent_id_arme="285898d5-6b7d-48b7-b9c5-643cc6cff3f9" />

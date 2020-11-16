@@ -2,10 +2,11 @@
   <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
     <set_variable name="Coordinate X" value="437.0" integer="yes" />
     <set_variable name="Coordinate Y" value="451.0" integer="yes" />
+    <set_variable name="Alignment" value="2.0" integer="yes" />
   </start>
-  <folder_arme name="Mria System" id_arme="b3306a27-726e-4516-a40f-48e4e4825520" expanded_arme="" />
-  <folder_arme name="Mria Settings" id_arme="6b8fe142-bc3a-4d5a-8e0b-b7435c16b71e" parent_id_arme="b3306a27-726e-4516-a40f-48e4e4825520" expanded_arme="" />
-  <folder_arme name="Mria Menu" id_arme="fb4301dd-df9d-4130-ad08-76544682f8eb" parent_id_arme="6b8fe142-bc3a-4d5a-8e0b-b7435c16b71e" expanded_arme="" />
+  <folder_arme name="Mria System" id_arme="b3306a27-726e-4516-a40f-48e4e4825520" />
+  <folder_arme name="Mria Settings" id_arme="6b8fe142-bc3a-4d5a-8e0b-b7435c16b71e" parent_id_arme="b3306a27-726e-4516-a40f-48e4e4825520" />
+  <folder_arme name="Mria Menu" id_arme="fb4301dd-df9d-4130-ad08-76544682f8eb" parent_id_arme="6b8fe142-bc3a-4d5a-8e0b-b7435c16b71e" />
   <event name="Mria Active" id_arme="337134ea-f9d6-433b-9cce-8a40014d2f9b" parent_id_arme="fb4301dd-df9d-4130-ad08-76544682f8eb">
     <if_variable name="Activation Menu" comparator="EQUALS" value="1.0" />
     <set_gm_button text="Lower Arc/Mria System" />

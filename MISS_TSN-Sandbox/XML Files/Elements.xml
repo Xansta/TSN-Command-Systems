@@ -7600,7 +7600,7 @@
     <set_ship_text name="--" newname="Z|firstnumber||secondnumber|" />
     <set_variable name="Name Assign" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" expanded_arme="" />
+  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <event name="All Inactive" id_arme="970521f0-180e-45e2-8cf8-693a4c3b200b" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1">
     <if_variable name="Sandbox Activation" comparator="EQUALS" value="0.0" />
     <if_variable name="shipCount" comparator="EQUALS" value="0.0" />
@@ -11299,6 +11299,7 @@
     <set_variable name="Ship1CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship1SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship1 Config" value="1.0" integer="yes" />
     <set_variable name="Ship1 Marines" value="1.0" integer="yes" />
     <set_variable name="Proteus Status" value="1.0" integer="yes" />
     <set_variable name="Ship1MarinesMax" value="20.0" integer="yes" />
@@ -11351,6 +11352,7 @@
     <set_variable name="Ship2CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship2SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship2 Config" value="1.0" integer="yes" />
     <set_variable name="Ship2 Marines" value="1.0" integer="yes" />
     <set_variable name="Theseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship2MarinesMax" value="20.0" integer="yes" />
@@ -11403,6 +11405,7 @@
     <set_variable name="Ship3CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship3SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship3 Config" value="1.0" integer="yes" />
     <set_variable name="Ship3 Marines" value="1.0" integer="yes" />
     <set_variable name="Odysseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship3MarinesMax" value="20.0" integer="yes" />
@@ -11455,6 +11458,7 @@
     <set_variable name="Ship4CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship4SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship4 Config" value="1.0" integer="yes" />
     <set_variable name="Ship4 Marines" value="1.0" integer="yes" />
     <set_variable name="Perseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship4MarinesMax" value="20.0" integer="yes" />
@@ -11507,6 +11511,7 @@
     <set_variable name="Ship5CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship5SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship5 Config" value="1.0" integer="yes" />
     <set_variable name="Ship5 Marines" value="1.0" integer="yes" />
     <set_variable name="Dionysus Status" value="1.0" integer="yes" />
     <set_variable name="Ship5MarinesMax" value="20.0" integer="yes" />
@@ -11559,6 +11564,7 @@
     <set_variable name="Ship6CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship6SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship6 Config" value="1.0" integer="yes" />
     <set_variable name="Ship6 Marines" value="1.0" integer="yes" />
     <set_variable name="Icarus Status" value="1.0" integer="yes" />
     <set_variable name="Ship6MarinesMax" value="20.0" integer="yes" />
@@ -11611,6 +11617,7 @@
     <set_variable name="Ship7CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship7SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship7 Config" value="1.0" integer="yes" />
     <set_variable name="Ship7 Marines" value="1.0" integer="yes" />
     <set_variable name="Adonis Status" value="1.0" integer="yes" />
     <set_variable name="Ship7MarinesMax" value="20.0" integer="yes" />
@@ -11663,6 +11670,7 @@
     <set_variable name="Ship8CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship8SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship8 Config" value="1.0" integer="yes" />
     <set_variable name="Ship8 Marines" value="1.0" integer="yes" />
     <set_variable name="Invention Status" value="1.0" integer="yes" />
     <set_variable name="Ship8MarinesMax" value="20.0" integer="yes" />
@@ -12697,6 +12705,7 @@
     <set_variable name="Ship1CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship1SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship1 Config" value="1.0" integer="yes" />
     <set_variable name="Ship1 Marines" value="1.0" integer="yes" />
     <set_variable name="Proteus Status" value="1.0" integer="yes" />
     <set_variable name="Ship1MarinesMax" value="20.0" integer="yes" />
@@ -12735,6 +12744,7 @@
     <set_variable name="Ship2CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship2SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship2 Config" value="1.0" integer="yes" />
     <set_variable name="Ship2 Marines" value="1.0" integer="yes" />
     <set_variable name="Theseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship2MarinesMax" value="20.0" integer="yes" />
@@ -12773,6 +12783,7 @@
     <set_variable name="Ship3CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship3SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship3 Config" value="1.0" integer="yes" />
     <set_variable name="Ship3 Marines" value="1.0" integer="yes" />
     <set_variable name="Odysseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship3MarinesMax" value="20.0" integer="yes" />
@@ -12811,6 +12822,7 @@
     <set_variable name="Ship4CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship4SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship4 Config" value="1.0" integer="yes" />
     <set_variable name="Ship4 Marines" value="1.0" integer="yes" />
     <set_variable name="Perseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship4MarinesMax" value="20.0" integer="yes" />
@@ -12849,6 +12861,7 @@
     <set_variable name="Ship5CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship5SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship5 Config" value="1.0" integer="yes" />
     <set_variable name="Ship5 Marines" value="1.0" integer="yes" />
     <set_variable name="Dionysus Status" value="1.0" integer="yes" />
     <set_variable name="Ship5MarinesMax" value="20.0" integer="yes" />
@@ -12887,6 +12900,7 @@
     <set_variable name="Ship6CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship6SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship6 Config" value="1.0" integer="yes" />
     <set_variable name="Ship6 Marines" value="1.0" integer="yes" />
     <set_variable name="Icarus Status" value="1.0" integer="yes" />
     <set_variable name="Ship6MarinesMax" value="20.0" integer="yes" />
@@ -12925,6 +12939,7 @@
     <set_variable name="Ship7CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship7SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship7 Config" value="1.0" integer="yes" />
     <set_variable name="Ship7 Marines" value="1.0" integer="yes" />
     <set_variable name="Adonis Status" value="1.0" integer="yes" />
     <set_variable name="Ship7MarinesMax" value="20.0" integer="yes" />
@@ -12963,6 +12978,7 @@
     <set_variable name="Ship8CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship8SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
+    <set_variable name="Ship8 Config" value="1.0" integer="yes" />
     <set_variable name="Ship8 Marines" value="1.0" integer="yes" />
     <set_variable name="Invention Status" value="1.0" integer="yes" />
     <set_variable name="Ship8MarinesMax" value="20.0" integer="yes" />
@@ -34679,95 +34695,6 @@
     <set_variable name="Ship8Silent" value="2.0" integer="yes" />
     <set_timer name="Ship8Silent" seconds="10" />
   </event>
-  <folder_arme name="Status Indicators" id_arme="16e9e3e7-52cc-47d2-885c-3a332f7ef04d" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" expanded_arme="" />
-  <disabled_event name="Energy Red" id_arme="752bcabc-1fc4-491b-8687-487127062da0" parent_id_arme="16e9e3e7-52cc-47d2-885c-3a332f7ef04d">
-    <if_variable name="FleetStatusOption" comparator="EQUALS" value="1.0" />
-    <if_object_property property="energy" player_slot="0" comparator="LESS_EQUAL" value="200" />
-    <if_not_exists name="S1 - RED" />
-    <create type="genericMesh" x="80000.0" y="0.0" z="0.0" name="S1 - RED" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="0.0" />
-    <create type="genericMesh" x="70000.0" y="0.0" z="0.0" name="S2 - RED" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="0.0" />
-    <create type="genericMesh" x="60000.0" y="0.0" z="0.0" name="S3 - RED" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="0.0" />
-    <create type="genericMesh" x="50000.0" y="0.0" z="0.0" name="S4 - RED" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="0.0" />
-    <create type="genericMesh" x="40000.0" y="0.0" z="0.0" name="S5 - RED" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="0.0" />
-    <create type="genericMesh" x="30000.0" y="0.0" z="0.0" name="S6 - RED" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="0.0" />
-    <create type="genericMesh" x="20000.0" y="0.0" z="0.0" name="S7 - RED" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="0.0" />
-    <create type="genericMesh" x="10000.0" y="0.0" z="0.0" name="S8 - RED" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="0.0" />
-    <destroy name="S1 - GREEN" />
-    <destroy name="S2 - GREEN" />
-    <destroy name="S3 - GREEN" />
-    <destroy name="S4 - GREEN" />
-    <destroy name="S5 - GREEN" />
-    <destroy name="S6 - GREEN" />
-    <destroy name="S7 - GREEN" />
-    <destroy name="S8 - GREEN" />
-    <destroy name="S1 - AMBER" />
-    <destroy name="S2 - AMBER" />
-    <destroy name="S3 - AMBER" />
-    <destroy name="S4 - AMBER" />
-    <destroy name="S5 - AMBER" />
-    <destroy name="S6 - AMBER" />
-    <destroy name="S7 - AMBER" />
-    <destroy name="S8 - AMBER" />
-  </disabled_event>
-  <disabled_event name="Energy Amber" id_arme="dfaf0cc3-e3c8-4cd5-a3e5-212530f14165" parent_id_arme="16e9e3e7-52cc-47d2-885c-3a332f7ef04d">
-    <if_variable name="FleetStatusOption" comparator="EQUALS" value="1.0" />
-    <if_object_property property="energy" player_slot="0" comparator="GREATER" value="200" />
-    <if_object_property property="energy" player_slot="0" comparator="LESS" value="600" />
-    <if_not_exists name="S1 - AMBER" />
-    <create type="genericMesh" x="80000.0" y="1500.0" z="0.0" name="S1 - AMBER" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="genericMesh" x="70000.0" y="1500.0" z="0.0" name="S2 - AMBER" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="genericMesh" x="60000.0" y="1500.0" z="0.0" name="S3 - AMBER" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="genericMesh" x="50000.0" y="1500.0" z="0.0" name="S4 - AMBER" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="genericMesh" x="40000.0" y="1500.0" z="0.0" name="S5 - AMBER" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="genericMesh" x="30000.0" y="1500.0" z="0.0" name="S6 - AMBER" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="genericMesh" x="20000.0" y="1500.0" z="0.0" name="S7 - AMBER" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="genericMesh" x="10000.0" y="1500.0" z="0.0" name="S8 - AMBER" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <destroy name="S1 - RED" />
-    <destroy name="S2 - RED" />
-    <destroy name="S3 - RED" />
-    <destroy name="S4 - RED" />
-    <destroy name="S5 - RED" />
-    <destroy name="S6 - RED" />
-    <destroy name="S7 - RED" />
-    <destroy name="S8 - RED" />
-    <destroy name="S1 - GREEN" />
-    <destroy name="S2 - GREEN" />
-    <destroy name="S3 - GREEN" />
-    <destroy name="S4 - GREEN" />
-    <destroy name="S5 - GREEN" />
-    <destroy name="S6 - GREEN" />
-    <destroy name="S7 - GREEN" />
-    <destroy name="S8 - GREEN" />
-  </disabled_event>
-  <disabled_event name="Energy Green" id_arme="ff2f37b1-a145-4f84-bfe4-4bc1750f3f13" parent_id_arme="16e9e3e7-52cc-47d2-885c-3a332f7ef04d">
-    <if_variable name="FleetStatusOption" comparator="EQUALS" value="1.0" />
-    <if_object_property property="energy" player_slot="0" comparator="GREATER_EQUAL" value="600" />
-    <if_not_exists name="S1 - GREEN" />
-    <create type="genericMesh" x="80000.0" y="2000.0" z="0.0" name="S1 - GREEN" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.0" colorGreen="0.8" colorBlue="0.0" />
-    <create type="genericMesh" x="70000.0" y="2000.0" z="0.0" name="S2 - GREEN" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.0" colorGreen="0.8" colorBlue="0.0" />
-    <create type="genericMesh" x="60000.0" y="2000.0" z="0.0" name="S3 - GREEN" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.0" colorGreen="0.8" colorBlue="0.0" />
-    <create type="genericMesh" x="50000.0" y="2000.0" z="0.0" name="S4 - GREEN" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.0" colorGreen="0.8" colorBlue="0.0" />
-    <create type="genericMesh" x="40000.0" y="2000.0" z="0.0" name="S5 - GREEN" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.0" colorGreen="0.8" colorBlue="0.0" />
-    <create type="genericMesh" x="30000.0" y="2000.0" z="0.0" name="S6 - GREEN" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.0" colorGreen="0.8" colorBlue="0.0" />
-    <create type="genericMesh" x="20000.0" y="2000.0" z="0.0" name="S7 - GREEN" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.0" colorGreen="0.8" colorBlue="0.0" />
-    <create type="genericMesh" x="10000.0" y="2000.0" z="0.0" name="S8 - GREEN" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.0" colorGreen="0.8" colorBlue="0.0" />
-    <destroy name="S1 - RED" />
-    <destroy name="S2 - RED" />
-    <destroy name="S3 - RED" />
-    <destroy name="S4 - RED" />
-    <destroy name="S5 - RED" />
-    <destroy name="S6 - RED" />
-    <destroy name="S7 - RED" />
-    <destroy name="S8 - RED" />
-    <destroy name="S1 - AMBER" />
-    <destroy name="S2 - AMBER" />
-    <destroy name="S3 - AMBER" />
-    <destroy name="S4 - AMBER" />
-    <destroy name="S5 - AMBER" />
-    <destroy name="S6 - AMBER" />
-    <destroy name="S7 - AMBER" />
-    <destroy name="S8 - AMBER" />
-  </disabled_event>
   <folder_arme name="Gate Activation System" id_arme="4d100278-3ca4-410d-b427-d409701fcf24" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <event name="Ship1 Activate Gate" id_arme="afa4315b-f719-4a35-a5e3-05285616427b" parent_id_arme="4d100278-3ca4-410d-b427-d409701fcf24">
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="1.0" />

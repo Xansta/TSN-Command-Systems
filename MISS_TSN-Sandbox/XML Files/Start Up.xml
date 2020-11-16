@@ -1,5 +1,8 @@
 <mission_data version="1.7" background_id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4" playerShipNames_arme="TSN Sabre\TSN Valiant\TSN Lancer\TSN Stalker\TSN Viper\TSN Horizon\TSN Necessity\TSN Hunter">
   <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
+    <!--Configurations-->
+    <set_variable name="Ship1MarineTeams" value="0.0" integer="yes" />
+    <!---->
     <set_difficulty_level value="10" />
     <set_variable name="FleetStatusOption" value="1.0" integer="yes" />
     <big_message title="The TSN Universe" subtitle1="Created by Xavier" subtitle2="Version 8.0" />
@@ -206,7 +209,7 @@
     <set_timer name="Destroy Objects" seconds="1" />
   </disabled_event>
   <folder_arme name="Sandbox Activation" id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" />
-  <folder_arme name="Reset Activation" id_arme="dec1f604-a38a-449a-b80b-d630ce45845c" parent_id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" expanded_arme="" />
+  <folder_arme name="Reset Activation" id_arme="dec1f604-a38a-449a-b80b-d630ce45845c" parent_id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" />
   <event name="Reset All Buttons" id_arme="4db38589-05f0-4387-9dd4-ef08c201581c" parent_id_arme="dec1f604-a38a-449a-b80b-d630ce45845c">
     <if_gm_button text="Restart Sandbox" />
     <clear_gm_button text="Restart Sandbox" />
@@ -244,10 +247,25 @@
     <set_gm_button text="Initial System Side\N'Tani (Side 4)" />
     <set_gm_button text="Initial System Side\Pirate (Side 5)" />
     <set_gm_button text="Initial System Side\Caltron (Side 6)" />
+    <set_gm_button text="Custom Config Disabled" x="500" y="100" h="60" w="300" />
+    <set_variable name="Custom Config" value="0.0" integer="yes" />
     <set_variable name="GM Mode" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="GM Mode" id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" parent_id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" expanded_arme="" />
-  <folder_arme name="Sector Menus" id_arme="de68fc8e-8137-4c76-ad1d-cea535f027a3" parent_id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" expanded_arme="" />
+  <folder_arme name="GM Mode" id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" parent_id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" />
+  <folder_arme name="Custom Config" id_arme="fa633206-c6e0-4ee2-ad51-9dc16e3e3288" parent_id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" />
+  <event name="Enable" id_arme="961ffa24-960a-44e4-982c-538cbf06b3cf" parent_id_arme="fa633206-c6e0-4ee2-ad51-9dc16e3e3288">
+    <if_gm_button text="Custom Config Disabled" />
+    <clear_gm_button text="Custom Config Disabled" />
+    <set_gm_button text="Custom Config Enabled" x="500" y="100" h="60" w="300" />
+    <set_variable name="Custom Config" value="1.0" integer="yes" />
+  </event>
+  <event name="Disable" id_arme="62041a2b-f341-4b41-a86e-5403e50de964" parent_id_arme="fa633206-c6e0-4ee2-ad51-9dc16e3e3288">
+    <if_gm_button text="Custom Config Enabled" />
+    <clear_gm_button text="Custom Config Enabled" />
+    <set_gm_button text="Custom Config Disabled" x="500" y="100" h="60" w="300" />
+    <set_variable name="Custom Config" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Sector Menus" id_arme="de68fc8e-8137-4c76-ad1d-cea535f027a3" parent_id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" />
   <event name="101 (3x2)" id_arme="49e30087-c5e6-4a89-83b8-8a59608074fd" parent_id_arme="de68fc8e-8137-4c76-ad1d-cea535f027a3">
     <if_variable name="GM Mode" comparator="EQUALS" value="3.0" />
     <if_variable name="Sector" comparator="EQUALS" value="101.0" />
@@ -435,7 +453,7 @@
     <set_variable name="Sector" value="0.0" integer="yes" />
     <set_variable name="GM Mode" value="4.0" integer="yes" />
   </event>
-  <folder_arme name="Sector Selection" id_arme="2e2c0c72-d93b-479d-ba3a-757e3e905ebb" parent_id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" expanded_arme="" />
+  <folder_arme name="Sector Selection" id_arme="2e2c0c72-d93b-479d-ba3a-757e3e905ebb" parent_id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" />
   <event name="Sector 1" id_arme="b51c3bd3-53a7-4969-8006-afafc00997a2" parent_id_arme="2e2c0c72-d93b-479d-ba3a-757e3e905ebb">
     <if_variable name="GM Mode" comparator="EQUALS" value="4.0" />
     <if_gm_button text="Sector 1" />
@@ -673,6 +691,8 @@
     <clear_gm_button text="Sector 24" />
     <clear_gm_button text="Sector 25" />
     <clear_gm_button text="Restart Sandbox" />
+    <clear_gm_button text="Custom Config Disabled" />
+    <clear_gm_button text="Custom Config Enabled" />
     <!---->
     <warning_popup_message message="Linking to Command Network" consoles="MHWESCO" player_slot="0" />
     <warning_popup_message message="Linking to Command Network" consoles="MHWESCO" player_slot="1" />

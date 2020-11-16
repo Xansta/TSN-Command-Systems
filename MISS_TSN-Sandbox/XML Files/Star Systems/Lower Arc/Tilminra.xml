@@ -2,6 +2,7 @@
   <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
     <set_variable name="Coordinate X" value="164.0" integer="yes" />
     <set_variable name="Coordinate Y" value="322.0" integer="yes" />
+    <set_variable name="Alignment" value="0.0" integer="yes" />
   </start>
   <folder_arme name="Tilminra System" id_arme="b394a5bf-9b2d-42df-8a92-acd68c457ff4" />
   <folder_arme name="System Settings" id_arme="dd49bd6b-a7a8-4cac-aa85-7837e165129c" parent_id_arme="b394a5bf-9b2d-42df-8a92-acd68c457ff4" />

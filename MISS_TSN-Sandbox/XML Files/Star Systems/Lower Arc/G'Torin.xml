@@ -2,6 +2,7 @@
   <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
     <set_variable name="Coordinate X" value="320.0" integer="yes" />
     <set_variable name="Coordinate Y" value="272.0" integer="yes" />
+    <set_variable name="Alignment" value="0.0" integer="yes" />
   </start>
   <folder_arme name="G'Torin System" id_arme="6fd1f040-4e52-415d-9676-24725b00bd4c" />
   <folder_arme name="G'Torin Settings" id_arme="7de4ecf1-627e-4c41-8741-4ff2f82f7862" parent_id_arme="6fd1f040-4e52-415d-9676-24725b00bd4c" expanded_arme="" />
