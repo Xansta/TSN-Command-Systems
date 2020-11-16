@@ -2,7 +2,7 @@
   <start id_arme="86e97228-28e8-4d69-abcf-c293d1d1ab5e">
     <set_variable name="Custom Config" value="0.0" integer="yes" />
   </start>
-  <folder_arme name="Custom Config" id_arme="f9dc6a29-7d1b-4399-9daa-0d993badc837" expanded_arme="" />
+  <folder_arme name="Custom Config" id_arme="f9dc6a29-7d1b-4399-9daa-0d993badc837" />
   <event name="Ship1 Configuration" id_arme="ed565860-810a-4932-b977-bb8bfdd04316" parent_id_arme="f9dc6a29-7d1b-4399-9daa-0d993badc837">
     <if_variable name="Custom Config" comparator="EQUALS" value="1.0" />
     <if_variable name="Ship1 Config" comparator="EQUALS" value="1.0" />

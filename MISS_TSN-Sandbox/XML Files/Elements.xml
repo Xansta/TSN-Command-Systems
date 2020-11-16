@@ -11299,7 +11299,6 @@
     <set_variable name="Ship1CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship1SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship1 Config" value="1.0" integer="yes" />
     <set_variable name="Ship1 Marines" value="1.0" integer="yes" />
     <set_variable name="Proteus Status" value="1.0" integer="yes" />
     <set_variable name="Ship1MarinesMax" value="20.0" integer="yes" />
@@ -11352,7 +11351,6 @@
     <set_variable name="Ship2CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship2SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship2 Config" value="1.0" integer="yes" />
     <set_variable name="Ship2 Marines" value="1.0" integer="yes" />
     <set_variable name="Theseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship2MarinesMax" value="20.0" integer="yes" />
@@ -11405,7 +11403,6 @@
     <set_variable name="Ship3CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship3SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship3 Config" value="1.0" integer="yes" />
     <set_variable name="Ship3 Marines" value="1.0" integer="yes" />
     <set_variable name="Odysseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship3MarinesMax" value="20.0" integer="yes" />
@@ -11458,7 +11455,6 @@
     <set_variable name="Ship4CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship4SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship4 Config" value="1.0" integer="yes" />
     <set_variable name="Ship4 Marines" value="1.0" integer="yes" />
     <set_variable name="Perseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship4MarinesMax" value="20.0" integer="yes" />
@@ -11511,7 +11507,6 @@
     <set_variable name="Ship5CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship5SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship5 Config" value="1.0" integer="yes" />
     <set_variable name="Ship5 Marines" value="1.0" integer="yes" />
     <set_variable name="Dionysus Status" value="1.0" integer="yes" />
     <set_variable name="Ship5MarinesMax" value="20.0" integer="yes" />
@@ -11564,7 +11559,6 @@
     <set_variable name="Ship6CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship6SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship6 Config" value="1.0" integer="yes" />
     <set_variable name="Ship6 Marines" value="1.0" integer="yes" />
     <set_variable name="Icarus Status" value="1.0" integer="yes" />
     <set_variable name="Ship6MarinesMax" value="20.0" integer="yes" />
@@ -11617,7 +11611,6 @@
     <set_variable name="Ship7CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship7SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship7 Config" value="1.0" integer="yes" />
     <set_variable name="Ship7 Marines" value="1.0" integer="yes" />
     <set_variable name="Adonis Status" value="1.0" integer="yes" />
     <set_variable name="Ship7MarinesMax" value="20.0" integer="yes" />
@@ -11670,7 +11663,6 @@
     <set_variable name="Ship8CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship8SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship8 Config" value="1.0" integer="yes" />
     <set_variable name="Ship8 Marines" value="1.0" integer="yes" />
     <set_variable name="Invention Status" value="1.0" integer="yes" />
     <set_variable name="Ship8MarinesMax" value="20.0" integer="yes" />
@@ -12705,7 +12697,6 @@
     <set_variable name="Ship1CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship1SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship1 Config" value="1.0" integer="yes" />
     <set_variable name="Ship1 Marines" value="1.0" integer="yes" />
     <set_variable name="Proteus Status" value="1.0" integer="yes" />
     <set_variable name="Ship1MarinesMax" value="20.0" integer="yes" />
@@ -12744,7 +12735,6 @@
     <set_variable name="Ship2CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship2SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship2 Config" value="1.0" integer="yes" />
     <set_variable name="Ship2 Marines" value="1.0" integer="yes" />
     <set_variable name="Theseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship2MarinesMax" value="20.0" integer="yes" />
@@ -12783,7 +12773,6 @@
     <set_variable name="Ship3CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship3SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship3 Config" value="1.0" integer="yes" />
     <set_variable name="Ship3 Marines" value="1.0" integer="yes" />
     <set_variable name="Odysseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship3MarinesMax" value="20.0" integer="yes" />
@@ -12822,7 +12811,6 @@
     <set_variable name="Ship4CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship4SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship4 Config" value="1.0" integer="yes" />
     <set_variable name="Ship4 Marines" value="1.0" integer="yes" />
     <set_variable name="Perseus Status" value="1.0" integer="yes" />
     <set_variable name="Ship4MarinesMax" value="20.0" integer="yes" />
@@ -12861,7 +12849,6 @@
     <set_variable name="Ship5CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship5SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship5 Config" value="1.0" integer="yes" />
     <set_variable name="Ship5 Marines" value="1.0" integer="yes" />
     <set_variable name="Dionysus Status" value="1.0" integer="yes" />
     <set_variable name="Ship5MarinesMax" value="20.0" integer="yes" />
@@ -12900,7 +12887,6 @@
     <set_variable name="Ship6CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship6SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship6 Config" value="1.0" integer="yes" />
     <set_variable name="Ship6 Marines" value="1.0" integer="yes" />
     <set_variable name="Icarus Status" value="1.0" integer="yes" />
     <set_variable name="Ship6MarinesMax" value="20.0" integer="yes" />
@@ -12939,7 +12925,6 @@
     <set_variable name="Ship7CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship7SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship7 Config" value="1.0" integer="yes" />
     <set_variable name="Ship7 Marines" value="1.0" integer="yes" />
     <set_variable name="Adonis Status" value="1.0" integer="yes" />
     <set_variable name="Ship7MarinesMax" value="20.0" integer="yes" />
@@ -12978,7 +12963,6 @@
     <set_variable name="Ship8CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <set_variable name="Ship8SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
-    <set_variable name="Ship8 Config" value="1.0" integer="yes" />
     <set_variable name="Ship8 Marines" value="1.0" integer="yes" />
     <set_variable name="Invention Status" value="1.0" integer="yes" />
     <set_variable name="Ship8MarinesMax" value="20.0" integer="yes" />

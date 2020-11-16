@@ -2,7 +2,7 @@
   <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
     <!---->
   </start>
-  <folder_arme name="GM Keys" id_arme="a63d8b7a-dd61-481e-b818-314ef7f7af5f" expanded_arme="" />
+  <folder_arme name="GM Keys" id_arme="a63d8b7a-dd61-481e-b818-314ef7f7af5f" />
   <event name="GM Main Menu" id_arme="605a7c3f-76b5-4953-bb43-aa50abc3f88b" parent_id_arme="a63d8b7a-dd61-481e-b818-314ef7f7af5f">
     <if_variable name="GM Controls" comparator="EQUALS" value="1.0" />
     <if_variable name="GM Menu" comparator="EQUALS" value="1.0" />
@@ -276,7 +276,7 @@
     <set_variable name="GM Menu" value="12.0" />
     <set_timer name="GM Menu" seconds="1" />
   </event>
-  <folder_arme name="Bas. Keys" id_arme="0495fdca-3d86-4cab-a403-d2dbdffe127e" parent_id_arme="a63d8b7a-dd61-481e-b818-314ef7f7af5f" expanded_arme="" />
+  <folder_arme name="Bas. Keys" id_arme="0495fdca-3d86-4cab-a403-d2dbdffe127e" parent_id_arme="a63d8b7a-dd61-481e-b818-314ef7f7af5f" />
   <event name="Bas. Key Menu" id_arme="7ae597ca-9166-4e2e-af7f-7a820dc1f151" parent_id_arme="0495fdca-3d86-4cab-a403-d2dbdffe127e">
     <if_variable name="GM Menu" comparator="EQUALS" value="3.0" />
     <if_timer_finished name="GM Menu" />
