@@ -8,16 +8,16 @@
     <if_variable name="Ship1 Config" comparator="EQUALS" value="1.0" />
     <set_variable name="Ship1MarineTeams" value="1.0" integer="yes" />
     <set_variable name="Ship1Cargos" value="1.0" integer="yes" />
-    <set_variable name="Ship1EngineerTeams" value="1.0" integer="yes" />
+    <set_variable name="Ship1EngineerTeams" value="3" integer="yes" />
     <set_variable name="Ship1MedicTeams" value="1.0" integer="yes" />
     <set_variable name="Ship1CommsRelays" value="1.0" integer="yes" />
     <set_variable name="Ship1SensorBuoys" value="1.0" integer="yes" />
-    <set_object_property property="countHoming" value="8" player_slot="0" />
-    <set_object_property property="countMine" value="8" player_slot="0" />
-    <set_object_property property="countNuke" value="8" player_slot="0" />
+    <set_object_property property="countHoming" value="3" player_slot="0" />
+    <set_object_property property="countMine" value="3" player_slot="0" />
+    <set_object_property property="countNuke" value="3" player_slot="0" />
     <set_object_property property="countPro" value="0" player_slot="0" />
-    <set_object_property property="countShk" value="8" player_slot="0" />
-    <set_object_property property="countEMP" value="0" player_slot="0" />
+    <set_object_property property="countShk" value="3" player_slot="0" />
+    <set_object_property property="countEMP" value="3" player_slot="0" />
     <set_object_property property="countTag" value="0" player_slot="0" />
     <set_object_property property="countBea" value="0" player_slot="0" />
     <set_variable name="Ship1 Config" value="0.0" integer="yes" />
