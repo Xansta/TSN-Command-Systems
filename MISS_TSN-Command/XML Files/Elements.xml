@@ -30,8 +30,8 @@
     <set_variable name="randMult" randomIntLow="1" randomIntHigh="5" integer="yes" />
     <set_variable name="Random Multiplier" value="0.0" integer="yes" />
   </event>
-  <folder_arme name="AI Types" id_arme="f4e899cb-4edd-4729-ac40-d582379619fb" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" expanded_arme="" />
-  <folder_arme name="Combat AI (1 - 49)" id_arme="d474c83d-3108-49d6-983d-3752ff52be2f" parent_id_arme="f4e899cb-4edd-4729-ac40-d582379619fb" expanded_arme="" />
+  <folder_arme name="AI Types" id_arme="f4e899cb-4edd-4729-ac40-d582379619fb" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
+  <folder_arme name="Combat AI (1 - 49)" id_arme="d474c83d-3108-49d6-983d-3752ff52be2f" parent_id_arme="f4e899cb-4edd-4729-ac40-d582379619fb" />
   <event name="1 - Standard Attack AI" id_arme="431edf06-7d5a-49dd-86fd-4990b5b16374" parent_id_arme="d474c83d-3108-49d6-983d-3752ff52be2f">
     <if_variable name="Auto AI Type" comparator="EQUALS" value="1.0" />
     <clear_ai name="--" />
@@ -227,7 +227,7 @@
     <add_ai type="CHASE_AI_SHIP" value1="1500" value2="500" name="--" />
     <add_ai type="DEFEND" value1="3000" value2="1000" name="--" />
   </event>
-  <folder_arme name="Alien AI (100 - 149)" id_arme="1c478493-8c0e-45f5-ba6a-ecd2b4fbd624" parent_id_arme="f4e899cb-4edd-4729-ac40-d582379619fb" expanded_arme="" />
+  <folder_arme name="Alien AI (100 - 149)" id_arme="1c478493-8c0e-45f5-ba6a-ecd2b4fbd624" parent_id_arme="f4e899cb-4edd-4729-ac40-d582379619fb" />
   <event name="100 - Ximni" id_arme="9ea1a99d-faee-412c-a64f-f9cd7911060d" parent_id_arme="1c478493-8c0e-45f5-ba6a-ecd2b4fbd624">
     <if_variable name="Auto AI Type" comparator="EQUALS" value="305.0" />
     <if_variable name="SideValue" comparator="NOT" value="2.0" />
@@ -7612,7 +7612,7 @@
     <set_ship_text name="--" newname="Z|firstnumber||secondnumber|" />
     <set_variable name="Name Assign" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
+  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" expanded_arme="" />
   <event name="All Inactive" id_arme="970521f0-180e-45e2-8cf8-693a4c3b200b" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1">
     <if_variable name="Sandbox Activation" comparator="EQUALS" value="0.0" />
     <if_variable name="shipCount" comparator="EQUALS" value="0.0" />
@@ -7621,7 +7621,7 @@
     <set_variable name="Sector Locked" value="1.0" integer="yes" />
     <set_variable name="Sandbox Activation" value="100.0" integer="yes" />
   </event>
-  <folder_arme name="Comms Controls" id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" />
+  <folder_arme name="Comms Controls" id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" expanded_arme="" />
   <event name="Create Menu" id_arme="c54e4e46-9912-462e-93b2-93a07284d4b4" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7">
     <if_variable name="CommsControls" comparator="EQUALS" value="1.0" />
     <set_comms_button text="Fleet Status" sideValue="playerSide" />
@@ -7876,6 +7876,7 @@
     <set_comms_button text="Channel 1 Menu" sideValue="playerSide" />
     <set_comms_button text="Cluster Deploy" />
     <set_comms_button text="Activate Cluster" />
+    <set_comms_button text="Activate Decoy" />
     <!---->
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_variable name="SpecialistOpsCheck" value="1.0" integer="yes" />
@@ -7904,6 +7905,7 @@
     <!---->
     <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
     <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
+    <clear_comms_button text="Activate Decoy" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
   </event>
@@ -8214,6 +8216,48 @@
     <destroy name="CL.10" />
     <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
     <set_variable name="Ship1ClusterMine" value="5.0" integer="yes" />
+  </event>
+  <event name="Decoy Ready to Deploy" id_arme="c08a5a96-5e0c-4b83-8d94-413122cb8511" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32">
+    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
+    <if_variable name="Ship1Decoy" comparator="EQUALS" value="1.0" />
+    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
+  </event>
+  <event name="Decoy Deployed" id_arme="310fc8ca-a3a6-4b16-ab35-6377f3b94ac6" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32">
+    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
+    <if_variable name="Ship1Decoy" comparator="EQUALS" value="3.0" />
+    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
+    <clear_comms_button text="Activate Decoy" sideValue="playerSide" />
+    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
+  </event>
+  <folder_arme name="Decoys" id_arme="52426dc1-9472-4939-85ea-2a52bbc4bcfd" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32" />
+  <event name="Spawn Decoy Point" id_arme="6bf9635e-93d0-4085-98da-e4f53757b23d" parent_id_arme="52426dc1-9472-4939-85ea-2a52bbc4bcfd">
+    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
+    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
+    <if_comms_button text="Activate Decoy" />
+    <create type="neutral" x="10.0" y="20.0" z="10.0" name="D.10" hullID="1054" sideValue="playerSide" />
+    <clear_comms_button text="Activate Decoy" sideValue="playerSide" />
+    <set_variable name="Ship1Decoy" value="2.0" integer="yes" />
+  </event>
+  <event name="Set Decoy Point" id_arme="1ba257c3-52c5-41b6-9034-ce793b8755a7" parent_id_arme="52426dc1-9472-4939-85ea-2a52bbc4bcfd">
+    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
+    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
+    <if_variable name="Ship1Decoy" comparator="EQUALS" value="2.0" />
+    <set_relative_position name2="D.10" distance="100" angle="180" player_slot1="0" />
+    <set_ship_text name="D.10" race="TSN" class="Decoy" desc="TSN Decoy" scan_desc="Status: Active" hailtext="&amp;SH&amp;&quot;P)D_AH77" />
+    <set_object_property property="shieldMaxStateBack" value="300" name="D.10" />
+    <set_object_property property="shieldMaxStateFront" value="300" name="D.10" />
+    <set_object_property property="shieldStateBack" value="300" name="D.10" />
+    <set_object_property property="shieldStateFront" value="300" name="D.10" />
+    <set_timer name="Ship1Decoy" seconds="60" />
+    <set_variable name="Ship1Decoy" value="3.0" integer="yes" />
+  </event>
+  <event name="Decoy Burn Out" id_arme="243f3770-7562-40cf-a610-30ede71cfda5" parent_id_arme="52426dc1-9472-4939-85ea-2a52bbc4bcfd">
+    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
+    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
+    <if_variable name="Ship1Decoy" comparator="EQUALS" value="3.0" />
+    <if_timer_finished name="Ship1Decoy" />
+    <destroy name="D.10" />
+    <set_variable name="Ship1Decoy" value="1.0" integer="yes" />
   </event>
   <folder_arme name="Ship 2 Comms Menus" id_arme="7c481e53-eff3-4858-b5d6-8783f676539d" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Ship2 Main Menu" id_arme="2f2852eb-4b42-482b-a9ea-3286a622e4b6" parent_id_arme="7c481e53-eff3-4858-b5d6-8783f676539d">
@@ -10849,7 +10893,7 @@
     <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
     <set_variable name="Ship7ClusterMine" value="5.0" integer="yes" />
   </event>
-  <folder_arme name="Ship 8 Comms Menus" id_arme="8ad17ae2-95d3-4958-9123-cc8a1ce72e1e" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" expanded_arme="" />
+  <folder_arme name="Ship 8 Comms Menus" id_arme="8ad17ae2-95d3-4958-9123-cc8a1ce72e1e" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Ship8 Main Menu" id_arme="97b72818-54d0-4b43-b0b2-a1917d6b715a" parent_id_arme="8ad17ae2-95d3-4958-9123-cc8a1ce72e1e">
     <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
     <if_variable name="CommsControls" comparator="EQUALS" value="3.0" />
@@ -31406,7 +31450,7 @@
     <set_variable name="InventionCargoType" value="3.0" integer="yes" />
     <destroy name="Life Pod 5" />
   </event>
-  <folder_arme name="Fuel Collection System" id_arme="9d864d69-fde0-4ec0-9abe-d9d738f85fc6" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" expanded_arme="" />
+  <folder_arme name="Fuel Collection System" id_arme="9d864d69-fde0-4ec0-9abe-d9d738f85fc6" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" />
   <event name="Enable Fuel Collectors System" id_arme="99b6b1e0-3feb-420b-8cdb-e66ec6a3d9d0" parent_id_arme="9d864d69-fde0-4ec0-9abe-d9d738f85fc6">
     <if_variable name="Enable FCS" comparator="EQUALS" value="1.0" />
     <set_variable name="Refuel Ship1" value="0.0" />
