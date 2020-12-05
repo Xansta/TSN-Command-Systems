@@ -3,7 +3,7 @@
     <!--Configurations-->
     <set_difficulty_level value="10" />
     <set_variable name="FleetStatusOption" value="1.0" integer="yes" />
-    <big_message title="The TSN Universe" subtitle1="Created by Xavier" subtitle2="Version 8.0" />
+    <big_message title="The TSN Universe" subtitle1="Created by Xavier" subtitle2="Version 9.0" />
     <warning_popup_message message="V.9.0" consoles="MHWESCO" player_slot="0" />
     <warning_popup_message message="Initialising ship systems...." consoles="MHWESCO" player_slot="0" />
     <warning_popup_message message="Initialising ship systems...." consoles="MHWESCO" player_slot="1" />
@@ -92,31 +92,25 @@
     <set_variable name="Sector Entities" value="0.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" integer="yes" />
     <set_variable name="SpecialistOpsCheck" value="0.0" integer="yes" />
+    <set_variable name="Ship1MaxShieldLevelFront" value="0.0" integer="yes" />
+    <set_variable name="Ship1MaxShieldLevelBack" value="0.0" integer="yes" />
     <!--Specialist Ops Specific-->
     <set_variable name="CL.10MinePositionX" value="0.0" />
     <set_variable name="CL.10MinePositionZ" value="0.0" />
-    <set_variable name="Ship1ClusterMine" value="1.0" integer="yes" />
     <set_variable name="CL.20MinePositionX" value="0.0" />
     <set_variable name="CL.20MinePositionZ" value="0.0" />
-    <set_variable name="Ship2ClusterMine" value="1.0" integer="yes" />
     <set_variable name="CL.30MinePositionX" value="0.0" />
     <set_variable name="CL.30MinePositionZ" value="0.0" />
-    <set_variable name="Ship3ClusterMine" value="1.0" integer="yes" />
     <set_variable name="CL.40MinePositionX" value="0.0" />
     <set_variable name="CL.40MinePositionZ" value="0.0" />
-    <set_variable name="Ship4ClusterMine" value="1.0" integer="yes" />
     <set_variable name="CL.50MinePositionX" value="0.0" />
     <set_variable name="CL.50MinePositionZ" value="0.0" />
-    <set_variable name="Ship5ClusterMine" value="1.0" integer="yes" />
     <set_variable name="CL.60MinePositionX" value="0.0" />
     <set_variable name="CL.60MinePositionZ" value="0.0" />
-    <set_variable name="Ship6ClusterMine" value="1.0" integer="yes" />
     <set_variable name="CL.70MinePositionX" value="0.0" />
     <set_variable name="CL.70MinePositionZ" value="0.0" />
-    <set_variable name="Ship7ClusterMine" value="1.0" integer="yes" />
     <set_variable name="CL.80MinePositionX" value="0.0" />
     <set_variable name="CL.80MinePositionZ" value="0.0" />
-    <set_variable name="Ship8ClusterMine" value="1.0" integer="yes" />
     <!--GM Specific-->
     <set_variable name="RVAngle" value="0.0" integer="yes" />
     <set_variable name="ScanPointNumber" value="1.0" integer="yes" />

@@ -531,7 +531,7 @@
     <set_variable name="Sector" value="8.0" integer="yes" />
     <set_variable name="Eulis System" value="3.0" integer="yes" />
   </event>
-  <folder_arme name="Sector Entities" id_arme="9ea0285b-7174-4594-b318-a1b0f1b5decb" parent_id_arme="d4d0ab2b-0dfd-4d39-b4cd-8949068ceef7" expanded_arme="" />
+  <folder_arme name="Sector Entities" id_arme="9ea0285b-7174-4594-b318-a1b0f1b5decb" parent_id_arme="d4d0ab2b-0dfd-4d39-b4cd-8949068ceef7" />
   <event name="Generate Sector Entities" id_arme="8fab847f-5c05-481e-a341-ac24dc1137dd" parent_id_arme="9ea0285b-7174-4594-b318-a1b0f1b5decb">
     <if_variable name="Eulis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="3" />
@@ -610,7 +610,7 @@
     <set_variable name="Sector" value="7.0" integer="yes" />
     <set_variable name="Eulis System" value="3.0" integer="yes" />
   </event>
-  <folder_arme name="Sector Entities" id_arme="61c5f62a-62b6-4b9d-a0eb-02f6005ad8a4" parent_id_arme="2a639a86-3071-425c-a6fa-9bd19b8c6459" expanded_arme="" />
+  <folder_arme name="Sector Entities" id_arme="61c5f62a-62b6-4b9d-a0eb-02f6005ad8a4" parent_id_arme="2a639a86-3071-425c-a6fa-9bd19b8c6459" />
   <event name="Generate Sector Entities" id_arme="53d07cb2-db01-4eaf-b2a3-004829528fff" parent_id_arme="61c5f62a-62b6-4b9d-a0eb-02f6005ad8a4">
     <if_variable name="Eulis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="4" />
@@ -1982,7 +1982,7 @@
     <set_variable name="Sector" value="5.0" integer="yes" />
     <set_variable name="Eulis System" value="3.0" integer="yes" />
   </event>
-  <folder_arme name="Sector Entities" id_arme="7fd41765-e9f0-4ee2-b3f8-cc6228df7504" parent_id_arme="f5600f78-3493-4fdb-9d88-18096d0312a7" expanded_arme="" />
+  <folder_arme name="Sector Entities" id_arme="7fd41765-e9f0-4ee2-b3f8-cc6228df7504" parent_id_arme="f5600f78-3493-4fdb-9d88-18096d0312a7" />
   <event name="Generate Sector Entities" id_arme="2a70c278-5887-486b-bf90-ceb8bc40654e" parent_id_arme="7fd41765-e9f0-4ee2-b3f8-cc6228df7504">
     <if_variable name="Eulis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="10" />

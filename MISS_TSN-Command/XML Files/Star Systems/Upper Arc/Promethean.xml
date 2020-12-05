@@ -120,11 +120,12 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="1" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="66126.0" y="0.0" z="68450.0" angle="0" name="Sephua" hullID="1001" />
-    <create type="station" x="55666.0" y="0.0" z="70242.0" angle="0" name="Haleez" hullID="1001" />
-    <create type="station" x="61332.0" y="0.0" z="76004.0" angle="0" name="Artin" hullID="1001" />
-    <create type="station" x="36635.0" y="0.0" z="34309.0" angle="0" name="DS-34" hullID="1000" />
-    <create type="station" x="55376.0" y="0.0" z="55811.0" angle="0" name="M-761" hullID="1003" />
+    <create type="station" x="66126.0" y="0.0" z="68450.0" name="Sephua" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="55666.0" y="0.0" z="70242.0" name="Haleez" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="61332.0" y="0.0" z="76004.0" name="Artin" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="36635.0" y="0.0" z="34309.0" name="DS-34" hullID="1000" sideValue="sectorSide" />
+    <create type="station" x="55376.0" y="0.0" z="55811.0" name="M-761" hullID="1003" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean I" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="1.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -143,6 +144,7 @@
     <destroy name="Artin" />
     <destroy name="DS-34" />
     <destroy name="M-761" />
+    <destroy name="Promethean I" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" integer="yes" />
   </event>
@@ -235,14 +237,15 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="2" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="73826.0" y="0.0" z="59152.0" angle="0" name="DS-75" hullID="1000" />
-    <create type="neutral" x="81671.0" y="0.0" z="57845.0" angle="0" name="WP-07" hullID="1052" sideValue="2" />
-    <create type="station" x="71792.0" y="0.0" z="54648.0" angle="0" name="CP-94" hullID="1002" />
-    <create type="station" x="50436.0" y="0.0" z="18184.0" angle="0" name="M-909" hullID="1003" />
-    <create type="station" x="14843.0" y="0.0" z="68740.0" angle="0" name="RS-25" hullID="1004" />
-    <create type="neutral" x="65981.0" y="0.0" z="53341.0" angle="0" name="WP-41" hullID="1052" sideValue="2" />
-    <create type="station" x="76441.0" y="0.0" z="53341.0" angle="0" name="I-001" hullID="1003" />
+    <create type="station" x="73826.0" y="0.0" z="59152.0" name="DS-75" hullID="1000" sideValue="sectorSide" />
+    <create type="neutral" x="81671.0" y="0.0" z="57845.0" angle="0" name="WP-07" hullID="1052" sideValue="sectorSide" />
+    <create type="station" x="71792.0" y="0.0" z="54648.0" name="CP-94" hullID="1002" sideValue="sectorSide" />
+    <create type="station" x="50436.0" y="0.0" z="18184.0" name="M-909" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="14843.0" y="0.0" z="68740.0" name="RS-25" hullID="1004" sideValue="sectorSide" />
+    <create type="neutral" x="65981.0" y="0.0" z="53341.0" angle="0" name="WP-41" hullID="1052" sideValue="sectorSide" />
+    <create type="station" x="76441.0" y="0.0" z="53341.0" name="I-001" hullID="1003" sideValue="sectorSide" />
     <create type="blackHole" x="22107.0" y="0.0" z="76585.0" name="BH-001" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean II" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="1.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -269,6 +272,7 @@
     <destroy name="WP-41" />
     <destroy name="I-001" />
     <destroy name="BH-001" />
+    <destroy name="Promethean II" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -363,11 +367,12 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="3" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="50602.0" y="0.0" z="53117.0" angle="0" name="M-061" hullID="1003" />
-    <create type="station" x="53556.0" y="0.0" z="26645.0" angle="0" name="M-449" hullID="1003" />
-    <create type="station" x="40429.0" y="0.0" z="42069.0" angle="0" name="M-152" hullID="1003" />
-    <create type="station" x="74449.0" y="0.0" z="35834.0" angle="0" name="Tera" hullID="1001" />
-    <create type="station" x="29641.0" y="0.0" z="68202.0" angle="0" name="DS-09" hullID="1000" />
+    <create type="station" x="50602.0" y="0.0" z="53117.0" name="M-061" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="53556.0" y="0.0" z="26645.0" name="M-449" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="40429.0" y="0.0" z="42069.0" name="M-152" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="74449.0" y="0.0" z="35834.0" name="Tera" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="29641.0" y="0.0" z="68202.0" name="DS-09" hullID="1000" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean III" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="5.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -391,6 +396,7 @@
     <destroy name="M-152" />
     <destroy name="Tera" />
     <destroy name="DS-09" />
+    <destroy name="Promethean III" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -460,16 +466,17 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="4" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="28063.0" y="0.0" z="39104.0" angle="0" name="DS-72" hullID="1000" />
-    <create type="neutral" x="37856.0" y="0.0" z="52053.0" angle="0" name="WP-92" hullID="1052" />
-    <create type="neutral" x="28033.0" y="0.0" z="51039.0" angle="0" name="SY-170" hullID="1053" />
-    <create type="neutral" x="18540.0" y="0.0" z="46645.0" angle="0" name="WP-77" hullID="1052" />
-    <create type="neutral" x="39620.0" y="0.0" z="45865.0" angle="0" name="WP-05" hullID="1052" />
-    <create type="station" x="28935.0" y="0.0" z="45932.0" angle="0" name="CP-11" hullID="1002" />
-    <create type="station" x="57410.0" y="0.0" z="23559.0" angle="0" name="Mira" hullID="1001" />
-    <create type="station" x="60606.0" y="0.0" z="33147.0" angle="0" name="Harra" hullID="1001" />
-    <create type="station" x="68160.0" y="0.0" z="26755.0" angle="0" name="Eve" hullID="1001" />
-    <create type="neutral" x="19957.0" y="0.0" z="40515.0" angle="0" name="WP-36" hullID="1052" />
+    <create type="station" x="28063.0" y="0.0" z="39104.0" name="DS-72" hullID="1000" sideValue="sectorSide" />
+    <create type="neutral" x="37856.0" y="0.0" z="52053.0" angle="0" name="WP-92" hullID="1052" sideValue="sectorSide" />
+    <create type="neutral" x="28033.0" y="0.0" z="51039.0" angle="0" name="SY-170" hullID="1053" sideValue="sectorSide" />
+    <create type="neutral" x="18540.0" y="0.0" z="46645.0" angle="0" name="WP-77" hullID="1052" sideValue="sectorSide" />
+    <create type="neutral" x="39620.0" y="0.0" z="45865.0" angle="0" name="WP-05" hullID="1052" sideValue="sectorSide" />
+    <create type="station" x="28935.0" y="0.0" z="45932.0" name="CP-11" hullID="1002" sideValue="sectorSide" />
+    <create type="station" x="57410.0" y="0.0" z="23559.0" name="Mira" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="60606.0" y="0.0" z="33147.0" name="Harra" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="68160.0" y="0.0" z="26755.0" name="Eve" hullID="1001" sideValue="sectorSide" />
+    <create type="neutral" x="19957.0" y="0.0" z="40515.0" angle="0" name="WP-36" hullID="1052" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean IV" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="1.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -498,6 +505,7 @@
     <destroy name="Harra" />
     <destroy name="Eve" />
     <destroy name="WP-36" />
+    <destroy name="Promethean IV" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -589,9 +597,10 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="5" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="66126.0" y="0.0" z="45641.0" angle="0" name="RS-02X" hullID="1004" />
-    <create type="station" x="40267.0" y="0.0" z="79636.0" angle="0" name="DS-36" hullID="1000" />
-    <create type="station" x="56393.0" y="0.0" z="25157.0" angle="0" name="M-445" hullID="1003" />
+    <create type="station" x="66126.0" y="0.0" z="45641.0" name="RS-02X" hullID="1004" sideValue="sectorSide" />
+    <create type="station" x="40267.0" y="0.0" z="79636.0" name="DS-36" hullID="1000" sideValue="sectorSide" />
+    <create type="station" x="56393.0" y="0.0" z="25157.0" name="M-445" hullID="1003" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean V" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="5.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -613,6 +622,7 @@
     <destroy name="RS-02X" />
     <destroy name="DS-36" />
     <destroy name="M-445" />
+    <destroy name="Promethean V" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -638,7 +648,7 @@
     <create count="20" type="nebulas" startX="73826.0" startY="0.0" startZ="26610.0" endX="84577.0" endY="0.0" endZ="11937.0" randomRange="6578" />
     <create count="20" type="asteroids" startX="77168.0" startY="0.0" startZ="18765.0" endX="65545.0" endY="0.0" endZ="33147.0" randomRange="8037" />
   </event>
-  <folder_arme name="Navigation" id_arme="122673a3-4826-4b4d-b524-c10a49a12177" parent_id_arme="1a7f9454-f775-4926-b353-eed3cec1a1e2" expanded_arme="" />
+  <folder_arme name="Navigation" id_arme="122673a3-4826-4b4d-b524-c10a49a12177" parent_id_arme="1a7f9454-f775-4926-b353-eed3cec1a1e2" />
   <event name="Transition to Sector VII" id_arme="35f61a1e-2b57-4513-a87b-b4a59cd3737d" parent_id_arme="122673a3-4826-4b4d-b524-c10a49a12177">
     <if_variable name="Grid 5 Transition" comparator="EQUALS" value="1.0" />
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
@@ -727,14 +737,14 @@
     <set_variable name="Sector" value="11.0" integer="yes" />
     <set_variable name="Promethean System" value="3.0" integer="yes" />
   </event>
-  <folder_arme name="System - Jump Gate Settings" id_arme="82075028-8227-4ce7-b2fd-20c6b2471e37" parent_id_arme="122673a3-4826-4b4d-b524-c10a49a12177" expanded_arme="" />
+  <folder_arme name="System - Jump Gate Settings" id_arme="82075028-8227-4ce7-b2fd-20c6b2471e37" parent_id_arme="122673a3-4826-4b4d-b524-c10a49a12177" />
   <event name="Gate Offline" id_arme="3db734a0-57ea-4491-bf55-0b34bba28853" parent_id_arme="82075028-8227-4ce7-b2fd-20c6b2471e37">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="0.0" />
     <set_object_property property="rollDelta" value="0.3" name="Cerberus Gate" />
   </event>
-  <folder_arme name="Tracking System" id_arme="53e29460-9af2-4e70-8e9e-ae61613416c9" parent_id_arme="82075028-8227-4ce7-b2fd-20c6b2471e37" expanded_arme="" />
+  <folder_arme name="Tracking System" id_arme="53e29460-9af2-4e70-8e9e-ae61613416c9" parent_id_arme="82075028-8227-4ce7-b2fd-20c6b2471e37" />
   <event name="Ship1 Activation Range" id_arme="cf3a0500-d826-4bf0-86cc-bee1d1663ca2" parent_id_arme="53e29460-9af2-4e70-8e9e-ae61613416c9">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
@@ -913,12 +923,13 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="6.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="genericMesh" x="72161.0" y="0.0" z="60402.0" angle="0" name="Cerberus Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="station" x="66998.0" y="0.0" z="16150.0" angle="0" name="M-33" hullID="1003" />
-    <create type="station" x="39105.0" y="0.0" z="47239.0" angle="0" name="Aetan" hullID="1001" />
-    <create type="station" x="37797.0" y="0.0" z="57554.0" angle="0" name="Selena" hullID="1001" />
-    <create type="station" x="31260.0" y="0.0" z="52179.0" angle="0" name="Columbia" hullID="1001" />
-    <create type="station" x="69904.0" y="0.0" z="36343.0" angle="0" name="M-051" hullID="1003" />
+    <create type="genericMesh" x="72161.0" y="0.0" z="60402.0" name="Cerberus Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
+    <create type="station" x="66998.0" y="0.0" z="16150.0" name="M-33" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="39105.0" y="0.0" z="47239.0" name="Aetan" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="37797.0" y="0.0" z="57554.0" name="Selena" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="31260.0" y="0.0" z="52179.0" name="Columbia" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="69904.0" y="0.0" z="36343.0" name="M-051" hullID="1003" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean VI" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="1.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -947,6 +958,7 @@
     <destroy name="Selena" />
     <destroy name="Columbia" />
     <destroy name="M-051" />
+    <destroy name="Promethean VI" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -1095,15 +1107,16 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="7" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="40267.0" y="0.0" z="29806.0" name="DS-26" hullID="1000" />
-    <create type="station" x="33584.0" y="0.0" z="17893.0" name="DS-81" hullID="1000" />
-    <create type="neutral" x="26738.0" y="0.0" z="34265.0" name="SY-61" hullID="1053" />
-    <create type="neutral" x="20218.0" y="0.0" z="25447.0" name="SY-55" hullID="1053" />
-    <create type="neutral" x="23953.0" y="0.0" z="30225.0" name="SY-170" hullID="1053" />
-    <create type="neutral" x="46161.0" y="0.0" z="19510.0" angle="0" name="WP-72" hullID="1052" />
-    <create type="neutral" x="24179.0" y="0.0" z="11681.0" angle="0" name="WP-98" hullID="1052" />
-    <create type="neutral" x="38378.0" y="0.0" z="41428.0" angle="0" name="WP-44" hullID="1052" />
-    <create type="station" x="30388.0" y="0.0" z="27191.0" angle="0" name="Promethean Command" hullID="1002" />
+    <create type="station" x="40267.0" y="0.0" z="29806.0" name="DS-26" hullID="1000" sideValue="sectorSide" />
+    <create type="station" x="33584.0" y="0.0" z="17893.0" name="DS-81" hullID="1000" sideValue="sectorSide" />
+    <create type="neutral" x="26738.0" y="0.0" z="34265.0" name="SY-61" hullID="1053" sideValue="sectorSide" />
+    <create type="neutral" x="20218.0" y="0.0" z="25447.0" name="SY-55" hullID="1053" sideValue="sectorSide" />
+    <create type="neutral" x="23953.0" y="0.0" z="30225.0" name="SY-170" hullID="1053" sideValue="sectorSide" />
+    <create type="neutral" x="46161.0" y="0.0" z="19510.0" angle="0" name="WP-72" hullID="1052" sideValue="sectorSide" />
+    <create type="neutral" x="24179.0" y="0.0" z="11681.0" angle="0" name="WP-98" hullID="1052" sideValue="sectorSide" />
+    <create type="neutral" x="38378.0" y="0.0" z="41428.0" angle="0" name="WP-44" hullID="1052" sideValue="sectorSide" />
+    <create type="station" x="30388.0" y="0.0" z="27191.0" name="Promethean Command" hullID="1002" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean VII" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="3.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -1137,6 +1150,7 @@
     <destroy name="WP-98" />
     <destroy name="WP-44" />
     <destroy name="Promethean Command" />
+    <destroy name="Promethean VII" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -1163,7 +1177,7 @@
     <create count="20" type="asteroids" startX="71004.0" startY="0.0" startZ="44654.0" endX="64229.0" endY="0.0" endZ="39535.0" randomRange="2047" />
     <create count="30" type="nebulas" startX="48570.0" startY="0.0" startZ="26737.0" endX="38031.0" endY="0.0" endZ="9422.0" randomRange="2020" />
   </event>
-  <folder_arme name="Navigation" id_arme="f40f1079-43a1-4991-b2a5-1a2ace87b3ee" parent_id_arme="80417d2c-1a3d-4d1c-b9e2-8d08cea89eb7" expanded_arme="" />
+  <folder_arme name="Navigation" id_arme="f40f1079-43a1-4991-b2a5-1a2ace87b3ee" parent_id_arme="80417d2c-1a3d-4d1c-b9e2-8d08cea89eb7" />
   <event name="Transition to Sector VII" id_arme="f0437ef1-72bf-4cc0-b4f3-d7733bbe322e" parent_id_arme="f40f1079-43a1-4991-b2a5-1a2ace87b3ee">
     <if_variable name="Grid 1 Transition" comparator="EQUALS" value="1.0" />
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
@@ -1219,14 +1233,14 @@
     <set_variable name="Sector" value="11.0" integer="yes" />
     <set_variable name="Promethean System" value="3.0" integer="yes" />
   </event>
-  <folder_arme name="System - Jump Gate Settings" id_arme="e32dccac-b1fc-49b8-b4bb-282edcf3b4cc" parent_id_arme="f40f1079-43a1-4991-b2a5-1a2ace87b3ee" expanded_arme="" />
+  <folder_arme name="System - Jump Gate Settings" id_arme="e32dccac-b1fc-49b8-b4bb-282edcf3b4cc" parent_id_arme="f40f1079-43a1-4991-b2a5-1a2ace87b3ee" />
   <event name="Gate Offline" id_arme="4f0bab27-56c6-4a6f-b54e-89e2404d26d2" parent_id_arme="e32dccac-b1fc-49b8-b4bb-282edcf3b4cc">
     <if_variable name="Sector" comparator="EQUALS" value="8" />
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="0.0" />
     <set_object_property property="rollDelta" value="0.3" name="Volantis Gate" />
   </event>
-  <folder_arme name="Tracking System" id_arme="16c1b128-adfa-492d-a3c4-94d44d6c039f" parent_id_arme="e32dccac-b1fc-49b8-b4bb-282edcf3b4cc" expanded_arme="" />
+  <folder_arme name="Tracking System" id_arme="16c1b128-adfa-492d-a3c4-94d44d6c039f" parent_id_arme="e32dccac-b1fc-49b8-b4bb-282edcf3b4cc" />
   <event name="Ship1 Activation Range" id_arme="191769d9-2976-4e67-b662-51b940be3da2" parent_id_arme="16c1b128-adfa-492d-a3c4-94d44d6c039f">
     <if_variable name="Sector" comparator="EQUALS" value="8" />
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
@@ -1405,12 +1419,13 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="8" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="genericMesh" x="37729.0" y="0.0" z="35470.0" angle="0" name="Volantis Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="station" x="51453.0" y="0.0" z="18184.0" angle="0" name="RS-71" hullID="1004" />
-    <create type="station" x="71792.0" y="0.0" z="38813.0" angle="0" name="M-025" hullID="1003" />
-    <create type="station" x="65691.0" y="0.0" z="35326.0" angle="0" name="M-291" hullID="1003" />
-    <create type="station" x="29952.0" y="0.0" z="68014.0" angle="0" name="DS-39" hullID="1000" />
-    <create type="station" x="59734.0" y="0.0" z="58571.0" angle="0" name="DS-42" hullID="1000" />
+    <create type="genericMesh" x="37729.0" y="0.0" z="35470.0" name="Volantis Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
+    <create type="station" x="51453.0" y="0.0" z="18184.0" name="RS-71" hullID="1004" sideValue="sectorSide" />
+    <create type="station" x="71792.0" y="0.0" z="38813.0" name="M-025" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="65691.0" y="0.0" z="35326.0" name="M-291" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="29952.0" y="0.0" z="68014.0" name="DS-39" hullID="1000" sideValue="sectorSide" />
+    <create type="station" x="59734.0" y="0.0" z="58571.0" name="DS-42" hullID="1000" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean VIII" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="5.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -1439,6 +1454,7 @@
     <destroy name="M-291" />
     <destroy name="DS-39" />
     <destroy name="DS-42" />
+    <destroy name="Promethean VIII" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -1527,10 +1543,11 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="9" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="81586.0" y="0.0" z="41013.0" angle="0" name="M-040" hullID="1003" />
-    <create type="station" x="71014.0" y="0.0" z="44317.0" angle="0" name="M-294" hullID="1003" />
-    <create type="station" x="85551.0" y="0.0" z="52114.0" angle="0" name="M-008" hullID="1003" />
-    <create type="station" x="38814.0" y="0.0" z="56973.0" angle="0" name="DS-72" hullID="1000" />
+    <create type="station" x="81586.0" y="0.0" z="41013.0" name="M-040" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="71014.0" y="0.0" z="44317.0" name="M-294" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="85551.0" y="0.0" z="52114.0" name="M-008" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="38814.0" y="0.0" z="56973.0" name="DS-72" hullID="1000" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean IX" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="5.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -1552,6 +1569,7 @@
     <destroy name="M-294" />
     <destroy name="M-008" />
     <destroy name="DS-72" />
+    <destroy name="Promethean IX" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -1649,9 +1667,10 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="10" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="80509.0" y="0.0" z="14116.0" angle="0" name="DS-99" hullID="1000" />
-    <create type="station" x="31986.0" y="0.0" z="71355.0" angle="0" name="DS-142" hullID="1000" />
-    <create type="station" x="32712.0" y="0.0" z="28062.0" angle="0" name="DS-43" hullID="1000" />
+    <create type="station" x="80509.0" y="0.0" z="14116.0" name="DS-99" hullID="1000" sideValue="sectorSide" />
+    <create type="station" x="31986.0" y="0.0" z="71355.0" name="DS-142" hullID="1000" sideValue="sectorSide" />
+    <create type="station" x="32712.0" y="0.0" z="28062.0" name="DS-43" hullID="1000" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean X" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="2.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -1672,6 +1691,7 @@
     <destroy name="DS-99" />
     <destroy name="DS-142" />
     <destroy name="DS-43" />
+    <destroy name="Promethean X" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -1708,7 +1728,7 @@
     <set_variable name="Corner E1 Transition Enabled" value="0.0" />
     <set_variable name="Corner E5 Transition Enabled" value="0.0" />
   </event>
-  <folder_arme name="Navigation" id_arme="22bdfd9f-14d9-4f52-8f7a-130bc05a789c" parent_id_arme="9b616979-3ede-4410-bb83-2b09ed2b48b3" expanded_arme="" />
+  <folder_arme name="Navigation" id_arme="22bdfd9f-14d9-4f52-8f7a-130bc05a789c" parent_id_arme="9b616979-3ede-4410-bb83-2b09ed2b48b3" />
   <event name="Transition to Sector XII" id_arme="dcff69d4-e6db-40ed-b2a9-1b7c43ab3f4c" parent_id_arme="22bdfd9f-14d9-4f52-8f7a-130bc05a789c">
     <if_variable name="Grid 5 Transition" comparator="EQUALS" value="1.0" />
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
@@ -1764,14 +1784,14 @@
     <set_variable name="Sector" value="6.0" integer="yes" />
     <set_variable name="Promethean System" value="3.0" integer="yes" />
   </event>
-  <folder_arme name="System - Jump Gate Settings" id_arme="405d38b6-cae3-4358-9f19-66fd33c1a1ff" parent_id_arme="22bdfd9f-14d9-4f52-8f7a-130bc05a789c" expanded_arme="" />
+  <folder_arme name="System - Jump Gate Settings" id_arme="405d38b6-cae3-4358-9f19-66fd33c1a1ff" parent_id_arme="22bdfd9f-14d9-4f52-8f7a-130bc05a789c" />
   <event name="Gate Offline" id_arme="a3618d9a-6155-47c8-973e-7c41b79e1534" parent_id_arme="405d38b6-cae3-4358-9f19-66fd33c1a1ff">
     <if_variable name="Sector" comparator="EQUALS" value="11" />
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="0.0" />
     <set_object_property property="rollDelta" value="0.3" name="Cronus Gate" />
   </event>
-  <folder_arme name="Tracking System" id_arme="dd64c733-625e-4136-936c-4295f6b6ce6e" parent_id_arme="405d38b6-cae3-4358-9f19-66fd33c1a1ff" expanded_arme="" />
+  <folder_arme name="Tracking System" id_arme="dd64c733-625e-4136-936c-4295f6b6ce6e" parent_id_arme="405d38b6-cae3-4358-9f19-66fd33c1a1ff" />
   <event name="Ship1 Activation Range" id_arme="74863862-9a13-44d2-8cd2-27c8fbe31ed0" parent_id_arme="dd64c733-625e-4136-936c-4295f6b6ce6e">
     <if_variable name="Sector" comparator="EQUALS" value="11" />
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
@@ -1950,13 +1970,14 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="11" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="genericMesh" x="64585.0" y="0.0" z="77169.0" angle="0" name="Cronus Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="station" x="52927.0" y="0.0" z="60536.0" angle="0" name="DS-12" hullID="1000" />
-    <create type="neutral" x="64927.0" y="0.0" z="64048.0" angle="0" name="WP-56" hullID="1052" />
-    <create type="neutral" x="50293.0" y="0.0" z="62000.0" angle="0" name="WP-23" hullID="1052" />
-    <create type="station" x="75053.0" y="0.0" z="26450.0" angle="0" name="Forward Command" hullID="1002" />
-    <create type="neutral" x="80207.0" y="0.0" z="27977.0" angle="0" name="WP-07" hullID="1052" />
-    <create type="neutral" x="69817.0" y="0.0" z="25218.0" angle="0" name="WP-15" hullID="1052" />
+    <create type="genericMesh" x="64585.0" y="0.0" z="77169.0" name="Cronus Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
+    <create type="station" x="52927.0" y="0.0" z="60536.0" name="DS-12" hullID="1000" sideValue="sectorSide" />
+    <create type="neutral" x="64927.0" y="0.0" z="64048.0" angle="0" name="WP-56" hullID="1052" sideValue="sectorSide" />
+    <create type="neutral" x="50293.0" y="0.0" z="62000.0" angle="0" name="WP-23" hullID="1052" sideValue="sectorSide" />
+    <create type="station" x="75053.0" y="0.0" z="26450.0" name="Forward Command" hullID="1002" sideValue="sectorSide" />
+    <create type="neutral" x="80207.0" y="0.0" z="27977.0" angle="0" name="WP-07" hullID="1052" sideValue="sectorSide" />
+    <create type="neutral" x="69817.0" y="0.0" z="25218.0" angle="0" name="WP-15" hullID="1052" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean XI" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="2.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -1999,6 +2020,7 @@
     <destroy name="Forward Command" />
     <destroy name="WP-07" />
     <destroy name="WP-15" />
+    <destroy name="Promethean XI" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -2092,9 +2114,10 @@
     <if_variable name="Promethean System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="12" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="33729.0" y="0.0" z="69031.0" angle="0" name="DS-06" hullID="1000" />
-    <create type="station" x="65545.0" y="0.0" z="41573.0" angle="0" name="DS-15" hullID="1000" />
-    <create type="station" x="29226.0" y="0.0" z="34891.0" angle="0" name="DS-31" hullID="1000" />
+    <create type="station" x="33729.0" y="0.0" z="69031.0" name="DS-06" hullID="1000" sideValue="sectorSide" />
+    <create type="station" x="65545.0" y="0.0" z="41573.0" name="DS-15" hullID="1000" sideValue="sectorSide" />
+    <create type="station" x="29226.0" y="0.0" z="34891.0" name="DS-31" hullID="1000" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Promethean XII" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="Sector Type" value="2.0" integer="yes" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
@@ -2115,6 +2138,7 @@
     <destroy name="DS-06" />
     <destroy name="DS-15" />
     <destroy name="DS-31" />
+    <destroy name="Promethean XII" />
     <set_variable name="Promethean System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>

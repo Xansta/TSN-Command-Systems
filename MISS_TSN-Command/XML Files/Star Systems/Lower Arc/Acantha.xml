@@ -11,7 +11,6 @@
     <if_variable name="Activation Menu" comparator="EQUALS" value="1.0" />
     <set_gm_button text="Lower Arc/Acantha System" />
     <set_variable name="Acantha Gate" value="1.0" integer="yes" />
-    <!--089,405-->
   </event>
   <event name="Clear Menu Item" id_arme="a949a464-0553-4fa8-8644-0faeb49a723d" parent_id_arme="15031bf4-211a-41db-8a94-8db570ab16ce">
     <if_variable name="Activation Menu" comparator="EQUALS" value="0.0" />
@@ -301,11 +300,12 @@
     <if_variable name="Sector" comparator="EQUALS" value="1.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
     <create type="genericMesh" x="63125.0" y="0.0" z="31383.0" name="Tilminra Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="station" x="38617.0" y="0.0" z="58035.0" name="Raschad" hullID="1001" sideValue="systemSide" />
-    <create type="station" x="61250.0" y="0.0" z="73571.0" name="Potzhu Construction" hullID="1003" sideValue="systemSide" />
-    <create type="neutral" x="65000.0" y="0.0" z="80535.0" angle="0" name="Potzhu Shipyards" hullID="1053" sideValue="systemSide" />
-    <create type="neutral" x="72500.0" y="0.0" z="62455.0" angle="0" name="Multada Denabite" hullID="1051" sideValue="systemSide" />
-    <create type="neutral" x="33125.0" y="0.0" z="21071.0" angle="0" name="Nautri Ores" hullID="1050" sideValue="systemSide" />
+    <create type="station" x="38617.0" y="0.0" z="58035.0" name="Raschad" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="61250.0" y="0.0" z="73571.0" name="Potzhu Construction" hullID="1003" sideValue="sectorSide" />
+    <create type="neutral" x="65000.0" y="0.0" z="80535.0" angle="0" name="Potzhu Shipyards" hullID="1053" sideValue="sectorSide" />
+    <create type="neutral" x="72500.0" y="0.0" z="62455.0" angle="0" name="Multada Denabite" hullID="1051" sideValue="sectorSide" />
+    <create type="neutral" x="33125.0" y="0.0" z="21071.0" angle="0" name="Nautri Ores" hullID="1050" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Acantha I" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -328,6 +328,7 @@
     <destroy name="Multada Denabite" />
     <destroy name="Nautri Ores" />
     <destroy name="Tilminra Gate" />
+    <destroy name="Acantha I" />
     <set_variable name="Acantha System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -436,9 +437,10 @@
     <if_variable name="Acantha System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="65670.0" y="0.0" z="71964.0" name="Intaka" hullID="1001" sideValue="systemSide" />
-    <create type="neutral" x="32054.0" y="0.0" z="39821.0" angle="0" name="SB-112" hullID="1054" sideValue="systemSide" />
-    <create type="neutral" x="51206.0" y="0.0" z="30178.0" angle="0" name="CR-982" hullID="1055" sideValue="systemSide" />
+    <create type="station" x="65670.0" y="0.0" z="71964.0" name="Intaka" hullID="1001" sideValue="sectorSide" />
+    <create type="neutral" x="32054.0" y="0.0" z="39821.0" angle="0" name="SB-112" hullID="1054" sideValue="sectorSide" />
+    <create type="neutral" x="51206.0" y="0.0" z="30178.0" angle="0" name="CR-982" hullID="1055" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Acantha II" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -454,6 +456,7 @@
     <destroy name="Intaka" />
     <destroy name="SB-112" />
     <destroy name="CR-982" />
+    <destroy name="Acantha II" />
     <set_variable name="Acantha System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -516,6 +519,7 @@
     <if_variable name="Acantha System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="3.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Acantha III" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -528,6 +532,7 @@
   </event>
   <event name="Destroy Sector Entities" id_arme="b81565bb-3d3d-4dad-876d-5bb1267ae13d" parent_id_arme="769c1f30-617a-4d4a-89c0-0a60f076a084">
     <if_variable name="Acantha System" comparator="EQUALS" value="3.0" />
+    <destroy name="Acantha III" />
     <set_variable name="Acantha System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -614,14 +619,15 @@
     <if_variable name="Acantha System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="4.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="43438.0" y="0.0" z="55892.0" name="Acantha Protectorate" hullID="1000" sideValue="systemSide" />
-    <create type="station" x="40893.0" y="0.0" z="38750.0" name="Sistera Processors" hullID="1003" sideValue="systemSide" />
-    <create type="station" x="48929.0" y="0.0" z="67544.0" name="King Manufacturing" hullID="1003" sideValue="systemSide" />
-    <create type="neutral" x="64599.0" y="0.0" z="50267.0" angle="0" name="A'ania Denabite" hullID="1051" sideValue="systemSide" />
-    <create type="neutral" x="70358.0" y="0.0" z="39285.0" angle="0" name="Kinth Refinery" hullID="1051" sideValue="systemSide" />
-    <create type="neutral" x="84554.0" y="0.0" z="57767.0" angle="0" name="Le-Ray Refinery" hullID="1051" sideValue="systemSide" />
-    <create type="neutral" x="70492.0" y="0.0" z="63526.0" angle="0" name="Truda Mining" hullID="1050" sideValue="systemSide" />
-    <create type="neutral" x="62992.0" y="0.0" z="26830.0" angle="0" name="Zorazi Mining" hullID="1050" sideValue="systemSide" />
+    <create type="station" x="43438.0" y="0.0" z="55892.0" name="Acantha Protectorate" hullID="1000" sideValue="sectorSide" />
+    <create type="station" x="40893.0" y="0.0" z="38750.0" name="Sistera Processors" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="48929.0" y="0.0" z="67544.0" name="King Manufacturing" hullID="1003" sideValue="sectorSide" />
+    <create type="neutral" x="64599.0" y="0.0" z="50267.0" angle="0" name="A'ania Denabite" hullID="1051" sideValue="sectorSide" />
+    <create type="neutral" x="70358.0" y="0.0" z="39285.0" angle="0" name="Kinth Refinery" hullID="1051" sideValue="sectorSide" />
+    <create type="neutral" x="84554.0" y="0.0" z="57767.0" angle="0" name="Le-Ray Refinery" hullID="1051" sideValue="sectorSide" />
+    <create type="neutral" x="70492.0" y="0.0" z="63526.0" angle="0" name="Truda Mining" hullID="1050" sideValue="sectorSide" />
+    <create type="neutral" x="62992.0" y="0.0" z="26830.0" angle="0" name="Zorazi Mining" hullID="1050" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Acantha IV" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -642,6 +648,7 @@
     <destroy name="Le-Ray Refinery" />
     <destroy name="Truda Mining" />
     <destroy name="Zorazi Mining" />
+    <destroy name="Acantha IV" />
     <set_variable name="Acantha System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -944,9 +951,10 @@
     <if_variable name="Sector" comparator="EQUALS" value="5.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
     <create type="genericMesh" x="50000.0" y="0.0" z="49732.0" name="Ashia Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="station" x="29108.0" y="0.0" z="24151.0" name="Ni'yata" hullID="1001" sideValue="systemSide" />
-    <create type="station" x="34063.0" y="0.0" z="81607.0" name="Utimni" hullID="1001" sideValue="systemSide" />
-    <create type="station" x="85759.0" y="0.0" z="46517.0" name="Ozkal" hullID="1001" sideValue="systemSide" />
+    <create type="station" x="29108.0" y="0.0" z="24151.0" name="Ni'yata" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="34063.0" y="0.0" z="81607.0" name="Utimni" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="85759.0" y="0.0" z="46517.0" name="Ozkal" hullID="1001" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Acantha V" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -967,6 +975,7 @@
     <destroy name="Ni'yata" />
     <destroy name="Utimni" />
     <destroy name="Ozkal" />
+    <destroy name="Acantha V" />
     <set_variable name="Acantha System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -1074,8 +1083,9 @@
     <if_variable name="Acantha System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="6.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="36072.0" y="0.0" z="36875.0" name="Ladna Labs" hullID="1004" sideValue="systemSide" />
-    <create type="station" x="63795.0" y="0.0" z="57767.0" name="Nessin" hullID="1001" sideValue="systemSide" />
+    <create type="station" x="36072.0" y="0.0" z="36875.0" name="Ladna Labs" hullID="1004" sideValue="sectorSide" />
+    <create type="station" x="63795.0" y="0.0" z="57767.0" name="Nessin" hullID="1001" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Acantha VI" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -1090,6 +1100,7 @@
     <if_variable name="Acantha System" comparator="EQUALS" value="3.0" />
     <destroy name="Ladna Labs" />
     <destroy name="Nessin" />
+    <destroy name="Acantha VI" />
     <set_variable name="Acantha System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -1153,8 +1164,9 @@
     <if_variable name="Acantha System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="7.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
-    <create type="station" x="45581.0" y="0.0" z="67678.0" name="Betos Bazaar" hullID="1001" sideValue="systemSide" />
-    <create type="station" x="55893.0" y="0.0" z="31919.0" name="Onzi Oasis" hullID="1001" sideValue="systemSide" />
+    <create type="station" x="45581.0" y="0.0" z="67678.0" name="Betos Bazaar" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="55893.0" y="0.0" z="31919.0" name="Onzi Oasis" hullID="1001" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Acantha VII" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -1169,6 +1181,7 @@
     <if_variable name="Acantha System" comparator="EQUALS" value="3.0" />
     <destroy name="Betos Bazaar" />
     <destroy name="Onzi Oasis" />
+    <destroy name="Acantha VII" />
     <set_variable name="Acantha System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -1255,8 +1268,9 @@
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
     <create type="genericMesh" x="50000.0" y="0.0" z="62187.0" name="Olvido" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" />
     <create type="blackHole" x="50000.0" y="0.0" z="62187.0" name="Olvido" />
-    <create type="station" x="77456.0" y="0.0" z="23214.0" name="Quee" hullID="1003" sideValue="systemSide" />
-    <create type="station" x="43974.0" y="0.0" z="22946.0" name="Gi'Yanu Mall" hullID="1001" sideValue="systemSide" />
+    <create type="station" x="77456.0" y="0.0" z="23214.0" name="Quee" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="43974.0" y="0.0" z="22946.0" name="Gi'Yanu Mall" hullID="1001" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Acantha VIII" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -1273,6 +1287,7 @@
     <destroy name="Olvido" />
     <destroy name="Quee" />
     <destroy name="Gi'Yanu Mall" />
+    <destroy name="Acantha VIII" />
     <set_variable name="Acantha System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
@@ -1519,8 +1534,9 @@
     <if_variable name="Sector" comparator="EQUALS" value="9.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
     <create type="genericMesh" x="34733.0" y="0.0" z="65267.0" name="Krellis Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
-    <create type="station" x="79599.0" y="0.0" z="53348.0" name="Nuzeli" hullID="1001" sideValue="systemSide" />
-    <create type="station" x="54018.0" y="0.0" z="28571.0" name="Yimsu" hullID="1001" sideValue="systemSide" />
+    <create type="station" x="79599.0" y="0.0" z="53348.0" name="Nuzeli" hullID="1001" sideValue="sectorSide" />
+    <create type="station" x="54018.0" y="0.0" z="28571.0" name="Yimsu" hullID="1001" sideValue="sectorSide" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Acantha IX" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -1540,6 +1556,7 @@
     <destroy name="Krellis Gate" />
     <destroy name="Nuzeli" />
     <destroy name="Yimsu" />
+    <destroy name="Acantha IX" />
     <set_variable name="Acantha System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>

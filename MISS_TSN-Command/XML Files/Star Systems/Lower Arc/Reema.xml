@@ -941,7 +941,7 @@
     <if_variable name="Ashia Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Reema System" value="3.0" integer="yes" />
-    <set_variable name="System" value="1.0" />
+    <set_variable name="System" value="0.0" />
     <destroy_near type="all" radius="100000" centerX="50000" centerY="0" centerZ="50000" />
     <set_variable name="Reema to Ashia" value="1.0" />
     <set_variable name="Ashia System" value="1.0" />
@@ -3310,11 +3310,11 @@
     <if_variable name="Eulis Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Reema System" value="3.0" integer="yes" />
-    <set_variable name="System" value="1.0" />
+    <set_variable name="System" value="0.0" />
     <destroy_near type="all" radius="100000" centerX="50000" centerY="0" centerZ="50000" />
     <set_variable name="Reema to Eulis" value="1.0" />
     <set_variable name="Eulis System" value="1.0" />
-    <set_variable name="Sector" value="12" />
+    <set_variable name="Sector" value="9.0" />
     <set_timer name="Transition" seconds="2" />
     <set_variable name="Gate System" value="0.0" />
     <set_variable name="ExitorRetreat" value="1.0" />

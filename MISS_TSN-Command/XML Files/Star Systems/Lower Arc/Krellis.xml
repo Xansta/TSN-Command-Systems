@@ -72,7 +72,6 @@
     <set_variable name="Corner A5 Transition Enabled" value="0.0" />
     <set_variable name="Corner E1 Transition Enabled" value="0.0" />
     <set_variable name="Corner E5 Transition Enabled" value="1.0" />
-    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis I" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create count="100" type="nebulas" startX="77882.0" startY="-200.0" startZ="9925.0" endX="60484.0" endY="-300.0" endZ="39368.0" randomRange="10000" />
     <create count="100" type="nebulas" startX="54238.0" startY="-400.0" startZ="76245.0" endX="60484.0" endY="-300.0" endZ="39368.0" randomRange="10000" />
     <create count="100" type="nebulas" startX="9926.0" startY="300.0" startZ="77881.0" endX="12454.0" endY="400.0" endZ="21524.0" randomRange="10000" />
@@ -286,7 +285,7 @@
     <if_variable name="Acantha Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Krellis System" value="3.0" integer="yes" />
-    <set_variable name="System" value="1.0" />
+    <set_variable name="System" value="0.0" />
     <destroy_near type="all" radius="100000" centerX="50000" centerY="0" centerZ="50000" />
     <set_variable name="Krellis to Acantha" value="1.0" />
     <set_variable name="Acantha System" value="1.0" />
@@ -303,6 +302,7 @@
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis I" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create type="genericMesh" x="52997.0" y="0.0" z="69590.0" name="Acantha Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
     <create type="station" x="33125.0" y="0.0" z="78392.0" name="Eshi Directorate" hullID="1005" sideValue="sectorSide" />
     <create type="station" x="15715.0" y="0.0" z="46919.0" name="Hagma Base" hullID="1005" sideValue="sectorSide" />
@@ -323,9 +323,9 @@
   </event>
   <event name="Destroy Sector Entities" id_arme="847894ee-2de5-4481-b0ce-91f37357a3be" parent_id_arme="94cae3cf-1a20-4ba3-8196-3294d979bf3f">
     <if_variable name="Krellis System" comparator="EQUALS" value="3.0" />
-    <destroy name="Krellis I" />
     <set_variable name="Krellis System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
+    <destroy name="Krellis I" />
     <destroy name="Acantha Gate" />
     <destroy name="Eshi Directorate" />
     <destroy name="Hagma Base" />
@@ -373,7 +373,6 @@
     <set_variable name="Corner A5 Transition Enabled" value="0.0" />
     <set_variable name="Corner E1 Transition Enabled" value="1.0" />
     <set_variable name="Corner E5 Transition Enabled" value="1.0" />
-    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis II" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create count="200" type="nebulas" startX="86697.0" startY="300.0" startZ="84687.0" endX="89375.0" endY="400.0" endZ="20401.0" randomRange="10000" />
     <create count="200" type="nebulas" startX="87500.0" startY="300.0" startZ="61517.0" endX="64733.0" endY="400.0" endZ="98482.0" randomRange="10000" />
     <create count="100" type="asteroids" startX="89108.0" startY="-300.0" startZ="31383.0" endX="81340.0" endY="-300.0" endZ="43973.0" randomRange="10000" />
@@ -444,6 +443,7 @@
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis II" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create type="station" x="39956.0" y="0.0" z="60848.0" name="Arshira Base" hullID="1005" sideValue="sectorSide" />
     <create type="station" x="71027.0" y="0.0" z="31250.0" name="N'Taira Base" hullID="1005" sideValue="sectorSide" />
     <create type="station" x="77322.0" y="0.0" z="35133.0" name="Onshi Mining" hullID="1005" sideValue="sectorSide" />
@@ -500,7 +500,6 @@
     <set_variable name="Corner A5 Transition Enabled" value="0.0" />
     <set_variable name="Corner E1 Transition Enabled" value="1.0" />
     <set_variable name="Corner E5 Transition Enabled" value="0.0" />
-    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis III" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create count="200" type="asteroids" startX="52277.0" startY="200.0" startZ="47187.0" endX="65000.0" endY="200.0" endZ="29107.0" randomRange="20000" />
     <create count="200" type="asteroids" startX="58974.0" startY="-200.0" startZ="24687.0" endX="44509.0" endY="-200.0" endZ="64464.0" randomRange="20000" />
     <create count="100" type="nebulas" nebType="2" startX="34465.0" startY="-200.0" startZ="22946.0" endX="27634.0" endY="200.0" endZ="69285.0" randomRange="10000" />
@@ -549,6 +548,7 @@
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis III" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create type="station" x="34465.0" y="0.0" z="44910.0" name="Koth Ore Processor" hullID="1005" sideValue="sectorSide" />
     <create type="station" x="48929.0" y="0.0" z="29107.0" name="P'Gel Metals" hullID="1005" sideValue="sectorSide" />
     <create type="station" x="35670.0" y="0.0" z="32321.0" name="Uxa Base" hullID="1005" sideValue="sectorSide" />
@@ -584,7 +584,6 @@
     <set_variable name="Corner A5 Transition Enabled" value="1.0" />
     <set_variable name="Corner E1 Transition Enabled" value="0.0" />
     <set_variable name="Corner E5 Transition Enabled" value="1.0" />
-    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis IV" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create count="100" type="asteroids" startX="74509.0" startY="0.0" startZ="32455.0" endX="32456.0" endY="0.0" endZ="65803.0" randomRange="10000" />
     <create count="100" type="nebulas" startX="57367.0" startY="0.0" startZ="29642.0" endX="41965.0" endY="0.0" endZ="67946.0" randomRange="30000" />
   </event>
@@ -652,6 +651,7 @@
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis IV" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create type="station" x="54018.0" y="0.0" z="51473.0" name="Turkeshi Mines" hullID="1005" sideValue="sectorSide" />
   </event>
   <event name="Settings" id_arme="6fb89a0f-141c-4adf-8c9a-4bbec8071282" parent_id_arme="cfde8ffc-b137-4ab5-8613-903a87490bd0">
@@ -683,7 +683,6 @@
     <set_variable name="Corner A5 Transition Enabled" value="1.0" />
     <set_variable name="Corner E1 Transition Enabled" value="1.0" />
     <set_variable name="Corner E5 Transition Enabled" value="1.0" />
-    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis V" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create count="150" type="asteroids" startX="50000.0" startY="0.0" startZ="50000.0" radius="30000" randomRange="5000" />
     <create count="50" type="nebulas" startAngle="0" endAngle="120" startX="66742.0" startY="0.0" startZ="39687.0" radius="25000" randomRange="4000" />
     <create count="30" type="nebulas" nebType="2" startAngle="60" endAngle="180" startX="50536.0" startY="0.0" startZ="33258.0" radius="25000" randomRange="4000" />
@@ -792,6 +791,7 @@
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis V" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create type="blackHole" x="50000.0" y="0.0" z="50000.0" name="O'o-Fada" />
   </event>
   <event name="Settings" id_arme="d6ae502d-8e85-47f7-ac11-f83475278ef3" parent_id_arme="33a17718-a44b-4a95-b2e8-8e8393e44137">
@@ -823,7 +823,6 @@
     <set_variable name="Corner A5 Transition Enabled" value="0.0" />
     <set_variable name="Corner E1 Transition Enabled" value="1.0" />
     <set_variable name="Corner E5 Transition Enabled" value="0.0" />
-    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis VI" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create count="100" type="nebulas" startX="51742.0" startY="0.0" startZ="35133.0" endX="96608.0" endY="0.0" endZ="59107.0" randomRange="8000" />
     <create count="100" type="asteroids" startX="71831.0" startY="0.0" startZ="22276.0" endX="27500.0" endY="0.0" endZ="68750.0" randomRange="10000" />
   </event>
@@ -888,6 +887,7 @@
     <if_variable name="Krellis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Sector" comparator="EQUALS" value="6.0" />
     <if_variable name="Sector Entities" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis VI" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
@@ -920,7 +920,6 @@
     <set_variable name="Corner A5 Transition Enabled" value="1.0" />
     <set_variable name="Corner E1 Transition Enabled" value="0.0" />
     <set_variable name="Corner E5 Transition Enabled" value="0.0" />
-    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis VII" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create count="100" type="nebulas" nebType="3" startX="56965.0" startY="0.0" startZ="49196.0" endX="44777.0" endY="0.0" endZ="39687.0" randomRange="10000" />
     <create count="100" type="nebulas" nebType="2" startX="48795.0" startY="0.0" startZ="31919.0" endX="53750.0" endY="0.0" endZ="58973.0" randomRange="10000" />
     <create count="100" type="nebulas" startX="61250.0" startY="0.0" startZ="38214.0" endX="44242.0" endY="0.0" endZ="52544.0" randomRange="10000" />
@@ -970,6 +969,7 @@
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis VII" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create type="station" x="64867.0" y="500.0" z="42633.0" name="Osca Base" hullID="1005" sideValue="sectorSide" />
     <create type="station" x="53884.0" y="-500.0" z="58303.0" name="Zawpan Base" hullID="1005" sideValue="sectorSide" />
     <create type="station" x="29777.0" y="0.0" z="32857.0" name="Ungswor Base" hullID="1005" sideValue="sectorSide" />
@@ -1007,7 +1007,6 @@
     <set_variable name="Corner A5 Transition Enabled" value="1.0" />
     <set_variable name="Corner E1 Transition Enabled" value="0.0" />
     <set_variable name="Corner E5 Transition Enabled" value="0.0" />
-    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis VIII" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create count="50" type="asteroids" startX="93795.0" startY="300.0" startZ="58169.0" endX="33527.0" endY="0.0" endZ="25089.0" randomRange="7000" />
     <create count="50" type="asteroids" startX="5402.0" startY="-300.0" startZ="29642.0" endX="67679.0" endY="0.0" endZ="36205.0" randomRange="7000" />
     <create count="100" type="nebulas" startX="59777.0" startY="0.0" startZ="13571.0" endX="9956.0" endY="0.0" endZ="46517.0" randomRange="8000" />
@@ -1241,7 +1240,7 @@
     <if_variable name="Erowis Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Krellis System" value="3.0" integer="yes" />
-    <set_variable name="System" value="1.0" />
+    <set_variable name="System" value="0.0" />
     <destroy_near type="all" radius="100000" centerX="50000" centerY="0" centerZ="50000" />
     <set_variable name="Krellis to Erowis" value="1.0" />
     <set_variable name="Erowis System" value="1.0" />
@@ -1258,6 +1257,7 @@
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis VIII" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create type="genericMesh" x="42634.0" y="0.0" z="58571.0" name="Erowis Gate" meshFileName="dat\TSN\USFP\TSNGate.dxs" textureFileName="dat\TSN\USFP\TSNGate.png" colorRed="1.0" colorGreen="0.5" colorBlue="0.0" />
     <create type="station" x="71161.0" y="0.0" z="55892.0" name="On-Ansi Base" hullID="1005" sideValue="sectorSide" />
   </event>
@@ -1318,7 +1318,6 @@
     <set_variable name="Corner A5 Transition Enabled" value="0.0" />
     <set_variable name="Corner E1 Transition Enabled" value="0.0" />
     <set_variable name="Corner E5 Transition Enabled" value="0.0" />
-    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis IX" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create count="50" type="asteroids" startX="98483.0" startY="-300.0" startZ="33258.0" endX="35536.0" endY="0.0" endZ="53080.0" randomRange="7000" />
     <create count="100" type="nebulas" startX="39688.0" startY="0.0" startZ="65535.0" endX="94197.0" endY="0.0" endZ="46651.0" randomRange="8000" />
     <create count="100" type="asteroids" startX="58170.0" startY="-200.0" startZ="26160.0" endX="31384.0" endY="-200.0" endZ="35669.0" randomRange="5000" />
@@ -1366,6 +1365,7 @@
     <set_variable name="ExitorRetreat" value="0.0" />
     <set_variable name="Sector Entities" value="2.0" />
     <set_variable name="MissionCode" value="1.0" />
+    <create type="genericMesh" x="100000.0" y="0.0" z="0.0" name="Krellis IX" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="1.0" colorBlue="1.0" />
     <create type="station" x="36875.0" y="0.0" z="27098.0" name="Kral-Ta Minerals" hullID="1005" sideValue="sectorSide" />
     <create type="station" x="33527.0" y="0.0" z="49062.0" name="Yi-Pular'Me Base" hullID="1005" sideValue="sectorSide" />
     <create type="station" x="66072.0" y="0.0" z="45848.0" name="Ootath Base" hullID="1005" sideValue="sectorSide" />

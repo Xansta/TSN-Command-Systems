@@ -2,7 +2,7 @@
   <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
     <!---->
   </start>
-  <folder_arme name="Elements" id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" expanded_arme="" />
+  <folder_arme name="Elements" id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <folder_arme name="Random Elements" id_arme="e5a3ec26-6d23-4bb8-9698-be3f70d38947" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <event name="Random Coordinates" id_arme="7c7265dd-f0de-4d29-9f42-9f23d1e09a4e" parent_id_arme="e5a3ec26-6d23-4bb8-9698-be3f70d38947">
     <if_variable name="Random Coordinates" comparator="EQUALS" value="1.0" />
@@ -7612,7 +7612,7 @@
     <set_ship_text name="--" newname="Z|firstnumber||secondnumber|" />
     <set_variable name="Name Assign" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" expanded_arme="" />
+  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <event name="All Inactive" id_arme="970521f0-180e-45e2-8cf8-693a4c3b200b" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1">
     <if_variable name="Sandbox Activation" comparator="EQUALS" value="0.0" />
     <if_variable name="shipCount" comparator="EQUALS" value="0.0" />
@@ -7621,7 +7621,7 @@
     <set_variable name="Sector Locked" value="1.0" integer="yes" />
     <set_variable name="Sandbox Activation" value="100.0" integer="yes" />
   </event>
-  <folder_arme name="Comms Controls" id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" expanded_arme="" />
+  <folder_arme name="Comms Controls" id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" />
   <event name="Create Menu" id_arme="c54e4e46-9912-462e-93b2-93a07284d4b4" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7">
     <if_variable name="CommsControls" comparator="EQUALS" value="1.0" />
     <set_comms_button text="Fleet Status" sideValue="playerSide" />
@@ -7637,6 +7637,7 @@
   </event>
   <event name="Cycle Menu" id_arme="8095e4f4-f253-4c35-8bf1-22e59f437e7b" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7">
     <if_variable name="CycleCommsMenu" comparator="EQUALS" value="1.0" />
+    <set_variable name="CycleModulesMenu" value="1.0" integer="yes" />
     <!---->
     <clear_comms_button text="Fleet Status" sideValue="playerSide" />
     <clear_comms_button text="Channel 1 Menu" sideValue="playerSide" />
@@ -7667,7 +7668,11 @@
     <clear_comms_button text="Resupply from Goblin" sideValue="playerSide" />
     <clear_comms_button text="Rv Point" sideValue="playerSide" />
     <!---->
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
+    <clear_comms_button text="Fleet Menu" sideValue="playerSide" />
+    <clear_comms_button text="Clear Status" sideValue="playerSide" />
+    <clear_comms_button text="Fuel Status" sideValue="playerSide" />
+    <clear_comms_button text="Ordnance Status" sideValue="playerSide" />
+    <clear_comms_button text="Cargo Status" sideValue="playerSide" />
     <!---->
     <set_variable name="ShipSelect" value="0.0" integer="yes" />
     <set_variable name="CommsControls" value="1.0" integer="yes" />
@@ -7793,7 +7798,6 @@
     <set_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <set_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <set_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <set_comms_button text="Specialist Operations" sideValue="playerSide" />
     <set_variable name="CommsControls" value="4.0" integer="yes" />
   </event>
   <event name="Ship1 Shuttle Menu" id_arme="d090ac25-6e5a-4a94-a7e8-ee6e4977029f" parent_id_arme="e577a5ef-6e32-45fe-a9ac-e30be97d6f7f">
@@ -7801,19 +7805,9 @@
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Shuttle Operations" />
     <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
     <!---->
     <set_comms_button text="Channel 1 Menu" sideValue="playerSide" />
     <!---->
@@ -7833,53 +7827,15 @@
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Resupply Operations" />
     <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
     <!---->
     <set_comms_button text="Channel 1 Menu" sideValue="playerSide" />
     <!---->
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_comms_button text="Supply Update" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="1.0" integer="yes" />
-    <set_variable name="CommsControls" value="5.0" integer="yes" />
-  </event>
-  <event name="Ship1 Specialist Menu" id_arme="671ddf2c-b47a-4b58-9641-0659be67aa3f" parent_id_arme="e577a5ef-6e32-45fe-a9ac-e30be97d6f7f">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
-    <if_comms_button text="Specialist Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
-    <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
-    <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
-    <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
-    <!---->
-    <set_comms_button text="Channel 1 Menu" sideValue="playerSide" />
-    <set_comms_button text="Cluster Deploy" />
-    <set_comms_button text="Activate Cluster" />
-    <set_comms_button text="Activate Decoy" />
-    <!---->
-    <set_comms_button text="Back" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="1.0" integer="yes" />
     <set_variable name="CommsControls" value="5.0" integer="yes" />
   </event>
   <event name="Back to Ship1 Menu" id_arme="9166327b-06e1-4d72-b8f4-a18334b43e9f" parent_id_arme="e577a5ef-6e32-45fe-a9ac-e30be97d6f7f">
@@ -7902,10 +7858,6 @@
     <clear_comms_button text="Resupply from Goblin" sideValue="playerSide" />
     <clear_comms_button text="Rv Point" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="0.0" integer="yes" />
-    <!---->
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <clear_comms_button text="Activate Decoy" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
   </event>
@@ -8155,110 +8107,6 @@
     <set_variable name="GoblintoShip1Resupply" value="3.0" integer="yes" />
     <set_variable name="CycleCommsMenu" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Specialist" id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32" parent_id_arme="e577a5ef-6e32-45fe-a9ac-e30be97d6f7f" />
-  <event name="Cluster ready to deploy" id_arme="aa16ea4f-e2f6-4c6b-b88b-7e9eb8fc5a5c" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="Ship1ClusterMine" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <set_variable name="CL.10MinePositionX" value="0.0" />
-    <set_variable name="CL.10MinePositionZ" value="0.0" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster ready to activate" id_arme="05e1262d-cf9b-4af4-b84b-3b9585a68927" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="Ship1ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster Used" id_arme="02657cdb-ec12-42fd-8365-6783e1ccebf5" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="Ship1ClusterMine" comparator="EQUALS" value="5.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <folder_arme name="Cluster Mines" id_arme="36a8c047-3aaa-43a0-bcf2-316de2e51679" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32" />
-  <event name="Spawn Mine Point" id_arme="f0e2d1a6-0324-43be-98d7-18ae460d3417" parent_id_arme="36a8c047-3aaa-43a0-bcf2-316de2e51679">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_comms_button text="Cluster Deploy" />
-    <create type="genericMesh" x="10.0" y="20.0" z="10.0" angle="0" name="CL.10" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="Ship1ClusterMine" value="2.0" integer="yes" />
-  </event>
-  <event name="Set Mine Point" id_arme="4ba7ce89-2526-4950-81b8-8101964bbe39" parent_id_arme="36a8c047-3aaa-43a0-bcf2-316de2e51679">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship1ClusterMine" comparator="EQUALS" value="2.0" />
-    <set_relative_position name2="CL.10" distance="100" angle="180" player_slot1="0" />
-    <set_object_property property="angleDelta" value="0.6" name="CL.10" />
-    <set_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship1ClusterMine" value="3.0" integer="yes" />
-  </event>
-  <event name="Gather Mine data" id_arme="c069578d-3af7-4609-af88-0151b8497a16" parent_id_arme="36a8c047-3aaa-43a0-bcf2-316de2e51679">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship1ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_comms_button text="Activate Cluster" />
-    <get_object_property property="positionX" name="CL.10" variable="CL.10MinePositionX" />
-    <get_object_property property="positionZ" name="CL.10" variable="CL.10MinePositionZ" />
-    <set_variable name="Ship1ClusterMine" value="4.0" integer="yes" />
-  </event>
-  <event name="Spawn Mine Cluster" id_arme="60704b1c-26b5-4afd-8dd3-e991ce2af185" parent_id_arme="36a8c047-3aaa-43a0-bcf2-316de2e51679">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship1ClusterMine" comparator="EQUALS" value="4.0" />
-    <create count="1" type="mines" startX="CL.10MinePositionX" startY="0.0" startZ="CL.10MinePositionZ" radius="1" />
-    <create count="8" type="mines" startX="CL.10MinePositionX" startY="0.0" startZ="CL.10MinePositionZ" radius="500" />
-    <destroy name="CL.10" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship1ClusterMine" value="5.0" integer="yes" />
-  </event>
-  <event name="Decoy Ready to Deploy" id_arme="c08a5a96-5e0c-4b83-8d94-413122cb8511" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="Ship1Decoy" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-  </event>
-  <event name="Decoy Deployed" id_arme="310fc8ca-a3a6-4b16-ab35-6377f3b94ac6" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="Ship1Decoy" comparator="EQUALS" value="3.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Activate Decoy" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <folder_arme name="Decoys" id_arme="52426dc1-9472-4939-85ea-2a52bbc4bcfd" parent_id_arme="d5d917c6-e2af-4517-90d5-b31e2b9eeb32" />
-  <event name="Spawn Decoy Point" id_arme="6bf9635e-93d0-4085-98da-e4f53757b23d" parent_id_arme="52426dc1-9472-4939-85ea-2a52bbc4bcfd">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_comms_button text="Activate Decoy" />
-    <create type="neutral" x="10.0" y="20.0" z="10.0" name="D.10" hullID="1054" sideValue="playerSide" />
-    <clear_comms_button text="Activate Decoy" sideValue="playerSide" />
-    <set_variable name="Ship1Decoy" value="2.0" integer="yes" />
-  </event>
-  <event name="Set Decoy Point" id_arme="1ba257c3-52c5-41b6-9034-ce793b8755a7" parent_id_arme="52426dc1-9472-4939-85ea-2a52bbc4bcfd">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship1Decoy" comparator="EQUALS" value="2.0" />
-    <set_relative_position name2="D.10" distance="100" angle="180" player_slot1="0" />
-    <set_ship_text name="D.10" race="TSN" class="Decoy" desc="TSN Decoy" scan_desc="Status: Active" hailtext="&amp;SH&amp;&quot;P)D_AH77" />
-    <set_object_property property="shieldMaxStateBack" value="300" name="D.10" />
-    <set_object_property property="shieldMaxStateFront" value="300" name="D.10" />
-    <set_object_property property="shieldStateBack" value="300" name="D.10" />
-    <set_object_property property="shieldStateFront" value="300" name="D.10" />
-    <set_timer name="Ship1Decoy" seconds="60" />
-    <set_variable name="Ship1Decoy" value="3.0" integer="yes" />
-  </event>
-  <event name="Decoy Burn Out" id_arme="243f3770-7562-40cf-a610-30ede71cfda5" parent_id_arme="52426dc1-9472-4939-85ea-2a52bbc4bcfd">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship1Decoy" comparator="EQUALS" value="3.0" />
-    <if_timer_finished name="Ship1Decoy" />
-    <destroy name="D.10" />
-    <set_variable name="Ship1Decoy" value="1.0" integer="yes" />
-  </event>
   <folder_arme name="Ship 2 Comms Menus" id_arme="7c481e53-eff3-4858-b5d6-8783f676539d" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Ship2 Main Menu" id_arme="2f2852eb-4b42-482b-a9ea-3286a622e4b6" parent_id_arme="7c481e53-eff3-4858-b5d6-8783f676539d">
     <if_variable name="ShipSelect" comparator="EQUALS" value="2" />
@@ -8278,22 +8126,12 @@
     <set_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <set_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <set_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <set_comms_button text="Specialist Operations" sideValue="playerSide" />
     <set_variable name="CommsControls" value="4.0" integer="yes" />
   </event>
   <event name="Ship2 Shuttle Menu" id_arme="bb779e24-80ac-4426-bcc2-c264c523c695" parent_id_arme="7c481e53-eff3-4858-b5d6-8783f676539d">
     <if_variable name="ShipSelect" comparator="EQUALS" value="2" />
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Shuttle Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
     <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
@@ -8317,15 +8155,6 @@
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Resupply Operations" />
     <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
@@ -8335,33 +8164,6 @@
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_comms_button text="Supply Update" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="1.0" integer="yes" />
-    <set_variable name="CommsControls" value="5.0" integer="yes" />
-  </event>
-  <event name="Ship2 Specialist Menu" id_arme="f729551b-e33a-4957-9834-3a138ec71a34" parent_id_arme="7c481e53-eff3-4858-b5d6-8783f676539d">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="2.0" />
-    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
-    <if_comms_button text="Specialist Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
-    <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
-    <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
-    <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
-    <!---->
-    <set_comms_button text="Channel 2 Menu" sideValue="playerSide" />
-    <set_comms_button text="Cluster Deploy" />
-    <set_comms_button text="Activate Cluster" />
-    <!---->
-    <set_comms_button text="Back" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="1.0" integer="yes" />
     <set_variable name="CommsControls" value="5.0" integer="yes" />
   </event>
   <event name="Back to Ship2 Menu" id_arme="46f42a84-230a-4e90-bf83-9e0f4d2e0882" parent_id_arme="7c481e53-eff3-4858-b5d6-8783f676539d">
@@ -8384,9 +8186,6 @@
     <clear_comms_button text="Resupply from Goblin" sideValue="playerSide" />
     <clear_comms_button text="Rv Point" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="0.0" integer="yes" />
-    <!---->
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
   </event>
@@ -8636,68 +8435,6 @@
     <set_variable name="GoblintoShip2Resupply" value="3.0" integer="yes" />
     <set_variable name="CycleCommsMenu" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Specialist" id_arme="f945cc3d-adc5-40bc-b30c-d4a28ac18026" parent_id_arme="7c481e53-eff3-4858-b5d6-8783f676539d" />
-  <event name="Cluster ready to deploy" id_arme="1ba84e24-36b1-4286-887d-260daadd44ce" parent_id_arme="f945cc3d-adc5-40bc-b30c-d4a28ac18026">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="2" />
-    <if_variable name="Ship2ClusterMine" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <set_variable name="CL.20MinePositionX" value="0.0" />
-    <set_variable name="CL.20MinePositionZ" value="0.0" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster ready to activate" id_arme="31e25715-c3b0-42dd-873f-c9f9922229cb" parent_id_arme="f945cc3d-adc5-40bc-b30c-d4a28ac18026">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="2" />
-    <if_variable name="Ship2ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster Used" id_arme="18eeb40e-843c-41c6-9c47-1de785f3c9eb" parent_id_arme="f945cc3d-adc5-40bc-b30c-d4a28ac18026">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="2" />
-    <if_variable name="Ship2ClusterMine" comparator="EQUALS" value="5.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <folder_arme name="Cluster Mines" id_arme="c4a075c8-0216-4cc1-bc88-f971d1a7f6ce" parent_id_arme="f945cc3d-adc5-40bc-b30c-d4a28ac18026" />
-  <event name="Spawn Mine Point" id_arme="ddbbe46b-c9e7-4256-ae1a-7e816801ed88" parent_id_arme="c4a075c8-0216-4cc1-bc88-f971d1a7f6ce">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="2" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_comms_button text="Cluster Deploy" />
-    <create type="genericMesh" x="10.0" y="20.0" z="10.0" angle="0" name="CL.20" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="Ship2ClusterMine" value="2.0" integer="yes" />
-  </event>
-  <event name="Set Mine Point" id_arme="44ab5080-6821-4f06-aedc-b54ad68472d5" parent_id_arme="c4a075c8-0216-4cc1-bc88-f971d1a7f6ce">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="2" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship2ClusterMine" comparator="EQUALS" value="2.0" />
-    <set_relative_position name2="CL.20" distance="100" angle="180" player_slot1="1" />
-    <set_object_property property="angleDelta" value="0.6" name="CL.20" />
-    <set_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship2ClusterMine" value="3.0" integer="yes" />
-  </event>
-  <event name="Gather Mine data" id_arme="c81fbe9f-d9dd-4c8c-bdb3-10e53bb87808" parent_id_arme="c4a075c8-0216-4cc1-bc88-f971d1a7f6ce">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="2" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship2ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_comms_button text="Activate Cluster" />
-    <get_object_property property="positionX" name="CL.20" variable="CL.20MinePositionX" />
-    <get_object_property property="positionZ" name="CL.20" variable="CL.20MinePositionZ" />
-    <set_variable name="Ship2ClusterMine" value="4.0" integer="yes" />
-  </event>
-  <event name="Spawn Mine Cluster" id_arme="06cf07e9-41da-495e-a3e1-44b34e2ed755" parent_id_arme="c4a075c8-0216-4cc1-bc88-f971d1a7f6ce">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="2" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship2ClusterMine" comparator="EQUALS" value="4.0" />
-    <create count="1" type="mines" startX="CL.20MinePositionX" startY="0.0" startZ="CL.20MinePositionZ" radius="1" />
-    <create count="8" type="mines" startX="CL.20MinePositionX" startY="0.0" startZ="CL.20MinePositionZ" radius="500" />
-    <destroy name="CL.20" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship2ClusterMine" value="5.0" integer="yes" />
-  </event>
   <folder_arme name="Ship 3 Comms Menus" id_arme="6384e833-6446-4d3a-91a7-840be5ed751d" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Ship3 Main Menu" id_arme="447d1f95-59b9-4060-a448-ab2f9ddd7bc5" parent_id_arme="6384e833-6446-4d3a-91a7-840be5ed751d">
     <if_variable name="ShipSelect" comparator="EQUALS" value="3" />
@@ -8717,22 +8454,12 @@
     <set_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <set_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <set_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <set_comms_button text="Specialist Operations" sideValue="playerSide" />
     <set_variable name="CommsControls" value="4.0" integer="yes" />
   </event>
   <event name="Ship3 Shuttle Menu" id_arme="87397c63-52c0-419c-bfaf-e5aba6009707" parent_id_arme="6384e833-6446-4d3a-91a7-840be5ed751d">
     <if_variable name="ShipSelect" comparator="EQUALS" value="3" />
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Shuttle Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
     <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
@@ -8756,15 +8483,6 @@
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Resupply Operations" />
     <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
@@ -8774,33 +8492,6 @@
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_comms_button text="Supply Update" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="1.0" integer="yes" />
-    <set_variable name="CommsControls" value="5.0" integer="yes" />
-  </event>
-  <event name="Ship3 Specialist Menu" id_arme="3fd67b47-8016-4854-bb58-a59b0da9da41" parent_id_arme="6384e833-6446-4d3a-91a7-840be5ed751d">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="3.0" />
-    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
-    <if_comms_button text="Specialist Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
-    <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
-    <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
-    <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
-    <!---->
-    <set_comms_button text="Channel 3 Menu" sideValue="playerSide" />
-    <set_comms_button text="Cluster Deploy" />
-    <set_comms_button text="Activate Cluster" />
-    <!---->
-    <set_comms_button text="Back" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="1.0" integer="yes" />
     <set_variable name="CommsControls" value="5.0" integer="yes" />
   </event>
   <event name="Back to Ship3 Menu" id_arme="66d8b2ec-1603-4a40-a6da-01ba77576231" parent_id_arme="6384e833-6446-4d3a-91a7-840be5ed751d">
@@ -8823,9 +8514,6 @@
     <clear_comms_button text="Resupply from Goblin" sideValue="playerSide" />
     <clear_comms_button text="Rv Point" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="0.0" integer="yes" />
-    <!---->
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
   </event>
@@ -9075,68 +8763,6 @@
     <set_variable name="GoblintoShip3Resupply" value="3.0" integer="yes" />
     <set_variable name="CycleCommsMenu" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Specialist" id_arme="469448ed-864b-4907-a89c-081495ae1468" parent_id_arme="6384e833-6446-4d3a-91a7-840be5ed751d" />
-  <event name="Cluster ready to deploy" id_arme="cb6fabea-33f3-4753-8c3d-013e63cc8bc9" parent_id_arme="469448ed-864b-4907-a89c-081495ae1468">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="3" />
-    <if_variable name="Ship3ClusterMine" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <set_variable name="CL.30MinePositionX" value="0.0" />
-    <set_variable name="CL.30MinePositionZ" value="0.0" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster ready to activate" id_arme="fd18b917-2a52-45b4-80a9-650f02f58114" parent_id_arme="469448ed-864b-4907-a89c-081495ae1468">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="3" />
-    <if_variable name="Ship3ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster Used" id_arme="05e2544b-a57c-4800-8f75-85945e0a2e2c" parent_id_arme="469448ed-864b-4907-a89c-081495ae1468">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="3" />
-    <if_variable name="Ship3ClusterMine" comparator="EQUALS" value="5.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <folder_arme name="Cluster Mines" id_arme="e742c785-f5d9-4bd1-be04-5197a3a9514f" parent_id_arme="469448ed-864b-4907-a89c-081495ae1468" />
-  <event name="Spawn Mine Point" id_arme="211f6428-1eb7-4831-b4c3-cb7f7b2cfbe6" parent_id_arme="e742c785-f5d9-4bd1-be04-5197a3a9514f">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="3" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_comms_button text="Cluster Deploy" />
-    <create type="genericMesh" x="10.0" y="20.0" z="10.0" angle="0" name="CL.30" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="Ship3ClusterMine" value="2.0" integer="yes" />
-  </event>
-  <event name="Set Mine Point" id_arme="836df528-db8b-4441-bc63-aa3aaf5dc7e7" parent_id_arme="e742c785-f5d9-4bd1-be04-5197a3a9514f">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="3" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship3ClusterMine" comparator="EQUALS" value="2.0" />
-    <set_relative_position name2="CL.30" distance="100" angle="180" player_slot1="2" />
-    <set_object_property property="angleDelta" value="0.6" name="CL.30" />
-    <set_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship3ClusterMine" value="3.0" integer="yes" />
-  </event>
-  <event name="Gather Mine data" id_arme="dcc93ad0-d5f7-4993-833c-fe86b05688f8" parent_id_arme="e742c785-f5d9-4bd1-be04-5197a3a9514f">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="3" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship3ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_comms_button text="Activate Cluster" />
-    <get_object_property property="positionX" name="CL.30" variable="CL.30MinePositionX" />
-    <get_object_property property="positionZ" name="CL.30" variable="CL.30MinePositionZ" />
-    <set_variable name="Ship3ClusterMine" value="4.0" integer="yes" />
-  </event>
-  <event name="Spawn Mine Cluster" id_arme="c3240ab6-98ab-4004-99f4-35348e978503" parent_id_arme="e742c785-f5d9-4bd1-be04-5197a3a9514f">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="3" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship3ClusterMine" comparator="EQUALS" value="4.0" />
-    <create count="1" type="mines" startX="CL.30MinePositionX" startY="0.0" startZ="CL.30MinePositionZ" radius="1" />
-    <create count="8" type="mines" startX="CL.30MinePositionX" startY="0.0" startZ="CL.30MinePositionZ" radius="500" />
-    <destroy name="CL.30" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship3ClusterMine" value="5.0" integer="yes" />
-  </event>
   <folder_arme name="Ship 4 Comms Menus" id_arme="a9a87229-5410-4304-be9a-dff2af79f96f" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Ship4 Main Menu" id_arme="1a016cce-d8bd-42ef-8775-2a0a773a826f" parent_id_arme="a9a87229-5410-4304-be9a-dff2af79f96f">
     <if_variable name="ShipSelect" comparator="EQUALS" value="4" />
@@ -9156,22 +8782,12 @@
     <set_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <set_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <set_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <set_comms_button text="Specialist Operations" sideValue="playerSide" />
     <set_variable name="CommsControls" value="4.0" integer="yes" />
   </event>
   <event name="Ship4 Shuttle Menu" id_arme="ecf71dae-5f01-4612-a2f5-b4265531e3f8" parent_id_arme="a9a87229-5410-4304-be9a-dff2af79f96f">
     <if_variable name="ShipSelect" comparator="EQUALS" value="4" />
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Shuttle Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
     <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
@@ -9195,15 +8811,6 @@
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Resupply Operations" />
     <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
@@ -9213,33 +8820,6 @@
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_comms_button text="Supply Update" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="1.0" integer="yes" />
-    <set_variable name="CommsControls" value="5.0" integer="yes" />
-  </event>
-  <event name="Ship4 Specialist Menu" id_arme="4bd20b6c-7c86-4ee9-9828-ee963c57bc00" parent_id_arme="a9a87229-5410-4304-be9a-dff2af79f96f">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="4.0" />
-    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
-    <if_comms_button text="Specialist Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
-    <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
-    <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
-    <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
-    <!---->
-    <set_comms_button text="Channel 4 Menu" sideValue="playerSide" />
-    <set_comms_button text="Cluster Deploy" />
-    <set_comms_button text="Activate Cluster" />
-    <!---->
-    <set_comms_button text="Back" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="1.0" integer="yes" />
     <set_variable name="CommsControls" value="5.0" integer="yes" />
   </event>
   <event name="Back to Ship4 Menu" id_arme="0b177d59-995b-4c61-8054-8b933c919ce6" parent_id_arme="a9a87229-5410-4304-be9a-dff2af79f96f">
@@ -9262,9 +8842,6 @@
     <clear_comms_button text="Resupply from Goblin" sideValue="playerSide" />
     <clear_comms_button text="Rv Point" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="0.0" integer="yes" />
-    <!---->
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
   </event>
@@ -9514,68 +9091,6 @@
     <set_variable name="GoblintoShip4Resupply" value="3.0" integer="yes" />
     <set_variable name="CycleCommsMenu" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Specialist" id_arme="2bbe2879-07ae-4c50-9ba5-385152f80219" parent_id_arme="a9a87229-5410-4304-be9a-dff2af79f96f" />
-  <event name="Cluster ready to deploy" id_arme="a5728956-e2e6-4e88-8cb4-3fc45dd9eff0" parent_id_arme="2bbe2879-07ae-4c50-9ba5-385152f80219">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="4" />
-    <if_variable name="Ship4ClusterMine" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <set_variable name="CL.40MinePositionX" value="0.0" />
-    <set_variable name="CL.40MinePositionZ" value="0.0" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster ready to activate" id_arme="7c0f77ef-94b3-43d8-b774-bd2c8ab0708e" parent_id_arme="2bbe2879-07ae-4c50-9ba5-385152f80219">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="4" />
-    <if_variable name="Ship4ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster Used" id_arme="61bfbf71-9209-4445-a1ca-c49a5f4c5a3f" parent_id_arme="2bbe2879-07ae-4c50-9ba5-385152f80219">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="4" />
-    <if_variable name="Ship4ClusterMine" comparator="EQUALS" value="5.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <folder_arme name="Cluster Mines" id_arme="95f14a2d-e6e2-4322-b3b9-3dcc9e940cb2" parent_id_arme="2bbe2879-07ae-4c50-9ba5-385152f80219" />
-  <event name="Spawn Mine Point" id_arme="db114de4-15a4-4b91-9d1a-093afc1ddf1f" parent_id_arme="95f14a2d-e6e2-4322-b3b9-3dcc9e940cb2">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="4" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_comms_button text="Cluster Deploy" />
-    <create type="genericMesh" x="10.0" y="20.0" z="10.0" angle="0" name="CL.40" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="Ship4ClusterMine" value="2.0" integer="yes" />
-  </event>
-  <event name="Set Mine Point" id_arme="676648ea-8181-43f2-be9d-52ad5dd51f6c" parent_id_arme="95f14a2d-e6e2-4322-b3b9-3dcc9e940cb2">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="4" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship4ClusterMine" comparator="EQUALS" value="2.0" />
-    <set_relative_position name2="CL.40" distance="100" angle="180" player_slot1="3" />
-    <set_object_property property="angleDelta" value="0.6" name="CL.40" />
-    <set_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship4ClusterMine" value="3.0" integer="yes" />
-  </event>
-  <event name="Gather Mine data" id_arme="6604846d-2026-4281-bbb8-b0cd1be32d72" parent_id_arme="95f14a2d-e6e2-4322-b3b9-3dcc9e940cb2">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="4" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship4ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_comms_button text="Activate Cluster" />
-    <get_object_property property="positionX" name="CL.40" variable="CL.40MinePositionX" />
-    <get_object_property property="positionZ" name="CL.40" variable="CL.40MinePositionZ" />
-    <set_variable name="Ship4ClusterMine" value="4.0" integer="yes" />
-  </event>
-  <event name="Spawn Mine Cluster" id_arme="b960ba98-c6e4-4a78-952d-4c9d6e5f7e3f" parent_id_arme="95f14a2d-e6e2-4322-b3b9-3dcc9e940cb2">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="4" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship4ClusterMine" comparator="EQUALS" value="4.0" />
-    <create count="1" type="mines" startX="CL.40MinePositionX" startY="0.0" startZ="CL.40MinePositionZ" radius="1" />
-    <create count="8" type="mines" startX="CL.40MinePositionX" startY="0.0" startZ="CL.40MinePositionZ" radius="500" />
-    <destroy name="CL.40" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship4ClusterMine" value="5.0" integer="yes" />
-  </event>
   <folder_arme name="Ship 5 Comms Menus" id_arme="73af3094-db95-42a2-88fe-c6c0a27713b7" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Ship5 Main Menu" id_arme="38876dae-5ab8-42a0-80d0-bde2a845d463" parent_id_arme="73af3094-db95-42a2-88fe-c6c0a27713b7">
     <if_variable name="ShipSelect" comparator="EQUALS" value="5" />
@@ -9595,22 +9110,12 @@
     <set_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <set_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <set_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <set_comms_button text="Specialist Operations" sideValue="playerSide" />
     <set_variable name="CommsControls" value="4.0" integer="yes" />
   </event>
   <event name="Ship5 Shuttle Menu" id_arme="41d9e55b-153d-43f1-bd2c-5edfcf35edcf" parent_id_arme="73af3094-db95-42a2-88fe-c6c0a27713b7">
     <if_variable name="ShipSelect" comparator="EQUALS" value="5" />
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Shuttle Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
     <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
@@ -9634,15 +9139,6 @@
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Resupply Operations" />
     <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
@@ -9652,33 +9148,6 @@
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_comms_button text="Supply Update" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="1.0" integer="yes" />
-    <set_variable name="CommsControls" value="5.0" integer="yes" />
-  </event>
-  <event name="Ship5 Specialist Menu" id_arme="c04ef8de-d251-4e9b-89e5-67064b5be31e" parent_id_arme="73af3094-db95-42a2-88fe-c6c0a27713b7">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="5.0" />
-    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
-    <if_comms_button text="Specialist Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
-    <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
-    <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
-    <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
-    <!---->
-    <set_comms_button text="Channel 5 Menu" sideValue="playerSide" />
-    <set_comms_button text="Cluster Deploy" />
-    <set_comms_button text="Activate Cluster" />
-    <!---->
-    <set_comms_button text="Back" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="1.0" integer="yes" />
     <set_variable name="CommsControls" value="5.0" integer="yes" />
   </event>
   <event name="Back to Ship5 Menu" id_arme="72c5fe92-bbed-482c-96b0-ea3a0ae06c73" parent_id_arme="73af3094-db95-42a2-88fe-c6c0a27713b7">
@@ -9701,9 +9170,6 @@
     <clear_comms_button text="Resupply from Goblin" sideValue="playerSide" />
     <clear_comms_button text="Rv Point" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="0.0" integer="yes" />
-    <!---->
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
   </event>
@@ -9953,68 +9419,6 @@
     <set_variable name="GoblintoShip5Resupply" value="3.0" integer="yes" />
     <set_variable name="CycleCommsMenu" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Specialist" id_arme="7366054d-d949-4fab-a1a6-7e4c580967bc" parent_id_arme="73af3094-db95-42a2-88fe-c6c0a27713b7" />
-  <event name="Cluster ready to deploy" id_arme="fd553e80-d4bd-44ef-a3d7-169fb0d84b24" parent_id_arme="7366054d-d949-4fab-a1a6-7e4c580967bc">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="5" />
-    <if_variable name="Ship5ClusterMine" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <set_variable name="CL.50MinePositionX" value="0.0" />
-    <set_variable name="CL.50MinePositionZ" value="0.0" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster ready to activate" id_arme="512f34a5-8742-4b80-95e0-e215f16c98e3" parent_id_arme="7366054d-d949-4fab-a1a6-7e4c580967bc">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="5" />
-    <if_variable name="Ship5ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster Used" id_arme="3edf906a-fa6a-432a-98ce-1f9d584a547a" parent_id_arme="7366054d-d949-4fab-a1a6-7e4c580967bc">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="5" />
-    <if_variable name="Ship5ClusterMine" comparator="EQUALS" value="5.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <folder_arme name="Cluster Mines" id_arme="3326460f-cf65-48f7-9d4d-fc2a1e26b171" parent_id_arme="7366054d-d949-4fab-a1a6-7e4c580967bc" />
-  <event name="Spawn Mine Point" id_arme="882d6b7f-62e2-4bd4-906e-b2e75cc28535" parent_id_arme="3326460f-cf65-48f7-9d4d-fc2a1e26b171">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="5" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_comms_button text="Cluster Deploy" />
-    <create type="genericMesh" x="10.0" y="20.0" z="10.0" angle="0" name="CL.50" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="Ship5ClusterMine" value="2.0" integer="yes" />
-  </event>
-  <event name="Set Mine Point" id_arme="6efa7f47-5544-4144-b17b-4284b6a199e5" parent_id_arme="3326460f-cf65-48f7-9d4d-fc2a1e26b171">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="5" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship5ClusterMine" comparator="EQUALS" value="2.0" />
-    <set_relative_position name2="CL.50" distance="100" angle="180" player_slot1="4" />
-    <set_object_property property="angleDelta" value="0.6" name="CL.50" />
-    <set_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship5ClusterMine" value="3.0" integer="yes" />
-  </event>
-  <event name="Gather Mine data" id_arme="99a63306-901c-4463-a6b8-9ce9ad108455" parent_id_arme="3326460f-cf65-48f7-9d4d-fc2a1e26b171">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="5" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship5ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_comms_button text="Activate Cluster" />
-    <get_object_property property="positionX" name="CL.50" variable="CL.50MinePositionX" />
-    <get_object_property property="positionZ" name="CL.50" variable="CL.50MinePositionZ" />
-    <set_variable name="Ship5ClusterMine" value="4.0" integer="yes" />
-  </event>
-  <event name="Spawn Mine Cluster" id_arme="d78012f8-159c-4e33-b1af-2ce556d32b25" parent_id_arme="3326460f-cf65-48f7-9d4d-fc2a1e26b171">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="5" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship5ClusterMine" comparator="EQUALS" value="4.0" />
-    <create count="1" type="mines" startX="CL.50MinePositionX" startY="0.0" startZ="CL.50MinePositionZ" radius="1" />
-    <create count="8" type="mines" startX="CL.50MinePositionX" startY="0.0" startZ="CL.50MinePositionZ" radius="500" />
-    <destroy name="CL.50" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship5ClusterMine" value="5.0" integer="yes" />
-  </event>
   <folder_arme name="Ship 6 Comms Menus" id_arme="cf9f2268-c9b6-4655-a716-5b3547a8c0d9" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Ship6 Main Menu" id_arme="69bc0552-393f-4dc8-bb61-867254b5a655" parent_id_arme="cf9f2268-c9b6-4655-a716-5b3547a8c0d9">
     <if_variable name="ShipSelect" comparator="EQUALS" value="6" />
@@ -10034,22 +9438,12 @@
     <set_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <set_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <set_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <set_comms_button text="Specialist Operations" sideValue="playerSide" />
     <set_variable name="CommsControls" value="4.0" integer="yes" />
   </event>
   <event name="Ship6 Shuttle Menu" id_arme="51e82255-8ad5-41c8-9487-eea3cab39d2e" parent_id_arme="cf9f2268-c9b6-4655-a716-5b3547a8c0d9">
     <if_variable name="ShipSelect" comparator="EQUALS" value="6" />
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Shuttle Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
     <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
@@ -10073,15 +9467,6 @@
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Resupply Operations" />
     <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
@@ -10091,33 +9476,6 @@
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_comms_button text="Supply Update" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="1.0" integer="yes" />
-    <set_variable name="CommsControls" value="5.0" integer="yes" />
-  </event>
-  <event name="Ship6 Specialist Menu" id_arme="6e63d708-a651-4daa-8231-397e4d2da686" parent_id_arme="cf9f2268-c9b6-4655-a716-5b3547a8c0d9">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="6.0" />
-    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
-    <if_comms_button text="Specialist Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
-    <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
-    <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
-    <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
-    <!---->
-    <set_comms_button text="Channel 6 Menu" sideValue="playerSide" />
-    <set_comms_button text="Cluster Deploy" />
-    <set_comms_button text="Activate Cluster" />
-    <!---->
-    <set_comms_button text="Back" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="1.0" integer="yes" />
     <set_variable name="CommsControls" value="5.0" integer="yes" />
   </event>
   <event name="Back to Ship6 Menu" id_arme="b70a15cc-a469-42b0-ad91-98520bacd136" parent_id_arme="cf9f2268-c9b6-4655-a716-5b3547a8c0d9">
@@ -10140,9 +9498,6 @@
     <clear_comms_button text="Resupply from Goblin" sideValue="playerSide" />
     <clear_comms_button text="Rv Point" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="0.0" integer="yes" />
-    <!---->
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
   </event>
@@ -10392,68 +9747,6 @@
     <set_variable name="GoblintoShip6Resupply" value="3.0" integer="yes" />
     <set_variable name="CycleCommsMenu" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Specialist" id_arme="e7d7b159-0582-4054-ba2b-9e9b53c56c2c" parent_id_arme="cf9f2268-c9b6-4655-a716-5b3547a8c0d9" />
-  <event name="Cluster ready to deploy" id_arme="7ebfea68-47ec-427e-80e2-c3a1f43f86a8" parent_id_arme="e7d7b159-0582-4054-ba2b-9e9b53c56c2c">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="6" />
-    <if_variable name="Ship6ClusterMine" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <set_variable name="CL.60MinePositionX" value="0.0" />
-    <set_variable name="CL.60MinePositionZ" value="0.0" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster ready to activate" id_arme="a024077f-7b90-4a1e-a0ce-24fed534f1bd" parent_id_arme="e7d7b159-0582-4054-ba2b-9e9b53c56c2c">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="6" />
-    <if_variable name="Ship6ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster Used" id_arme="656e1af6-9be9-4df0-b80c-8b9c927ec219" parent_id_arme="e7d7b159-0582-4054-ba2b-9e9b53c56c2c">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="6" />
-    <if_variable name="Ship6ClusterMine" comparator="EQUALS" value="5.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <folder_arme name="Cluster Mines" id_arme="a4fe8b72-49a2-4e31-9d62-d6f075054a73" parent_id_arme="e7d7b159-0582-4054-ba2b-9e9b53c56c2c" />
-  <event name="Spawn Mine Point" id_arme="5a59835e-e13c-41ed-aeb7-8dca8abb4ff2" parent_id_arme="a4fe8b72-49a2-4e31-9d62-d6f075054a73">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="6" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_comms_button text="Cluster Deploy" />
-    <create type="genericMesh" x="10.0" y="20.0" z="10.0" angle="0" name="CL.60" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="Ship6ClusterMine" value="2.0" integer="yes" />
-  </event>
-  <event name="Set Mine Point" id_arme="6f992d64-c55a-4334-88e0-dd5ddacb307b" parent_id_arme="a4fe8b72-49a2-4e31-9d62-d6f075054a73">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="6" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship6ClusterMine" comparator="EQUALS" value="2.0" />
-    <set_relative_position name2="CL.60" distance="100" angle="180" player_slot1="5" />
-    <set_object_property property="angleDelta" value="0.6" name="CL.60" />
-    <set_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship6ClusterMine" value="3.0" integer="yes" />
-  </event>
-  <event name="Gather Mine data" id_arme="bcc5c76d-dfcd-40ed-b0c2-4ef06733bc32" parent_id_arme="a4fe8b72-49a2-4e31-9d62-d6f075054a73">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="6" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship6ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_comms_button text="Activate Cluster" />
-    <get_object_property property="positionX" name="CL.60" variable="CL.60MinePositionX" />
-    <get_object_property property="positionZ" name="CL.60" variable="CL.60MinePositionZ" />
-    <set_variable name="Ship6ClusterMine" value="4.0" integer="yes" />
-  </event>
-  <event name="Spawn Mine Cluster" id_arme="5cca57fc-0ae5-4987-b5fb-3190e2eaf021" parent_id_arme="a4fe8b72-49a2-4e31-9d62-d6f075054a73">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="6" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship6ClusterMine" comparator="EQUALS" value="4.0" />
-    <create count="1" type="mines" startX="CL.60MinePositionX" startY="0.0" startZ="CL.60MinePositionZ" radius="1" />
-    <create count="8" type="mines" startX="CL.60MinePositionX" startY="0.0" startZ="CL.60MinePositionZ" radius="500" />
-    <destroy name="CL.60" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship6ClusterMine" value="5.0" integer="yes" />
-  </event>
   <folder_arme name="Ship 7 Comms Menus" id_arme="21c18a1b-02a7-43f1-8422-7935ab3f996a" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Ship7 Main Menu" id_arme="8e909fd2-ab6f-4a35-9fa9-08e2f42ac921" parent_id_arme="21c18a1b-02a7-43f1-8422-7935ab3f996a">
     <if_variable name="ShipSelect" comparator="EQUALS" value="7" />
@@ -10473,22 +9766,12 @@
     <set_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <set_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <set_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <set_comms_button text="Specialist Operations" sideValue="playerSide" />
     <set_variable name="CommsControls" value="4.0" integer="yes" />
   </event>
   <event name="Ship7 Shuttle Menu" id_arme="d5946cea-4744-45ed-8d0c-cc675471739a" parent_id_arme="21c18a1b-02a7-43f1-8422-7935ab3f996a">
     <if_variable name="ShipSelect" comparator="EQUALS" value="7" />
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Shuttle Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
     <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
@@ -10512,15 +9795,6 @@
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Resupply Operations" />
     <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
@@ -10530,33 +9804,6 @@
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_comms_button text="Supply Update" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="1.0" integer="yes" />
-    <set_variable name="CommsControls" value="5.0" integer="yes" />
-  </event>
-  <event name="Ship7 Specialist Menu" id_arme="c6efda1c-0ecc-4cad-ba0e-b2102d5a06b1" parent_id_arme="21c18a1b-02a7-43f1-8422-7935ab3f996a">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="7.0" />
-    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
-    <if_comms_button text="Specialist Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
-    <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
-    <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
-    <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
-    <!---->
-    <set_comms_button text="Channel 7 Menu" sideValue="playerSide" />
-    <set_comms_button text="Cluster Deploy" />
-    <set_comms_button text="Activate Cluster" />
-    <!---->
-    <set_comms_button text="Back" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="1.0" integer="yes" />
     <set_variable name="CommsControls" value="5.0" integer="yes" />
   </event>
   <event name="Back to Ship7 Menu" id_arme="86d03507-96ed-4770-877e-3d07ce0343d4" parent_id_arme="21c18a1b-02a7-43f1-8422-7935ab3f996a">
@@ -10579,9 +9826,6 @@
     <clear_comms_button text="Resupply from Goblin" sideValue="playerSide" />
     <clear_comms_button text="Rv Point" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="0.0" integer="yes" />
-    <!---->
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
   </event>
@@ -10831,68 +10075,6 @@
     <set_variable name="GoblintoShip7Resupply" value="3.0" integer="yes" />
     <set_variable name="CycleCommsMenu" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Specialist" id_arme="99a10323-663c-4907-a788-ed6beac00625" parent_id_arme="21c18a1b-02a7-43f1-8422-7935ab3f996a" />
-  <event name="Cluster ready to deploy" id_arme="13f78a41-81a6-411b-9de1-4b138f6a0fcf" parent_id_arme="99a10323-663c-4907-a788-ed6beac00625">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="7" />
-    <if_variable name="Ship7ClusterMine" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <set_variable name="CL.70MinePositionX" value="0.0" />
-    <set_variable name="CL.70MinePositionZ" value="0.0" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster ready to activate" id_arme="cf64bf08-6e03-4afc-a5cf-1918575f8c0b" parent_id_arme="99a10323-663c-4907-a788-ed6beac00625">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="7" />
-    <if_variable name="Ship7ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster Used" id_arme="51d7c570-8728-49bb-8503-f0d3ed2799a2" parent_id_arme="99a10323-663c-4907-a788-ed6beac00625">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="7" />
-    <if_variable name="Ship7ClusterMine" comparator="EQUALS" value="5.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <folder_arme name="Cluster Mines" id_arme="20532abf-521a-4125-86fc-5b367207a274" parent_id_arme="99a10323-663c-4907-a788-ed6beac00625" />
-  <event name="Spawn Mine Point" id_arme="abd6bd4e-2b6c-465e-b935-4e943ab21e1c" parent_id_arme="20532abf-521a-4125-86fc-5b367207a274">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="7" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_comms_button text="Cluster Deploy" />
-    <create type="genericMesh" x="10.0" y="20.0" z="10.0" angle="0" name="CL.70" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="Ship7ClusterMine" value="2.0" integer="yes" />
-  </event>
-  <event name="Set Mine Point" id_arme="b4a5be9e-c04d-4f73-9cc5-9f8fceb9a4c4" parent_id_arme="20532abf-521a-4125-86fc-5b367207a274">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="7" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship7ClusterMine" comparator="EQUALS" value="2.0" />
-    <set_relative_position name2="CL.70" distance="100" angle="180" player_slot1="6" />
-    <set_object_property property="angleDelta" value="0.6" name="CL.70" />
-    <set_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship7ClusterMine" value="3.0" integer="yes" />
-  </event>
-  <event name="Gather Mine data" id_arme="bf0918d8-db17-4d7b-93b0-f6e7ec2437b6" parent_id_arme="20532abf-521a-4125-86fc-5b367207a274">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="7" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship7ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_comms_button text="Activate Cluster" />
-    <get_object_property property="positionX" name="CL.70" variable="CL.70MinePositionX" />
-    <get_object_property property="positionZ" name="CL.70" variable="CL.70MinePositionZ" />
-    <set_variable name="Ship7ClusterMine" value="4.0" integer="yes" />
-  </event>
-  <event name="Spawn Mine Cluster" id_arme="0e3ec843-e7dd-4257-8ba9-e4f53f9347d7" parent_id_arme="20532abf-521a-4125-86fc-5b367207a274">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="7" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship7ClusterMine" comparator="EQUALS" value="4.0" />
-    <create count="1" type="mines" startX="CL.70MinePositionX" startY="0.0" startZ="CL.70MinePositionZ" radius="1" />
-    <create count="8" type="mines" startX="CL.70MinePositionX" startY="0.0" startZ="CL.70MinePositionZ" radius="500" />
-    <destroy name="CL.70" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship7ClusterMine" value="5.0" integer="yes" />
-  </event>
   <folder_arme name="Ship 8 Comms Menus" id_arme="8ad17ae2-95d3-4958-9123-cc8a1ce72e1e" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Ship8 Main Menu" id_arme="97b72818-54d0-4b43-b0b2-a1917d6b715a" parent_id_arme="8ad17ae2-95d3-4958-9123-cc8a1ce72e1e">
     <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
@@ -10912,22 +10094,12 @@
     <set_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <set_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <set_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <set_comms_button text="Specialist Operations" sideValue="playerSide" />
     <set_variable name="CommsControls" value="4.0" integer="yes" />
   </event>
   <event name="Ship8 Shuttle Menu" id_arme="0ccda4a5-c62f-4f88-9b45-389f6f2b5e40" parent_id_arme="8ad17ae2-95d3-4958-9123-cc8a1ce72e1e">
     <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Shuttle Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
     <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
@@ -10951,15 +10123,6 @@
     <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <if_comms_button text="Resupply Operations" />
     <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
     <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
     <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
     <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
@@ -10969,33 +10132,6 @@
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_comms_button text="Supply Update" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="1.0" integer="yes" />
-    <set_variable name="CommsControls" value="5.0" integer="yes" />
-  </event>
-  <event name="Ship8 Specialist Menu" id_arme="8ccd8eb0-90cb-4fad-92cf-b21162aec767" parent_id_arme="8ad17ae2-95d3-4958-9123-cc8a1ce72e1e">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="8.0" />
-    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
-    <if_comms_button text="Specialist Operations" />
-    <!---->
-    <clear_comms_button text="Channel 1" sideValue="playerSide" />
-    <clear_comms_button text="Channel 2" sideValue="playerSide" />
-    <clear_comms_button text="Channel 3" sideValue="playerSide" />
-    <clear_comms_button text="Channel 4" sideValue="playerSide" />
-    <clear_comms_button text="Channel 5" sideValue="playerSide" />
-    <clear_comms_button text="Channel 6" sideValue="playerSide" />
-    <clear_comms_button text="Channel 7" sideValue="playerSide" />
-    <clear_comms_button text="Channel 8" sideValue="playerSide" />
-    <!---->
-    <clear_comms_button text="Cargo &amp; Personnel Status" sideValue="playerSide" />
-    <clear_comms_button text="Shuttle Operations" sideValue="playerSide" />
-    <clear_comms_button text="Resupply Operations" sideValue="playerSide" />
-    <clear_comms_button text="Specialist Operations" sideValue="playerSide" />
-    <!---->
-    <set_comms_button text="Channel 8 Menu" sideValue="playerSide" />
-    <set_comms_button text="Cluster Deploy" />
-    <set_comms_button text="Activate Cluster" />
-    <!---->
-    <set_comms_button text="Back" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="1.0" integer="yes" />
     <set_variable name="CommsControls" value="5.0" integer="yes" />
   </event>
   <event name="Back to Ship8 Menu" id_arme="d3b50629-a85a-496f-a3c5-8af2599c680d" parent_id_arme="8ad17ae2-95d3-4958-9123-cc8a1ce72e1e">
@@ -11018,9 +10154,6 @@
     <clear_comms_button text="Resupply from Goblin" sideValue="playerSide" />
     <clear_comms_button text="Rv Point" sideValue="playerSide" />
     <set_variable name="ResupplyCheck" value="0.0" integer="yes" />
-    <!---->
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
   </event>
@@ -11270,69 +10403,7 @@
     <set_variable name="GoblintoShip8Resupply" value="3.0" integer="yes" />
     <set_variable name="CycleCommsMenu" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Specialist" id_arme="eeb6ec9a-5415-4a8d-bd2b-fd327630bb62" parent_id_arme="8ad17ae2-95d3-4958-9123-cc8a1ce72e1e" />
-  <event name="Cluster ready to deploy" id_arme="b3332e19-b003-4f0b-a661-d9413ad888fb" parent_id_arme="eeb6ec9a-5415-4a8d-bd2b-fd327630bb62">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
-    <if_variable name="Ship8ClusterMine" comparator="EQUALS" value="1.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <set_variable name="CL.80MinePositionX" value="0.0" />
-    <set_variable name="CL.80MinePositionZ" value="0.0" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster ready to activate" id_arme="236d7653-e0aa-4a50-97b0-6d1a6b22bdf9" parent_id_arme="eeb6ec9a-5415-4a8d-bd2b-fd327630bb62">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
-    <if_variable name="Ship8ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <event name="Cluster Used" id_arme="4705f6ca-b407-4034-959d-8ce258655c51" parent_id_arme="eeb6ec9a-5415-4a8d-bd2b-fd327630bb62">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
-    <if_variable name="Ship8ClusterMine" comparator="EQUALS" value="5.0" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="SpecialistOpsCheck" value="2.0" integer="yes" />
-  </event>
-  <folder_arme name="Cluster Mines" id_arme="b4921efe-1b66-4555-8c8e-3b4e07984fbb" parent_id_arme="eeb6ec9a-5415-4a8d-bd2b-fd327630bb62" />
-  <event name="Spawn Mine Point" id_arme="1eb4c550-6f3b-4006-8066-a2003d38d65e" parent_id_arme="b4921efe-1b66-4555-8c8e-3b4e07984fbb">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_comms_button text="Cluster Deploy" />
-    <create type="genericMesh" x="10.0" y="20.0" z="10.0" angle="0" name="CL.80" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
-    <clear_comms_button text="Cluster Deploy" sideValue="playerSide" />
-    <set_variable name="Ship8ClusterMine" value="2.0" integer="yes" />
-  </event>
-  <event name="Set Mine Point" id_arme="a74e7188-07f1-4834-884e-267578ac4188" parent_id_arme="b4921efe-1b66-4555-8c8e-3b4e07984fbb">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship8ClusterMine" comparator="EQUALS" value="2.0" />
-    <set_relative_position name2="CL.80" distance="100" angle="180" player_slot1="7" />
-    <set_object_property property="angleDelta" value="0.6" name="CL.80" />
-    <set_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship8ClusterMine" value="3.0" integer="yes" />
-  </event>
-  <event name="Gather Mine data" id_arme="74cc9585-eaca-4d6d-b697-2ddee3636fad" parent_id_arme="b4921efe-1b66-4555-8c8e-3b4e07984fbb">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship8ClusterMine" comparator="EQUALS" value="3.0" />
-    <if_comms_button text="Activate Cluster" />
-    <get_object_property property="positionX" name="CL.80" variable="CL.80MinePositionX" />
-    <get_object_property property="positionZ" name="CL.80" variable="CL.80MinePositionZ" />
-    <set_variable name="Ship8ClusterMine" value="4.0" integer="yes" />
-  </event>
-  <event name="Spawn Mine Cluster" id_arme="c7e9fe77-67d2-4631-8c43-2e2a31874094" parent_id_arme="b4921efe-1b66-4555-8c8e-3b4e07984fbb">
-    <if_variable name="ShipSelect" comparator="EQUALS" value="8" />
-    <if_variable name="SpecialistOpsCheck" comparator="EQUALS" value="2.0" />
-    <if_variable name="Ship8ClusterMine" comparator="EQUALS" value="4.0" />
-    <create count="1" type="mines" startX="CL.80MinePositionX" startY="0.0" startZ="CL.80MinePositionZ" radius="1" />
-    <create count="8" type="mines" startX="CL.80MinePositionX" startY="0.0" startZ="CL.80MinePositionZ" radius="500" />
-    <destroy name="CL.80" />
-    <clear_comms_button text="Activate Cluster" sideValue="playerSide" />
-    <set_variable name="Ship8ClusterMine" value="5.0" integer="yes" />
-  </event>
-  <folder_arme name="Fleet Status Comms" id_arme="dbdb6d2f-b69d-4076-90e7-cf1384396463" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" expanded_arme="" />
+  <folder_arme name="Fleet Status Comms" id_arme="dbdb6d2f-b69d-4076-90e7-cf1384396463" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" />
   <event name="Fleet Stat Main Menu" id_arme="33707d25-56fe-49bc-8c1c-e78dd6d0c568" parent_id_arme="dbdb6d2f-b69d-4076-90e7-cf1384396463">
     <if_variable name="ShipSelect" comparator="EQUALS" value="9.0" />
     <if_variable name="CommsControls" comparator="EQUALS" value="3.0" />
@@ -11358,7 +10429,7 @@
   <event name="Back to Fleet Menu" id_arme="e9f347a8-1257-4eeb-8b76-dc09eba2c6d7" parent_id_arme="dbdb6d2f-b69d-4076-90e7-cf1384396463">
     <if_variable name="ShipSelect" comparator="EQUALS" value="9.0" />
     <if_comms_button text="Back" />
-    <if_variable name="CommsControls" comparator="EQUALS" value="5.0" />
+    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
     <clear_comms_button text="Fleet Menu" sideValue="playerSide" />
     <clear_comms_button text="Clear Status" sideValue="playerSide" />
     <clear_comms_button text="Fuel Status" sideValue="playerSide" />
@@ -11393,12 +10464,12 @@
     <set_variable name="Ship1ProCurrent" value="Ship1ProMax" integer="yes" />
     <set_variable name="Ship1TagCurrent" value="Ship1TagMax" integer="yes" />
     <!--Shuttle Teams-->
-    <set_variable name="Ship1MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
+    <!--<set_variable name="Ship1MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship1Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship1EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship1MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship1CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship1SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
     <!--Additional Trackers-->
     <set_variable name="Ship1 Marines" value="1.0" integer="yes" />
     <set_variable name="Proteus Status" value="1.0" integer="yes" />
@@ -11445,12 +10516,12 @@
     <set_variable name="Ship2ProCurrent" value="Ship2ProMax" integer="yes" />
     <set_variable name="Ship2TagCurrent" value="Ship2TagMax" integer="yes" />
     <!--Shuttle Teams-->
-    <set_variable name="Ship2MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
+    <!--<set_variable name="Ship2MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship2Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship2EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship2MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship2CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship2SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
     <!--Additional Trackers-->
     <set_variable name="Ship2 Marines" value="1.0" integer="yes" />
     <set_variable name="Theseus Status" value="1.0" integer="yes" />
@@ -11497,12 +10568,12 @@
     <set_variable name="Ship3ProCurrent" value="Ship3ProMax" integer="yes" />
     <set_variable name="Ship3TagCurrent" value="Ship3TagMax" integer="yes" />
     <!--Shuttle Teams-->
-    <set_variable name="Ship3MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
+    <!--<set_variable name="Ship3MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship3Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship3EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship3MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship3CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship3SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
     <!--Additional Trackers-->
     <set_variable name="Ship3 Marines" value="1.0" integer="yes" />
     <set_variable name="Odysseus Status" value="1.0" integer="yes" />
@@ -11549,12 +10620,12 @@
     <set_variable name="Ship4ProCurrent" value="Ship4ProMax" integer="yes" />
     <set_variable name="Ship4TagCurrent" value="Ship4TagMax" integer="yes" />
     <!--Shuttle Teams-->
-    <set_variable name="Ship4MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
+    <!--<set_variable name="Ship4MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship4Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship4EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship4MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship4CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship4SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
     <!--Additional Trackers-->
     <set_variable name="Ship4 Marines" value="1.0" integer="yes" />
     <set_variable name="Perseus Status" value="1.0" integer="yes" />
@@ -11601,12 +10672,12 @@
     <set_variable name="Ship5ProCurrent" value="Ship5ProMax" integer="yes" />
     <set_variable name="Ship5TagCurrent" value="Ship5TagMax" integer="yes" />
     <!--Shuttle Teams-->
-    <set_variable name="Ship5MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
+    <!--<set_variable name="Ship5MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship5Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship5EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship5MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship5CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship5SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
     <!--Additional Trackers-->
     <set_variable name="Ship5 Marines" value="1.0" integer="yes" />
     <set_variable name="Dionysus Status" value="1.0" integer="yes" />
@@ -11653,12 +10724,12 @@
     <set_variable name="Ship6ProCurrent" value="Ship6ProMax" integer="yes" />
     <set_variable name="Ship6TagCurrent" value="Ship6TagMax" integer="yes" />
     <!--Shuttle Teams-->
-    <set_variable name="Ship6MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
+    <!--<set_variable name="Ship6MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship6Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship6EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship6MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship6CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship6SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
     <!--Additional Trackers-->
     <set_variable name="Ship6 Marines" value="1.0" integer="yes" />
     <set_variable name="Icarus Status" value="1.0" integer="yes" />
@@ -11705,12 +10776,12 @@
     <set_variable name="Ship7ProCurrent" value="Ship7ProMax" integer="yes" />
     <set_variable name="Ship7TagCurrent" value="Ship7TagMax" integer="yes" />
     <!--Shuttle Teams-->
-    <set_variable name="Ship7MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
+    <!--<set_variable name="Ship7MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship7Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship7EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship7MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship7CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship7SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
     <!--Additional Trackers-->
     <set_variable name="Ship7 Marines" value="1.0" integer="yes" />
     <set_variable name="Adonis Status" value="1.0" integer="yes" />
@@ -11757,12 +10828,12 @@
     <set_variable name="Ship8ProCurrent" value="Ship8ProMax" integer="yes" />
     <set_variable name="Ship8TagCurrent" value="Ship8TagMax" integer="yes" />
     <!--Shuttle Teams-->
-    <set_variable name="Ship8MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
+    <!--<set_variable name="Ship8MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship8Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship8EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship8MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship8CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
+    <!--<set_variable name="Ship8SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />-->
     <!--Additional Trackers-->
     <set_variable name="Ship8 Marines" value="1.0" integer="yes" />
     <set_variable name="Invention Status" value="1.0" integer="yes" />
@@ -12790,13 +11861,6 @@
     <set_variable name="Ship1BeaCurrent" value="Ship1BeaMax" integer="yes" />
     <set_variable name="Ship1ProCurrent" value="Ship1ProMax" integer="yes" />
     <set_variable name="Ship1TagCurrent" value="Ship1TagMax" integer="yes" />
-    <!--Shuttle Teams-->
-    <set_variable name="Ship1MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship1SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
     <set_variable name="Ship1 Marines" value="1.0" integer="yes" />
     <set_variable name="Proteus Status" value="1.0" integer="yes" />
@@ -12828,13 +11892,6 @@
     <set_variable name="Ship2BeaCurrent" value="Ship2BeaMax" integer="yes" />
     <set_variable name="Ship2ProCurrent" value="Ship2ProMax" integer="yes" />
     <set_variable name="Ship2TagCurrent" value="Ship2TagMax" integer="yes" />
-    <!--Shuttle Teams-->
-    <set_variable name="Ship2MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship2SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
     <set_variable name="Ship2 Marines" value="1.0" integer="yes" />
     <set_variable name="Theseus Status" value="1.0" integer="yes" />
@@ -12866,13 +11923,6 @@
     <set_variable name="Ship3BeaCurrent" value="Ship3BeaMax" integer="yes" />
     <set_variable name="Ship3ProCurrent" value="Ship3ProMax" integer="yes" />
     <set_variable name="Ship3TagCurrent" value="Ship3TagMax" integer="yes" />
-    <!--Shuttle Teams-->
-    <set_variable name="Ship3MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship3SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
     <set_variable name="Ship3 Marines" value="1.0" integer="yes" />
     <set_variable name="Odysseus Status" value="1.0" integer="yes" />
@@ -12904,13 +11954,6 @@
     <set_variable name="Ship4BeaCurrent" value="Ship4BeaMax" integer="yes" />
     <set_variable name="Ship4ProCurrent" value="Ship4ProMax" integer="yes" />
     <set_variable name="Ship4TagCurrent" value="Ship4TagMax" integer="yes" />
-    <!--Shuttle Teams-->
-    <set_variable name="Ship4MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship4SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
     <set_variable name="Ship4 Marines" value="1.0" integer="yes" />
     <set_variable name="Perseus Status" value="1.0" integer="yes" />
@@ -12942,13 +11985,6 @@
     <set_variable name="Ship5BeaCurrent" value="Ship5BeaMax" integer="yes" />
     <set_variable name="Ship5ProCurrent" value="Ship5ProMax" integer="yes" />
     <set_variable name="Ship5TagCurrent" value="Ship5TagMax" integer="yes" />
-    <!--Shuttle Teams-->
-    <set_variable name="Ship5MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship5SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
     <set_variable name="Ship5 Marines" value="1.0" integer="yes" />
     <set_variable name="Dionysus Status" value="1.0" integer="yes" />
@@ -12980,13 +12016,6 @@
     <set_variable name="Ship6BeaCurrent" value="Ship6BeaMax" integer="yes" />
     <set_variable name="Ship6ProCurrent" value="Ship6ProMax" integer="yes" />
     <set_variable name="Ship6TagCurrent" value="Ship6TagMax" integer="yes" />
-    <!--Shuttle Teams-->
-    <set_variable name="Ship6MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship6SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
     <set_variable name="Ship6 Marines" value="1.0" integer="yes" />
     <set_variable name="Icarus Status" value="1.0" integer="yes" />
@@ -13018,13 +12047,6 @@
     <set_variable name="Ship7BeaCurrent" value="Ship7BeaMax" integer="yes" />
     <set_variable name="Ship7ProCurrent" value="Ship7ProMax" integer="yes" />
     <set_variable name="Ship7TagCurrent" value="Ship7TagMax" integer="yes" />
-    <!--Shuttle Teams-->
-    <set_variable name="Ship7MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship7SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
     <set_variable name="Ship7 Marines" value="1.0" integer="yes" />
     <set_variable name="Adonis Status" value="1.0" integer="yes" />
@@ -13056,13 +12078,6 @@
     <set_variable name="Ship8BeaCurrent" value="Ship8BeaMax" integer="yes" />
     <set_variable name="Ship8ProCurrent" value="Ship8ProMax" integer="yes" />
     <set_variable name="Ship8TagCurrent" value="Ship8TagMax" integer="yes" />
-    <!--Shuttle Teams-->
-    <set_variable name="Ship8MarineTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8Cargos" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8EngineerTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8MedicTeams" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8CommsRelays" randomIntLow="1" randomIntHigh="3" integer="yes" />
-    <set_variable name="Ship8SensorBuoys" randomIntLow="1" randomIntHigh="3" integer="yes" />
     <!--Additional Trackers-->
     <set_variable name="Ship8 Marines" value="1.0" integer="yes" />
     <set_variable name="Invention Status" value="1.0" integer="yes" />
