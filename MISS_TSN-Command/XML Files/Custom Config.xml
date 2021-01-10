@@ -366,7 +366,7 @@
   <event name="Set Mine Point" id_arme="5cdd9245-22dc-48c3-8da8-bf3f2b6a20e9" parent_id_arme="1106a5ec-8e15-4aa5-8cc7-49e5d56a5bf0">
     <if_variable name="ShipSelect" comparator="EQUALS" value="2.0" />
     <if_variable name="Ship2Cluster" comparator="EQUALS" value="1.0" />
-    <set_relative_position name2="CL.20" distance="100" angle="180" player_slot1="0" />
+    <set_relative_position name2="CL.20" distance="100" angle="180" player_slot1="1" />
     <set_object_property property="angleDelta" value="0.6" name="CL.20" />
     <set_variable name="Ship2Cluster" value="2.0" integer="yes" />
   </event>
@@ -452,7 +452,7 @@
   <event name="Set Mine Point" id_arme="3e109201-5d12-4f11-b5f4-8184a2d58fec" parent_id_arme="ccca055e-c032-45b9-b4aa-6d463f0e50b6">
     <if_variable name="ShipSelect" comparator="EQUALS" value="3.0" />
     <if_variable name="Ship3Cluster" comparator="EQUALS" value="1.0" />
-    <set_relative_position name2="CL.30" distance="100" angle="180" player_slot1="0" />
+    <set_relative_position name2="CL.30" distance="100" angle="180" player_slot1="2" />
     <set_object_property property="angleDelta" value="0.6" name="CL.30" />
     <set_variable name="Ship3Cluster" value="2.0" integer="yes" />
   </event>
@@ -538,7 +538,7 @@
   <event name="Set Mine Point" id_arme="39534be6-7270-49dd-af1d-cf483a159c44" parent_id_arme="ecd60056-d6a4-400c-ad3b-693fad1f230c">
     <if_variable name="ShipSelect" comparator="EQUALS" value="4.0" />
     <if_variable name="Ship4Cluster" comparator="EQUALS" value="1.0" />
-    <set_relative_position name2="CL.40" distance="100" angle="180" player_slot1="0" />
+    <set_relative_position name2="CL.40" distance="100" angle="180" player_slot1="3" />
     <set_object_property property="angleDelta" value="0.6" name="CL.40" />
     <set_variable name="Ship4Cluster" value="2.0" integer="yes" />
   </event>
@@ -624,7 +624,7 @@
   <event name="Set Mine Point" id_arme="416f6531-3828-4178-bcd3-16cae63d602a" parent_id_arme="03789fe0-3633-4145-9439-35b52fcf33ca">
     <if_variable name="ShipSelect" comparator="EQUALS" value="5.0" />
     <if_variable name="Ship5Cluster" comparator="EQUALS" value="1.0" />
-    <set_relative_position name2="CL.50" distance="100" angle="180" player_slot1="0" />
+    <set_relative_position name2="CL.50" distance="100" angle="180" player_slot1="4" />
     <set_object_property property="angleDelta" value="0.6" name="CL.50" />
     <set_variable name="Ship5Cluster" value="2.0" integer="yes" />
   </event>
@@ -710,7 +710,7 @@
   <event name="Set Mine Point" id_arme="d877ba84-4433-4401-b60b-a8558871593d" parent_id_arme="5697c0ae-fa08-4fb4-ae0a-e0bc183ae755">
     <if_variable name="ShipSelect" comparator="EQUALS" value="6.0" />
     <if_variable name="Ship6Cluster" comparator="EQUALS" value="1.0" />
-    <set_relative_position name2="CL.60" distance="100" angle="180" player_slot1="0" />
+    <set_relative_position name2="CL.60" distance="100" angle="180" player_slot1="5" />
     <set_object_property property="angleDelta" value="0.6" name="CL.60" />
     <set_variable name="Ship6Cluster" value="2.0" integer="yes" />
   </event>
@@ -796,7 +796,7 @@
   <event name="Set Mine Point" id_arme="d5a8b948-6f16-47cd-9324-0b0464beb6e1" parent_id_arme="fb9e226f-d151-40b4-a0bf-ee14873666ac">
     <if_variable name="ShipSelect" comparator="EQUALS" value="7.0" />
     <if_variable name="Ship7Cluster" comparator="EQUALS" value="1.0" />
-    <set_relative_position name2="CL.70" distance="100" angle="180" player_slot1="0" />
+    <set_relative_position name2="CL.70" distance="100" angle="180" player_slot1="6" />
     <set_object_property property="angleDelta" value="0.6" name="CL.70" />
     <set_variable name="Ship7Cluster" value="2.0" integer="yes" />
   </event>
@@ -882,7 +882,7 @@
   <event name="Set Mine Point" id_arme="f28d59e7-bb6b-4b7a-98c5-555695e4d16f" parent_id_arme="c1e22025-5ce8-4fd0-8fd3-b671acc551bd">
     <if_variable name="ShipSelect" comparator="EQUALS" value="8.0" />
     <if_variable name="Ship8Cluster" comparator="EQUALS" value="1.0" />
-    <set_relative_position name2="CL.80" distance="100" angle="180" player_slot1="0" />
+    <set_relative_position name2="CL.80" distance="100" angle="180" player_slot1="7" />
     <set_object_property property="angleDelta" value="0.6" name="CL.80" />
     <set_variable name="Ship8Cluster" value="2.0" integer="yes" />
   </event>
