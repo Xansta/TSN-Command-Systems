@@ -1921,7 +1921,7 @@
     <set_variable name="Atlantis System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
-  <folder_arme name="Sector XI - XV" id_arme="c2d2c1f4-a7bd-4165-838b-09f70eed8cf6" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" />
+  <folder_arme name="Sector XI - XV" id_arme="c2d2c1f4-a7bd-4165-838b-09f70eed8cf6" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" expanded_arme="" />
   <folder_arme name="Atlantis Sector XI" id_arme="fe6bd80c-8499-4d8f-9354-29a4cd076b4e" parent_id_arme="c2d2c1f4-a7bd-4165-838b-09f70eed8cf6" />
   <event name="Create Atlantis Sector XI" id_arme="a72d9494-efe0-4a9b-a20a-5dcb77d5e8a0" parent_id_arme="fe6bd80c-8499-4d8f-9354-29a4cd076b4e">
     <if_timer_finished name="Transition" />
@@ -2831,7 +2831,7 @@
     <set_variable name="Atlantis System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
-  <folder_arme name="Sector XVI - XX" id_arme="f4f00cda-3862-44ea-997b-ba9fd87ec4d3" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" />
+  <folder_arme name="Sector XVI - XX" id_arme="f4f00cda-3862-44ea-997b-ba9fd87ec4d3" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" expanded_arme="" />
   <folder_arme name="Atlantis Sector XVI" id_arme="5b36e449-a996-4f2e-bebc-31b38eb36ce1" parent_id_arme="f4f00cda-3862-44ea-997b-ba9fd87ec4d3" />
   <event name="Create Atlantis Sector XVI" id_arme="dd508fca-c70a-4794-9d88-8d0ca16f06df" parent_id_arme="5b36e449-a996-4f2e-bebc-31b38eb36ce1">
     <if_timer_finished name="Transition" />

@@ -5,11 +5,11 @@
   <folder_arme name="Custom Config" id_arme="f9dc6a29-7d1b-4399-9daa-0d993badc837" />
   <event name="Ship1 Configuration" id_arme="56643add-a468-4dc1-9549-d6ed1e6757ad" parent_id_arme="f9dc6a29-7d1b-4399-9daa-0d993badc837">
     <if_variable name="Custom Config" comparator="EQUALS" value="1.0" />
-    <if_variable name="Ship1 Config" comparator="EQUALS" value="2.0" />
+    <if_variable name="Ship1 Config" comparator="EQUALS" value="1.0" />
     <if_exists player_slot="0" />
-    <set_object_property property="countHoming" value="1" player_slot="0" />
-    <set_object_property property="countMine" value="3" player_slot="0" />
-    <set_object_property property="countNuke" value="22" player_slot="0" />
+    <set_object_property property="countHoming" value="4" player_slot="0" />
+    <set_object_property property="countMine" value="0" player_slot="0" />
+    <set_object_property property="countNuke" value="9" player_slot="0" />
     <set_object_property property="countPro" value="22" player_slot="0" />
     <set_object_property property="countShk" value="12" player_slot="0" />
     <set_object_property property="countEMP" value="3" player_slot="0" />
@@ -23,12 +23,12 @@
     <if_exists player_slot="1" />
     <set_object_property property="countHoming" value="12" player_slot="1" />
     <set_object_property property="countMine" value="0" player_slot="1" />
-    <set_object_property property="countNuke" value="0" player_slot="1" />
+    <set_object_property property="countNuke" value="1" player_slot="1" />
     <set_object_property property="countPro" value="0" player_slot="1" />
     <set_object_property property="countShk" value="0" player_slot="1" />
     <set_object_property property="countEMP" value="10" player_slot="1" />
     <set_object_property property="countTag" value="0" player_slot="1" />
-    <set_object_property property="countBea" value="0" player_slot="1" />
+    <set_object_property property="countBea" value="1" player_slot="1" />
     <set_variable name="Ship2 Config" value="0.0" integer="yes" />
   </event>
   <event name="Ship3 Configuration" id_arme="13761cab-0b21-47b5-b747-3e5abce647a5" parent_id_arme="f9dc6a29-7d1b-4399-9daa-0d993badc837">
@@ -117,19 +117,19 @@
   </event>
   <event name="Cargo" id_arme="ed565860-810a-4932-b977-bb8bfdd04316" parent_id_arme="f9dc6a29-7d1b-4399-9daa-0d993badc837">
     <if_variable name="Custom Config" comparator="EQUALS" value="1.0" />
-    <set_variable name="Ship1MarineTeams" value="10" integer="yes" />
-    <set_variable name="Ship1Cargos" value="8" integer="yes" />
-    <set_variable name="Ship1EngineerTeams" value="2" integer="yes" />
-    <set_variable name="Ship1MedicTeams" value="3" integer="yes" />
-    <set_variable name="Ship1CommsRelays" value="2" integer="yes" />
-    <set_variable name="Ship1SensorBuoys" value="10" integer="yes" />
+    <set_variable name="Ship1MarineTeams" value="1" integer="yes" />
+    <set_variable name="Ship1Cargos" value="5" integer="yes" />
+    <set_variable name="Ship1EngineerTeams" value="0" integer="yes" />
+    <set_variable name="Ship1MedicTeams" value="0" integer="yes" />
+    <set_variable name="Ship1CommsRelays" value="0" integer="yes" />
+    <set_variable name="Ship1SensorBuoys" value="0" integer="yes" />
     <set_variable name="Ship1 Config" value="2.0" integer="yes" />
-    <set_variable name="Ship2MarineTeams" value="1.0" integer="yes" />
-    <set_variable name="Ship2Cargos" value="1.0" integer="yes" />
-    <set_variable name="Ship2EngineerTeams" value="1.0" integer="yes" />
-    <set_variable name="Ship2MedicTeams" value="4" integer="yes" />
-    <set_variable name="Ship2CommsRelays" value="2" integer="yes" />
-    <set_variable name="Ship2SensorBuoys" value="1.0" integer="yes" />
+    <set_variable name="Ship2MarineTeams" value="5" integer="yes" />
+    <set_variable name="Ship2Cargos" value="0" integer="yes" />
+    <set_variable name="Ship2EngineerTeams" value="0" integer="yes" />
+    <set_variable name="Ship2MedicTeams" value="0" integer="yes" />
+    <set_variable name="Ship2CommsRelays" value="0" integer="yes" />
+    <set_variable name="Ship2SensorBuoys" value="0" integer="yes" />
     <set_variable name="Ship3MarineTeams" value="1.0" integer="yes" />
     <set_variable name="Ship3Cargos" value="1.0" integer="yes" />
     <set_variable name="Ship3EngineerTeams" value="1.0" integer="yes" />
@@ -173,10 +173,10 @@
     <if_variable name="Custom Config" comparator="EQUALS" value="2.0" />
     <if_variable name="Modules" comparator="NOT" value="1.0" />
     <set_variable name="Ship1ModuleType" value="2" integer="yes" />
-    <set_variable name="Ship2ModuleType" value="2" integer="yes" />
-    <set_variable name="Ship3ModuleType" value="1" integer="yes" />
-    <set_variable name="Ship4ModuleType" value="2.0" integer="yes" />
-    <set_variable name="Ship5ModuleType" value="1.0" integer="yes" />
+    <set_variable name="Ship2ModuleType" value="1" integer="yes" />
+    <set_variable name="Ship3ModuleType" value="0" integer="yes" />
+    <set_variable name="Ship4ModuleType" value="0" integer="yes" />
+    <set_variable name="Ship5ModuleType" value="0" integer="yes" />
     <set_variable name="Ship6ModuleType" value="1.0" integer="yes" />
     <set_variable name="Ship7ModuleType" value="2" integer="yes" />
     <set_variable name="Ship8ModuleType" value="1.0" integer="yes" />

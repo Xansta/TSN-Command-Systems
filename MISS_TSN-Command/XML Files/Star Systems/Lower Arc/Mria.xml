@@ -4,7 +4,7 @@
     <set_variable name="Coordinate Y" value="451.0" integer="yes" />
     <set_variable name="Alignment" value="2.0" integer="yes" />
   </start>
-  <folder_arme name="Mria System" id_arme="b3306a27-726e-4516-a40f-48e4e4825520" />
+  <folder_arme name="Mria System" id_arme="b3306a27-726e-4516-a40f-48e4e4825520" expanded_arme="" />
   <folder_arme name="Mria Settings" id_arme="6b8fe142-bc3a-4d5a-8e0b-b7435c16b71e" parent_id_arme="b3306a27-726e-4516-a40f-48e4e4825520" />
   <folder_arme name="Mria Menu" id_arme="fb4301dd-df9d-4130-ad08-76544682f8eb" parent_id_arme="6b8fe142-bc3a-4d5a-8e0b-b7435c16b71e" />
   <event name="Mria Active" id_arme="337134ea-f9d6-433b-9cce-8a40014d2f9b" parent_id_arme="fb4301dd-df9d-4130-ad08-76544682f8eb">
@@ -57,7 +57,7 @@
     <set_variable name="sectorSide" value="systemSide" integer="yes" />
     <set_variable name="System Settings" value="0.0" integer="yes" />
   </event>
-  <folder_arme name="Sector I - V" id_arme="69612d26-6395-4a7e-bb78-44433347d5ad" parent_id_arme="b3306a27-726e-4516-a40f-48e4e4825520" />
+  <folder_arme name="Sector I - V" id_arme="69612d26-6395-4a7e-bb78-44433347d5ad" parent_id_arme="b3306a27-726e-4516-a40f-48e4e4825520" expanded_arme="" />
   <folder_arme name="Mria Sector I" id_arme="b4a76ff8-d811-451c-9d0e-989559544354" parent_id_arme="69612d26-6395-4a7e-bb78-44433347d5ad" />
   <event name="Create Mria Sector I" id_arme="8772d3ed-d206-4ed8-a419-accee9169ccd" parent_id_arme="b4a76ff8-d811-451c-9d0e-989559544354">
     <if_timer_finished name="Transition" />
@@ -405,7 +405,7 @@
     <create type="station" x="28036.0" y="0.0" z="61250.0" name="DS-701" hullID="1000" sideValue="sectorSide" />
     <create type="station" x="71563.0" y="0.0" z="24687.0" name="Ela Industries" hullID="1003" sideValue="sectorSide" />
     <create type="station" x="27500.0" y="0.0" z="46116.0" name="Customs &amp; Immigration" hullID="1001" sideValue="sectorSide" />
-    <create type="neutral" x="20536.0" y="0.0" z="52142.0" angle="0" name="Mria Shipyards" hullID="1003" sideValue="sectorSide" />
+    <create type="station" x="20536.0" y="0.0" z="52142.0" name="Mria Shipyards" hullID="1003" sideValue="sectorSide" />
     <create type="neutral" x="74375.0" y="0.0" z="42901.0" angle="0" name="Precious Mining" hullID="1050" sideValue="sectorSide" />
     <create type="neutral" x="51742.0" y="0.0" z="27366.0" angle="0" name="Jeketa Ores" hullID="1050" sideValue="sectorSide" />
     <create type="neutral" x="82009.0" y="0.0" z="54017.0" angle="0" name="Ufaqi Mining" hullID="1050" sideValue="sectorSide" />
