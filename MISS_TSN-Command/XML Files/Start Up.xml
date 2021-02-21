@@ -16,11 +16,12 @@
     <gm_instructions title="Instructions">Welcome to the TSN Sandbox^--Activation---^The activation sequence allows the GM to choose the System and Sector for the players to start. It also sets up key variables that are tracked once the Sandbox is running.^Once the activation sequence is completed, the main Sandbox menu will appear and the GM can begin their mission. Below is a step-by-step guide to activation: ^- First, ensure all player ships have spawned before activating GM Mode.^- Next, click on Activate GM Mode to begin the Sandbox activation sequence.^- Finally, select the Operational area, System and Sector, or select the Command Base where the players will start.^- Once complete, the Sandbox will run.^The GM can restart the Activation sequence by clicking on Restart Sandbox. Note; this is only available during the Sandbox activation sequence. The Sandbox cannot be restarted once it is running.</gm_instructions>
     <!--Test Variables (not required in start block)-->
     <!--Test Variables-->
-    <set_variable name="Docking Port" value="10.0" integer="yes" />
-    <set_variable name="DockingPortLocationX" value="0.0" integer="yes" />
-    <set_variable name="DockingPortLocationY" value="0.0" integer="yes" />
-    <set_variable name="DockingPortLocationZ" value="0.0" integer="yes" />
+    <!--<set_variable name="Docking Port" value="10.0" integer="yes" />-->
+    <!--<set_variable name="DockingPortLocationX" value="0.0" integer="yes" />-->
+    <!--<set_variable name="DockingPortLocationY" value="0.0" integer="yes" />-->
+    <!--<set_variable name="DockingPortLocationZ" value="0.0" integer="yes" />-->
     <set_variable name="sectorSideOverride" value="0.0" integer="yes" />
+    <set_variable name="System" value="1.0" integer="yes" />
     <set_variable name="systemSideOverride" value="0.0" integer="yes" />
     <set_variable name="reassignPatrol0" value="0.0" integer="yes" />
     <set_variable name="reassignPatrol2" value="10.0" integer="yes" />
@@ -202,7 +203,7 @@
     <if_timer_finished name="Destroy Objects" />
     <set_timer name="Destroy Objects" seconds="1" />
   </disabled_event>
-  <folder_arme name="Sandbox Activation" id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" />
+  <folder_arme name="Sandbox Activation" id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" expanded_arme="" />
   <folder_arme name="Reset Activation" id_arme="dec1f604-a38a-449a-b80b-d630ce45845c" parent_id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" />
   <event name="Reset All Buttons" id_arme="4db38589-05f0-4387-9dd4-ef08c201581c" parent_id_arme="dec1f604-a38a-449a-b80b-d630ce45845c">
     <if_gm_button text="Restart Sandbox" />
@@ -252,7 +253,7 @@
     <set_variable name="Custom Config" value="0.0" integer="yes" />
     <set_variable name="GM Mode" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="GM Mode" id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" parent_id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" />
+  <folder_arme name="GM Mode" id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" parent_id_arme="d2f73ac8-352b-463b-aa12-87d61dd5064f" expanded_arme="" />
   <folder_arme name="Custom Config" id_arme="fa633206-c6e0-4ee2-ad51-9dc16e3e3288" parent_id_arme="10a3b890-07b8-4df7-8bb8-5ec4c9750c28" />
   <event name="Ship 1 Enable" id_arme="92f3ba91-ad3a-4809-8512-b664bee80fda" parent_id_arme="fa633206-c6e0-4ee2-ad51-9dc16e3e3288">
     <if_gm_button text="Ship1 Config Disabled" />

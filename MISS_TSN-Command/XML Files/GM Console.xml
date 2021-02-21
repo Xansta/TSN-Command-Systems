@@ -46594,10 +46594,6 @@
     <if_gm_button text="Station Scan Text\Mineral Refinary" />
     <set_ship_text use_gm_selection=" " desc="Mineral Deposits detected" scan_desc="Intel - Mineral refinary operations active." />
   </event>
-  <folder_arme name="Docking Port" id_arme="d021d56d-150e-4e6f-bdd4-35a8495626b4" parent_id_arme="c3aaadcc-fe4b-4a02-8f3a-f263ccfd6c99" expanded_arme="" />
-  <event name="Create Docking Port" id_arme="89faae68-0867-4861-84df-23fd0cad8d9d" parent_id_arme="d021d56d-150e-4e6f-bdd4-35a8495626b4">
-    <create type="station" x="100.0" y="20.0" z="100.0" name="Dock|PortNumber|" />
-  </event>
   <event name="Reset Comms Buttons" id_arme="2f450435-1b0e-4cbd-9cde-dab0400027e2" parent_id_arme="c3aaadcc-fe4b-4a02-8f3a-f263ccfd6c99">
     <if_variable name="Interactions Menu" comparator="EQUALS" value="1.0" />
     <if_gm_button text="Reset Comms" />
