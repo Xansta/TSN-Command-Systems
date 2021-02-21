@@ -7612,7 +7612,7 @@
     <set_ship_text name="--" newname="Z|firstnumber||secondnumber|" />
     <set_variable name="Name Assign" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
+  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" expanded_arme="" />
   <event name="All Inactive" id_arme="970521f0-180e-45e2-8cf8-693a4c3b200b" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1">
     <if_variable name="Sandbox Activation" comparator="EQUALS" value="0.0" />
     <if_variable name="shipCount" comparator="EQUALS" value="0.0" />
@@ -7621,7 +7621,7 @@
     <set_variable name="Sector Locked" value="1.0" integer="yes" />
     <set_variable name="Sandbox Activation" value="100.0" integer="yes" />
   </event>
-  <folder_arme name="Comms Controls" id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" />
+  <folder_arme name="Comms Controls" id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" expanded_arme="" />
   <event name="Create Menu" id_arme="c54e4e46-9912-462e-93b2-93a07284d4b4" parent_id_arme="722eb0e1-d32d-43b3-a8f0-45c0efb17fc7">
     <if_variable name="CommsControls" comparator="EQUALS" value="1.0" />
     <set_comms_button text="Fleet Status" sideValue="playerSide" />
@@ -10420,8 +10420,8 @@
     <set_comms_button text="Fleet Menu" sideValue="playerSide" />
     <set_comms_button text="Clear Status" sideValue="playerSide" />
     <set_comms_button text="Fuel Status" sideValue="playerSide" />
-    <set_comms_button text="Ordnance Status" sideValue="playerSide" />
-    <set_comms_button text="Cargo Status" sideValue="playerSide" />
+    <!--<set_comms_button text="Ordnance Status" sideValue="playerSide" />-->
+    <!--<set_comms_button text="Cargo Status" sideValue="playerSide" />-->
     <!---->
     <set_comms_button text="Back" sideValue="playerSide" />
     <set_variable name="CommsControls" value="4.0" integer="yes" />
@@ -10439,6 +10439,40 @@
     <clear_comms_button text="Back" sideValue="playerSide" />
     <!---->
     <set_variable name="CommsControls" value="3.0" integer="yes" />
+  </event>
+  <event name="Fuel Status Enabled" id_arme="bd6f9b56-0101-4de2-a10c-31d641743b49" parent_id_arme="dbdb6d2f-b69d-4076-90e7-cf1384396463">
+    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
+    <if_comms_button text="Fuel Status" />
+    <set_variable name="Fuel Status Display" value="1.0" integer="yes" />
+  </event>
+  <event name="Clear Status" id_arme="49b175cc-7d12-432c-a10f-8ed19a89e2a4" parent_id_arme="dbdb6d2f-b69d-4076-90e7-cf1384396463">
+    <if_variable name="CommsControls" comparator="EQUALS" value="4.0" />
+    <if_comms_button text="Clear Status" />
+    <set_variable name="Fuel Status Display" value="0.0" integer="yes" />
+    <destroy name="TSN Sabre - Green" />
+    <destroy name="TSN Sabre - Amber" />
+    <destroy name="TSN Sabre - Red" />
+    <destroy name="TSN Horizon - Green" />
+    <destroy name="TSN Horizon - Amber" />
+    <destroy name="TSN Horizon - Red" />
+    <destroy name="TSN Viper - Green" />
+    <destroy name="TSN Viper - Amber" />
+    <destroy name="TSN Viper - Red" />
+    <destroy name="TSN Lancer - Green" />
+    <destroy name="TSN Lancer - Amber" />
+    <destroy name="TSN Lancer - Red" />
+    <destroy name="TSN Hunter - Green" />
+    <destroy name="TSN Hunter - Amber" />
+    <destroy name="TSN Hunter - Red" />
+    <destroy name="TSN Osiris - Green" />
+    <destroy name="TSN Osiris - Amber" />
+    <destroy name="TSN Osiris - Red" />
+    <destroy name="TSN Stalker - Green" />
+    <destroy name="TSN Stalker - Amber" />
+    <destroy name="TSN Stalker - Red" />
+    <destroy name="TSN Eagle - Green" />
+    <destroy name="TSN Eagle - Amber" />
+    <destroy name="TSN Eagle - Red" />
   </event>
   <folder_arme name="Status on Activation" id_arme="2f04d95e-6b8e-4dca-a553-98bd1bc2f0c9" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" />
   <event name="Ship1 Active" id_arme="7e9d2816-cbfc-40b8-a548-831ce7352f33" parent_id_arme="2f04d95e-6b8e-4dca-a553-98bd1bc2f0c9">
@@ -10857,9 +10891,9 @@
     <set_variable name="Ship8 Status" value="4.0" integer="yes" />
     <set_variable name="Ship8CommsMenu" value="0.0" integer="yes" />
   </event>
-  <folder_arme name="Track Ship Status" id_arme="1160c145-db31-4c90-99e1-907d9e1bb8bc" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" />
-  <folder_arme name="Ordnance Tracker" id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" parent_id_arme="1160c145-db31-4c90-99e1-907d9e1bb8bc" />
-  <folder_arme name="Ship1" id_arme="2c027645-c62e-485b-bf7e-87f3f2140426" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" />
+  <folder_arme name="Track Ship Status" id_arme="1160c145-db31-4c90-99e1-907d9e1bb8bc" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" expanded_arme="" />
+  <folder_arme name="Ordnance Tracker" id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" parent_id_arme="1160c145-db31-4c90-99e1-907d9e1bb8bc" expanded_arme="" />
+  <folder_arme name="Ship1" id_arme="2c027645-c62e-485b-bf7e-87f3f2140426" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" expanded_arme="" />
   <event name="Increase Homings" id_arme="2a5181be-1cd2-4c7d-94ab-62289454df50" parent_id_arme="2c027645-c62e-485b-bf7e-87f3f2140426">
     <if_exists player_slot="0" />
     <if_object_property property="countHoming" player_slot="0" comparator="GREATER" value="Ship1HomingCurrent" />
@@ -10939,6 +10973,37 @@
     <if_exists player_slot="0" />
     <if_object_property property="countTag" player_slot="0" comparator="LESS" value="Ship1TagCurrent" />
     <set_variable name="Ship1TagCurrent" value="Ship1TagCurrent-1" integer="yes" />
+  </event>
+  <event name="Energy Green" id_arme="21df8028-2e45-4f41-a2e5-06ccc8f0f780" parent_id_arme="2c027645-c62e-485b-bf7e-87f3f2140426">
+    <if_variable name="Refuel Ship1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="0" comparator="GREATER_EQUAL" value="600" />
+    <if_not_exists name="TSN Sabre - Green" />
+    <if_exists player_slot="0" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="93000.0" y="0.0" z="0.0" name="TSN Sabre - Green" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Sabre - Amber" />
+    <destroy name="TSN Sabre - Red" />
+  </event>
+  <event name="Energy Amber" id_arme="a060824a-fc03-4a90-9291-a763ba6d0377" parent_id_arme="2c027645-c62e-485b-bf7e-87f3f2140426">
+    <if_variable name="Refuel Ship1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="0" comparator="LESS" value="600" />
+    <if_object_property property="energy" player_slot="0" comparator="GREATER_EQUAL" value="300" />
+    <if_not_exists name="TSN Sabre - Amber" />
+    <if_exists player_slot="0" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <destroy name="TSN Sabre - Green" />
+    <create type="genericMesh" x="93000.0" y="0.0" z="0.0" name="TSN Sabre - Amber" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Sabre - Red" />
+  </event>
+  <event name="Energy Red" id_arme="f78609b0-3ccf-48e6-8904-ec4b0e62ce02" parent_id_arme="2c027645-c62e-485b-bf7e-87f3f2140426">
+    <if_variable name="Refuel Ship1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="0" comparator="LESS" value="300" />
+    <if_not_exists name="TSN Sabre - Red" />
+    <if_exists player_slot="0" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <destroy name="TSN Sabre - Green" />
+    <destroy name="TSN Sabre - Amber" />
+    <create type="genericMesh" x="93000.0" y="0.0" z="0.0" name="TSN Sabre - Red" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
   </event>
   <folder_arme name="Ship2" id_arme="3ffaa9fc-066c-4bc3-954b-74698ebec862" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" />
   <event name="Increase Homings" id_arme="6239d45b-e3c1-4624-8709-90c0865f549a" parent_id_arme="3ffaa9fc-066c-4bc3-954b-74698ebec862">
@@ -11021,6 +11086,37 @@
     <if_object_property property="countTag" player_slot="1" comparator="LESS" value="Ship2TagCurrent" />
     <set_variable name="Ship2TagCurrent" value="Ship2TagCurrent-1" integer="yes" />
   </event>
+  <event name="Energy Green" id_arme="ab7859d8-553a-40c7-b605-6b4fa1d674e6" parent_id_arme="3ffaa9fc-066c-4bc3-954b-74698ebec862">
+    <if_variable name="Refuel Ship2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="1" comparator="GREATER_EQUAL" value="600" />
+    <if_not_exists name="TSN Horizon - Green" />
+    <if_exists player_slot="1" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="83000.0" y="0.0" z="0.0" name="TSN Horizon - Green" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Horizon - Amber" />
+    <destroy name="TSN Horizon - Red" />
+  </event>
+  <event name="Energy Amber" id_arme="f3931569-a1b1-48f5-90b9-91911a3a1036" parent_id_arme="3ffaa9fc-066c-4bc3-954b-74698ebec862">
+    <if_variable name="Refuel Ship2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="1" comparator="LESS" value="600" />
+    <if_object_property property="energy" player_slot="1" comparator="GREATER_EQUAL" value="300" />
+    <if_not_exists name="TSN Horizon - Amber" />
+    <if_exists player_slot="1" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <destroy name="TSN Horizon - Green" />
+    <create type="genericMesh" x="83000.0" y="0.0" z="0.0" name="TSN Horizon - Amber" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Horizon - Red" />
+  </event>
+  <event name="Energy Red" id_arme="258cd5de-4808-47b6-9cb3-40ff5632bcc3" parent_id_arme="3ffaa9fc-066c-4bc3-954b-74698ebec862">
+    <if_variable name="Refuel Ship2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="1" comparator="LESS" value="300" />
+    <if_not_exists name="TSN Horizon - Red" />
+    <if_exists player_slot="1" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <destroy name="TSN Horizon - Green" />
+    <destroy name="TSN Horizon - Amber" />
+    <create type="genericMesh" x="83000.0" y="0.0" z="0.0" name="TSN Horizon - Red" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+  </event>
   <folder_arme name="Ship3" id_arme="8d8c2545-659d-4a3a-9ce7-6b63250ca5fc" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" />
   <event name="Increase Homings" id_arme="73dc1221-1397-4bee-a7c9-63d4fff245c7" parent_id_arme="8d8c2545-659d-4a3a-9ce7-6b63250ca5fc">
     <if_exists player_slot="2" />
@@ -11101,6 +11197,37 @@
     <if_exists player_slot="2" />
     <if_object_property property="countTag" player_slot="2" comparator="LESS" value="Ship3TagCurrent" />
     <set_variable name="Ship3TagCurrent" value="Ship3TagCurrent-1" integer="yes" />
+  </event>
+  <event name="Energy Green" id_arme="7efa25d7-624b-4f90-b376-0613d62ef6be" parent_id_arme="8d8c2545-659d-4a3a-9ce7-6b63250ca5fc">
+    <if_variable name="Refuel Ship3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="2" comparator="GREATER_EQUAL" value="600" />
+    <if_not_exists name="TSN Viper - Green" />
+    <if_exists player_slot="2" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="73000.0" y="0.0" z="0.0" name="TSN Viper - Green" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Viper - Amber" />
+    <destroy name="TSN Viper - Red" />
+  </event>
+  <event name="Energy Amber" id_arme="e6e6b8f4-09ea-4051-8be8-7550d883f0db" parent_id_arme="8d8c2545-659d-4a3a-9ce7-6b63250ca5fc">
+    <if_variable name="Refuel Ship3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="2" comparator="LESS" value="600" />
+    <if_object_property property="energy" player_slot="2" comparator="GREATER_EQUAL" value="300" />
+    <if_not_exists name="TSN Viper - Amber" />
+    <if_exists player_slot="2" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="73000.0" y="0.0" z="0.0" name="TSN Viper - Amber" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Viper - Green" />
+    <destroy name="TSN Viper - Red" />
+  </event>
+  <event name="Energy Red" id_arme="d009389b-0f66-4486-aecf-10e3c0cfb6f7" parent_id_arme="8d8c2545-659d-4a3a-9ce7-6b63250ca5fc">
+    <if_variable name="Refuel Ship3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="2" comparator="LESS" value="300" />
+    <if_not_exists name="TSN Viper - Red" />
+    <if_exists player_slot="2" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="73000.0" y="0.0" z="0.0" name="TSN Viper - Red" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Viper - Green" />
+    <destroy name="TSN Viper - Amber" />
   </event>
   <folder_arme name="Ship4" id_arme="b4bada20-48a4-48b7-824f-ed54a11bc2e6" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" />
   <event name="Increase Homings" id_arme="aa4f5561-992b-4e1b-b4f8-de5be8203fd7" parent_id_arme="b4bada20-48a4-48b7-824f-ed54a11bc2e6">
@@ -11183,6 +11310,37 @@
     <if_object_property property="countTag" player_slot="3" comparator="LESS" value="Ship4TagCurrent" />
     <set_variable name="Ship4TagCurrent" value="Ship4TagCurrent-1" integer="yes" />
   </event>
+  <event name="Energy Green" id_arme="d1c97e54-e67b-434c-80bb-e96adb8df2ae" parent_id_arme="b4bada20-48a4-48b7-824f-ed54a11bc2e6">
+    <if_variable name="Refuel Ship4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="3" comparator="GREATER_EQUAL" value="600" />
+    <if_not_exists name="TSN Lancer - Green" />
+    <if_exists player_slot="3" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="63000.0" y="0.0" z="0.0" name="TSN Lancer - Green" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Lancer - Amber" />
+    <destroy name="TSN Lancer - Red" />
+  </event>
+  <event name="Energy Amber" id_arme="21358cfc-95d9-4591-8a5e-25f9f8351b10" parent_id_arme="b4bada20-48a4-48b7-824f-ed54a11bc2e6">
+    <if_variable name="Refuel Ship4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="3" comparator="LESS" value="600" />
+    <if_object_property property="energy" player_slot="3" comparator="GREATER_EQUAL" value="300" />
+    <if_not_exists name="TSN Lancer - Amber" />
+    <if_exists player_slot="3" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="63000.0" y="0.0" z="0.0" name="TSN Lancer - Amber" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Lancer - Green" />
+    <destroy name="TSN Lancer - Red" />
+  </event>
+  <event name="Energy Red" id_arme="3d70d5af-ea69-479f-996c-a6e454916537" parent_id_arme="b4bada20-48a4-48b7-824f-ed54a11bc2e6">
+    <if_variable name="Refuel Ship4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="3" comparator="LESS" value="300" />
+    <if_not_exists name="TSN Lancer - Red" />
+    <if_exists player_slot="3" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="63000.0" y="0.0" z="0.0" name="TSN Lancer - Red" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Lancer - Green" />
+    <destroy name="TSN Lancer - Amber" />
+  </event>
   <folder_arme name="Ship5" id_arme="e125df04-7749-4f84-b772-93b868fb22db" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" />
   <event name="Increase Homings" id_arme="0f0af9b9-9354-4227-bac6-de598be79dcc" parent_id_arme="e125df04-7749-4f84-b772-93b868fb22db">
     <if_exists player_slot="4" />
@@ -11263,6 +11421,37 @@
     <if_exists player_slot="4" />
     <if_object_property property="countTag" player_slot="4" comparator="LESS" value="Ship5TagCurrent" />
     <set_variable name="Ship5TagCurrent" value="Ship5TagCurrent-1" integer="yes" />
+  </event>
+  <event name="Energy Green" id_arme="7697352a-ee66-4ba7-9bfa-0674a86719d4" parent_id_arme="e125df04-7749-4f84-b772-93b868fb22db">
+    <if_variable name="Refuel Ship5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="4" comparator="GREATER_EQUAL" value="600" />
+    <if_not_exists name="TSN Hunter - Green" />
+    <if_exists player_slot="4" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="53000.0" y="0.0" z="0.0" name="TSN Hunter - Green" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Hunter - Amber" />
+    <destroy name="TSN Hunter - Red" />
+  </event>
+  <event name="Energy Amber" id_arme="289cdaa5-2c74-4266-a88d-01a8f2075f71" parent_id_arme="e125df04-7749-4f84-b772-93b868fb22db">
+    <if_variable name="Refuel Ship5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="4" comparator="LESS" value="600" />
+    <if_object_property property="energy" player_slot="4" comparator="GREATER_EQUAL" value="300" />
+    <if_not_exists name="TSN Hunter - Amber" />
+    <if_exists player_slot="4" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="53000.0" y="0.0" z="0.0" name="TSN Hunter - Amber" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Hunter - Green" />
+    <destroy name="TSN Hunter - Red" />
+  </event>
+  <event name="Energy Red" id_arme="df20d91b-34ab-419d-9d07-c8a24ffc5c29" parent_id_arme="e125df04-7749-4f84-b772-93b868fb22db">
+    <if_variable name="Refuel Ship5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="4" comparator="LESS" value="300" />
+    <if_not_exists name="TSN Hunter - Red" />
+    <if_exists player_slot="4" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="53000.0" y="0.0" z="0.0" name="TSN Hunter - Red" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Hunter - Green" />
+    <destroy name="TSN Hunter - Amber" />
   </event>
   <folder_arme name="Ship6" id_arme="476156cf-274d-4b73-8290-a52526edb688" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" />
   <event name="Increase Homings" id_arme="74602e75-bc03-4bcb-8984-5134fca44ea8" parent_id_arme="476156cf-274d-4b73-8290-a52526edb688">
@@ -11345,6 +11534,37 @@
     <if_object_property property="countTag" player_slot="5" comparator="LESS" value="Ship6TagCurrent" />
     <set_variable name="Ship6TagCurrent" value="Ship6TagCurrent-1" integer="yes" />
   </event>
+  <event name="Energy Green" id_arme="832c39fe-beeb-4ad1-93c3-f1438fc7e890" parent_id_arme="476156cf-274d-4b73-8290-a52526edb688">
+    <if_variable name="Refuel Ship6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="5" comparator="GREATER_EQUAL" value="600" />
+    <if_not_exists name="TSN Osiris - Green" />
+    <if_exists player_slot="5" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="43000.0" y="0.0" z="0.0" name="TSN Osiris - Green" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Osiris - Amber" />
+    <destroy name="TSN Osiris - Red" />
+  </event>
+  <event name="Energy Amber" id_arme="d0de7b44-2947-4b2f-9a9c-2e13c188678c" parent_id_arme="476156cf-274d-4b73-8290-a52526edb688">
+    <if_variable name="Refuel Ship6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="5" comparator="LESS" value="600" />
+    <if_object_property property="energy" player_slot="5" comparator="GREATER_EQUAL" value="300" />
+    <if_not_exists name="TSN Osiris - Amber" />
+    <if_exists player_slot="5" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="43000.0" y="0.0" z="0.0" name="TSN Osiris - Amber" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Osiris - Green" />
+    <destroy name="TSN Osiris - Red" />
+  </event>
+  <event name="Energy Red" id_arme="33f2dd65-614b-479a-bff8-c416afc878de" parent_id_arme="476156cf-274d-4b73-8290-a52526edb688">
+    <if_variable name="Refuel Ship6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="5" comparator="LESS" value="300" />
+    <if_not_exists name="TSN Osiris - Red" />
+    <if_exists player_slot="5" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="43000.0" y="0.0" z="0.0" name="TSN Osiris - Red" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Osiris - Green" />
+    <destroy name="TSN Osiris - Amber" />
+  </event>
   <folder_arme name="Ship7" id_arme="630f5c51-f259-484f-822d-06ca78f2b7b3" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" />
   <event name="Increase Homings" id_arme="905ddb74-8cd5-4db4-9509-ed018ef273a8" parent_id_arme="630f5c51-f259-484f-822d-06ca78f2b7b3">
     <if_exists player_slot="6" />
@@ -11426,6 +11646,37 @@
     <if_object_property property="countTag" player_slot="6" comparator="LESS" value="Ship7TagCurrent" />
     <set_variable name="Ship7TagCurrent" value="Ship7TagCurrent-1" integer="yes" />
   </event>
+  <event name="Energy Green" id_arme="0a3a7ad6-395a-4134-a0dc-b96cb6a02767" parent_id_arme="630f5c51-f259-484f-822d-06ca78f2b7b3">
+    <if_variable name="Refuel Ship7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="6" comparator="GREATER_EQUAL" value="600" />
+    <if_not_exists name="TSN Stalker - Green" />
+    <if_exists player_slot="6" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="33000.0" y="0.0" z="0.0" name="TSN Stalker - Green" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Stalker - Amber" />
+    <destroy name="TSN Stalker - Red" />
+  </event>
+  <event name="Energy Amber" id_arme="856a1b31-e101-441c-99fd-ee2f80c10915" parent_id_arme="630f5c51-f259-484f-822d-06ca78f2b7b3">
+    <if_variable name="Refuel Ship7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="6" comparator="LESS" value="600" />
+    <if_object_property property="energy" player_slot="6" comparator="GREATER_EQUAL" value="300" />
+    <if_not_exists name="TSN Stalker - Amber" />
+    <if_exists player_slot="6" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="33000.0" y="0.0" z="0.0" name="TSN Stalker - Amber" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Stalker - Green" />
+    <destroy name="TSN Stalker - Red" />
+  </event>
+  <event name="Energy Red" id_arme="ef5e357d-efcc-496d-8623-60e1a493fb20" parent_id_arme="630f5c51-f259-484f-822d-06ca78f2b7b3">
+    <if_variable name="Refuel Ship7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="6" comparator="LESS" value="300" />
+    <if_not_exists name="TSN Stalker - Red" />
+    <if_exists player_slot="6" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="33000.0" y="0.0" z="0.0" name="TSN Stalker - Red" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Stalker - Green" />
+    <destroy name="TSN Stalker - Amber" />
+  </event>
   <folder_arme name="Ship8" id_arme="de3213b9-2ac6-4469-86f4-3d1cab77c343" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" />
   <event name="Increase Homings" id_arme="566c2430-ac1d-46ab-a505-0fd286b26a6e" parent_id_arme="de3213b9-2ac6-4469-86f4-3d1cab77c343">
     <if_exists player_slot="7" />
@@ -11506,6 +11757,37 @@
     <if_exists player_slot="7" />
     <if_object_property property="countTag" player_slot="7" comparator="LESS" value="Ship8TagCurrent" />
     <set_variable name="Ship8TagCurrent" value="Ship8TagCurrent-1" integer="yes" />
+  </event>
+  <event name="Energy Green" id_arme="a3648e3b-c4d4-447e-b9ab-75e57e0166cb" parent_id_arme="de3213b9-2ac6-4469-86f4-3d1cab77c343">
+    <if_variable name="Refuel Ship8" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="7" comparator="GREATER_EQUAL" value="600" />
+    <if_not_exists name="TSN Eagle - Green" />
+    <if_exists player_slot="7" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="23000.0" y="0.0" z="0.0" name="TSN Eagle - Green" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Eagle - Amber" />
+    <destroy name="TSN Eagle - Red" />
+  </event>
+  <event name="Energy Amber" id_arme="19d048a5-87f5-46ae-986e-49dc93f2ca2b" parent_id_arme="de3213b9-2ac6-4469-86f4-3d1cab77c343">
+    <if_variable name="Refuel Ship8" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="7" comparator="LESS" value="600" />
+    <if_object_property property="energy" player_slot="7" comparator="GREATER_EQUAL" value="300" />
+    <if_not_exists name="TSN Eagle - Amber" />
+    <if_exists player_slot="7" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="23000.0" y="0.0" z="0.0" name="TSN Eagle - Amber" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Eagle - Green" />
+    <destroy name="TSN Eagle - Red" />
+  </event>
+  <event name="Energy Red" id_arme="404bfba4-6b0b-4242-8627-401d2ea47ac6" parent_id_arme="de3213b9-2ac6-4469-86f4-3d1cab77c343">
+    <if_variable name="Refuel Ship8" comparator="EQUALS" value="0.0" />
+    <if_object_property property="energy" player_slot="7" comparator="LESS" value="300" />
+    <if_not_exists name="TSN Eagle - Red" />
+    <if_exists player_slot="7" />
+    <if_variable name="Fuel Status Display" comparator="EQUALS" value="1.0" />
+    <create type="genericMesh" x="23000.0" y="0.0" z="0.0" name="TSN Eagle - Red" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
+    <destroy name="TSN Eagle - Green" />
+    <destroy name="TSN Eagle - Amber" />
   </event>
   <folder_arme name="Destroyed" id_arme="5e24183b-0344-45c6-9981-1b2d210778d7" parent_id_arme="1160c145-db31-4c90-99e1-907d9e1bb8bc" />
   <event name="Ship1 Destroyed" id_arme="defc1070-b7d2-4e08-b196-18fe9d407622" parent_id_arme="5e24183b-0344-45c6-9981-1b2d210778d7">
@@ -30540,10 +30822,13 @@
   <event name="Activation Messages" id_arme="ef546cd6-5824-44b5-abcc-e15df6d73a13" parent_id_arme="972624a9-7450-4d67-93da-8ae0e5e22871">
     <if_not_exists name="FCS - TSN Sabre" />
     <if_variable name="Refuel Ship1" comparator="EQUALS" value="2.0" />
+    <destroy name="TSN Sabre - Green" />
+    <destroy name="TSN Sabre - Amber" />
+    <destroy name="TSN Sabre - Red" />
     <create type="genericMesh" x="93000.0" y="0.0" z="0.0" name="FCS - TSN Sabre" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
     <warning_popup_message message="FCS: Active" consoles="ME" player_slot="0" />
   </event>
-  <folder_arme name="Deactivation" id_arme="c80ca9c3-6c4c-4432-a7bc-fb48266e513f" parent_id_arme="972624a9-7450-4d67-93da-8ae0e5e22871" expanded_arme="" />
+  <folder_arme name="Deactivation" id_arme="c80ca9c3-6c4c-4432-a7bc-fb48266e513f" parent_id_arme="972624a9-7450-4d67-93da-8ae0e5e22871" />
   <event name="Deactivate Collectors" id_arme="39e9a5ce-6b63-4adb-828c-7c1d5fc5e54a" parent_id_arme="c80ca9c3-6c4c-4432-a7bc-fb48266e513f">
     <if_variable name="Refuel Ship1" comparator="EQUALS" value="2.0" />
     <if_timer_finished name="Deactivate Ship1 FCS" />
@@ -30655,10 +30940,13 @@
   <event name="Activation Messages" id_arme="c6d1b117-d015-4394-aa6b-b8d6cc69ec80" parent_id_arme="99626f33-d79a-426a-884f-87d223ad1289">
     <if_not_exists name="FCS - TSN Horizon" />
     <if_variable name="Refuel Ship2" comparator="EQUALS" value="2.0" />
+    <destroy name="TSN Horizon - Green" />
+    <destroy name="TSN Horizon - Amber" />
+    <destroy name="TSN Horizon - Red" />
     <create type="genericMesh" x="83000.0" y="0.0" z="0.0" name="FCS - TSN Horizon" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
     <warning_popup_message message="FCS: Active" consoles="ME" player_slot="1" />
   </event>
-  <folder_arme name="Deactivation" id_arme="2de5eec0-63c9-4647-a8b6-03cdd829ff77" parent_id_arme="99626f33-d79a-426a-884f-87d223ad1289" expanded_arme="" />
+  <folder_arme name="Deactivation" id_arme="2de5eec0-63c9-4647-a8b6-03cdd829ff77" parent_id_arme="99626f33-d79a-426a-884f-87d223ad1289" />
   <event name="Deactivate Collectors" id_arme="a36d9c89-dcc7-45d4-a1f4-4486a73672cf" parent_id_arme="2de5eec0-63c9-4647-a8b6-03cdd829ff77">
     <if_variable name="Refuel Ship2" comparator="EQUALS" value="2.0" />
     <if_timer_finished name="Deactivate Ship2 FCS" />
@@ -30770,10 +31058,13 @@
   <event name="Activation Messages" id_arme="b2052211-5fda-4508-9506-5cfa07c427fb" parent_id_arme="a89fd645-14f4-4ff1-8f0d-190c22284dcf">
     <if_not_exists name="FCS - TSN Viper" />
     <if_variable name="Refuel Ship3" comparator="EQUALS" value="2.0" />
+    <destroy name="TSN Viper - Green" />
+    <destroy name="TSN Viper - Amber" />
+    <destroy name="TSN Viper - Red" />
     <create type="genericMesh" x="73000.0" y="0.0" z="0.0" name="FCS - TSN Viper" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
     <warning_popup_message message="FCS: Active" consoles="ME" player_slot="2" />
   </event>
-  <folder_arme name="Deactivation" id_arme="71b2467e-3f35-451b-a339-3678eda9ceba" parent_id_arme="a89fd645-14f4-4ff1-8f0d-190c22284dcf" expanded_arme="" />
+  <folder_arme name="Deactivation" id_arme="71b2467e-3f35-451b-a339-3678eda9ceba" parent_id_arme="a89fd645-14f4-4ff1-8f0d-190c22284dcf" />
   <event name="Deactivate Collectors" id_arme="3484a471-4e7f-4905-ab13-1dd9af4bc0e7" parent_id_arme="71b2467e-3f35-451b-a339-3678eda9ceba">
     <if_variable name="Refuel Ship3" comparator="EQUALS" value="2.0" />
     <if_timer_finished name="Deactivate Ship3 FCS" />
@@ -30885,10 +31176,13 @@
   <event name="Activation Messages" id_arme="92c5f7cd-e3c7-498b-951f-d2872fadae39" parent_id_arme="41f8c1a7-c4d3-47e2-84da-63e5609ec11d">
     <if_not_exists name="FCS - TSN Lancer" />
     <if_variable name="Refuel Ship4" comparator="EQUALS" value="2.0" />
+    <destroy name="TSN Lancer - Green" />
+    <destroy name="TSN Lancer - Amber" />
+    <destroy name="TSN Lancer - Red" />
     <create type="genericMesh" x="63000.0" y="0.0" z="0.0" name="FCS - TSN Lancer" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
     <warning_popup_message message="FCS: Active" consoles="ME" player_slot="3" />
   </event>
-  <folder_arme name="Deactivation" id_arme="6a43b573-f485-4f83-b0b3-71da41ab8668" parent_id_arme="41f8c1a7-c4d3-47e2-84da-63e5609ec11d" expanded_arme="" />
+  <folder_arme name="Deactivation" id_arme="6a43b573-f485-4f83-b0b3-71da41ab8668" parent_id_arme="41f8c1a7-c4d3-47e2-84da-63e5609ec11d" />
   <event name="Deactivate Collectors" id_arme="bf55f45e-36c6-4fa4-991e-32c1f305cbae" parent_id_arme="6a43b573-f485-4f83-b0b3-71da41ab8668">
     <if_variable name="Refuel Ship4" comparator="EQUALS" value="2.0" />
     <if_timer_finished name="Deactivate Ship4 FCS" />
@@ -31000,10 +31294,13 @@
   <event name="Activation Messages" id_arme="f99b1b3f-76db-4407-acee-6e6c30b8c393" parent_id_arme="5c851141-e1dd-4626-b978-dffd54ae2782">
     <if_not_exists name="FCS - TSN Hunter" />
     <if_variable name="Refuel Ship5" comparator="EQUALS" value="2.0" />
+    <destroy name="TSN Hunter - Green" />
+    <destroy name="TSN Hunter - Amber" />
+    <destroy name="TSN Hunter - Red" />
     <create type="genericMesh" x="53000.0" y="0.0" z="0.0" name="FCS - TSN Hunter" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
     <warning_popup_message message="FCS: Active" consoles="ME" player_slot="4" />
   </event>
-  <folder_arme name="Deactivation" id_arme="890c4603-1a04-4b06-868a-dc17a93c53be" parent_id_arme="5c851141-e1dd-4626-b978-dffd54ae2782" expanded_arme="" />
+  <folder_arme name="Deactivation" id_arme="890c4603-1a04-4b06-868a-dc17a93c53be" parent_id_arme="5c851141-e1dd-4626-b978-dffd54ae2782" />
   <event name="Deactivate Collectors" id_arme="d705e6f2-15cf-4db3-b330-ef2039ba29e8" parent_id_arme="890c4603-1a04-4b06-868a-dc17a93c53be">
     <if_variable name="Refuel Ship5" comparator="EQUALS" value="2.0" />
     <if_timer_finished name="Deactivate Ship5 FCS" />
@@ -31115,10 +31412,13 @@
   <event name="Activation Messages" id_arme="76157ac4-22ee-42d6-b2e0-4e4582279ea3" parent_id_arme="7538f096-38d9-4633-ad79-055747e909d7">
     <if_not_exists name="FCS - TSN Osiris" />
     <if_variable name="Refuel Ship6" comparator="EQUALS" value="2.0" />
+    <destroy name="TSN Osiris - Green" />
+    <destroy name="TSN Osiris - Amber" />
+    <destroy name="TSN Osiris - Red" />
     <create type="genericMesh" x="43000.0" y="0.0" z="0.0" name="FCS - TSN Osiris" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
     <warning_popup_message message="FCS: Active" consoles="ME" player_slot="5" />
   </event>
-  <folder_arme name="Deactivation" id_arme="bee194c6-62ca-4589-8ccc-6afe7743203e" parent_id_arme="7538f096-38d9-4633-ad79-055747e909d7" expanded_arme="" />
+  <folder_arme name="Deactivation" id_arme="bee194c6-62ca-4589-8ccc-6afe7743203e" parent_id_arme="7538f096-38d9-4633-ad79-055747e909d7" />
   <event name="Deactivate Collectors" id_arme="a2acdfbe-f610-4c2c-a407-3c4b3c2411b5" parent_id_arme="bee194c6-62ca-4589-8ccc-6afe7743203e">
     <if_variable name="Refuel Ship6" comparator="EQUALS" value="2.0" />
     <if_timer_finished name="Deactivate Ship6 FCS" />
@@ -31230,10 +31530,13 @@
   <event name="Activation Messages" id_arme="3628db41-0acf-4aff-815e-e68492ae1b2a" parent_id_arme="06fae324-2781-4faa-8204-3f75c76dfc18">
     <if_not_exists name="FCS - TSN Stalker" />
     <if_variable name="Refuel Ship7" comparator="EQUALS" value="2.0" />
+    <destroy name="TSN Stalker - Green" />
+    <destroy name="TSN Stalker - Amber" />
+    <destroy name="TSN Stalker - Red" />
     <create type="genericMesh" x="33000.0" y="0.0" z="122.0" name="FCS - TSN Stalker" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
     <warning_popup_message message="FCS: Active" consoles="ME" player_slot="6" />
   </event>
-  <folder_arme name="Deactivation" id_arme="9ea69178-d064-4114-a9b1-c5638b345706" parent_id_arme="06fae324-2781-4faa-8204-3f75c76dfc18" expanded_arme="" />
+  <folder_arme name="Deactivation" id_arme="9ea69178-d064-4114-a9b1-c5638b345706" parent_id_arme="06fae324-2781-4faa-8204-3f75c76dfc18" />
   <event name="Deactivate Collectors" id_arme="23f61e00-ef39-4f06-855f-6bc8e548bbab" parent_id_arme="9ea69178-d064-4114-a9b1-c5638b345706">
     <if_variable name="Refuel Ship7" comparator="EQUALS" value="2.0" />
     <if_timer_finished name="Deactivate Ship7 FCS" />
@@ -31345,10 +31648,13 @@
   <event name="Activation Messages" id_arme="14e9ae97-40dd-4da8-96cc-7c23b052f64d" parent_id_arme="7404d119-ec09-4c04-91a6-3c130b484f2a">
     <if_not_exists name="FCS - TSN Eagle" />
     <if_variable name="Refuel Ship8" comparator="EQUALS" value="2.0" />
+    <destroy name="TSN Eagle - Green" />
+    <destroy name="TSN Eagle - Amber" />
+    <destroy name="TSN Eagle - Red" />
     <create type="genericMesh" x="23000.0" y="0.0" z="0.0" name="FCS - TSN Eagle" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="1.0" colorGreen="0.0" colorBlue="1.0" />
     <warning_popup_message message="FCS: Active" consoles="ME" player_slot="7" />
   </event>
-  <folder_arme name="Deactivation" id_arme="02c5bd1f-fb7e-4896-ab07-874a78e4a543" parent_id_arme="7404d119-ec09-4c04-91a6-3c130b484f2a" expanded_arme="" />
+  <folder_arme name="Deactivation" id_arme="02c5bd1f-fb7e-4896-ab07-874a78e4a543" parent_id_arme="7404d119-ec09-4c04-91a6-3c130b484f2a" />
   <event name="Deactivate Collectors" id_arme="01bf7335-6380-4d2f-9e39-0979c79bd96c" parent_id_arme="02c5bd1f-fb7e-4896-ab07-874a78e4a543">
     <if_variable name="Refuel Ship8" comparator="EQUALS" value="2.0" />
     <if_timer_finished name="Deactivate Ship8 FCS" />
@@ -35090,6 +35396,1106 @@
     <set_variable name="System Settings" value="1.0" integer="yes" />
   </event>
   <folder_arme name="Auxiliary Ships" id_arme="08fe41b1-a258-46df-a42e-e72143862157" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
+  <folder_arme name="Devin" id_arme="d9b82822-58d3-425c-9337-0e1249fb4c71" parent_id_arme="08fe41b1-a258-46df-a42e-e72143862157" />
+  <event name="Devin Supply Request" id_arme="d22b9860-877d-4bd4-ab62-66316344b96a" parent_id_arme="d9b82822-58d3-425c-9337-0e1249fb4c71">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="2.0" />
+    <if_comms_button text="Supply Update" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Supply Ship Devin is standing ready to resupply TSN ships.^Stores:^Homing Torpedoes: |DevonHoming|^Nuclear Torpedoes: |DevonNuke|^EMP Torpedoes: |DevonEMP|^Mines: |DevonMine|^PShock Torpedoes: |DevonPShock|^Beacons: |DevonBeacon|^Tags: |DevonTag|^Probes: |DevonProbe|</incoming_comms_text>
+  </event>
+  <folder_arme name="Supplies" id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc" parent_id_arme="d9b82822-58d3-425c-9337-0e1249fb4c71" />
+  <event name="Devin Inactive" id_arme="88ba7625-98d4-42ed-8c78-d2574d6ee66a" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_not_exists name="Devin" />
+    <set_variable name="Devin Supplies" value="0.0" integer="yes" />
+  </event>
+  <event name="Devin Active" id_arme="4f73b7d3-5ecd-470e-ae41-1483520e1218" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="0.0" />
+    <if_exists name="Devin" />
+    <set_variable name="DevontoShip1Resupply" value="0.0" integer="yes" />
+    <set_variable name="DevontoShip2Resupply" value="0.0" integer="yes" />
+    <set_variable name="DevontoShip3Resupply" value="0.0" integer="yes" />
+    <set_variable name="DevontoShip4Resupply" value="0.0" integer="yes" />
+    <set_variable name="DevontoShip5Resupply" value="0.0" integer="yes" />
+    <set_variable name="DevontoShip6Resupply" value="0.0" integer="yes" />
+    <set_variable name="DevontoShip7Resupply" value="0.0" integer="yes" />
+    <set_variable name="DevontoShip8Resupply" value="0.0" integer="yes" />
+    <!--Stores-->
+    <set_variable name="DevonHoming" value="200.0" integer="yes" />
+    <set_variable name="DevonEMP" value="150.0" integer="yes" />
+    <set_variable name="DevonNuke" value="80.0" integer="yes" />
+    <set_variable name="DevonMine" value="100.0" integer="yes" />
+    <set_variable name="DevonPShock" value="100.0" integer="yes" />
+    <set_variable name="DevonBeacon" value="80.0" integer="yes" />
+    <set_variable name="DevonTag" value="100.0" integer="yes" />
+    <set_variable name="DevonProbe" value="100.0" integer="yes" />
+    <!--Rebuild Trackers-->
+    <set_variable name="DevonbuildHoming" value="0.0" integer="yes" />
+    <set_variable name="DevonbuildNuke" value="0.0" integer="yes" />
+    <set_variable name="DevonbuildMine" value="0.0" integer="yes" />
+    <set_variable name="DevonbuildEMP" value="0.0" integer="yes" />
+    <set_variable name="DevonbuildPShock" value="0.0" integer="yes" />
+    <set_variable name="DevonbuildBeacon" value="0.0" integer="yes" />
+    <set_variable name="DevonbuildTag" value="0.0" integer="yes" />
+    <set_variable name="DevonbuildProbe" value="0.0" integer="yes" />
+    <set_timer name="DevonbuildHoming" seconds="2" />
+    <set_timer name="DevonbuildNuke" seconds="2" />
+    <set_timer name="DevonbuildEMP" seconds="2" />
+    <set_timer name="DevonbuildMine" seconds="2" />
+    <set_timer name="DevonbuildPShock" seconds="2" />
+    <set_timer name="DevonbuildBeacon" seconds="2" />
+    <set_timer name="DevonbuildTag" seconds="2" />
+    <set_timer name="DevonbuildProbe" seconds="2" />
+    <!--General Stats-->
+    <set_ship_text name="Devin" desc="Auxillary supply ship for the TSN combat vessels" scan_desc="Max. Supplies: 20 Homing, 15 EMP, 8 Nuke, 10 Mine, 10 PShock, 10 Beacon, 10 Tag, 10 Probes" hailtext="Wrenches on standby, 4th Light!" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Supply Ship Devin is standing ready to resupply TSN ships.^Stores:^Homing Torpedoes: |DevonHoming|^Nuclear Torpedoes: |DevonNuke|^EMP Torpedoes: |DevonEMP|^Mines: |DevonMine|^PShock Torpedoes: |DevonPShock|^Beacons: |DevonBeacon|^Tags: |DevonTag|^Probes: |DevonProbe|</incoming_comms_text>
+    <set_object_property property="topSpeed" value="0.8" name="Devin" />
+    <clear_ai name="Devin" />
+    <add_ai type="DIR_THROTTLE" value1="0" value2="1.0" name="Devin" />
+    <add_ai type="FOLLOW_COMMS_ORDERS" name="Devin" />
+    <set_variable name="Devin Supplies" value="2.0" integer="yes" />
+  </event>
+  <event name="Track Homing" id_arme="85f09c5c-8e80-4bc7-8158-b0e8b790af4d" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="2.0" />
+    <if_variable name="DevonHoming" comparator="LESS_EQUAL" value="1.0" />
+    <if_variable name="DevonbuildHoming" comparator="EQUALS" value="0.0" />
+    <set_variable name="DevonbuildHoming" value="1.0" integer="yes" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Homing Torpedo load is low. We have started the manufacturing process and are now converting raw materials to increase our supplies. </incoming_comms_text>
+    <set_timer name="DevonbuildHoming" seconds="2" />
+  </event>
+  <event name="Track Nuke" id_arme="a99e5325-868f-497f-bac9-6458610ebb33" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="2.0" />
+    <if_variable name="DevonNuke" comparator="LESS_EQUAL" value="1.0" />
+    <if_variable name="DevonbuildNuke" comparator="EQUALS" value="0.0" />
+    <set_variable name="DevonbuildNuke" value="1.0" integer="yes" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Nuclear Torpedo load is low. We have started the manufacturing process and are now converting raw materials to increase our supplies. </incoming_comms_text>
+    <set_timer name="DevonbuildNuke" seconds="2" />
+  </event>
+  <event name="Track EMP" id_arme="7efae34d-765c-4212-98b7-5eeba43422b5" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="2.0" />
+    <if_variable name="DevonEMP" comparator="LESS_EQUAL" value="1.0" />
+    <if_variable name="DevonbuildEMP" comparator="EQUALS" value="0.0" />
+    <set_variable name="DevonbuildEMP" value="1.0" integer="yes" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our EMP Torpedo load is low. We have started the manufacturing process and are now converting raw materials to increase our supplies. </incoming_comms_text>
+    <set_timer name="DevonbuildEMP" seconds="2" />
+  </event>
+  <event name="Track Mine" id_arme="bb9377d7-b4ee-47e7-8ba9-af0001d7d0b0" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="2.0" />
+    <if_variable name="DevonMine" comparator="LESS_EQUAL" value="1.0" />
+    <if_variable name="DevonbuildMine" comparator="EQUALS" value="0.0" />
+    <set_variable name="DevonbuildMine" value="1.0" integer="yes" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Mine load is low. We have started the manufacturing process and are now converting raw materials to increase our supplies. </incoming_comms_text>
+    <set_timer name="DevonbuildMine" seconds="2" />
+  </event>
+  <event name="Track PShocks" id_arme="97d93f9b-c312-4d13-9432-c484f4bbff80" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="2.0" />
+    <if_variable name="DevonPShock" comparator="LESS_EQUAL" value="1.0" />
+    <if_variable name="DevonbuildPShock" comparator="EQUALS" value="0.0" />
+    <set_variable name="DevonbuildPShock" value="1.0" integer="yes" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our PShock load is low. We have started the manufacturing process and are now converting raw materials to increase our supplies. </incoming_comms_text>
+    <set_timer name="DevonbuildPShock" seconds="2" />
+  </event>
+  <event name="Track Beacons" id_arme="1588e180-cdce-46af-9b83-fedbf02877a2" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="2.0" />
+    <if_variable name="DevonMine" comparator="LESS_EQUAL" value="1.0" />
+    <if_variable name="DevonbuildBeacon" comparator="EQUALS" value="0.0" />
+    <set_variable name="DevonbuildBeacon" value="1.0" integer="yes" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Beacon load is low. We have started the manufacturing process and are now converting raw materials to increase our supplies. </incoming_comms_text>
+    <set_timer name="DevonbuildBeacon" seconds="2" />
+  </event>
+  <event name="Track Tag" id_arme="f8bdaf54-8527-4460-991a-942c019c2d93" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="2.0" />
+    <if_variable name="DevonMine" comparator="LESS_EQUAL" value="1.0" />
+    <if_variable name="DevonbuildTag" comparator="EQUALS" value="0.0" />
+    <set_variable name="DevonbuildTag" value="1.0" integer="yes" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Tag load is low. We have started the manufacturing process and are now converting raw materials to increase our supplies. </incoming_comms_text>
+    <set_timer name="DevonbuildTag" seconds="2" />
+  </event>
+  <event name="Track Probe" id_arme="3db89710-0591-4dd8-ba8d-07b99a994d47" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc">
+    <if_variable name="Devin Supplies" comparator="EQUALS" value="2.0" />
+    <if_variable name="DevonMine" comparator="LESS_EQUAL" value="1.0" />
+    <if_variable name="DevonbuildProbe" comparator="EQUALS" value="0.0" />
+    <set_variable name="DevonbuildProbe" value="1.0" integer="yes" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Probe load is low. We have started the manufacturing process and are now converting raw materials to increase our supplies. </incoming_comms_text>
+    <set_timer name="DevonbuildProbe" seconds="2" />
+  </event>
+  <folder_arme name="Regenerate Supplies" id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578" parent_id_arme="09e6e2df-4395-454f-a7c8-ebd5613c7ecc" />
+  <event name="Build Homing" id_arme="cca2dbec-d923-4cef-a075-46d2d2e3b1cb" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildHoming" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonHoming" comparator="NOT" value="20.0" />
+    <if_timer_finished name="DevonbuildHoming" />
+    <set_variable name="DevonHoming" value="DevonHoming+1" integer="yes" />
+    <set_timer name="DevonbuildHoming" seconds="20" />
+  </event>
+  <event name="Homing Full" id_arme="58995cdd-c5f1-425f-b3f7-baddba761b62" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildHoming" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonHoming" comparator="EQUALS" value="20.0" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Homing Torpedo stores are at full capacity.</incoming_comms_text>
+    <set_variable name="DevonbuildHoming" value="0.0" integer="yes" />
+  </event>
+  <event name="Build Nuke" id_arme="597807d7-5756-482a-9ad0-ee9766d9dca2" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildNuke" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonNuke" comparator="NOT" value="8.0" />
+    <if_timer_finished name="DevonbuildNuke" />
+    <set_variable name="DevonNuke" value="DevonNuke+1" integer="yes" />
+    <set_timer name="DevonbuildNuke" seconds="20" />
+  </event>
+  <event name="Nuke Full" id_arme="81a215d5-167f-4cd3-9c75-9301f06d94f3" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildNuke" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonNuke" comparator="EQUALS" value="8.0" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Nuclear Torpedo stores are at full capacity.</incoming_comms_text>
+    <set_variable name="DevonbuildNuke" value="0.0" integer="yes" />
+  </event>
+  <event name="Build EMP" id_arme="1e3943ed-036e-46e4-ba63-2ca5aa119fff" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildEMP" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonEMP" comparator="NOT" value="15.0" />
+    <if_timer_finished name="DevonbuildEMP" />
+    <set_variable name="DevonEMP" value="DevonEMP+1" integer="yes" />
+    <set_timer name="DevonbuildEMP" seconds="20" />
+  </event>
+  <event name="EMP Full" id_arme="d74b3e58-0b4d-4889-bfd2-2b149818c62c" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildEMP" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonEMP" comparator="EQUALS" value="15.0" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our EMP Torpedo stores are at full capacity.</incoming_comms_text>
+    <set_variable name="DevonbuildEMP" value="0.0" integer="yes" />
+  </event>
+  <event name="Build Mine" id_arme="79a55e73-7ca8-4f58-ba06-dd04779827d9" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildMine" comparator="EQUALS" value="1.0" />
+    <if_timer_finished name="DevonbuildMine" />
+    <if_variable name="DevonMine" comparator="NOT" value="10.0" />
+    <set_variable name="DevonMine" value="DevonMine+1" integer="yes" />
+    <set_timer name="DevonbuildMine" seconds="20" />
+  </event>
+  <event name="Mine Full" id_arme="95e8472e-d232-4b80-af50-1d0349f44285" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildMine" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonMine" comparator="EQUALS" value="10.0" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Mine stores are at full capacity.</incoming_comms_text>
+    <set_variable name="DevonbuildMine" value="0.0" integer="yes" />
+  </event>
+  <event name="Build PShock" id_arme="72957468-c061-483a-9c29-b99a67a8c9a5" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildPShock" comparator="EQUALS" value="1.0" />
+    <if_timer_finished name="DevonbuildPShock" />
+    <if_variable name="DevonPShock" comparator="NOT" value="10.0" />
+    <set_variable name="DevonPShock" value="DevonPShock+1" integer="yes" />
+    <set_timer name="DevonbuildPShock" seconds="20" />
+  </event>
+  <event name="PShock Full" id_arme="1ba2a7c4-3f61-4ca7-b208-2c2c024d3e85" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildPShock" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonPShock" comparator="EQUALS" value="10.0" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our PShock stores are at full capacity.</incoming_comms_text>
+    <set_variable name="DevonbuildPShock" value="0.0" integer="yes" />
+  </event>
+  <event name="Build Beacon" id_arme="45167118-a683-4914-8a1d-fef84c885368" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildBeacon" comparator="EQUALS" value="1.0" />
+    <if_timer_finished name="DevonbuildBeacon" />
+    <if_variable name="DevonBeacon" comparator="NOT" value="10.0" />
+    <set_variable name="DevonBeacon" value="DevonBeacon+1" integer="yes" />
+    <set_timer name="DevonbuildBeacon" seconds="20" />
+  </event>
+  <event name="Beacon Full" id_arme="a9ffa957-e589-4404-8635-2c38964e13fb" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildBeacon" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonBeacon" comparator="EQUALS" value="10.0" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Beacon stores are at full capacity.</incoming_comms_text>
+    <set_variable name="DevonbuildBeacon" value="0.0" integer="yes" />
+  </event>
+  <event name="Build Tag" id_arme="49c53750-1b03-4423-aa5b-857be4b6a314" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildTag" comparator="EQUALS" value="1.0" />
+    <if_timer_finished name="DevonbuildTag" />
+    <if_variable name="DevonTag" comparator="NOT" value="10.0" />
+    <set_variable name="DevonTag" value="DevonTag+1" integer="yes" />
+    <set_timer name="DevonbuildTag" seconds="20" />
+  </event>
+  <event name="Tag Full" id_arme="c4b55160-9904-4924-bfc1-7bff6ae15f9c" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildTag" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonTag" comparator="EQUALS" value="10.0" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Tag stores are at full capacity.</incoming_comms_text>
+    <set_variable name="DevonbuildTag" value="0.0" integer="yes" />
+  </event>
+  <event name="Build Probe" id_arme="66a53f59-848d-411a-8d2c-c0f5e5c14f19" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildProbe" comparator="EQUALS" value="1.0" />
+    <if_timer_finished name="DevonbuildProbe" />
+    <if_variable name="DevonProbe" comparator="NOT" value="10.0" />
+    <set_variable name="DevonProbe" value="DevonProbe+1" integer="yes" />
+    <set_timer name="DevonbuildProbe" seconds="20" />
+  </event>
+  <event name="Probe Full" id_arme="75a15388-6ac0-4b2a-b98b-902eee30ebc7" parent_id_arme="adf9ade5-b913-4c5b-a1b7-51a7f7104578">
+    <if_variable name="DevonbuildProbe" comparator="EQUALS" value="1.0" />
+    <if_variable name="DevonProbe" comparator="EQUALS" value="10.0" />
+    <incoming_comms_text from="Devin" sideValue="playerSide" type="FRIEND">Our Probe stores are at full capacity.</incoming_comms_text>
+    <set_variable name="DevonbuildProbe" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Resupply Ops" id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" parent_id_arme="d9b82822-58d3-425c-9337-0e1249fb4c71" />
+  <folder_arme name="Track Ships" id_arme="012e01e9-ccf7-44cf-9a5c-f493b10d471b" parent_id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" />
+  <folder_arme name="Ship1" id_arme="5a11fda7-35ab-48d5-8bbf-77baa89247b3" parent_id_arme="012e01e9-ccf7-44cf-9a5c-f493b10d471b" />
+  <event name="Ship1 In Range" id_arme="3a31ab58-0aad-4a79-8ab7-a2ae376dad92" parent_id_arme="5a11fda7-35ab-48d5-8bbf-77baa89247b3">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="0.0" />
+    <if_distance player_slot1="0" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0" />
+    <incoming_comms_text from="CHANNEL 1" sideValue="playerSide" type="STATUS">Devin systems locked.^Setting up system interface....</incoming_comms_text>
+    <set_timer name="Resupply Ship1" seconds="10" />
+    <set_variable name="DevontoShip1Resupply" value="1.0" integer="yes" />
+  </event>
+  <event name="Ship1 Ready" id_arme="5f588039-4366-4995-9285-b04617a1206f" parent_id_arme="5a11fda7-35ab-48d5-8bbf-77baa89247b3">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="1.0" />
+    <if_distance player_slot1="0" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_timer_finished name="Resupply Ship1" />
+    <incoming_comms_text from="CHANNEL 1" sideValue="playerSide" type="STATUS">system interface complete.^Awaiting resupply request.^Remain within 1000 of Devin, with shields offline, to initiate supply transfer.</incoming_comms_text>
+    <set_variable name="DevontoShip1Resupply" value="2.0" integer="yes" />
+  </event>
+  <event name="Ship1 Out of Range" id_arme="3bcc3a3a-2b02-4db3-ab8b-0b420881c13b" parent_id_arme="5a11fda7-35ab-48d5-8bbf-77baa89247b3">
+    <if_variable name="DevontoShip1Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_distance player_slot1="0" name2="Devin" comparator="GREATER" value="1000.0" />
+    <incoming_comms_text from="CHANNEL 1" sideValue="playerSide" type="STATUS">Interface disconnected: Range increased beyond 1000.</incoming_comms_text>
+    <set_variable name="DevontoShip1Resupply" value="0.0" integer="yes" />
+  </event>
+  <event name="Ship1 Shields Up" id_arme="8d1616a0-7a8f-4dd0-956b-6c581fc0dce7" parent_id_arme="5a11fda7-35ab-48d5-8bbf-77baa89247b3">
+    <if_variable name="DevontoShip1Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="1" />
+    <incoming_comms_text from="CHANNEL 1" sideValue="playerSide" type="STATUS">Interface disconnected: Shield's raised.</incoming_comms_text>
+    <set_variable name="DevontoShip1Resupply" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Ship2" id_arme="8237fb69-6ba2-4938-934c-b704dac6d27b" parent_id_arme="012e01e9-ccf7-44cf-9a5c-f493b10d471b" />
+  <event name="Ship2 In Range" id_arme="8fd24730-9a76-4355-9aff-23e843d6442e" parent_id_arme="8237fb69-6ba2-4938-934c-b704dac6d27b">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="0.0" />
+    <if_distance player_slot1="1" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="0" />
+    <incoming_comms_text from="CHANNEL 2" sideValue="playerSide" type="STATUS">Devin systems locked.^Setting up system interface....</incoming_comms_text>
+    <set_timer name="Resupply Ship2" seconds="10" />
+    <set_variable name="DevontoShip2Resupply" value="1.0" integer="yes" />
+  </event>
+  <event name="Ship2 Ready" id_arme="473d2eb3-b390-4895-9241-ebe50df96c03" parent_id_arme="8237fb69-6ba2-4938-934c-b704dac6d27b">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="1.0" />
+    <if_distance player_slot1="1" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_timer_finished name="Resupply Ship2" />
+    <incoming_comms_text from="CHANNEL 2" sideValue="playerSide" type="STATUS">system interface complete.^Awaiting resupply request.^Remain within 1000 of Devin, with shields offline, to initiate supply transfer.</incoming_comms_text>
+    <set_variable name="DevontoShip2Resupply" value="2.0" integer="yes" />
+  </event>
+  <event name="Ship2 Out of Range" id_arme="91d7fd76-d2f5-4459-9edc-43c39d1bedb9" parent_id_arme="8237fb69-6ba2-4938-934c-b704dac6d27b">
+    <if_variable name="DevontoShip2Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_distance player_slot1="1" name2="Devin" comparator="GREATER" value="1000.0" />
+    <incoming_comms_text from="CHANNEL 2" sideValue="playerSide" type="STATUS">Interface disconnected: Range increased beyond 1000.</incoming_comms_text>
+    <set_variable name="DevontoShip2Resupply" value="0.0" integer="yes" />
+  </event>
+  <event name="Ship2 Shields Up" id_arme="9d5d0e89-77a8-4b0a-87f9-7e0c5e544ee6" parent_id_arme="8237fb69-6ba2-4938-934c-b704dac6d27b">
+    <if_variable name="DevontoShip2Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="1" />
+    <incoming_comms_text from="CHANNEL 2" sideValue="playerSide" type="STATUS">Interface disconnected: Shield's raised.</incoming_comms_text>
+    <set_variable name="DevontoShip2Resupply" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Ship3" id_arme="6b41c5fd-7fa8-4c26-8cab-965ebf59d6a4" parent_id_arme="012e01e9-ccf7-44cf-9a5c-f493b10d471b" />
+  <event name="Ship3 In Range" id_arme="52914669-6cc1-4c75-8763-e2a10eb3eb0c" parent_id_arme="6b41c5fd-7fa8-4c26-8cab-965ebf59d6a4">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="0.0" />
+    <if_distance player_slot1="2" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="0" />
+    <incoming_comms_text from="CHANNEL 3" sideValue="playerSide" type="STATUS">Devin systems locked.^Setting up system interface....</incoming_comms_text>
+    <set_timer name="Resupply Ship3" seconds="10" />
+    <set_variable name="DevontoShip3Resupply" value="1.0" integer="yes" />
+  </event>
+  <event name="Ship3 Ready" id_arme="3fe041e7-d1de-4da5-af16-bb02e6c6bd40" parent_id_arme="6b41c5fd-7fa8-4c26-8cab-965ebf59d6a4">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="1.0" />
+    <if_distance player_slot1="2" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_timer_finished name="Resupply Ship3" />
+    <incoming_comms_text from="CHANNEL 3" sideValue="playerSide" type="STATUS">system interface complete.^Awaiting resupply request.^Remain within 1000 of Devin, with shields offline, to initiate supply transfer.</incoming_comms_text>
+    <set_variable name="DevontoShip3Resupply" value="2.0" integer="yes" />
+  </event>
+  <event name="Ship3 Out of Range" id_arme="c1652aa6-dddb-4613-b0a9-89488bc57c7a" parent_id_arme="6b41c5fd-7fa8-4c26-8cab-965ebf59d6a4">
+    <if_variable name="DevontoShip3Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_distance player_slot1="2" name2="Devin" comparator="GREATER" value="1000.0" />
+    <incoming_comms_text from="CHANNEL 3" sideValue="playerSide" type="STATUS">Interface disconnected: Range increased beyond 1000.</incoming_comms_text>
+    <set_variable name="DevontoShip3Resupply" value="0.0" integer="yes" />
+  </event>
+  <event name="Ship3 Shields Up" id_arme="bb084855-06dd-4d55-850c-d0dca7362e73" parent_id_arme="6b41c5fd-7fa8-4c26-8cab-965ebf59d6a4">
+    <if_variable name="DevontoShip3Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="1" />
+    <incoming_comms_text from="CHANNEL 3" sideValue="playerSide" type="STATUS">Interface disconnected: Shield's raised.</incoming_comms_text>
+    <set_variable name="DevontoShip3Resupply" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Ship4" id_arme="d3ad5348-a52e-4766-842e-bcc0a1984c18" parent_id_arme="012e01e9-ccf7-44cf-9a5c-f493b10d471b" />
+  <event name="Ship4 In Range" id_arme="828c5de3-74a3-43da-9aa1-07a7460ef6ce" parent_id_arme="d3ad5348-a52e-4766-842e-bcc0a1984c18">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="0.0" />
+    <if_distance player_slot1="3" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="0" />
+    <incoming_comms_text from="CHANNEL 4" sideValue="playerSide" type="STATUS">Devin systems locked.^Setting up system interface....</incoming_comms_text>
+    <set_timer name="Resupply Ship4" seconds="10" />
+    <set_variable name="DevontoShip4Resupply" value="1.0" integer="yes" />
+  </event>
+  <event name="Ship4 Ready" id_arme="15d2405f-5bb0-4494-9c2a-9ef227df59be" parent_id_arme="d3ad5348-a52e-4766-842e-bcc0a1984c18">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="1.0" />
+    <if_distance player_slot1="3" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_timer_finished name="Resupply Ship4" />
+    <incoming_comms_text from="CHANNEL 4" sideValue="playerSide" type="STATUS">system interface complete.^Awaiting resupply request.^Remain within 1000 of Devin, with shields offline, to initiate supply transfer.</incoming_comms_text>
+    <set_variable name="DevontoShip4Resupply" value="2.0" integer="yes" />
+  </event>
+  <event name="Ship4 Out of Range" id_arme="e462a99a-5a7d-4719-a589-d95a0d0f6448" parent_id_arme="d3ad5348-a52e-4766-842e-bcc0a1984c18">
+    <if_variable name="DevontoShip4Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_distance player_slot1="3" name2="Devin" comparator="GREATER" value="1000.0" />
+    <incoming_comms_text from="CHANNEL 4" sideValue="playerSide" type="STATUS">Interface disconnected: Range increased beyond 1000.</incoming_comms_text>
+    <set_variable name="DevontoShip4Resupply" value="0.0" integer="yes" />
+  </event>
+  <event name="Ship4 Shields Up" id_arme="9bf0a87b-dbf7-4b06-b524-1d7b62be7859" parent_id_arme="d3ad5348-a52e-4766-842e-bcc0a1984c18">
+    <if_variable name="DevontoShip4Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="1" />
+    <incoming_comms_text from="CHANNEL 4" sideValue="playerSide" type="STATUS">Interface disconnected: Shield's raised.</incoming_comms_text>
+    <set_variable name="DevontoShip4Resupply" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Ship5" id_arme="67beae8b-0916-403e-ae54-c7305ca4c22d" parent_id_arme="012e01e9-ccf7-44cf-9a5c-f493b10d471b" />
+  <event name="Ship5 In Range" id_arme="52f2233a-a9d7-4683-9dfc-dc98dfc77ceb" parent_id_arme="67beae8b-0916-403e-ae54-c7305ca4c22d">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="0.0" />
+    <if_distance player_slot1="4" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="0" />
+    <incoming_comms_text from="CHANNEL 5" sideValue="playerSide" type="STATUS">Devin systems locked.^Setting up system interface....</incoming_comms_text>
+    <set_timer name="Resupply Ship5" seconds="10" />
+    <set_variable name="DevontoShip5Resupply" value="1.0" integer="yes" />
+  </event>
+  <event name="Ship5 Ready" id_arme="9a9ed102-ac61-411d-94e5-723ab62b9884" parent_id_arme="67beae8b-0916-403e-ae54-c7305ca4c22d">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="1.0" />
+    <if_distance player_slot1="4" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_timer_finished name="Resupply Ship5" />
+    <incoming_comms_text from="CHANNEL 5" sideValue="playerSide" type="STATUS">system interface complete.^Awaiting resupply request.^Remain within 1000 of Devin, with shields offline, to initiate supply transfer.</incoming_comms_text>
+    <set_variable name="DevontoShip5Resupply" value="2.0" integer="yes" />
+  </event>
+  <event name="Ship5 Out of Range" id_arme="b49a0805-7bc6-4e2c-b7a1-f3cbee714ab6" parent_id_arme="67beae8b-0916-403e-ae54-c7305ca4c22d">
+    <if_variable name="DevontoShip5Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_distance player_slot1="4" name2="Devin" comparator="GREATER" value="1000.0" />
+    <incoming_comms_text from="CHANNEL 5" sideValue="playerSide" type="STATUS">Interface disconnected: Range increased beyond 1000.</incoming_comms_text>
+    <set_variable name="DevontoShip5Resupply" value="0.0" integer="yes" />
+  </event>
+  <event name="Ship5 Shields Up" id_arme="69b88d5b-3684-42ed-b93d-14bc30ca166d" parent_id_arme="67beae8b-0916-403e-ae54-c7305ca4c22d">
+    <if_variable name="DevontoShip5Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="1" />
+    <incoming_comms_text from="CHANNEL 5" sideValue="playerSide" type="STATUS">Interface disconnected: Shield's raised.</incoming_comms_text>
+    <set_variable name="DevontoShip5Resupply" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Ship6" id_arme="4730b4b4-141e-407f-89f0-1a2bb385decb" parent_id_arme="012e01e9-ccf7-44cf-9a5c-f493b10d471b" />
+  <event name="Ship6 In Range" id_arme="456a0a2e-9235-40e1-ba07-142ea49a9a70" parent_id_arme="4730b4b4-141e-407f-89f0-1a2bb385decb">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="0.0" />
+    <if_distance player_slot1="5" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="0" />
+    <incoming_comms_text from="CHANNEL 6" sideValue="playerSide" type="STATUS">Devin systems locked.^Setting up system interface....</incoming_comms_text>
+    <set_timer name="Resupply Ship6" seconds="10" />
+    <set_variable name="DevontoShip6Resupply" value="1.0" integer="yes" />
+  </event>
+  <event name="Ship6 Ready" id_arme="92903911-9771-4cbb-ac56-3a6d6c499f14" parent_id_arme="4730b4b4-141e-407f-89f0-1a2bb385decb">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="1.0" />
+    <if_distance player_slot1="5" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_timer_finished name="Resupply Ship6" />
+    <incoming_comms_text from="CHANNEL 6" sideValue="playerSide" type="STATUS">system interface complete.^Awaiting resupply request.^Remain within 1000 of Devin, with shields offline, to initiate supply transfer.</incoming_comms_text>
+    <set_variable name="DevontoShip6Resupply" value="2.0" integer="yes" />
+  </event>
+  <event name="Ship6 Out of Range" id_arme="340f509f-dbb6-4585-8be1-484dde48ce3e" parent_id_arme="4730b4b4-141e-407f-89f0-1a2bb385decb">
+    <if_variable name="DevontoShip6Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_distance player_slot1="5" name2="Devin" comparator="GREATER" value="1000.0" />
+    <incoming_comms_text from="CHANNEL 6" sideValue="playerSide" type="STATUS">Interface disconnected: Range increased beyond 1000.</incoming_comms_text>
+    <set_variable name="DevontoShip6Resupply" value="0.0" integer="yes" />
+  </event>
+  <event name="Ship6 Shields Up" id_arme="952809b0-2761-4d25-ae93-740b0626b8b5" parent_id_arme="4730b4b4-141e-407f-89f0-1a2bb385decb">
+    <if_variable name="DevontoShip6Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="1" />
+    <incoming_comms_text from="CHANNEL 6" sideValue="playerSide" type="STATUS">Interface disconnected: Shield's raised.</incoming_comms_text>
+    <set_variable name="DevontoShip6Resupply" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Ship7" id_arme="bf26ee72-df48-4f64-9d3a-9c895ec7b587" parent_id_arme="012e01e9-ccf7-44cf-9a5c-f493b10d471b" />
+  <event name="Ship7 In Range" id_arme="332e2709-e3c9-4cff-8c8d-6290995971a3" parent_id_arme="bf26ee72-df48-4f64-9d3a-9c895ec7b587">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="0.0" />
+    <if_distance player_slot1="6" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="0" />
+    <incoming_comms_text from="CHANNEL 7" sideValue="playerSide" type="STATUS">Devin systems locked.^Setting up system interface....</incoming_comms_text>
+    <set_timer name="Resupply Ship7" seconds="10" />
+    <set_variable name="DevontoShip7Resupply" value="1.0" integer="yes" />
+  </event>
+  <event name="Ship7 Ready" id_arme="ca83f534-7738-449b-8fad-4669ff36c4ec" parent_id_arme="bf26ee72-df48-4f64-9d3a-9c895ec7b587">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="1.0" />
+    <if_distance player_slot1="6" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_timer_finished name="Resupply Ship7" />
+    <incoming_comms_text from="CHANNEL 7" sideValue="playerSide" type="STATUS">system interface complete.^Awaiting resupply request.^Remain within 1000 of Devin, with shields offline, to initiate supply transfer.</incoming_comms_text>
+    <set_variable name="DevontoShip7Resupply" value="2.0" integer="yes" />
+  </event>
+  <event name="Ship7 Out of Range" id_arme="90b7f55f-8516-4e5e-87f7-1b2f85bc545b" parent_id_arme="bf26ee72-df48-4f64-9d3a-9c895ec7b587">
+    <if_variable name="DevontoShip7Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_distance player_slot1="6" name2="Devin" comparator="GREATER" value="1000.0" />
+    <incoming_comms_text from="CHANNEL 7" sideValue="playerSide" type="STATUS">Interface disconnected: Range increased beyond 1000.</incoming_comms_text>
+    <set_variable name="DevontoShip7Resupply" value="0.0" integer="yes" />
+  </event>
+  <event name="Ship7 Shields Up" id_arme="533321da-b7f4-4fb8-836a-0e1ae91a35ff" parent_id_arme="bf26ee72-df48-4f64-9d3a-9c895ec7b587">
+    <if_variable name="DevontoShip7Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="1" />
+    <incoming_comms_text from="CHANNEL 7" sideValue="playerSide" type="STATUS">Interface disconnected: Shield's raised.</incoming_comms_text>
+    <set_variable name="DevontoShip7Resupply" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Ship8" id_arme="d9b89514-bdaa-4bd3-a251-2c1bdf4d2c99" parent_id_arme="012e01e9-ccf7-44cf-9a5c-f493b10d471b" />
+  <event name="Ship8 In Range" id_arme="9eb8cf63-2723-4db1-ab67-39a5b7e03014" parent_id_arme="d9b89514-bdaa-4bd3-a251-2c1bdf4d2c99">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="0.0" />
+    <if_distance player_slot1="7" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="0" />
+    <incoming_comms_text from="CHANNEL 8" sideValue="playerSide" type="STATUS">Devin systems locked.^Setting up system interface....</incoming_comms_text>
+    <set_timer name="Resupply Ship8" seconds="10" />
+    <set_variable name="DevontoShip8Resupply" value="1.0" integer="yes" />
+  </event>
+  <event name="Ship8 Ready" id_arme="6b793c22-e555-40b3-bb3a-2a9396ae5431" parent_id_arme="d9b89514-bdaa-4bd3-a251-2c1bdf4d2c99">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="1.0" />
+    <if_distance player_slot1="7" name2="Devin" comparator="LESS" value="1000.0" />
+    <if_timer_finished name="Resupply Ship8" />
+    <incoming_comms_text from="CHANNEL 8" sideValue="playerSide" type="STATUS">system interface complete.^Awaiting resupply request.^Remain within 1000 of Devin, with shields offline, to initiate supply transfer.</incoming_comms_text>
+    <set_variable name="DevontoShip8Resupply" value="2.0" integer="yes" />
+  </event>
+  <event name="Ship8 Out of Range" id_arme="ebecb912-8361-420a-a6d9-6575a6617671" parent_id_arme="d9b89514-bdaa-4bd3-a251-2c1bdf4d2c99">
+    <if_variable name="DevontoShip8Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_distance player_slot1="7" name2="Devin" comparator="GREATER" value="1000.0" />
+    <incoming_comms_text from="CHANNEL 8" sideValue="playerSide" type="STATUS">Interface disconnected: Range increased beyond 1000.</incoming_comms_text>
+    <set_variable name="DevontoShip8Resupply" value="0.0" integer="yes" />
+  </event>
+  <event name="Ship8 Shields Up" id_arme="e01b9cd7-2c41-459c-bc36-eb2990db508f" parent_id_arme="d9b89514-bdaa-4bd3-a251-2c1bdf4d2c99">
+    <if_variable name="DevontoShip8Resupply" comparator="GREATER_EQUAL" value="1.0" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="1" />
+    <incoming_comms_text from="CHANNEL 8" sideValue="playerSide" type="STATUS">Interface disconnected: Shield's raised.</incoming_comms_text>
+    <set_variable name="DevontoShip8Resupply" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Resupply Ship1" id_arme="f81c6d55-53ee-4edd-b25d-4d404d0affc4" parent_id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" />
+  <event name="Resupply Homing" id_arme="92e4fc59-1815-4902-be82-b22278552f5c" parent_id_arme="f81c6d55-53ee-4edd-b25d-4d404d0affc4">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonHoming" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship1" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countHoming" player_slot="0" comparator="LESS" value="Ship1HomingMax" />
+    <set_variable name="DevonHoming" value="DevonHoming-1" integer="yes" />
+    <addto_object_property value="1.0" property="countHoming" player_slot="0" />
+    <set_timer name="Resupply Ship1" seconds="2" />
+  </event>
+  <event name="Resupply Nuke" id_arme="b401f587-11c0-4042-9d83-41b7e938a75d" parent_id_arme="f81c6d55-53ee-4edd-b25d-4d404d0affc4">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonNuke" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship1" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countNuke" player_slot="0" comparator="LESS" value="Ship1NukeMax" />
+    <set_variable name="DevonNuke" value="DevonNuke-1" integer="yes" />
+    <addto_object_property value="1.0" property="countNuke" player_slot="0" />
+    <set_timer name="Resupply Ship1" seconds="2" />
+  </event>
+  <event name="Resupply EMP" id_arme="774444dc-3e94-4229-8166-f6a2b9f61a3d" parent_id_arme="f81c6d55-53ee-4edd-b25d-4d404d0affc4">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonEMP" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship1" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countEMP" player_slot="0" comparator="LESS" value="Ship1EMPMax" />
+    <set_variable name="DevonEMP" value="DevonEMP-1" integer="yes" />
+    <addto_object_property value="1.0" property="countEMP" player_slot="0" />
+    <set_timer name="Resupply Ship1" seconds="2" />
+  </event>
+  <event name="Resupply Mine" id_arme="ec6683fb-fc20-49ba-9b92-e74d57e79bf6" parent_id_arme="f81c6d55-53ee-4edd-b25d-4d404d0affc4">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonMine" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship1" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countMine" player_slot="0" comparator="LESS" value="Ship1MineMax" />
+    <set_variable name="DevonMine" value="DevonMine-1" integer="yes" />
+    <addto_object_property value="1.0" property="countMine" player_slot="0" />
+    <set_timer name="Resupply Ship1" seconds="2" />
+  </event>
+  <event name="Resupply PShock" id_arme="81a43af7-032b-49f7-90cc-ba107aae540e" parent_id_arme="f81c6d55-53ee-4edd-b25d-4d404d0affc4">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonPShock" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship1" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countShk" player_slot="0" comparator="LESS" value="Ship1ShkMax" />
+    <set_variable name="DevonPShock" value="DevonPShock-1" integer="yes" />
+    <addto_object_property value="1.0" property="countShk" player_slot="0" />
+    <set_timer name="Resupply Ship1" seconds="2" />
+  </event>
+  <event name="Resupply Beacon" id_arme="49455137-631b-4453-9229-131446a0a0d6" parent_id_arme="f81c6d55-53ee-4edd-b25d-4d404d0affc4">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonBeacon" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship1" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countBea" player_slot="0" comparator="LESS" value="Ship1BeaMax" />
+    <set_variable name="DevonBeacon" value="DevonBeacon-1" integer="yes" />
+    <addto_object_property value="1.0" property="countBea" player_slot="0" />
+    <set_timer name="Resupply Ship1" seconds="2" />
+  </event>
+  <event name="Resupply Tag" id_arme="0fbd8559-16bf-44de-9913-e60fad12aa81" parent_id_arme="f81c6d55-53ee-4edd-b25d-4d404d0affc4">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonTag" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship1" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countTag" player_slot="0" comparator="LESS" value="Ship1TagMax" />
+    <set_variable name="DevonTag" value="DevonTag-1" integer="yes" />
+    <addto_object_property value="1.0" property="countTag" player_slot="0" />
+    <set_timer name="Resupply Ship1" seconds="2" />
+  </event>
+  <event name="Resupply Probe" id_arme="1af52314-a31c-4d85-b077-f3822692ce43" parent_id_arme="f81c6d55-53ee-4edd-b25d-4d404d0affc4">
+    <if_variable name="DevontoShip1Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonProbe" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship1" />
+    <if_object_property property="shieldsOn" player_slot="0" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countPro" player_slot="0" comparator="LESS" value="Ship1ProMax" />
+    <set_variable name="DevonProbe" value="DevonProbe-1" integer="yes" />
+    <addto_object_property value="1.0" property="countPro" player_slot="0" />
+    <set_timer name="Resupply Ship1" seconds="2" />
+  </event>
+  <folder_arme name="Resupply Ship2" id_arme="83ca62aa-711d-4cd5-af5b-586672e5ab45" parent_id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" />
+  <event name="Resupply Homing" id_arme="79e58de4-a11e-4880-87fa-a7c8eb2ad177" parent_id_arme="83ca62aa-711d-4cd5-af5b-586672e5ab45">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonHoming" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship2" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countHoming" player_slot="1" comparator="LESS" value="Ship2HomingMax" />
+    <set_variable name="DevonHoming" value="DevonHoming-1" integer="yes" />
+    <addto_object_property value="1.0" property="countHoming" player_slot="1" />
+    <set_timer name="Resupply Ship2" seconds="2" />
+  </event>
+  <event name="Resupply Nuke" id_arme="1e4c4191-7ed4-45d2-99e0-89250b45b5d3" parent_id_arme="83ca62aa-711d-4cd5-af5b-586672e5ab45">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonNuke" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship2" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countNuke" player_slot="1" comparator="LESS" value="Ship2NukeMax" />
+    <set_variable name="DevonNuke" value="DevonNuke-1" integer="yes" />
+    <addto_object_property value="1.0" property="countNuke" player_slot="1" />
+    <set_timer name="Resupply Ship2" seconds="2" />
+  </event>
+  <event name="Resupply EMP" id_arme="4cbb45d1-8913-4848-a42f-28db8dcea7d8" parent_id_arme="83ca62aa-711d-4cd5-af5b-586672e5ab45">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonEMP" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship2" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countEMP" player_slot="1" comparator="LESS" value="Ship2EMPMax" />
+    <set_variable name="DevonEMP" value="DevonEMP-1" integer="yes" />
+    <addto_object_property value="1.0" property="countEMP" player_slot="1" />
+    <set_timer name="Resupply Ship2" seconds="2" />
+  </event>
+  <event name="Resupply Mine" id_arme="f597146f-04b8-45fa-801d-f72610abdefe" parent_id_arme="83ca62aa-711d-4cd5-af5b-586672e5ab45">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonMine" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship2" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countMine" player_slot="1" comparator="LESS" value="Ship2MineMax" />
+    <set_variable name="DevonMine" value="DevonMine-1" integer="yes" />
+    <addto_object_property value="1.0" property="countMine" player_slot="1" />
+    <set_timer name="Resupply Ship2" seconds="2" />
+  </event>
+  <event name="Resupply PShock" id_arme="3106ed2f-d5c6-4974-b877-c02891328ea0" parent_id_arme="83ca62aa-711d-4cd5-af5b-586672e5ab45">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonPShock" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship2" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countShk" player_slot="1" comparator="LESS" value="Ship2ShkMax" />
+    <set_variable name="DevonPShock" value="DevonPShock-1" integer="yes" />
+    <addto_object_property value="1.0" property="countShk" player_slot="1" />
+    <set_timer name="Resupply Ship2" seconds="2" />
+  </event>
+  <event name="Resupply Beacon" id_arme="a9bbfc86-4f7f-4f0b-9b72-f7ab5102eb36" parent_id_arme="83ca62aa-711d-4cd5-af5b-586672e5ab45">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonBeacon" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship2" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countBea" player_slot="1" comparator="LESS" value="Ship2BeaMax" />
+    <set_variable name="DevonBeacon" value="DevonBeacon-1" integer="yes" />
+    <addto_object_property value="1.0" property="countBea" player_slot="1" />
+    <set_timer name="Resupply Ship2" seconds="2" />
+  </event>
+  <event name="Resupply Tag" id_arme="63740db3-cfe2-4779-937c-41f2a6f0ae76" parent_id_arme="83ca62aa-711d-4cd5-af5b-586672e5ab45">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonTag" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship2" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countTag" player_slot="1" comparator="LESS" value="Ship2TagMax" />
+    <set_variable name="DevonTag" value="DevonTag-1" integer="yes" />
+    <addto_object_property value="1.0" property="countTag" player_slot="1" />
+    <set_timer name="Resupply Ship2" seconds="2" />
+  </event>
+  <event name="Resupply Probe" id_arme="bf276642-b5bb-4340-832a-8c3f4a9de812" parent_id_arme="83ca62aa-711d-4cd5-af5b-586672e5ab45">
+    <if_variable name="DevontoShip2Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonProbe" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship2" />
+    <if_object_property property="shieldsOn" player_slot="1" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countPro" player_slot="1" comparator="LESS" value="Ship2ProMax" />
+    <set_variable name="DevonProbe" value="DevonProbe-1" integer="yes" />
+    <addto_object_property value="1.0" property="countPro" player_slot="1" />
+    <set_timer name="Resupply Ship2" seconds="2" />
+  </event>
+  <folder_arme name="Resupply Ship3" id_arme="188d4515-3a0b-4614-bf18-e9f75bc5b2bd" parent_id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" />
+  <event name="Resupply Homing" id_arme="58b4c7e7-9202-4a64-9cee-2ba072c45772" parent_id_arme="188d4515-3a0b-4614-bf18-e9f75bc5b2bd">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonHoming" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship3" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countHoming" player_slot="2" comparator="LESS" value="Ship3HomingMax" />
+    <set_variable name="DevonHoming" value="DevonHoming-1" integer="yes" />
+    <addto_object_property value="1.0" property="countHoming" player_slot="2" />
+    <set_timer name="Resupply Ship3" seconds="2" />
+  </event>
+  <event name="Resupply Nuke" id_arme="d3aafbcc-445b-4d11-8fb3-88550139e133" parent_id_arme="188d4515-3a0b-4614-bf18-e9f75bc5b2bd">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonNuke" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship3" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countNuke" player_slot="2" comparator="LESS" value="Ship3NukeMax" />
+    <set_variable name="DevonNuke" value="DevonNuke-1" integer="yes" />
+    <addto_object_property value="1.0" property="countNuke" player_slot="2" />
+    <set_timer name="Resupply Ship3" seconds="2" />
+  </event>
+  <event name="Resupply EMP" id_arme="c5222acf-3244-419a-ab0d-ad515013aa5d" parent_id_arme="188d4515-3a0b-4614-bf18-e9f75bc5b2bd">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonEMP" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship3" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countEMP" player_slot="2" comparator="LESS" value="Ship3EMPMax" />
+    <set_variable name="DevonEMP" value="DevonEMP-1" integer="yes" />
+    <addto_object_property value="1.0" property="countEMP" player_slot="2" />
+    <set_timer name="Resupply Ship3" seconds="2" />
+  </event>
+  <event name="Resupply Mine" id_arme="f3bf80df-648a-4e22-ab48-eb6a93c2bb52" parent_id_arme="188d4515-3a0b-4614-bf18-e9f75bc5b2bd">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonMine" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship3" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countMine" player_slot="2" comparator="LESS" value="Ship3MineMax" />
+    <set_variable name="DevonMine" value="DevonMine-1" integer="yes" />
+    <addto_object_property value="1.0" property="countMine" player_slot="2" />
+    <set_timer name="Resupply Ship3" seconds="2" />
+  </event>
+  <event name="Resupply PShock" id_arme="92be96c7-609a-4972-a3d5-022e45ce26c9" parent_id_arme="188d4515-3a0b-4614-bf18-e9f75bc5b2bd">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonPShock" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship3" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countShk" player_slot="2" comparator="LESS" value="Ship3ShkMax" />
+    <set_variable name="DevonPShock" value="DevonPShock-1" integer="yes" />
+    <addto_object_property value="1.0" property="countShk" player_slot="2" />
+    <set_timer name="Resupply Ship3" seconds="2" />
+  </event>
+  <event name="Resupply Beacon" id_arme="2829ecc3-0f66-4282-8faf-15631ab42c8c" parent_id_arme="188d4515-3a0b-4614-bf18-e9f75bc5b2bd">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonBeacon" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship3" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countBea" player_slot="2" comparator="LESS" value="Ship3BeaMax" />
+    <set_variable name="DevonBeacon" value="DevonBeacon-1" integer="yes" />
+    <addto_object_property value="1.0" property="countBea" player_slot="2" />
+    <set_timer name="Resupply Ship3" seconds="2" />
+  </event>
+  <event name="Resupply Tag" id_arme="9356ec5c-790f-475a-8376-96ae49c3f56f" parent_id_arme="188d4515-3a0b-4614-bf18-e9f75bc5b2bd">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonTag" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship3" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countTag" player_slot="2" comparator="LESS" value="Ship3TagMax" />
+    <set_variable name="DevonTag" value="DevonTag-1" integer="yes" />
+    <addto_object_property value="1.0" property="countTag" player_slot="2" />
+    <set_timer name="Resupply Ship3" seconds="2" />
+  </event>
+  <event name="Resupply Probe" id_arme="99891443-c048-4e2d-ae93-3085cfbcb1a8" parent_id_arme="188d4515-3a0b-4614-bf18-e9f75bc5b2bd">
+    <if_variable name="DevontoShip3Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonProbe" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship3" />
+    <if_object_property property="shieldsOn" player_slot="2" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countPro" player_slot="2" comparator="LESS" value="Ship3ProMax" />
+    <set_variable name="DevonProbe" value="DevonProbe-1" integer="yes" />
+    <addto_object_property value="1.0" property="countPro" player_slot="2" />
+    <set_timer name="Resupply Ship3" seconds="2" />
+  </event>
+  <folder_arme name="Resupply Ship4" id_arme="aa553a05-e05a-47fd-936d-ec3f7c2274ed" parent_id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" />
+  <event name="Resupply Homing" id_arme="176bb4d3-d2da-4c7d-b12c-c55657cbd143" parent_id_arme="aa553a05-e05a-47fd-936d-ec3f7c2274ed">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonHoming" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship4" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countHoming" player_slot="3" comparator="LESS" value="Ship4HomingMax" />
+    <set_variable name="DevonHoming" value="DevonHoming-1" integer="yes" />
+    <addto_object_property value="1.0" property="countHoming" player_slot="3" />
+    <set_timer name="Resupply Ship4" seconds="2" />
+  </event>
+  <event name="Resupply Nuke" id_arme="5797aaf2-e27d-43fb-b19a-c7e7a757501a" parent_id_arme="aa553a05-e05a-47fd-936d-ec3f7c2274ed">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonNuke" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship4" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countNuke" player_slot="3" comparator="LESS" value="Ship4NukeMax" />
+    <set_variable name="DevonNuke" value="DevonNuke-1" integer="yes" />
+    <addto_object_property value="1.0" property="countNuke" player_slot="3" />
+    <set_timer name="Resupply Ship4" seconds="2" />
+  </event>
+  <event name="Resupply EMP" id_arme="9d03ff12-843f-471d-bf23-e8bb7aa6f163" parent_id_arme="aa553a05-e05a-47fd-936d-ec3f7c2274ed">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonEMP" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship4" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countEMP" player_slot="3" comparator="LESS" value="Ship4EMPMax" />
+    <set_variable name="DevonEMP" value="DevonEMP-1" integer="yes" />
+    <addto_object_property value="1.0" property="countEMP" player_slot="3" />
+    <set_timer name="Resupply Ship4" seconds="2" />
+  </event>
+  <event name="Resupply Mine" id_arme="1dbbc5b1-ea67-45a3-80b9-df7d6448552e" parent_id_arme="aa553a05-e05a-47fd-936d-ec3f7c2274ed">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonMine" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship4" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countMine" player_slot="3" comparator="LESS" value="Ship4MineMax" />
+    <set_variable name="DevonMine" value="DevonMine-1" integer="yes" />
+    <addto_object_property value="1.0" property="countMine" player_slot="3" />
+    <set_timer name="Resupply Ship4" seconds="2" />
+  </event>
+  <event name="Resupply PShock" id_arme="76111b83-67db-4b07-a840-4fbf5e5b4181" parent_id_arme="aa553a05-e05a-47fd-936d-ec3f7c2274ed">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonPShock" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship4" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countShk" player_slot="3" comparator="LESS" value="Ship4ShkMax" />
+    <set_variable name="DevonPShock" value="DevonPShock-1" integer="yes" />
+    <addto_object_property value="1.0" property="countShk" player_slot="3" />
+    <set_timer name="Resupply Ship4" seconds="2" />
+  </event>
+  <event name="Resupply Beacon" id_arme="cbac518f-c5af-4376-bed8-9d8b917bd588" parent_id_arme="aa553a05-e05a-47fd-936d-ec3f7c2274ed">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonBeacon" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship4" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countBea" player_slot="3" comparator="LESS" value="Ship4BeaMax" />
+    <set_variable name="DevonBeacon" value="DevonBeacon-1" integer="yes" />
+    <addto_object_property value="1.0" property="countBea" player_slot="3" />
+    <set_timer name="Resupply Ship4" seconds="2" />
+  </event>
+  <event name="Resupply Tag" id_arme="c7dd7006-1192-40f5-a5df-bb40036231e8" parent_id_arme="aa553a05-e05a-47fd-936d-ec3f7c2274ed">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonTag" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship4" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countTag" player_slot="3" comparator="LESS" value="Ship4TagMax" />
+    <set_variable name="DevonTag" value="DevonTag-1" integer="yes" />
+    <addto_object_property value="1.0" property="countTag" player_slot="3" />
+    <set_timer name="Resupply Ship4" seconds="2" />
+  </event>
+  <event name="Resupply Probe" id_arme="95ce7edc-3e92-4761-88d6-b8e8c3eed0ad" parent_id_arme="aa553a05-e05a-47fd-936d-ec3f7c2274ed">
+    <if_variable name="DevontoShip4Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonProbe" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship4" />
+    <if_object_property property="shieldsOn" player_slot="3" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countPro" player_slot="3" comparator="LESS" value="Ship4ProMax" />
+    <set_variable name="DevonProbe" value="DevonProbe-1" integer="yes" />
+    <addto_object_property value="1.0" property="countPro" player_slot="3" />
+    <set_timer name="Resupply Ship4" seconds="2" />
+  </event>
+  <folder_arme name="Resupply Ship5" id_arme="1fc581e0-8ccb-4a9a-9b2d-fb2a602ac427" parent_id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" />
+  <event name="Resupply Homing" id_arme="320a67f5-66f7-4070-8a08-c748fae5334e" parent_id_arme="1fc581e0-8ccb-4a9a-9b2d-fb2a602ac427">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonHoming" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship5" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countHoming" player_slot="4" comparator="LESS" value="Ship5HomingMax" />
+    <set_variable name="DevonHoming" value="DevonHoming-1" integer="yes" />
+    <addto_object_property value="1.0" property="countHoming" player_slot="4" />
+    <set_timer name="Resupply Ship5" seconds="2" />
+  </event>
+  <event name="Resupply Nuke" id_arme="c0280666-2a00-4c82-afb5-ee406b853a30" parent_id_arme="1fc581e0-8ccb-4a9a-9b2d-fb2a602ac427">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonNuke" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship5" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countNuke" player_slot="4" comparator="LESS" value="Ship5NukeMax" />
+    <set_variable name="DevonNuke" value="DevonNuke-1" integer="yes" />
+    <addto_object_property value="1.0" property="countNuke" player_slot="4" />
+    <set_timer name="Resupply Ship5" seconds="2" />
+  </event>
+  <event name="Resupply EMP" id_arme="467b1f0d-4405-4c19-8849-978c7f4d49c2" parent_id_arme="1fc581e0-8ccb-4a9a-9b2d-fb2a602ac427">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonEMP" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship5" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countEMP" player_slot="4" comparator="LESS" value="Ship5EMPMax" />
+    <set_variable name="DevonEMP" value="DevonEMP-1" integer="yes" />
+    <addto_object_property value="1.0" property="countEMP" player_slot="4" />
+    <set_timer name="Resupply Ship5" seconds="2" />
+  </event>
+  <event name="Resupply Mine" id_arme="fa781040-cf3e-45a9-a9b6-63af2adf44d7" parent_id_arme="1fc581e0-8ccb-4a9a-9b2d-fb2a602ac427">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonMine" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship5" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countMine" player_slot="4" comparator="LESS" value="Ship5MineMax" />
+    <set_variable name="DevonMine" value="DevonMine-1" integer="yes" />
+    <addto_object_property value="1.0" property="countMine" player_slot="4" />
+    <set_timer name="Resupply Ship5" seconds="2" />
+  </event>
+  <event name="Resupply PShock" id_arme="3fdbbba9-df48-4796-b640-0503cb12b384" parent_id_arme="1fc581e0-8ccb-4a9a-9b2d-fb2a602ac427">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonPShock" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship5" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countShk" player_slot="4" comparator="LESS" value="Ship5ShkMax" />
+    <set_variable name="DevonPShock" value="DevonPShock-1" integer="yes" />
+    <addto_object_property value="1.0" property="countShk" player_slot="4" />
+    <set_timer name="Resupply Ship5" seconds="2" />
+  </event>
+  <event name="Resupply Beacon" id_arme="795205c7-89ef-4001-accb-0fe35ea9747e" parent_id_arme="1fc581e0-8ccb-4a9a-9b2d-fb2a602ac427">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonBeacon" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship5" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countBea" player_slot="4" comparator="LESS" value="Ship5BeaMax" />
+    <set_variable name="DevonBeacon" value="DevonBeacon-1" integer="yes" />
+    <addto_object_property value="1.0" property="countBea" player_slot="4" />
+    <set_timer name="Resupply Ship5" seconds="2" />
+  </event>
+  <event name="Resupply Tag" id_arme="5af55355-4ac7-4ccd-8372-b42852cc2eb9" parent_id_arme="1fc581e0-8ccb-4a9a-9b2d-fb2a602ac427">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonTag" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship5" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countTag" player_slot="4" comparator="LESS" value="Ship5TagMax" />
+    <set_variable name="DevonTag" value="DevonTag-1" integer="yes" />
+    <addto_object_property value="1.0" property="countTag" player_slot="4" />
+    <set_timer name="Resupply Ship5" seconds="2" />
+  </event>
+  <event name="Resupply Probe" id_arme="a1620381-43d3-4f35-9114-097644284a74" parent_id_arme="1fc581e0-8ccb-4a9a-9b2d-fb2a602ac427">
+    <if_variable name="DevontoShip5Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonProbe" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship5" />
+    <if_object_property property="shieldsOn" player_slot="4" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countPro" player_slot="4" comparator="LESS" value="Ship5ProMax" />
+    <set_variable name="DevonProbe" value="DevonProbe-1" integer="yes" />
+    <addto_object_property value="1.0" property="countPro" player_slot="4" />
+    <set_timer name="Resupply Ship5" seconds="2" />
+  </event>
+  <folder_arme name="Resupply Ship6" id_arme="6734bdfe-ab68-42eb-8d12-b6c0beed0ba4" parent_id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" />
+  <event name="Resupply Homing" id_arme="1377ba9d-7b2e-4185-ae3b-d392754d00a5" parent_id_arme="6734bdfe-ab68-42eb-8d12-b6c0beed0ba4">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonHoming" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship6" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countHoming" player_slot="5" comparator="LESS" value="Ship6HomingMax" />
+    <set_variable name="DevonHoming" value="DevonHoming-1" integer="yes" />
+    <addto_object_property value="1.0" property="countHoming" player_slot="5" />
+    <set_timer name="Resupply Ship6" seconds="2" />
+  </event>
+  <event name="Resupply Nuke" id_arme="bb3ee87c-38b4-404c-b3b0-96af9efe31e4" parent_id_arme="6734bdfe-ab68-42eb-8d12-b6c0beed0ba4">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonNuke" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship6" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countNuke" player_slot="5" comparator="LESS" value="Ship6NukeMax" />
+    <set_variable name="DevonNuke" value="DevonNuke-1" integer="yes" />
+    <addto_object_property value="1.0" property="countNuke" player_slot="5" />
+    <set_timer name="Resupply Ship6" seconds="2" />
+  </event>
+  <event name="Resupply EMP" id_arme="f66aedf4-aace-4464-a648-155e07b7cd1b" parent_id_arme="6734bdfe-ab68-42eb-8d12-b6c0beed0ba4">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonEMP" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship6" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countEMP" player_slot="5" comparator="LESS" value="Ship6EMPMax" />
+    <set_variable name="DevonEMP" value="DevonEMP-1" integer="yes" />
+    <addto_object_property value="1.0" property="countEMP" player_slot="5" />
+    <set_timer name="Resupply Ship6" seconds="2" />
+  </event>
+  <event name="Resupply Mine" id_arme="f399057b-53f7-4c05-b014-29e6e4c49b28" parent_id_arme="6734bdfe-ab68-42eb-8d12-b6c0beed0ba4">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonMine" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship6" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countMine" player_slot="5" comparator="LESS" value="Ship6MineMax" />
+    <set_variable name="DevonMine" value="DevonMine-1" integer="yes" />
+    <addto_object_property value="1.0" property="countMine" player_slot="5" />
+    <set_timer name="Resupply Ship6" seconds="2" />
+  </event>
+  <event name="Resupply PShock" id_arme="2f268eff-9653-4819-8702-8bf203e26e05" parent_id_arme="6734bdfe-ab68-42eb-8d12-b6c0beed0ba4">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonPShock" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship6" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countShk" player_slot="5" comparator="LESS" value="Ship6ShkMax" />
+    <set_variable name="DevonPShock" value="DevonPShock-1" integer="yes" />
+    <addto_object_property value="1.0" property="countShk" player_slot="5" />
+    <set_timer name="Resupply Ship6" seconds="2" />
+  </event>
+  <event name="Resupply Beacon" id_arme="0844ac18-f924-4a07-b120-a5e5bfe75f47" parent_id_arme="6734bdfe-ab68-42eb-8d12-b6c0beed0ba4">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonBeacon" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship6" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countBea" player_slot="5" comparator="LESS" value="Ship6BeaMax" />
+    <set_variable name="DevonBeacon" value="DevonBeacon-1" integer="yes" />
+    <addto_object_property value="1.0" property="countBea" player_slot="5" />
+    <set_timer name="Resupply Ship6" seconds="2" />
+  </event>
+  <event name="Resupply Tag" id_arme="a156be67-7bfd-446a-a360-f3d4562fb017" parent_id_arme="6734bdfe-ab68-42eb-8d12-b6c0beed0ba4">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonTag" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship6" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countTag" player_slot="5" comparator="LESS" value="Ship6TagMax" />
+    <set_variable name="DevonTag" value="DevonTag-1" integer="yes" />
+    <addto_object_property value="1.0" property="countTag" player_slot="5" />
+    <set_timer name="Resupply Ship6" seconds="2" />
+  </event>
+  <event name="Resupply Probe" id_arme="832d4b58-5898-4e20-8403-c5994e88dbef" parent_id_arme="6734bdfe-ab68-42eb-8d12-b6c0beed0ba4">
+    <if_variable name="DevontoShip6Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonProbe" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship6" />
+    <if_object_property property="shieldsOn" player_slot="5" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countPro" player_slot="5" comparator="LESS" value="Ship6ProMax" />
+    <set_variable name="DevonProbe" value="DevonProbe-1" integer="yes" />
+    <addto_object_property value="1.0" property="countPro" player_slot="5" />
+    <set_timer name="Resupply Ship6" seconds="2" />
+  </event>
+  <folder_arme name="Resupply Ship7" id_arme="bd2353a6-034e-44c9-af40-d515868b3a67" parent_id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" />
+  <event name="Resupply Homing" id_arme="5f7731b4-7974-4fb9-be62-45849e0aa0d1" parent_id_arme="bd2353a6-034e-44c9-af40-d515868b3a67">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonHoming" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship7" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countHoming" player_slot="6" comparator="LESS" value="Ship7HomingMax" />
+    <set_variable name="DevonHoming" value="DevonHoming-1" integer="yes" />
+    <addto_object_property value="1.0" property="countHoming" player_slot="6" />
+    <set_timer name="Resupply Ship7" seconds="2" />
+  </event>
+  <event name="Resupply Nuke" id_arme="11244a48-8c57-4f29-83c1-8ea23ca12eb0" parent_id_arme="bd2353a6-034e-44c9-af40-d515868b3a67">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonNuke" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship7" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countNuke" player_slot="6" comparator="LESS" value="Ship7NukeMax" />
+    <set_variable name="DevonNuke" value="DevonNuke-1" integer="yes" />
+    <addto_object_property value="1.0" property="countNuke" player_slot="6" />
+    <set_timer name="Resupply Ship7" seconds="2" />
+  </event>
+  <event name="Resupply EMP" id_arme="79d95470-7c07-42c4-a85e-7b778d202358" parent_id_arme="bd2353a6-034e-44c9-af40-d515868b3a67">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonEMP" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship7" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countEMP" player_slot="6" comparator="LESS" value="Ship7EMPMax" />
+    <set_variable name="DevonEMP" value="DevonEMP-1" integer="yes" />
+    <addto_object_property value="1.0" property="countEMP" player_slot="6" />
+    <set_timer name="Resupply Ship7" seconds="2" />
+  </event>
+  <event name="Resupply Mine" id_arme="f9a38d24-23f3-4159-a8d0-67f42f593cce" parent_id_arme="bd2353a6-034e-44c9-af40-d515868b3a67">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonMine" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship7" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countMine" player_slot="6" comparator="LESS" value="Ship7MineMax" />
+    <set_variable name="DevonMine" value="DevonMine-1" integer="yes" />
+    <addto_object_property value="1.0" property="countMine" player_slot="6" />
+    <set_timer name="Resupply Ship7" seconds="2" />
+  </event>
+  <event name="Resupply PShock" id_arme="d116be40-16a7-4d55-aebf-7053d97890e4" parent_id_arme="bd2353a6-034e-44c9-af40-d515868b3a67">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonPShock" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship7" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countShk" player_slot="6" comparator="LESS" value="Ship7ShkMax" />
+    <set_variable name="DevonPShock" value="DevonPShock-1" integer="yes" />
+    <addto_object_property value="1.0" property="countShk" player_slot="6" />
+    <set_timer name="Resupply Ship7" seconds="2" />
+  </event>
+  <event name="Resupply Beacon" id_arme="c73dd2c7-efc3-41c2-9a78-f54f15cf1c8e" parent_id_arme="bd2353a6-034e-44c9-af40-d515868b3a67">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonBeacon" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship7" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countBea" player_slot="6" comparator="LESS" value="Ship7BeaMax" />
+    <set_variable name="DevonBeacon" value="DevonBeacon-1" integer="yes" />
+    <addto_object_property value="1.0" property="countBea" player_slot="6" />
+    <set_timer name="Resupply Ship7" seconds="2" />
+  </event>
+  <event name="Resupply Tag" id_arme="076df5dc-11d1-484f-be2e-b43d7e1090a0" parent_id_arme="bd2353a6-034e-44c9-af40-d515868b3a67">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonTag" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship7" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countTag" player_slot="6" comparator="LESS" value="Ship7TagMax" />
+    <set_variable name="DevonTag" value="DevonTag-1" integer="yes" />
+    <addto_object_property value="1.0" property="countTag" player_slot="6" />
+    <set_timer name="Resupply Ship7" seconds="2" />
+  </event>
+  <event name="Resupply Probe" id_arme="069ef5a4-7269-47bb-ae7b-52523917028e" parent_id_arme="bd2353a6-034e-44c9-af40-d515868b3a67">
+    <if_variable name="DevontoShip7Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonProbe" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship7" />
+    <if_object_property property="shieldsOn" player_slot="6" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countPro" player_slot="6" comparator="LESS" value="Ship7ProMax" />
+    <set_variable name="DevonProbe" value="DevonProbe-1" integer="yes" />
+    <addto_object_property value="1.0" property="countPro" player_slot="6" />
+    <set_timer name="Resupply Ship7" seconds="2" />
+  </event>
+  <folder_arme name="Resupply Ship8" id_arme="a38d5f38-3f1e-475d-89a0-3f447bb23bd1" parent_id_arme="d182076b-2e3f-43bc-a876-8e901ff479e8" />
+  <event name="Resupply Homing" id_arme="51ce515a-3dd1-4de4-a57f-6eef52a03550" parent_id_arme="a38d5f38-3f1e-475d-89a0-3f447bb23bd1">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonHoming" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship8" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countHoming" player_slot="7" comparator="LESS" value="Ship8HomingMax" />
+    <set_variable name="DevonHoming" value="DevonHoming-1" integer="yes" />
+    <addto_object_property value="1.0" property="countHoming" player_slot="7" />
+    <set_timer name="Resupply Ship8" seconds="2" />
+  </event>
+  <event name="Resupply Nuke" id_arme="16563d00-7687-43a7-8e53-e73cc41e4a49" parent_id_arme="a38d5f38-3f1e-475d-89a0-3f447bb23bd1">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonNuke" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship8" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countNuke" player_slot="7" comparator="LESS" value="Ship8NukeMax" />
+    <set_variable name="DevonNuke" value="DevonNuke-1" integer="yes" />
+    <addto_object_property value="1.0" property="countNuke" player_slot="7" />
+    <set_timer name="Resupply Ship8" seconds="2" />
+  </event>
+  <event name="Resupply EMP" id_arme="30c6732e-6da5-4e51-8ac6-5175539615bb" parent_id_arme="a38d5f38-3f1e-475d-89a0-3f447bb23bd1">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonEMP" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship8" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countEMP" player_slot="7" comparator="LESS" value="Ship8EMPMax" />
+    <set_variable name="DevonEMP" value="DevonEMP-1" integer="yes" />
+    <addto_object_property value="1.0" property="countEMP" player_slot="7" />
+    <set_timer name="Resupply Ship8" seconds="2" />
+  </event>
+  <event name="Resupply Mine" id_arme="d0240cf6-eb2c-4be1-a983-15fb381274c6" parent_id_arme="a38d5f38-3f1e-475d-89a0-3f447bb23bd1">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonMine" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship8" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countMine" player_slot="7" comparator="LESS" value="Ship8MineMax" />
+    <set_variable name="DevonMine" value="DevonMine-1" integer="yes" />
+    <addto_object_property value="1.0" property="countMine" player_slot="7" />
+    <set_timer name="Resupply Ship8" seconds="2" />
+  </event>
+  <event name="Resupply PShock" id_arme="6690dbf4-b94a-4d5e-a810-9e444892ca95" parent_id_arme="a38d5f38-3f1e-475d-89a0-3f447bb23bd1">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonPShock" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship8" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countShk" player_slot="7" comparator="LESS" value="Ship8ShkMax" />
+    <set_variable name="DevonPShock" value="DevonPShock-1" integer="yes" />
+    <addto_object_property value="1.0" property="countShk" player_slot="7" />
+    <set_timer name="Resupply Ship8" seconds="2" />
+  </event>
+  <event name="Resupply Beacon" id_arme="ad8f3983-2290-45fc-9ba3-88dd240673d4" parent_id_arme="a38d5f38-3f1e-475d-89a0-3f447bb23bd1">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonBeacon" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship8" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countBea" player_slot="7" comparator="LESS" value="Ship8BeaMax" />
+    <set_variable name="DevonBeacon" value="DevonBeacon-1" integer="yes" />
+    <addto_object_property value="1.0" property="countBea" player_slot="7" />
+    <set_timer name="Resupply Ship8" seconds="2" />
+  </event>
+  <event name="Resupply Tag" id_arme="0b7325f3-cecf-4745-a5b4-c75307ce4427" parent_id_arme="a38d5f38-3f1e-475d-89a0-3f447bb23bd1">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonTag" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship8" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countTag" player_slot="7" comparator="LESS" value="Ship8TagMax" />
+    <set_variable name="DevonTag" value="DevonTag-1" integer="yes" />
+    <addto_object_property value="1.0" property="countTag" player_slot="7" />
+    <set_timer name="Resupply Ship8" seconds="2" />
+  </event>
+  <event name="Resupply Probe" id_arme="ce2460c3-8a00-4802-a324-87b38ebbbb8b" parent_id_arme="a38d5f38-3f1e-475d-89a0-3f447bb23bd1">
+    <if_variable name="DevontoShip8Resupply" comparator="EQUALS" value="3.0" />
+    <if_variable name="DevonProbe" comparator="GREATER" value="1.0" />
+    <if_timer_finished name="Resupply Ship8" />
+    <if_object_property property="shieldsOn" player_slot="7" comparator="EQUALS" value="0.0" />
+    <if_object_property property="countPro" player_slot="7" comparator="LESS" value="Ship8ProMax" />
+    <set_variable name="DevonProbe" value="DevonProbe-1" integer="yes" />
+    <addto_object_property value="1.0" property="countPro" player_slot="7" />
+    <set_timer name="Resupply Ship8" seconds="2" />
+  </event>
   <folder_arme name="Grant" id_arme="5937f111-d2ac-443d-a8f0-d27c0ac70e92" parent_id_arme="08fe41b1-a258-46df-a42e-e72143862157" />
   <event name="Grant Supply Request" id_arme="760cdef1-9b2d-4fbb-95d4-6f310b220947" parent_id_arme="5937f111-d2ac-443d-a8f0-d27c0ac70e92">
     <if_variable name="Grant Supplies" comparator="EQUALS" value="2.0" />

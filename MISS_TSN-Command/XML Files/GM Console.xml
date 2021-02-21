@@ -962,6 +962,7 @@
     <clear_gm_button text="TSN Ships\Bomber" />
     <clear_gm_button text="TSN Ships\Shuttle" />
     <clear_gm_button text="TSN Ships\LR Shuttle" />
+    <clear_gm_button text="TSN Fleets\Devin Supply Fleet" />
     <clear_gm_button text="TSN Fleets\Grant Supply Fleet" />
     <clear_gm_button text="TSN Fleets\Jinn Supply Fleet" />
     <clear_gm_button text="TSN Fleets\Goblin Supply Fleet" />
@@ -1876,6 +1877,7 @@
   <event name="TSN Menu" id_arme="d2669643-9363-4037-b082-a89e8763b218" parent_id_arme="666c7e74-c45b-4032-9472-629e090f8e41">
     <if_variable name="Ship Spawn Menu" comparator="EQUALS" value="3.0" />
     <if_timer_finished name="Ship Spawn Menu" />
+    <set_gm_button text="TSN Fleets\Devin Supply Fleet" />
     <set_gm_button text="TSN Fleets\Grant Supply Fleet" />
     <set_gm_button text="TSN Fleets\Jinn Supply Fleet" />
     <set_gm_button text="TSN Fleets\Goblin Supply Fleet" />
@@ -2109,6 +2111,16 @@
     <set_special name="--" ship="-1" captain="1" clear="yes" ability="Cloak" />
     <set_variable name="Fleet Settings" value="1.0" />
     <set_variable name="Auto AI Type" value="1.0" />
+    <set_variable name="Random Direction" value="1.0" />
+    <set_variable name="Name Assign" value="1.0" integer="yes" />
+  </event>
+  <event name="Devin Supply Fleet" id_arme="b655e081-e745-45ab-a2f5-536ae96e582d" parent_id_arme="a68cb140-7719-4e59-bb0b-49cf0b5b9ab0">
+    <if_gm_button text="TSN Fleets\Devin Supply Fleet" />
+    <create type="enemy" use_gm_position="" name="Devin" hullID="1605" sideValue="SideValue" fleetnumber="Fleetnumber" />
+    <create type="enemy" use_gm_position="" name="--" hullID="1500" sideValue="SideValue" fleetnumber="Fleetnumber" />
+    <create type="enemy" use_gm_position="" name="--" hullID="1500" sideValue="SideValue" fleetnumber="Fleetnumber" />
+    <set_variable name="Fleet Settings" value="1.0" />
+    <set_variable name="Auto AI Type" value="203.0" integer="yes" />
     <set_variable name="Random Direction" value="1.0" />
     <set_variable name="Name Assign" value="1.0" integer="yes" />
   </event>
@@ -4781,7 +4793,7 @@
     <if_variable name="Auto AI Type" comparator="NOT" value="AISetting" />
     <set_variable name="Auto AI Type" value="AISetting" integer="yes" />
   </event>
-  <folder_arme name="Neutral Menu" id_arme="575c1af4-cfa8-4d0c-9490-88dcedd93e96" parent_id_arme="047cc0b3-ea2a-4991-98c9-400c3bbcd6c5" expanded_arme="" />
+  <folder_arme name="Neutral Menu" id_arme="575c1af4-cfa8-4d0c-9490-88dcedd93e96" parent_id_arme="047cc0b3-ea2a-4991-98c9-400c3bbcd6c5" />
   <event name="Neutral Menu" id_arme="3bcbbe10-f94d-4317-8353-821bb452c432" parent_id_arme="575c1af4-cfa8-4d0c-9490-88dcedd93e96">
     <if_variable name="Ship Spawn Menu" comparator="EQUALS" value="25.0" />
     <if_timer_finished name="Ship Spawn Menu" />
@@ -4823,7 +4835,7 @@
     <set_variable name="SideValue" value="5.0" integer="yes" />
     <set_variable name="Ship Spawn Menu" value="1.0" />
   </event>
-  <folder_arme name="Budron" id_arme="b29555a5-21d6-468d-8466-ce9d72dbd6bd" parent_id_arme="575c1af4-cfa8-4d0c-9490-88dcedd93e96" expanded_arme="" />
+  <folder_arme name="Budron" id_arme="b29555a5-21d6-468d-8466-ce9d72dbd6bd" parent_id_arme="575c1af4-cfa8-4d0c-9490-88dcedd93e96" />
   <event name="Aloof" id_arme="98035107-b765-42da-af0c-ab8d1a377137" parent_id_arme="b29555a5-21d6-468d-8466-ce9d72dbd6bd">
     <if_gm_button text="Budron\Aloof" />
     <create type="enemy" use_gm_position="" name="--" hullID="7701" sideValue="SideValue" fleetnumber="-1" />
@@ -38397,6 +38409,14 @@
     <clear_gm_button text="Enemy Signature\Skaraan\Warp Signatures" />
     <clear_gm_button text="Enemy Signature\Skaraan\Comms Signatures" />
     <clear_gm_button text="Enemy Signature\Skaraan\Cloak Signatures" />
+    <clear_gm_button text="Mobile Signature\Skaraan\Heading 0" />
+    <clear_gm_button text="Mobile Signature\Skaraan\Heading 45" />
+    <clear_gm_button text="Mobile Signature\Skaraan\Heading 90" />
+    <clear_gm_button text="Mobile Signature\Skaraan\Heading 135" />
+    <clear_gm_button text="Mobile Signature\Skaraan\Heading 180" />
+    <clear_gm_button text="Mobile Signature\Skaraan\Heading 225" />
+    <clear_gm_button text="Mobile Signature\Skaraan\Heading 270" />
+    <clear_gm_button text="Mobile Signature\Skaraan\Heading 315" />
     <!--Anomalies-->
     <clear_gm_button text="Spawn Anomaly\Energy" />
     <clear_gm_button text="Spawn Anomaly\DamCons" />
@@ -40189,6 +40209,15 @@
     <set_gm_button text="Enemy Signature\Skaraan\Warp Signatures" />
     <set_gm_button text="Enemy Signature\Skaraan\Cloak Signatures" />
     <set_gm_button text="Enemy Signature\Skaraan\Comms Signatures" />
+    <!--Mobile Signatures-->
+    <set_gm_button text="Mobile Signature\Skaraan\Heading 0" />
+    <set_gm_button text="Mobile Signature\Skaraan\Heading 45" />
+    <set_gm_button text="Mobile Signature\Skaraan\Heading 90" />
+    <set_gm_button text="Mobile Signature\Skaraan\Heading 135" />
+    <set_gm_button text="Mobile Signature\Skaraan\Heading 180" />
+    <set_gm_button text="Mobile Signature\Skaraan\Heading 225" />
+    <set_gm_button text="Mobile Signature\Skaraan\Heading 270" />
+    <set_gm_button text="Mobile Signature\Skaraan\Heading 315" />
     <set_variable name="POI Menu" value="1.0" integer="yes" />
   </event>
   <folder_arme name="Signature Select" id_arme="9ff0c7aa-f5c0-488c-9554-1d3d2df80622" parent_id_arme="057c8e7f-7f30-4c9a-a7e6-21a0335d87d7" />
@@ -40310,12 +40339,27 @@
     <set_variable name="ScanPoint" value="1.0" integer="yes" />
     <set_variable name="ScanSignature" value="65.0" integer="yes" />
   </event>
+  <folder_arme name="Moving Signatures" id_arme="6f45240c-bcea-4123-bc25-dc704dd6c630" parent_id_arme="9ff0c7aa-f5c0-488c-9554-1d3d2df80622" expanded_arme="" />
+  <folder_arme name="Skaraan" id_arme="dafa600b-cef6-4780-92b5-0ac940996577" parent_id_arme="6f45240c-bcea-4123-bc25-dc704dd6c630" expanded_arme="" />
+  <event name="Heading 0" id_arme="80f49316-8814-4fdd-9ba6-4ef215cc71d2" parent_id_arme="dafa600b-cef6-4780-92b5-0ac940996577">
+    <if_gm_button text="Mobile Signature\Skaraan\Heading 0" />
+    <create type="genericMesh" use_gm_position="" name="(|ScanPointNumber|)" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" fakeShieldsFront="1" fakeShieldsRear="1" hasFakeShldFreq="1" colorRed="0.1" colorGreen="0.5" colorBlue="0.1" />
+    <create type="genericMesh" x="0.0" y="0.0" z="0.0" name=".-" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.1" colorGreen="0.5" colorBlue="0.1" />
+    <set_relative_position name2=".-" distance="10000" angle="180" name1="(|ScanPointNumber|)" />
+    <set_variable name="ScanSignature" value="100.0" integer="yes" />
+    <set_variable name="ScanPoint" value="2.0" integer="yes" />
+  </event>
+  <event name="Heading 180" id_arme="a7376049-6021-4671-a2ee-2390ed5f6590" parent_id_arme="dafa600b-cef6-4780-92b5-0ac940996577">
+    <if_gm_button text="Mobile Signature\Skaraan\Heading 180" />
+    <create type="genericMesh" use_gm_position="" name="(|ScanPointNumber|)" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" fakeShieldsFront="10" fakeShieldsRear="10" hasFakeShldFreq="1" colorRed="0.1" colorGreen="0.5" colorBlue="0.1" />
+    <set_variable name="ScanPointNumber" value="ScanPointNumber+1" integer="yes" />
+  </event>
   <event name="Spawn Scan Point" id_arme="d038aa34-9b10-45cf-8870-4229cea8b052" parent_id_arme="057c8e7f-7f30-4c9a-a7e6-21a0335d87d7">
     <if_variable name="ScanPoint" comparator="EQUALS" value="1.0" />
     <create type="genericMesh" use_gm_position="" angle="0" name="(|ScanPointNumber|)" meshFileName="dat\TSN\USFP\marker.dxs" textureFileName="dat\TSN\USFP\marker.png" colorRed="0.1" colorGreen="0.5" colorBlue="0.1" />
     <set_variable name="ScanPoint" value="2.0" integer="yes" />
   </event>
-  <folder_arme name="Signature Readings" id_arme="db803b9b-8009-46a6-a192-cabd7cf92f25" parent_id_arme="057c8e7f-7f30-4c9a-a7e6-21a0335d87d7" />
+  <folder_arme name="Signature Readings" id_arme="db803b9b-8009-46a6-a192-cabd7cf92f25" parent_id_arme="057c8e7f-7f30-4c9a-a7e6-21a0335d87d7" expanded_arme="" />
   <folder_arme name="TSN Signatures" id_arme="a3ba9a1d-8974-4814-bc1e-49e0a2fbca22" parent_id_arme="db803b9b-8009-46a6-a192-cabd7cf92f25" />
   <event name="TSN Energy Signature" id_arme="34eb9755-40c1-4866-8a0b-daf1f4b8838e" parent_id_arme="a3ba9a1d-8974-4814-bc1e-49e0a2fbca22">
     <if_variable name="ScanPoint" comparator="EQUALS" value="2.0" />
@@ -40494,6 +40538,16 @@
     <if_variable name="ScanPoint" comparator="EQUALS" value="2.0" />
     <if_variable name="ScanSignature" comparator="EQUALS" value="65.0" />
     <set_ship_text name="(|ScanPointNumber|)" race="Signature" class="Scan Location" desc="Focused delminium particle trail." scan_desc="Resonance frequency and particle density consistent with Skaraan high energy data transmissions." />
+    <set_variable name="ScanPointNumber" value="ScanPointNumber+1" integer="yes" />
+    <set_variable name="ScanSignature" value="0.0" integer="yes" />
+    <set_variable name="ScanPoint" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Mobile Signatures" id_arme="0cbf4caf-53fe-4785-87a6-3945453ef149" parent_id_arme="db803b9b-8009-46a6-a192-cabd7cf92f25" expanded_arme="" />
+  <event name="Heading 0" id_arme="c392ccf4-53e8-4515-b1c1-0b085db227ee" parent_id_arme="0cbf4caf-53fe-4785-87a6-3945453ef149">
+    <if_variable name="ScanPoint" comparator="EQUALS" value="2.0" />
+    <if_variable name="ScanSignature" comparator="EQUALS" value="100.0" />
+    <set_ship_text name="(|ScanPointNumber|)" race="Signature" desc="Heading 0" />
+    <direct name="(|ScanPointNumber|)" targetName=".-" scriptThrottle="2.0" />
     <set_variable name="ScanPointNumber" value="ScanPointNumber+1" integer="yes" />
     <set_variable name="ScanSignature" value="0.0" integer="yes" />
     <set_variable name="ScanPoint" value="0.0" integer="yes" />
@@ -40781,7 +40835,7 @@
     <if_gm_button text="Terrain\Asteroids\Large Field" />
     <create count="100" type="asteroids" use_gm_position="" radius="5000" randomRange="5000" />
   </event>
-  <folder_arme name="Interaction Keys" id_arme="c3aaadcc-fe4b-4a02-8f3a-f263ccfd6c99" parent_id_arme="a63d8b7a-dd61-481e-b818-314ef7f7af5f" />
+  <folder_arme name="Interaction Keys" id_arme="c3aaadcc-fe4b-4a02-8f3a-f263ccfd6c99" parent_id_arme="a63d8b7a-dd61-481e-b818-314ef7f7af5f" expanded_arme="" />
   <event name="Interaction Menu" id_arme="6f5c9324-17b9-470d-ac70-4f1e4a50636a" parent_id_arme="c3aaadcc-fe4b-4a02-8f3a-f263ccfd6c99">
     <if_timer_finished name="GM Menu" />
     <if_variable name="GM Menu" comparator="EQUALS" value="10.0" />
@@ -46539,6 +46593,10 @@
   <event name="Mineral Refinary" id_arme="b1727d9b-7244-4d4b-bce9-4ae2d598eedb" parent_id_arme="3d28749b-7281-45c7-a17d-6ff3d7ca6af1">
     <if_gm_button text="Station Scan Text\Mineral Refinary" />
     <set_ship_text use_gm_selection=" " desc="Mineral Deposits detected" scan_desc="Intel - Mineral refinary operations active." />
+  </event>
+  <folder_arme name="Docking Port" id_arme="d021d56d-150e-4e6f-bdd4-35a8495626b4" parent_id_arme="c3aaadcc-fe4b-4a02-8f3a-f263ccfd6c99" expanded_arme="" />
+  <event name="Create Docking Port" id_arme="89faae68-0867-4861-84df-23fd0cad8d9d" parent_id_arme="d021d56d-150e-4e6f-bdd4-35a8495626b4">
+    <create type="station" x="100.0" y="20.0" z="100.0" name="Dock|PortNumber|" />
   </event>
   <event name="Reset Comms Buttons" id_arme="2f450435-1b0e-4cbd-9cde-dab0400027e2" parent_id_arme="c3aaadcc-fe4b-4a02-8f3a-f263ccfd6c99">
     <if_variable name="Interactions Menu" comparator="EQUALS" value="1.0" />
