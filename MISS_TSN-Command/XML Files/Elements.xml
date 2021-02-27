@@ -2,7 +2,7 @@
   <start name="Start" id_arme="8bf1c774-cd5c-41e1-b463-2a543cc7fbd4">
     <!---->
   </start>
-  <folder_arme name="Elements" id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" expanded_arme="" />
+  <folder_arme name="Elements" id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <folder_arme name="Random Elements" id_arme="e5a3ec26-6d23-4bb8-9698-be3f70d38947" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <event name="Random Coordinates" id_arme="7c7265dd-f0de-4d29-9f42-9f23d1e09a4e" parent_id_arme="e5a3ec26-6d23-4bb8-9698-be3f70d38947">
     <if_variable name="Random Coordinates" comparator="EQUALS" value="1.0" />
@@ -7612,7 +7612,7 @@
     <set_ship_text name="--" newname="Z|firstnumber||secondnumber|" />
     <set_variable name="Name Assign" value="1.0" integer="yes" />
   </event>
-  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" expanded_arme="" />
+  <folder_arme name="Ship Status" id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
   <event name="All Inactive" id_arme="970521f0-180e-45e2-8cf8-693a4c3b200b" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1">
     <if_variable name="Sandbox Activation" comparator="EQUALS" value="0.0" />
     <if_variable name="shipCount" comparator="EQUALS" value="0.0" />
@@ -10891,9 +10891,9 @@
     <set_variable name="Ship8 Status" value="4.0" integer="yes" />
     <set_variable name="Ship8CommsMenu" value="0.0" integer="yes" />
   </event>
-  <folder_arme name="Track Ship Status" id_arme="1160c145-db31-4c90-99e1-907d9e1bb8bc" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" expanded_arme="" />
-  <folder_arme name="Ordnance Tracker" id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" parent_id_arme="1160c145-db31-4c90-99e1-907d9e1bb8bc" expanded_arme="" />
-  <folder_arme name="Ship1" id_arme="2c027645-c62e-485b-bf7e-87f3f2140426" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" expanded_arme="" />
+  <folder_arme name="Track Ship Status" id_arme="1160c145-db31-4c90-99e1-907d9e1bb8bc" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" />
+  <folder_arme name="Ordnance Tracker" id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" parent_id_arme="1160c145-db31-4c90-99e1-907d9e1bb8bc" />
+  <folder_arme name="Ship1" id_arme="2c027645-c62e-485b-bf7e-87f3f2140426" parent_id_arme="b3425a71-9d46-47b4-b88c-60320d9a6e56" />
   <event name="Increase Homings" id_arme="2a5181be-1cd2-4c7d-94ab-62289454df50" parent_id_arme="2c027645-c62e-485b-bf7e-87f3f2140426">
     <if_exists player_slot="0" />
     <if_object_property property="countHoming" player_slot="0" comparator="GREATER" value="Ship1HomingCurrent" />
@@ -31727,7 +31727,7 @@
     <set_variable name="Ship8RateFCS" value="0.0" integer="yes" />
     <set_variable name="CheckShip8PDZRange" value="0.0" integer="yes" />
   </event>
-  <folder_arme name="Radiation Monitors" id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" />
+  <folder_arme name="Radiation Monitors" id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" parent_id_arme="da1f4d06-129f-463c-a1e6-d7a4eae746b1" expanded_arme="" />
   <event name="Radiation Alert" id_arme="77581f6f-6ccb-4c07-965d-f7039bf91e90" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec">
     <if_variable name="Active Radiation" comparator="EQUALS" value="1.0" />
     <if_exists name="'" />
@@ -31781,7 +31781,7 @@
     <if_variable name="Ship1RadDist" comparator="GREATER" value="0.0" />
     <if_timer_finished name="Ship1 Radiation" />
     <if_variable name="Ship1Level" comparator="LESS" value="100.0" />
-    <set_variable name="Ship1Level" value="Ship1Level + (Ship1RadDist * RadiationLevel)" />
+    <set_variable name="Ship1Level" value="Ship1Level + (Ship1RadDist * RadiationLevel)" integer="yes" />
     <set_timer name="Ship1 Radiation" seconds="5" />
   </event>
   <event name="Ship1 Max Exposure" id_arme="6f8347b7-b5dc-402b-ae92-e7ba6c20f89a" parent_id_arme="1409a1db-5754-4a7f-89b8-7473d001a60e">
@@ -31794,27 +31794,27 @@
     <if_variable name="Ship1Level" comparator="GREATER" value="2.0" />
     <if_variable name="Ship1RadDist" comparator="EQUALS" value="0.0" />
     <if_timer_finished name="Ship1 Radiation" />
-    <set_variable name="Ship1Level" value="Ship1Level - 2" />
+    <set_variable name="Ship1Level" value="Ship1Level - 2" integer="yes" />
     <set_timer name="Ship1 Radiation" seconds="5" />
   </event>
-  <folder_arme name="Radiation Monitors" id_arme="1dd130c6-298f-4023-978d-a64f0df727d7" parent_id_arme="1409a1db-5754-4a7f-89b8-7473d001a60e" />
+  <folder_arme name="Radiation Monitors" id_arme="1dd130c6-298f-4023-978d-a64f0df727d7" parent_id_arme="1409a1db-5754-4a7f-89b8-7473d001a60e" expanded_arme="" />
   <event name="Create Ship1 Monitor" id_arme="97a8ad76-37d0-4605-a526-1d254c4de429" parent_id_arme="1dd130c6-298f-4023-978d-a64f0df727d7">
     <if_variable name="Active Radiation" comparator="EQUALS" value="2.0" />
     <if_exists player_slot="0" />
-    <if_not_exists name="Rad. Mon. 1 0" />
+    <if_not_exists name="Rad. Mon. 1: 0" />
     <if_variable name="Ship1Monitor" comparator="NOT" value="1.0" />
-    <create type="genericMesh" x="90000.0" y="750.0" z="98000.0" angle="0" name="Rad. Mon. 1 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
-    <set_variable name="Ship1Level" value="0.0" />
-    <set_variable name="Ship1Monitor" value="1.0" />
+    <create type="genericMesh" x="90000.0" y="750.0" z="98000.0" name="Rad. Mon. 1: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
+    <set_variable name="Ship1Level" value="0.0" integer="yes" />
+    <set_variable name="Ship1Monitor" value="1.0" integer="yes" />
   </event>
   <event name="Remove Ship1 Monitor" id_arme="b902d61a-dc1b-4c33-8965-514c4b0bd6c1" parent_id_arme="1dd130c6-298f-4023-978d-a64f0df727d7">
     <if_variable name="Active Radiation" comparator="EQUALS" value="0.0" />
     <if_exists player_slot="0" />
-    <if_exists name="Rad. Mon. 1 0" />
-    <destroy name="Rad. Mon. 1 0" />
+    <if_exists name="Rad. Mon. 1: 0" />
+    <destroy name="Rad. Mon. 1: 0" />
     <warning_popup_message message="Radiation levels nominal." consoles="MSO" player_slot="0">Radiation levels nominal^Deactivating radiation monitors</warning_popup_message>
-    <set_variable name="Ship1Level" value="0.0" />
-    <set_variable name="Ship1Monitor" value="0.0" />
+    <set_variable name="Ship1Level" value="0.0" integer="yes" />
+    <set_variable name="Ship1Monitor" value="0.0" integer="yes" />
   </event>
   <folder_arme name="Ship1 Radiation Levels" id_arme="4365c4fe-faea-4d2a-9447-06a69730974a" parent_id_arme="1dd130c6-298f-4023-978d-a64f0df727d7" />
   <event name="Ship1Level 100" id_arme="395078cc-c514-4072-9ada-39b254541b0b" parent_id_arme="4365c4fe-faea-4d2a-9447-06a69730974a">
@@ -31933,11 +31933,11 @@
     <if_variable name="Ship1Level" comparator="GREATER_EQUAL" value="5.0" />
     <if_variable name="Ship1Level" comparator="LESS" value="10.0" />
     <set_ship_text name="Rad. Mon. 1 10" newname="Rad. Mon. 1 5" />
-    <set_ship_text name="Rad. Mon. 1 0" newname="Rad. Mon. 1 5" />
+    <set_ship_text name="Rad. Mon. 1: 0" newname="Rad. Mon. 1 5" />
   </event>
   <event name="Ship1Level 0" id_arme="fdf169bd-ea42-4593-be65-caaa0c135555" parent_id_arme="4365c4fe-faea-4d2a-9447-06a69730974a">
     <if_variable name="Ship1Level" comparator="LESS" value="5.0" />
-    <set_ship_text name="Rad. Mon. 1 5" newname="Rad. Mon. 1 0" />
+    <set_ship_text name="Rad. Mon. 1 5" newname="Rad. Mon. 1: 0" />
   </event>
   <folder_arme name="Distance Monitor" id_arme="4e6ec7c4-23cd-43ef-a9e1-664e1267a3df" parent_id_arme="1409a1db-5754-4a7f-89b8-7473d001a60e" />
   <event name="Radiation Source Removed" id_arme="2e24443d-a0fc-4d08-9a37-1301942852c9" parent_id_arme="4e6ec7c4-23cd-43ef-a9e1-664e1267a3df">
@@ -31995,7 +31995,7 @@
     <if_variable name="Ship2RadDist" comparator="GREATER" value="0.0" />
     <if_timer_finished name="Ship2 Radiation" />
     <if_variable name="Ship2Level" comparator="LESS" value="100.0" />
-    <set_variable name="Ship2Level" value="Ship2Level + (Ship2RadDist * RadiationLevel)" />
+    <set_variable name="Ship2Level" value="Ship2Level + (Ship2RadDist * RadiationLevel)" integer="yes" />
     <set_timer name="Ship2 Radiation" seconds="5" />
   </event>
   <event name="Ship2 Max Exposure" id_arme="7e17348f-c5a4-4a8c-ba2f-e76ab801a1b3" parent_id_arme="8cf7129c-a432-4275-a256-61699e939c1e">
@@ -32008,27 +32008,27 @@
     <if_variable name="Ship2Level" comparator="GREATER" value="2.0" />
     <if_variable name="Ship2RadDist" comparator="EQUALS" value="0.0" />
     <if_timer_finished name="Ship2 Radiation" />
-    <set_variable name="Ship2Level" value="Ship2Level - 2" />
+    <set_variable name="Ship2Level" value="Ship2Level - 2" integer="yes" />
     <set_timer name="Ship2 Radiation" seconds="5" />
   </event>
-  <folder_arme name="Radiation Monitors" id_arme="19fdc565-6bc6-4ce9-b7dd-e254750d03ea" parent_id_arme="8cf7129c-a432-4275-a256-61699e939c1e" />
+  <folder_arme name="Radiation Monitors" id_arme="19fdc565-6bc6-4ce9-b7dd-e254750d03ea" parent_id_arme="8cf7129c-a432-4275-a256-61699e939c1e" expanded_arme="" />
   <event name="Create Ship2 Monitor" id_arme="8d955054-62c1-4e88-a690-7c7924154b0b" parent_id_arme="19fdc565-6bc6-4ce9-b7dd-e254750d03ea">
     <if_variable name="Active Radiation" comparator="EQUALS" value="2.0" />
     <if_exists player_slot="1" />
-    <if_not_exists name="Rad. Mon. 2 0" />
+    <if_not_exists name="Rad. Mon. 2: 0" />
     <if_variable name="Ship2Monitor" comparator="NOT" value="1.0" />
-    <create type="genericMesh" x="90000.0" y="750.0" z="98000.0" angle="0" name="Rad. Mon. 2 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
-    <set_variable name="Ship2Level" value="0.0" />
-    <set_variable name="Ship2Monitor" value="1.0" />
+    <create type="genericMesh" x="84000.0" y="750.0" z="98000.0" name="Rad. Mon. 2: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
+    <set_variable name="Ship2Level" value="0.0" integer="yes" />
+    <set_variable name="Ship2Monitor" value="1.0" integer="yes" />
   </event>
   <event name="Remove Ship2 Monitor" id_arme="3a726a32-a4df-4630-8b81-3237a70a9f1f" parent_id_arme="19fdc565-6bc6-4ce9-b7dd-e254750d03ea">
     <if_variable name="Active Radiation" comparator="EQUALS" value="0.0" />
     <if_exists player_slot="1" />
-    <if_exists name="Rad. Mon. 2 0" />
-    <destroy name="Rad. Mon. 2 0" />
+    <if_exists name="Rad. Mon. 2: 0" />
+    <destroy name="Rad. Mon. 2: 0" />
     <warning_popup_message message="Radiation levels nominal." consoles="MSO" player_slot="1">Radiation levels nominal^Deactivating radiation monitors</warning_popup_message>
-    <set_variable name="Ship2Level" value="0.0" />
-    <set_variable name="Ship2Monitor" value="0.0" />
+    <set_variable name="Ship2Level" value="0.0" integer="yes" />
+    <set_variable name="Ship2Monitor" value="0.0" integer="yes" />
   </event>
   <folder_arme name="Ship2 Radiation Levels" id_arme="49f37afb-152a-4ca6-9e1f-9649c84ff252" parent_id_arme="19fdc565-6bc6-4ce9-b7dd-e254750d03ea" />
   <event name="Ship2Level 100" id_arme="70b079a6-6cff-47f1-b3bf-c4a23460a530" parent_id_arme="49f37afb-152a-4ca6-9e1f-9649c84ff252">
@@ -32147,11 +32147,11 @@
     <if_variable name="Ship2Level" comparator="GREATER_EQUAL" value="5.0" />
     <if_variable name="Ship2Level" comparator="LESS" value="10.0" />
     <set_ship_text name="Rad. Mon. 2 10" newname="Rad. Mon. 2 5" />
-    <set_ship_text name="Rad. Mon. 2 0" newname="Rad. Mon. 2 5" />
+    <set_ship_text name="Rad. Mon. 2: 0" newname="Rad. Mon. 2 5" />
   </event>
   <event name="Ship2Level 0" id_arme="ed160a2e-fba8-409d-93ef-c8ecfb5e5904" parent_id_arme="49f37afb-152a-4ca6-9e1f-9649c84ff252">
     <if_variable name="Ship2Level" comparator="LESS" value="5.0" />
-    <set_ship_text name="Rad. Mon. 2 5" newname="Rad. Mon. 2 0" />
+    <set_ship_text name="Rad. Mon. 2 5" newname="Rad. Mon. 2: 0" />
   </event>
   <folder_arme name="Distance Monitor" id_arme="7dbd39c2-f30e-4053-a232-699a86af44fb" parent_id_arme="8cf7129c-a432-4275-a256-61699e939c1e" />
   <event name="Radiation Source Removed" id_arme="518f6421-800f-4f03-b3a3-1cbe8d8c1d08" parent_id_arme="7dbd39c2-f30e-4053-a232-699a86af44fb">
@@ -32209,7 +32209,7 @@
     <if_variable name="Ship3RadDist" comparator="GREATER" value="0.0" />
     <if_timer_finished name="Ship3 Radiation" />
     <if_variable name="Ship3Level" comparator="LESS" value="100.0" />
-    <set_variable name="Ship3Level" value="Ship3Level + (Ship3RadDist * RadiationLevel)" />
+    <set_variable name="Ship3Level" value="Ship3Level + (Ship3RadDist * RadiationLevel)" integer="yes" />
     <set_timer name="Ship3 Radiation" seconds="5" />
   </event>
   <event name="Ship3 Max Exposure" id_arme="ca17d113-4cf3-4c75-bb5e-38d65ab56453" parent_id_arme="847b8649-29b2-4633-b0b6-9100fb7d408a">
@@ -32222,18 +32222,18 @@
     <if_variable name="Ship3Level" comparator="GREATER" value="2.0" />
     <if_variable name="Ship3RadDist" comparator="EQUALS" value="0.0" />
     <if_timer_finished name="Ship3 Radiation" />
-    <set_variable name="Ship3Level" value="Ship3Level - 2" />
+    <set_variable name="Ship3Level" value="Ship3Level - 2" integer="yes" />
     <set_timer name="Ship3 Radiation" seconds="5" />
   </event>
-  <folder_arme name="Radiation Monitors" id_arme="6549c055-b946-42db-a0ff-ad0138c88bd8" parent_id_arme="847b8649-29b2-4633-b0b6-9100fb7d408a" />
+  <folder_arme name="Radiation Monitors" id_arme="6549c055-b946-42db-a0ff-ad0138c88bd8" parent_id_arme="847b8649-29b2-4633-b0b6-9100fb7d408a" expanded_arme="" />
   <event name="Create Ship3 Monitor" id_arme="54776a1d-f4c6-4522-b51a-b791c0111300" parent_id_arme="6549c055-b946-42db-a0ff-ad0138c88bd8">
     <if_variable name="Active Radiation" comparator="EQUALS" value="2.0" />
     <if_exists player_slot="2" />
     <if_not_exists name="Rad. Mon. 3: 0" />
     <if_variable name="Ship3Monitor" comparator="NOT" value="1.0" />
-    <create type="genericMesh" x="90000.0" y="750.0" z="98000.0" angle="0" name="Rad. Mon. 3: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
-    <set_variable name="Ship3Level" value="0.0" />
-    <set_variable name="Ship3Monitor" value="1.0" />
+    <create type="genericMesh" x="78000.0" y="750.0" z="98000.0" name="Rad. Mon. 3: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
+    <set_variable name="Ship3Level" value="0.0" integer="yes" />
+    <set_variable name="Ship3Monitor" value="1.0" integer="yes" />
   </event>
   <event name="Remove Ship3 Monitor" id_arme="30a3e280-36df-4242-bf96-bb775625e1a6" parent_id_arme="6549c055-b946-42db-a0ff-ad0138c88bd8">
     <if_variable name="Active Radiation" comparator="EQUALS" value="0.0" />
@@ -32241,8 +32241,8 @@
     <if_exists name="Rad. Mon. 3: 0" />
     <destroy name="Rad. Mon. 3: 0" />
     <warning_popup_message message="Radiation levels nominal." consoles="MSO" player_slot="2">Radiation levels nominal^Deactivating radiation monitors</warning_popup_message>
-    <set_variable name="Ship3Level" value="0.0" />
-    <set_variable name="Ship3Monitor" value="0.0" />
+    <set_variable name="Ship3Level" value="0.0" integer="yes" />
+    <set_variable name="Ship3Monitor" value="0.0" integer="yes" />
   </event>
   <folder_arme name="Ship3 Radiation Levels" id_arme="1020aab0-1f64-4501-ba18-11d90ee83f9c" parent_id_arme="6549c055-b946-42db-a0ff-ad0138c88bd8" />
   <event name="Ship3Level 100" id_arme="d72526a4-b0d4-4831-ba6e-3a57210f8255" parent_id_arme="1020aab0-1f64-4501-ba18-11d90ee83f9c">
@@ -32397,7 +32397,7 @@
     <if_distance player_slot1="2" name2="'" comparator="LESS_EQUAL" value="2000.0" />
     <set_variable name="Ship3RadDist" value="4.0" />
   </event>
-  <folder_arme name="Ship4 Radiation" id_arme="21fe9867-6065-401b-b0db-607ec47e9d01" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" />
+  <folder_arme name="Ship4 Radiation" id_arme="21fe9867-6065-401b-b0db-607ec47e9d01" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" expanded_arme="" />
   <folder_arme name="Radiation Effects" id_arme="e2dcb4f8-c9a9-455f-b719-fbad2af7a88f" parent_id_arme="21fe9867-6065-401b-b0db-607ec47e9d01" />
   <event name="Shield Failure" id_arme="d6798294-27d1-4a90-a717-3259c24c14d4" parent_id_arme="e2dcb4f8-c9a9-455f-b719-fbad2af7a88f">
     <if_variable name="Ship4Monitor" comparator="EQUALS" value="1.0" />
@@ -32423,7 +32423,7 @@
     <if_variable name="Ship4RadDist" comparator="GREATER" value="0.0" />
     <if_timer_finished name="Ship4 Radiation" />
     <if_variable name="Ship4Level" comparator="LESS" value="100.0" />
-    <set_variable name="Ship4Level" value="Ship4Level + (Ship4RadDist * RadiationLevel)" />
+    <set_variable name="Ship4Level" value="Ship4Level + (Ship4RadDist * RadiationLevel)" integer="yes" />
     <set_timer name="Ship4 Radiation" seconds="5" />
   </event>
   <event name="Ship4 Max Exposure" id_arme="0d4cd4f7-7a46-4148-a285-fe509f791a1e" parent_id_arme="21fe9867-6065-401b-b0db-607ec47e9d01">
@@ -32436,18 +32436,18 @@
     <if_variable name="Ship4Level" comparator="GREATER" value="2.0" />
     <if_variable name="Ship4RadDist" comparator="EQUALS" value="0.0" />
     <if_timer_finished name="Ship4 Radiation" />
-    <set_variable name="Ship4Level" value="Ship4Level - 2" />
+    <set_variable name="Ship4Level" value="Ship4Level - 2" integer="yes" />
     <set_timer name="Ship4 Radiation" seconds="5" />
   </event>
-  <folder_arme name="Radiation Monitors" id_arme="5df5d641-bb44-4a03-8f4b-ad141854520d" parent_id_arme="21fe9867-6065-401b-b0db-607ec47e9d01" />
+  <folder_arme name="Radiation Monitors" id_arme="5df5d641-bb44-4a03-8f4b-ad141854520d" parent_id_arme="21fe9867-6065-401b-b0db-607ec47e9d01" expanded_arme="" />
   <event name="Create Ship4 Monitor" id_arme="8764a9d5-c6a9-4c73-be0f-e6e5cb6c527a" parent_id_arme="5df5d641-bb44-4a03-8f4b-ad141854520d">
     <if_variable name="Active Radiation" comparator="EQUALS" value="2.0" />
     <if_exists player_slot="3" />
     <if_not_exists name="Rad. Mon. 4: 0" />
     <if_variable name="Ship4Monitor" comparator="NOT" value="1.0" />
-    <create type="genericMesh" x="90000.0" y="750.0" z="98000.0" angle="0" name="Rad. Mon. 4: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
-    <set_variable name="Ship4Level" value="0.0" />
-    <set_variable name="Ship4Monitor" value="1.0" />
+    <create type="genericMesh" x="72000.0" y="750.0" z="98000.0" name="Rad. Mon. 4: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
+    <set_variable name="Ship4Level" value="0.0" integer="yes" />
+    <set_variable name="Ship4Monitor" value="1.0" integer="yes" />
   </event>
   <event name="Remove Ship4 Monitor" id_arme="16da21d4-fd5d-4d1f-a2b1-649206e76eb8" parent_id_arme="5df5d641-bb44-4a03-8f4b-ad141854520d">
     <if_variable name="Active Radiation" comparator="EQUALS" value="0.0" />
@@ -32455,8 +32455,8 @@
     <if_exists name="Rad. Mon. 4: 0" />
     <destroy name="Rad. Mon. 4: 0" />
     <warning_popup_message message="Radiation levels nominal." consoles="MSO" player_slot="3">Radiation levels nominal^Deactivating radiation monitors</warning_popup_message>
-    <set_variable name="Ship4Level" value="0.0" />
-    <set_variable name="Ship4Monitor" value="0.0" />
+    <set_variable name="Ship4Level" value="0.0" integer="yes" />
+    <set_variable name="Ship4Monitor" value="0.0" integer="yes" />
   </event>
   <folder_arme name="Ship4 Radiation Levels" id_arme="463515b2-7527-4e69-83d2-804fa01ce8d0" parent_id_arme="5df5d641-bb44-4a03-8f4b-ad141854520d" />
   <event name="Ship4Level 100" id_arme="bb4ed587-60ac-420f-9902-05e031520489" parent_id_arme="463515b2-7527-4e69-83d2-804fa01ce8d0">
@@ -32611,7 +32611,7 @@
     <if_distance player_slot1="3" name2="'" comparator="LESS_EQUAL" value="2000.0" />
     <set_variable name="Ship4RadDist" value="4.0" />
   </event>
-  <folder_arme name="Ship5 Radiation" id_arme="20bc86b2-b6df-46c2-b11e-5b28b1a043d1" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" />
+  <folder_arme name="Ship5 Radiation" id_arme="20bc86b2-b6df-46c2-b11e-5b28b1a043d1" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" expanded_arme="" />
   <folder_arme name="Radiation Effects" id_arme="4191ef9e-075c-4fe1-8c68-e33e715e0bef" parent_id_arme="20bc86b2-b6df-46c2-b11e-5b28b1a043d1" />
   <event name="Shield Failure" id_arme="b332d074-cb10-43a6-a9b6-821f3abfcabc" parent_id_arme="4191ef9e-075c-4fe1-8c68-e33e715e0bef">
     <if_variable name="Ship5Monitor" comparator="EQUALS" value="1.0" />
@@ -32637,7 +32637,7 @@
     <if_variable name="Ship5RadDist" comparator="GREATER" value="0.0" />
     <if_timer_finished name="Ship5 Radiation" />
     <if_variable name="Ship5Level" comparator="LESS" value="100.0" />
-    <set_variable name="Ship5Level" value="Ship5Level + (Ship5RadDist * RadiationLevel)" />
+    <set_variable name="Ship5Level" value="Ship5Level + (Ship5RadDist * RadiationLevel)" integer="yes" />
     <set_timer name="Ship5 Radiation" seconds="5" />
   </event>
   <event name="Ship5 Max Exposure" id_arme="558f29cf-65c5-49f8-a0d5-1bc2cc3edfeb" parent_id_arme="20bc86b2-b6df-46c2-b11e-5b28b1a043d1">
@@ -32650,18 +32650,18 @@
     <if_variable name="Ship5Level" comparator="GREATER" value="2.0" />
     <if_variable name="Ship5RadDist" comparator="EQUALS" value="0.0" />
     <if_timer_finished name="Ship5 Radiation" />
-    <set_variable name="Ship5Level" value="Ship5Level - 2" />
+    <set_variable name="Ship5Level" value="Ship5Level - 2" integer="yes" />
     <set_timer name="Ship5 Radiation" seconds="5" />
   </event>
-  <folder_arme name="Radiation Monitors" id_arme="9ea81f38-66b8-4a8d-a817-2844d6033595" parent_id_arme="20bc86b2-b6df-46c2-b11e-5b28b1a043d1" />
+  <folder_arme name="Radiation Monitors" id_arme="9ea81f38-66b8-4a8d-a817-2844d6033595" parent_id_arme="20bc86b2-b6df-46c2-b11e-5b28b1a043d1" expanded_arme="" />
   <event name="Create Ship5 Monitor" id_arme="028d5984-0c71-447c-85b6-ce6b6728dbef" parent_id_arme="9ea81f38-66b8-4a8d-a817-2844d6033595">
     <if_variable name="Active Radiation" comparator="EQUALS" value="2.0" />
     <if_exists player_slot="4" />
     <if_not_exists name="Rad. Mon. 5: 0" />
     <if_variable name="Ship5Monitor" comparator="NOT" value="1.0" />
-    <create type="genericMesh" x="90000.0" y="750.0" z="98000.0" angle="0" name="Rad. Mon. 5: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
-    <set_variable name="Ship5Level" value="0.0" />
-    <set_variable name="Ship5Monitor" value="1.0" />
+    <create type="genericMesh" x="66000.0" y="750.0" z="98000.0" name="Rad. Mon. 5: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
+    <set_variable name="Ship5Level" value="0.0" integer="yes" />
+    <set_variable name="Ship5Monitor" value="1.0" integer="yes" />
   </event>
   <event name="Remove Ship5 Monitor" id_arme="b912a430-737d-4e88-9795-26bc3f55a139" parent_id_arme="9ea81f38-66b8-4a8d-a817-2844d6033595">
     <if_variable name="Active Radiation" comparator="EQUALS" value="0.0" />
@@ -32825,7 +32825,7 @@
     <if_distance player_slot1="4" name2="'" comparator="LESS_EQUAL" value="2000.0" />
     <set_variable name="Ship5RadDist" value="4.0" />
   </event>
-  <folder_arme name="Ship6 Radiation" id_arme="84aca919-53ff-4aab-a7ef-3db66da3fc42" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" />
+  <folder_arme name="Ship6 Radiation" id_arme="84aca919-53ff-4aab-a7ef-3db66da3fc42" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" expanded_arme="" />
   <folder_arme name="Radiation Effects" id_arme="c3af1a11-ae9a-4322-97ad-c7b96a244fe3" parent_id_arme="84aca919-53ff-4aab-a7ef-3db66da3fc42" />
   <event name="Shield Failure" id_arme="3e2504a1-5ffd-46e9-a36d-b7585bafa470" parent_id_arme="c3af1a11-ae9a-4322-97ad-c7b96a244fe3">
     <if_variable name="Ship6Monitor" comparator="EQUALS" value="1.0" />
@@ -32851,7 +32851,7 @@
     <if_variable name="Ship6RadDist" comparator="GREATER" value="0.0" />
     <if_timer_finished name="Ship6 Radiation" />
     <if_variable name="Ship6Level" comparator="LESS" value="100.0" />
-    <set_variable name="Ship6Level" value="Ship6Level + (Ship6RadDist * RadiationLevel)" />
+    <set_variable name="Ship6Level" value="Ship6Level + (Ship6RadDist * RadiationLevel)" integer="yes" />
     <set_timer name="Ship6 Radiation" seconds="5" />
   </event>
   <event name="Ship6 Max Exposure" id_arme="d7a24a79-c225-469b-b4b6-a3c5b66dd8f7" parent_id_arme="84aca919-53ff-4aab-a7ef-3db66da3fc42">
@@ -32864,18 +32864,18 @@
     <if_variable name="Ship6Level" comparator="GREATER" value="2.0" />
     <if_variable name="Ship6RadDist" comparator="EQUALS" value="0.0" />
     <if_timer_finished name="Ship6 Radiation" />
-    <set_variable name="Ship6Level" value="Ship6Level - 2" />
+    <set_variable name="Ship6Level" value="Ship6Level - 2" integer="yes" />
     <set_timer name="Ship6 Radiation" seconds="5" />
   </event>
-  <folder_arme name="Radiation Monitors" id_arme="f95faa27-afd6-4389-a60c-dd2ba31d0d8b" parent_id_arme="84aca919-53ff-4aab-a7ef-3db66da3fc42" />
+  <folder_arme name="Radiation Monitors" id_arme="f95faa27-afd6-4389-a60c-dd2ba31d0d8b" parent_id_arme="84aca919-53ff-4aab-a7ef-3db66da3fc42" expanded_arme="" />
   <event name="Create Ship6 Monitor" id_arme="0879f8d8-655c-46bb-a32b-dbf3e8c33831" parent_id_arme="f95faa27-afd6-4389-a60c-dd2ba31d0d8b">
     <if_variable name="Active Radiation" comparator="EQUALS" value="2.0" />
     <if_exists player_slot="5" />
     <if_not_exists name="Rad. Mon. 6: 0" />
     <if_variable name="Ship6Monitor" comparator="NOT" value="1.0" />
-    <create type="genericMesh" x="90000.0" y="750.0" z="98000.0" angle="0" name="Rad. Mon. 6: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
-    <set_variable name="Ship6Level" value="0.0" />
-    <set_variable name="Ship6Monitor" value="1.0" />
+    <create type="genericMesh" x="60000.0" y="750.0" z="98000.0" name="Rad. Mon. 6: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
+    <set_variable name="Ship6Level" value="0.0" integer="yes" />
+    <set_variable name="Ship6Monitor" value="1.0" integer="yes" />
   </event>
   <event name="Remove Ship6 Monitor" id_arme="878ade5c-1acc-47c6-aadb-d993af2ce73e" parent_id_arme="f95faa27-afd6-4389-a60c-dd2ba31d0d8b">
     <if_variable name="Active Radiation" comparator="EQUALS" value="0.0" />
@@ -32883,8 +32883,8 @@
     <if_exists name="Rad. Mon. 6: 0" />
     <destroy name="Rad. Mon. 6: 0" />
     <warning_popup_message message="Radiation levels nominal." consoles="MSO" player_slot="5">Radiation levels nominal^Deactivating radiation monitors</warning_popup_message>
-    <set_variable name="Ship6Level" value="0.0" />
-    <set_variable name="Ship6Monitor" value="0.0" />
+    <set_variable name="Ship6Level" value="0.0" integer="yes" />
+    <set_variable name="Ship6Monitor" value="0.0" integer="yes" />
   </event>
   <folder_arme name="Ship6 Radiation Levels" id_arme="e00d14fc-127b-4090-82cb-c0e3ee63de0b" parent_id_arme="f95faa27-afd6-4389-a60c-dd2ba31d0d8b" />
   <event name="Ship6Level 100" id_arme="cea1e484-1870-4bef-ada9-8a21cc588c28" parent_id_arme="e00d14fc-127b-4090-82cb-c0e3ee63de0b">
@@ -33039,7 +33039,7 @@
     <if_distance player_slot1="5" name2="'" comparator="LESS_EQUAL" value="2000.0" />
     <set_variable name="Ship6RadDist" value="4.0" />
   </event>
-  <folder_arme name="Ship7 Radiation" id_arme="babe0460-0b20-4931-911b-497175ca08e0" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" />
+  <folder_arme name="Ship7 Radiation" id_arme="babe0460-0b20-4931-911b-497175ca08e0" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" expanded_arme="" />
   <folder_arme name="Radiation Effects" id_arme="f7e1006e-2888-40ce-80a4-f28d8aa6a092" parent_id_arme="babe0460-0b20-4931-911b-497175ca08e0" />
   <event name="Shield Failure" id_arme="d476f98f-2e7e-4bf5-9f0b-03bad96c3b0e" parent_id_arme="f7e1006e-2888-40ce-80a4-f28d8aa6a092">
     <if_variable name="Ship7Monitor" comparator="EQUALS" value="1.0" />
@@ -33065,7 +33065,7 @@
     <if_variable name="Ship7RadDist" comparator="GREATER" value="0.0" />
     <if_timer_finished name="Ship7 Radiation" />
     <if_variable name="Ship7Level" comparator="LESS" value="100.0" />
-    <set_variable name="Ship7Level" value="Ship7Level + (Ship7RadDist * RadiationLevel)" />
+    <set_variable name="Ship7Level" value="Ship7Level + (Ship7RadDist * RadiationLevel)" integer="yes" />
     <set_timer name="Ship7 Radiation" seconds="5" />
   </event>
   <event name="Ship7 Max Exposure" id_arme="e5061579-78bd-416a-8710-dba0f988bfe9" parent_id_arme="babe0460-0b20-4931-911b-497175ca08e0">
@@ -33078,18 +33078,18 @@
     <if_variable name="Ship7Level" comparator="GREATER" value="2.0" />
     <if_variable name="Ship7RadDist" comparator="EQUALS" value="0.0" />
     <if_timer_finished name="Ship7 Radiation" />
-    <set_variable name="Ship7Level" value="Ship7Level - 2" />
+    <set_variable name="Ship7Level" value="Ship7Level - 2" integer="yes" />
     <set_timer name="Ship7 Radiation" seconds="5" />
   </event>
-  <folder_arme name="Radiation Monitors" id_arme="d3acbd90-3760-4938-8edb-cafe0537a0ed" parent_id_arme="babe0460-0b20-4931-911b-497175ca08e0" />
+  <folder_arme name="Radiation Monitors" id_arme="d3acbd90-3760-4938-8edb-cafe0537a0ed" parent_id_arme="babe0460-0b20-4931-911b-497175ca08e0" expanded_arme="" />
   <event name="Create Ship7 Monitor" id_arme="39fe83f5-797a-4d53-8370-f7a5bfe44b57" parent_id_arme="d3acbd90-3760-4938-8edb-cafe0537a0ed">
     <if_variable name="Active Radiation" comparator="EQUALS" value="2.0" />
     <if_exists player_slot="6" />
     <if_not_exists name="Rad. Mon. 7: 0" />
     <if_variable name="Ship7Monitor" comparator="NOT" value="1.0" />
-    <create type="genericMesh" x="90000.0" y="750.0" z="98000.0" angle="0" name="Rad. Mon. 7: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
-    <set_variable name="Ship7Level" value="0.0" />
-    <set_variable name="Ship7Monitor" value="1.0" />
+    <create type="genericMesh" x="54000.0" y="750.0" z="98000.0" name="Rad. Mon. 7: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
+    <set_variable name="Ship7Level" value="0.0" integer="yes" />
+    <set_variable name="Ship7Monitor" value="1.0" integer="yes" />
   </event>
   <event name="Remove Ship7 Monitor" id_arme="ec59b58a-d267-41b8-8228-ad953d0179ed" parent_id_arme="d3acbd90-3760-4938-8edb-cafe0537a0ed">
     <if_variable name="Active Radiation" comparator="EQUALS" value="0.0" />
@@ -33097,8 +33097,8 @@
     <if_exists name="Rad. Mon. 7: 0" />
     <destroy name="Rad. Mon. 7: 0" />
     <warning_popup_message message="Radiation levels nominal." consoles="MSO" player_slot="6">Radiation levels nominal^Deactivating radiation monitors</warning_popup_message>
-    <set_variable name="Ship7Level" value="0.0" />
-    <set_variable name="Ship7Monitor" value="0.0" />
+    <set_variable name="Ship7Level" value="0.0" integer="yes" />
+    <set_variable name="Ship7Monitor" value="0.0" integer="yes" />
   </event>
   <folder_arme name="Ship7 Radiation Levels" id_arme="d7875f66-1ee2-473c-89db-6880477b6269" parent_id_arme="d3acbd90-3760-4938-8edb-cafe0537a0ed" />
   <event name="Ship7Level 100" id_arme="3ec090e9-de54-4cc8-9082-7e0b83357278" parent_id_arme="d7875f66-1ee2-473c-89db-6880477b6269">
@@ -33253,7 +33253,7 @@
     <if_distance player_slot1="6" name2="'" comparator="LESS_EQUAL" value="2000.0" />
     <set_variable name="Ship7RadDist" value="4.0" />
   </event>
-  <folder_arme name="Ship8 Radiation" id_arme="a0bf4618-80a0-442b-9281-54e39bc13044" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" />
+  <folder_arme name="Ship8 Radiation" id_arme="a0bf4618-80a0-442b-9281-54e39bc13044" parent_id_arme="a86142bd-50be-414e-8dd4-3cea6b57aaec" expanded_arme="" />
   <folder_arme name="Radiation Effects" id_arme="2868b2f0-2291-43d0-b717-4d2d2a271436" parent_id_arme="a0bf4618-80a0-442b-9281-54e39bc13044" />
   <event name="Shield Failure" id_arme="0aaad059-aef8-4324-989f-e1e0ae123b1d" parent_id_arme="2868b2f0-2291-43d0-b717-4d2d2a271436">
     <if_variable name="Ship8Monitor" comparator="EQUALS" value="1.0" />
@@ -33279,7 +33279,7 @@
     <if_variable name="Ship8RadDist" comparator="GREATER" value="0.0" />
     <if_timer_finished name="Ship8 Radiation" />
     <if_variable name="Ship8Level" comparator="LESS" value="100.0" />
-    <set_variable name="Ship8Level" value="Ship8Level + (Ship8RadDist * RadiationLevel)" />
+    <set_variable name="Ship8Level" value="Ship8Level + (Ship8RadDist * RadiationLevel)" integer="yes" />
     <set_timer name="Ship8 Radiation" seconds="5" />
   </event>
   <event name="Ship8 Max Exposure" id_arme="97651249-c54a-45e0-8677-f083142889d4" parent_id_arme="a0bf4618-80a0-442b-9281-54e39bc13044">
@@ -33292,18 +33292,18 @@
     <if_variable name="Ship8Level" comparator="GREATER" value="2.0" />
     <if_variable name="Ship8RadDist" comparator="EQUALS" value="0.0" />
     <if_timer_finished name="Ship8 Radiation" />
-    <set_variable name="Ship8Level" value="Ship8Level - 2" />
+    <set_variable name="Ship8Level" value="Ship8Level - 2" integer="yes" />
     <set_timer name="Ship8 Radiation" seconds="5" />
   </event>
-  <folder_arme name="Radiation Monitors" id_arme="f886651e-6f93-4705-91c8-206c4fb6955b" parent_id_arme="a0bf4618-80a0-442b-9281-54e39bc13044" />
+  <folder_arme name="Radiation Monitors" id_arme="f886651e-6f93-4705-91c8-206c4fb6955b" parent_id_arme="a0bf4618-80a0-442b-9281-54e39bc13044" expanded_arme="" />
   <event name="Create Ship8 Monitor" id_arme="a00e2d2f-5529-4855-b0e1-260157d3dc87" parent_id_arme="f886651e-6f93-4705-91c8-206c4fb6955b">
     <if_variable name="Active Radiation" comparator="EQUALS" value="2.0" />
     <if_exists player_slot="7" />
     <if_not_exists name="Rad. Mon. 8: 0" />
     <if_variable name="Ship8Monitor" comparator="NOT" value="1.0" />
-    <create type="genericMesh" x="90000.0" y="750.0" z="98000.0" angle="0" name="Rad. Mon. 8: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
-    <set_variable name="Ship8Level" value="0.0" />
-    <set_variable name="Ship8Monitor" value="1.0" />
+    <create type="genericMesh" x="48000.0" y="750.0" z="98000.0" name="Rad. Mon. 8: 0" meshFileName="dat\mine.dxs" textureFileName="dat\electricNoise2.png" colorRed="0.5" colorGreen="0.5" colorBlue="1.0" />
+    <set_variable name="Ship8Level" value="0.0" integer="yes" />
+    <set_variable name="Ship8Monitor" value="1.0" integer="yes" />
   </event>
   <event name="Remove Ship8 Monitor" id_arme="3ca9c123-080f-4ac9-95b4-39ba05e0e11c" parent_id_arme="f886651e-6f93-4705-91c8-206c4fb6955b">
     <if_variable name="Active Radiation" comparator="EQUALS" value="0.0" />
@@ -33311,8 +33311,8 @@
     <if_exists name="Rad. Mon. 8: 0" />
     <destroy name="Rad. Mon. 8: 0" />
     <warning_popup_message message="Radiation levels nominal." consoles="MSO" player_slot="7">Radiation levels nominal^Deactivating radiation monitors</warning_popup_message>
-    <set_variable name="Ship8Level" value="0.0" />
-    <set_variable name="Ship8Monitor" value="0.0" />
+    <set_variable name="Ship8Level" value="0.0" integer="yes" />
+    <set_variable name="Ship8Monitor" value="0.0" integer="yes" />
   </event>
   <folder_arme name="Ship8 Radiation Levels" id_arme="8fea2b4e-8f3d-497a-943b-1e01a5bad5c8" parent_id_arme="f886651e-6f93-4705-91c8-206c4fb6955b" />
   <event name="Ship8Level 100" id_arme="8a332520-b191-4ee0-bcb2-e2bd87ef5202" parent_id_arme="8fea2b4e-8f3d-497a-943b-1e01a5bad5c8">
@@ -43212,6 +43212,510 @@
     <set_variable name="Ship8NodeNumber" value="0.0" integer="yes" />
     <set_variable name="Ship8DamageType" value="0.0" integer="yes" />
     <set_timer name="Ship8DamageTimer" seconds="1" />
+  </event>
+  <folder_arme name="Unstable Space" id_arme="c6be8c58-7d80-47b2-b306-c53b53f432b8" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696" />
+  <folder_arme name="Gravitational Waves" id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" parent_id_arme="c6be8c58-7d80-47b2-b306-c53b53f432b8" />
+  <event name="Set Gravitation Waves" id_arme="13f56766-b215-4eed-b716-e1db5371738e" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5">
+    <if_variable name="Gravitational Wave Detected" comparator="EQUALS" value="1.0" />
+    <set_variable name="Gravitational Waves" randomIntLow="1" randomIntHigh="8" />
+    <set_timer name="Gravitation Shift" seconds="2" />
+    <set_variable name="Gravitational Wave Detected" value="2.0" />
+    <warning_popup_message message="Gravitational Waves detected" consoles="MHWESCO" />
+  </event>
+  <event name="Remove Gravitation Waves" id_arme="4b09547e-65b7-4cf4-8172-78c4f2a0d300" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5">
+    <if_variable name="Gravitational Wave Detected" comparator="EQUALS" value="3.0" />
+    <set_variable name="Gravitational Waves" value="0.0" />
+    <set_timer name="Gravitation Shift" seconds="2" />
+    <set_variable name="Gravitational Wave Detected" value="0.0" />
+  </event>
+  <folder_arme name="Random Variables" id_arme="f78c8458-125f-44a2-b278-b5c2d7bfeffc" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" />
+  <event name="Random x strength" id_arme="658278e0-93fd-4e68-91c7-566f1bf8aa27" parent_id_arme="f78c8458-125f-44a2-b278-b5c2d7bfeffc">
+    <if_variable name="Gravitational Waves" comparator="GREATER_EQUAL" value="1.0" />
+    <if_timer_finished name="Gravitation Shift" />
+    <set_variable name="xStrength" randomIntLow="0" randomIntHigh="20" />
+  </event>
+  <event name="Random z strength" id_arme="0cc08e8e-690e-43d1-85ca-2d2fcd26308f" parent_id_arme="f78c8458-125f-44a2-b278-b5c2d7bfeffc">
+    <if_variable name="Gravitational Waves" comparator="GREATER_EQUAL" value="1.0" />
+    <if_timer_finished name="Gravitation Shift" />
+    <set_variable name="zStrength" randomIntLow="0" randomIntHigh="20" />
+  </event>
+  <event name="Random Shift timer" id_arme="744a2b09-54d4-4189-bf02-5862234ee2bb" parent_id_arme="f78c8458-125f-44a2-b278-b5c2d7bfeffc">
+    <if_variable name="Gravitational Waves" comparator="GREATER_EQUAL" value="1.0" />
+    <if_timer_finished name="Gravitation Shift" />
+    <set_variable name="shiftTimer" randomIntLow="20" randomIntHigh="360" />
+    <set_timer name="Gravitation Shift" seconds="shiftTimer" />
+    <set_variable name="Gravitational Waves" randomIntLow="1" randomIntHigh="8" />
+  </event>
+  <folder_arme name="Ship1" id_arme="31495070-1e00-4f0a-994b-79f434b93f17" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" />
+  <event name="Z Positive" id_arme="c9236bf4-ace4-48f9-a167-4fddb5714273" parent_id_arme="31495070-1e00-4f0a-994b-79f434b93f17">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="1.0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="0" />
+  </event>
+  <event name="Z Negative" id_arme="4d375182-98ba-4932-829f-47f871d9d0e3" parent_id_arme="31495070-1e00-4f0a-994b-79f434b93f17">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="2.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="0" />
+  </event>
+  <event name="X Positive" id_arme="cdf042c0-1662-4a0e-a265-ca77e231bcb3" parent_id_arme="31495070-1e00-4f0a-994b-79f434b93f17">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="3.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="0" />
+  </event>
+  <event name="X Negative" id_arme="8c28f3b7-8cae-41cb-925d-1aef9ffbce10" parent_id_arme="31495070-1e00-4f0a-994b-79f434b93f17">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="4.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="0" />
+  </event>
+  <event name="ZX Positive" id_arme="379aa2a1-c1d5-4243-87e0-5b57a95d408c" parent_id_arme="31495070-1e00-4f0a-994b-79f434b93f17">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="5.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="0" />
+  </event>
+  <event name="ZX Negative" id_arme="7992624e-152a-438f-95b4-2421611ba408" parent_id_arme="31495070-1e00-4f0a-994b-79f434b93f17">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="6.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="0" />
+  </event>
+  <event name="Z Neg X Pos" id_arme="d644808e-a884-43db-a02c-74f9053ea901" parent_id_arme="31495070-1e00-4f0a-994b-79f434b93f17">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="8.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="0" />
+  </event>
+  <event name="Z Pos X Neg" id_arme="7559b60f-5065-4951-a0d7-3ab0c38bacff" parent_id_arme="31495070-1e00-4f0a-994b-79f434b93f17">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="7.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="0" />
+  </event>
+  <folder_arme name="Ship2" id_arme="dfcae64a-0428-40c8-9c85-3f472b41f971" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" />
+  <event name="Z Positive" id_arme="5b624cf8-89ce-485a-a159-e9ec78f2f107" parent_id_arme="dfcae64a-0428-40c8-9c85-3f472b41f971">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="1.0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="1" />
+  </event>
+  <event name="Z Negative" id_arme="03d963c5-63ce-4033-affd-1a06ef74f4fd" parent_id_arme="dfcae64a-0428-40c8-9c85-3f472b41f971">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="2.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="1" />
+  </event>
+  <event name="X Positive" id_arme="cfdbe4e3-61e4-4a3d-bba4-507723dd3559" parent_id_arme="dfcae64a-0428-40c8-9c85-3f472b41f971">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="3.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="1" />
+  </event>
+  <event name="X Negative" id_arme="47594e82-b2b3-4f48-9b1b-8e685067f526" parent_id_arme="dfcae64a-0428-40c8-9c85-3f472b41f971">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="4.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="1" />
+  </event>
+  <event name="ZX Positive" id_arme="8c91d4a2-f705-475a-af7e-99d27957dadf" parent_id_arme="dfcae64a-0428-40c8-9c85-3f472b41f971">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="5.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="1" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="1" />
+  </event>
+  <event name="ZX Negative" id_arme="dc13d444-b727-4a6a-8f4a-2caa79a5b5ee" parent_id_arme="dfcae64a-0428-40c8-9c85-3f472b41f971">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="6.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="1" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="1" />
+  </event>
+  <event name="Z Pos X Neg" id_arme="3a3828d1-feae-4e03-b9de-f2fa192c843c" parent_id_arme="dfcae64a-0428-40c8-9c85-3f472b41f971">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="7.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="1" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="1" />
+  </event>
+  <event name="Z Neg X Pos" id_arme="c7019512-a3fd-4c3f-a212-0226082df06a" parent_id_arme="dfcae64a-0428-40c8-9c85-3f472b41f971">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="8.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="1" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="1" />
+  </event>
+  <folder_arme name="Ship3" id_arme="1936e13c-9c28-47d2-90e3-33bd063c0a78" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" />
+  <event name="Z Positive" id_arme="c6e0562d-da40-4251-813f-6b3fd5716652" parent_id_arme="1936e13c-9c28-47d2-90e3-33bd063c0a78">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="1.0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="2" />
+  </event>
+  <event name="Z Negative" id_arme="24e07c39-6b3e-43a5-98fe-ad0ec4fef89b" parent_id_arme="1936e13c-9c28-47d2-90e3-33bd063c0a78">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="2.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="2" />
+  </event>
+  <event name="X Positive" id_arme="2f0884aa-9fa3-4b88-897f-ee145cb1be6a" parent_id_arme="1936e13c-9c28-47d2-90e3-33bd063c0a78">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="3.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="2" />
+  </event>
+  <event name="X Negative" id_arme="e1fc655b-c219-46d0-8971-ebcc911584f2" parent_id_arme="1936e13c-9c28-47d2-90e3-33bd063c0a78">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="4.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="2" />
+  </event>
+  <event name="ZX Positive" id_arme="f33ee32b-ba22-455d-b398-aebb8a516f3d" parent_id_arme="1936e13c-9c28-47d2-90e3-33bd063c0a78">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="5.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="2" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="2" />
+  </event>
+  <event name="ZX Negative" id_arme="b251b768-3a0d-41f8-97ec-7b29aa803b5d" parent_id_arme="1936e13c-9c28-47d2-90e3-33bd063c0a78">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="6.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="2" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="2" />
+  </event>
+  <event name="Z Pos X Neg" id_arme="758e3660-4feb-4462-b17c-8ff70338cc58" parent_id_arme="1936e13c-9c28-47d2-90e3-33bd063c0a78">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="7.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="2" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="2" />
+  </event>
+  <event name="Z Neg X Pos" id_arme="3f2cdbb0-661d-442f-ae5e-9ac702d08707" parent_id_arme="1936e13c-9c28-47d2-90e3-33bd063c0a78">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="8.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="2" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="2" />
+  </event>
+  <folder_arme name="Ship4" id_arme="fb3530c1-918f-4547-9997-93b68bc6265f" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" />
+  <event name="Z Positive" id_arme="164f2901-d2d3-456f-b0d5-c47ad652a603" parent_id_arme="fb3530c1-918f-4547-9997-93b68bc6265f">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="1.0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="3" />
+  </event>
+  <event name="Z Negative" id_arme="cebd877f-c13b-4f90-8d3c-7cbcfd822425" parent_id_arme="fb3530c1-918f-4547-9997-93b68bc6265f">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="2.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="3" />
+  </event>
+  <event name="X Positive" id_arme="dba9bd6d-4029-44b2-9fb1-54bc10aa4a71" parent_id_arme="fb3530c1-918f-4547-9997-93b68bc6265f">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="3.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="3" />
+  </event>
+  <event name="X Negative" id_arme="39d2110e-473e-443f-8ce1-5b97370c1f7a" parent_id_arme="fb3530c1-918f-4547-9997-93b68bc6265f">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="4.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="3" />
+  </event>
+  <event name="ZX Positive" id_arme="35ac09ee-b57f-467b-bb42-627b09dc91ed" parent_id_arme="fb3530c1-918f-4547-9997-93b68bc6265f">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="5.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="3" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="3" />
+  </event>
+  <event name="ZX Negative" id_arme="50bb5fbc-509d-4fe7-87fa-6a31d1200acc" parent_id_arme="fb3530c1-918f-4547-9997-93b68bc6265f">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="6.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="3" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="3" />
+  </event>
+  <event name="Z Pos X Neg" id_arme="9c248fa7-a896-4025-986d-87efc4f0b225" parent_id_arme="fb3530c1-918f-4547-9997-93b68bc6265f">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="7.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="3" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="3" />
+  </event>
+  <event name="Z Neg X Pos" id_arme="87b31602-e08f-4615-a7a8-df8a805b8b38" parent_id_arme="fb3530c1-918f-4547-9997-93b68bc6265f">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="8.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="3" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="3" />
+  </event>
+  <folder_arme name="Ship5" id_arme="69162e59-b8b6-43d9-9603-2c9539ec06bc" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" />
+  <event name="Z Positive" id_arme="41519e6c-85af-4951-b663-a03b4094930b" parent_id_arme="69162e59-b8b6-43d9-9603-2c9539ec06bc">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="1.0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="4" />
+  </event>
+  <event name="Z Negative" id_arme="b68f6d59-153a-4bb6-8683-6b533a1d76af" parent_id_arme="69162e59-b8b6-43d9-9603-2c9539ec06bc">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="2.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="4" />
+  </event>
+  <event name="X Positive" id_arme="6b01168e-9706-4e99-bc91-c11e2c23fb5c" parent_id_arme="69162e59-b8b6-43d9-9603-2c9539ec06bc">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="3.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="4" />
+  </event>
+  <event name="X Negative" id_arme="2eb8fdd3-f77e-4531-84e6-812e3d372a01" parent_id_arme="69162e59-b8b6-43d9-9603-2c9539ec06bc">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="4.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="4" />
+  </event>
+  <event name="ZX Positive" id_arme="d10965e3-7e0e-4303-b793-099aaf5c6660" parent_id_arme="69162e59-b8b6-43d9-9603-2c9539ec06bc">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="5.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="4" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="4" />
+  </event>
+  <event name="ZX Negative" id_arme="16e5d64e-6aea-4829-992c-f602036daefd" parent_id_arme="69162e59-b8b6-43d9-9603-2c9539ec06bc">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="6.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="4" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="4" />
+  </event>
+  <event name="Z Pos X Neg" id_arme="9fe89c2e-042b-4815-8c78-9e60807d0bee" parent_id_arme="69162e59-b8b6-43d9-9603-2c9539ec06bc">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="7.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="4" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="4" />
+  </event>
+  <event name="Z Neg X Pos" id_arme="16e106c9-5225-4098-b600-6d870e6f6c79" parent_id_arme="69162e59-b8b6-43d9-9603-2c9539ec06bc">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="8.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="4" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="4" />
+  </event>
+  <folder_arme name="Ship6" id_arme="a4b21f68-5be7-4ec6-b99c-4aceba2e236a" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" />
+  <event name="Z Positive" id_arme="e3077e96-ed62-4d43-b91e-2b327a0585c3" parent_id_arme="a4b21f68-5be7-4ec6-b99c-4aceba2e236a">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="1.0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="5" />
+  </event>
+  <event name="Z Negative" id_arme="f42ab74b-805b-429e-8202-4d43925f3efa" parent_id_arme="a4b21f68-5be7-4ec6-b99c-4aceba2e236a">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="2.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="5" />
+  </event>
+  <event name="X Positive" id_arme="638e4533-8ceb-4435-b380-28c852fd30d0" parent_id_arme="a4b21f68-5be7-4ec6-b99c-4aceba2e236a">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="3.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="5" />
+  </event>
+  <event name="X Negative" id_arme="cf99bec1-e1bb-4a30-b26c-d5fdab002aac" parent_id_arme="a4b21f68-5be7-4ec6-b99c-4aceba2e236a">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="4.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="5" />
+  </event>
+  <event name="ZX Positive" id_arme="16070a55-1df7-46e7-a6b0-f8c194407802" parent_id_arme="a4b21f68-5be7-4ec6-b99c-4aceba2e236a">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="5.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="5" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="5" />
+  </event>
+  <event name="ZX Negative" id_arme="341ff476-9002-4b6c-9b82-9e9050a855ef" parent_id_arme="a4b21f68-5be7-4ec6-b99c-4aceba2e236a">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="6.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="5" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="5" />
+  </event>
+  <event name="Z Pos X Neg" id_arme="2201031d-1634-4e16-b77b-9aab2d9ecf89" parent_id_arme="a4b21f68-5be7-4ec6-b99c-4aceba2e236a">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="7.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="5" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="5" />
+  </event>
+  <event name="Z Neg X Pos" id_arme="001ee186-a344-4efb-83cb-fa54cd66f009" parent_id_arme="a4b21f68-5be7-4ec6-b99c-4aceba2e236a">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="8.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="5" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="5" />
+  </event>
+  <folder_arme name="Ship7" id_arme="5216ffc7-9340-42fa-bb21-9730df7ab572" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" />
+  <event name="Z Positive" id_arme="02dc2711-2d1f-4292-8822-57fd11179228" parent_id_arme="5216ffc7-9340-42fa-bb21-9730df7ab572">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="1.0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="6" />
+  </event>
+  <event name="Z Negative" id_arme="cd1a04a2-6118-4d3a-b969-ae41bdccdf38" parent_id_arme="5216ffc7-9340-42fa-bb21-9730df7ab572">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="2.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="6" />
+  </event>
+  <event name="X Positive" id_arme="799ff612-2b71-4808-a28f-eca04962b399" parent_id_arme="5216ffc7-9340-42fa-bb21-9730df7ab572">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="3.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="6" />
+  </event>
+  <event name="X Negative" id_arme="fc84315a-efa7-4aad-aa05-98320889f7b3" parent_id_arme="5216ffc7-9340-42fa-bb21-9730df7ab572">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="4.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="6" />
+  </event>
+  <event name="ZX Positive" id_arme="f492b547-c4c5-49f0-bc8b-231ee010ad23" parent_id_arme="5216ffc7-9340-42fa-bb21-9730df7ab572">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="5.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="6" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="6" />
+  </event>
+  <event name="ZX Negative" id_arme="c2734673-78df-42c5-b36b-84b6fa767b30" parent_id_arme="5216ffc7-9340-42fa-bb21-9730df7ab572">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="6.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="6" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="6" />
+  </event>
+  <event name="Z Pos X Neg" id_arme="4fa12bfa-c990-488e-b2d3-77a57a5e1aa6" parent_id_arme="5216ffc7-9340-42fa-bb21-9730df7ab572">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="7.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="6" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="6" />
+  </event>
+  <event name="Z Neg X Pos" id_arme="f1bc3abf-1eee-45af-b1c9-d2b8626076ac" parent_id_arme="5216ffc7-9340-42fa-bb21-9730df7ab572">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="8.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="6" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="6" />
+  </event>
+  <folder_arme name="Ship8" id_arme="40b19ff4-2cce-445a-a15b-7c689e45ffa7" parent_id_arme="1db5669a-8ab8-4fe1-ac96-45d492115ed5" />
+  <event name="Z Positive" id_arme="c60f48a0-7a1a-4449-9b02-e4a3adc91ed7" parent_id_arme="40b19ff4-2cce-445a-a15b-7c689e45ffa7">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="1.0" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="7" />
+  </event>
+  <event name="Z Negative" id_arme="b7dae8e6-de37-44aa-8c92-e3734f454394" parent_id_arme="40b19ff4-2cce-445a-a15b-7c689e45ffa7">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="2.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="7" />
+  </event>
+  <event name="X Positive" id_arme="f6bdfcf5-a50a-47ea-8c59-fce04158d128" parent_id_arme="40b19ff4-2cce-445a-a15b-7c689e45ffa7">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="3.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="7" />
+  </event>
+  <event name="X Negative" id_arme="4e366697-c6fc-44f1-b51c-bd8b334124fe" parent_id_arme="40b19ff4-2cce-445a-a15b-7c689e45ffa7">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="4.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="7" />
+  </event>
+  <event name="ZX Positive" id_arme="2284c9c9-b143-43c2-844d-57c5940ac9f0" parent_id_arme="40b19ff4-2cce-445a-a15b-7c689e45ffa7">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="5.0" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="7" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="7" />
+  </event>
+  <event name="ZX Negative" id_arme="98064076-6455-4c55-ac30-598a9dbdb26e" parent_id_arme="40b19ff4-2cce-445a-a15b-7c689e45ffa7">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="6.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="7" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="7" />
+  </event>
+  <event name="Z Pos X Neg" id_arme="ab73f266-b5dc-491d-ab94-c98c7810fa4d" parent_id_arme="40b19ff4-2cce-445a-a15b-7c689e45ffa7">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="7.0" />
+    <addto_object_property value="(0-xStrength)" property="positionX" player_slot="7" />
+    <addto_object_property value="zStrength" property="positionZ" player_slot="7" />
+  </event>
+  <event name="Z Neg X Pos" id_arme="deb4ad09-a77b-4220-82ff-90e9c8f056c7" parent_id_arme="40b19ff4-2cce-445a-a15b-7c689e45ffa7">
+    <if_variable name="Gravitational Waves" comparator="EQUALS" value="8.0" />
+    <addto_object_property value="(0-zStrength)" property="positionZ" player_slot="7" />
+    <addto_object_property value="xStrength" property="positionX" player_slot="7" />
+  </event>
+  <folder_arme name="Blackholes" id_arme="56b90798-8c7f-443d-aacf-dbcd58382d4e" parent_id_arme="c6be8c58-7d80-47b2-b306-c53b53f432b8" />
+  <event name="Remove Blackholes" id_arme="d71fdda4-3a5c-4f06-ad3c-fb11ffd8b6de" parent_id_arme="56b90798-8c7f-443d-aacf-dbcd58382d4e">
+    <if_variable name="DestroyBH" comparator="EQUALS" value="1.0" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Static Blackhole" />
+    <destroy name="Blackhole1" />
+    <destroy name="Blackhole2" />
+    <destroy name="Blackhole3" />
+    <destroy name="Blackhole4" />
+    <destroy name="Blackhole5" />
+    <destroy name="Blackhole6" />
+    <destroy name="Blackhole7" />
+    <destroy name="Blackhole8" />
+    <destroy name="Blackhole9" />
+    <destroy name="Blackhole10" />
+    <set_variable name="BHNumber" value="0.0" integer="yes" />
+    <set_variable name="DynamicBlackhole" value="0.0" integer="yes" />
+    <set_variable name="DestroyBH" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Static Blackholes" id_arme="4fbfe552-bd96-4b98-b440-021daec5f199" parent_id_arme="56b90798-8c7f-443d-aacf-dbcd58382d4e" />
+  <folder_arme name="Blackhole count" id_arme="f06823bf-b766-4db1-8f56-1ec6ae352b84" parent_id_arme="4fbfe552-bd96-4b98-b440-021daec5f199" />
+  <event name="Check for Blackholes" id_arme="db00df38-1be2-4afc-a0a1-e3e5953ce59b" parent_id_arme="f06823bf-b766-4db1-8f56-1ec6ae352b84">
+    <if_variable name="StaticBHCount" comparator="GREATER" value="1.0" />
+    <if_variable name="StaticBlackhole" comparator="EQUALS" value="0.0" />
+    <set_variable name="StaticBlackhole" value="1.0" integer="yes" />
+  </event>
+  <event name="Blackholes Mapped" id_arme="d924a95f-cb7d-4acc-b1d5-ba9017f2ce23" parent_id_arme="f06823bf-b766-4db1-8f56-1ec6ae352b84">
+    <if_variable name="StaticBHCount" comparator="EQUALS" value="1.0" />
+    <if_variable name="StaticBlackhole" comparator="EQUALS" value="0.0" />
+    <warning_popup_message message="Gravitational Distortions Mapped" consoles="MS" />
+    <set_variable name="StaticBHCount" value="0.0" />
+  </event>
+  <event name="Set Location" id_arme="8488a6d9-2047-4319-b913-980307e4a10c" parent_id_arme="f06823bf-b766-4db1-8f56-1ec6ae352b84">
+    <if_variable name="StaticBlackhole" comparator="EQUALS" value="1.0" />
+    <set_variable name="StaticBHCoordX" randomIntLow="10" randomIntHigh="100" />
+    <set_variable name="StaticBHCoordZ" randomIntLow="10" randomIntHigh="100" />
+    <set_variable name="StaticBlackhole" value="2.0" integer="yes" />
+  </event>
+  <event name="Create Blackhole" id_arme="6f3599ed-9878-4bc4-9ae7-61ea06a2aa6a" parent_id_arme="f06823bf-b766-4db1-8f56-1ec6ae352b84">
+    <if_variable name="StaticBlackhole" comparator="EQUALS" value="2.0" />
+    <create type="blackHole" x="StaticBHCoordX*1000" y="0.0" z="StaticBHCoordZ*1000" name="Static Blackhole" />
+    <set_variable name="StaticBHCount" value="StaticBHCount-1" integer="yes" />
+    <set_variable name="StaticBlackhole" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Dynamic Blackholes" id_arme="0fb3e094-9569-4367-b7f2-21844da0c9e2" parent_id_arme="56b90798-8c7f-443d-aacf-dbcd58382d4e" />
+  <folder_arme name="Blackhole count" id_arme="274f211c-73c2-4b19-a1a0-d931c60fc0b9" parent_id_arme="0fb3e094-9569-4367-b7f2-21844da0c9e2" />
+  <event name="Check for Blackholes" id_arme="9235a114-98c0-4a62-ae8e-b31c755c5959" parent_id_arme="274f211c-73c2-4b19-a1a0-d931c60fc0b9">
+    <if_variable name="DynamicBHCount" comparator="GREATER" value="1.0" />
+    <if_variable name="DynamicBHCount" comparator="LESS" value="100.0" />
+    <if_variable name="DynamicBlackhole" comparator="EQUALS" value="0.0" />
+    <set_variable name="BHNumber" value="BHNumber+1" integer="yes" />
+    <set_variable name="DynamicBlackhole" value="1.0" integer="yes" />
+  </event>
+  <event name="Blackholes Mapped" id_arme="d7a8acd7-d0c0-4bcf-bbb5-c62148d0f4c1" parent_id_arme="274f211c-73c2-4b19-a1a0-d931c60fc0b9">
+    <if_variable name="DynamicBHCount" comparator="EQUALS" value="1.0" />
+    <if_variable name="DynamicBlackhole" comparator="EQUALS" value="0.0" />
+    <warning_popup_message message="Gravitational Disruption Tracking" consoles="MS" />
+    <set_variable name="BlackholeTimer" value="2.0" integer="yes" />
+    <set_variable name="BHNumberMax" value="BHNumber" integer="yes" />
+    <set_variable name="DynamicBHCount" value="0.0" />
+    <set_variable name="DynamicBlackhole" value="100.0" integer="yes" />
+  </event>
+  <event name="Set Location" id_arme="65450e20-08c8-46ff-9f59-78c48abc907f" parent_id_arme="274f211c-73c2-4b19-a1a0-d931c60fc0b9">
+    <if_variable name="DynamicBlackhole" comparator="EQUALS" value="1.0" />
+    <set_variable name="DynamicBHCoordX" randomIntLow="10" randomIntHigh="100" />
+    <set_variable name="DynamicBHCoordZ" randomIntLow="10" randomIntHigh="100" />
+    <set_variable name="DynamicBlackhole" value="2.0" integer="yes" />
+  </event>
+  <event name="Create Blackhole" id_arme="c701f223-77c4-427a-9333-74c3cf83d403" parent_id_arme="274f211c-73c2-4b19-a1a0-d931c60fc0b9">
+    <if_variable name="DynamicBlackhole" comparator="EQUALS" value="2.0" />
+    <create type="blackHole" x="DynamicBHCoordX*1000" y="0.0" z="DynamicBHCoordZ*1000" name="Blackhole|BHNumber|" />
+    <set_variable name="DynamicBHCount" value="DynamicBHCount-1" integer="yes" />
+    <set_variable name="DynamicBlackhole" value="0.0" integer="yes" />
+  </event>
+  <folder_arme name="Drift Code" id_arme="f44a16df-cec3-4b47-8c11-8deca960f661" parent_id_arme="0fb3e094-9569-4367-b7f2-21844da0c9e2" />
+  <event name="Drift Variable" id_arme="ac518ec3-b40d-4c93-82d9-28e2920fc15e" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_variable name="DynamicBlackhole" comparator="EQUALS" value="100.0" />
+    <set_variable name="BHDriftX" value="30.0" integer="yes" />
+    <set_variable name="BHDriftZ" value="30.0" integer="yes" />
+    <set_variable name="BlackholeTimer" randomIntLow="60" randomIntHigh="320" />
+    <set_variable name="DynamicBlackhole" value="101.0" integer="yes" />
+  </event>
+  <event name="Blackhole 1 Drift" id_arme="7e968b7e-0e12-43fa-8bc0-d7d77aa6d433" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole1" />
+    <addto_object_property value="BHDriftX" property="positionX" name="Blackhole1" />
+    <addto_object_property value="BHDriftZ" property="positionZ" name="Blackhole1" />
+  </event>
+  <event name="Blackhole 2 Drift" id_arme="55c36c22-d35c-42a4-b46e-6a5be492fd9e" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole2" />
+    <addto_object_property value="0-BHDriftX" property="positionX" name="Blackhole2" />
+    <addto_object_property value="BHDriftZ" property="positionZ" name="Blackhole2" />
+  </event>
+  <event name="Blackhole 3 Drift" id_arme="83d678d4-ca0b-40be-b9c4-b717a0e5d9e1" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole3" />
+    <addto_object_property value="BHDriftX" property="positionX" name="Blackhole3" />
+    <addto_object_property value="0-BHDriftZ" property="positionZ" name="Blackhole3" />
+  </event>
+  <event name="Blackhole 4 Drift" id_arme="9c4faa91-9270-4a06-942b-1d5649f4fb15" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole4" />
+    <addto_object_property value="0-BHDriftX" property="positionX" name="Blackhole4" />
+    <addto_object_property value="0-BHDriftZ" property="positionZ" name="Blackhole4" />
+  </event>
+  <event name="Blackhole 5 Drift" id_arme="045aa2dc-631f-4820-8926-dec2d3b1bdb5" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole5" />
+    <addto_object_property value="BHDriftZ" property="positionX" name="Blackhole5" />
+    <addto_object_property value="BHDriftX" property="positionZ" name="Blackhole5" />
+  </event>
+  <event name="Blackhole 6 Drift" id_arme="2ce6b975-b165-4220-9edd-671d53fec590" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole6" />
+    <addto_object_property value="BHDriftZ" property="positionX" name="Blackhole6" />
+    <addto_object_property value="0-BHDriftX" property="positionZ" name="Blackhole6" />
+  </event>
+  <event name="Blackhole 7 Drift" id_arme="bf75935c-b244-44a8-85bb-5dd0e3883421" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole7" />
+    <addto_object_property value="0-BHDriftX" property="positionZ" name="Blackhole7" />
+    <addto_object_property value="BHDriftZ" property="positionX" name="Blackhole7" />
+  </event>
+  <event name="Blackhole 8 Drift" id_arme="7cfe7201-7a78-426b-983d-36a8b8ef5573" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole8" />
+    <addto_object_property value="0-BHDriftX" property="positionZ" name="Blackhole8" />
+    <addto_object_property value="0-BHDriftZ" property="positionX" name="Blackhole8" />
+  </event>
+  <event name="Blackhole 9 Drift" id_arme="d9f12877-c9ab-4edd-9c3e-671dab6d4f61" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole9" />
+    <addto_object_property value="BHDriftX+5" property="positionX" name="Blackhole9" />
+    <addto_object_property value="BHDriftZ" property="positionZ" name="Blackhole9" />
+  </event>
+  <event name="Blackhole 10 Drift" id_arme="c421126f-f4b9-4ff4-ba05-2bb7345cd214" parent_id_arme="f44a16df-cec3-4b47-8c11-8deca960f661">
+    <if_exists name="Blackhole10" />
+    <addto_object_property value="BHDriftX" property="positionX" name="Blackhole10" />
+    <addto_object_property value="BHDriftZ+5" property="positionZ" name="Blackhole10" />
+  </event>
+  <folder_arme name="Remove" id_arme="41ae4ece-071e-48c2-9f30-5634ece55b7b" parent_id_arme="0fb3e094-9569-4367-b7f2-21844da0c9e2" />
+  <event name="Choose" id_arme="9baf5e02-fdfb-468a-a7c0-1fdc9cfe9372" parent_id_arme="41ae4ece-071e-48c2-9f30-5634ece55b7b">
+    <if_variable name="DynamicBlackhole" comparator="EQUALS" value="101.0" />
+    <if_timer_finished name="DynamicBlackhole" />
+    <set_variable name="BHNumber" randomIntLow="1" randomIntHigh="BHNumberMax" />
+    <set_variable name="BlackholeTimer" randomIntLow="60" randomIntHigh="320" />
+    <set_variable name="DynamicBlackhole" value="102.0" integer="yes" />
+  </event>
+  <event name="Remove" id_arme="9dae8cbb-db25-4810-aa84-721ed6c003fc" parent_id_arme="41ae4ece-071e-48c2-9f30-5634ece55b7b">
+    <if_variable name="DynamicBlackhole" comparator="EQUALS" value="102.0" />
+    <destroy name="Blackhole|BHNumber|" />
+    <set_variable name="DynamicBHCoordX" randomIntLow="10" randomIntHigh="100" />
+    <set_variable name="DynamicBHCoordZ" randomIntLow="10" randomIntHigh="100" />
+    <set_variable name="DynamicBlackhole" value="103.0" integer="yes" />
+  </event>
+  <event name="Reset" id_arme="b6624530-9cf6-4769-9394-9fdff6d6222d" parent_id_arme="41ae4ece-071e-48c2-9f30-5634ece55b7b">
+    <if_variable name="DynamicBlackhole" comparator="EQUALS" value="103.0" />
+    <create type="blackHole" x="DynamicBHCoordX*1000" y="0.0" z="DynamicBHCoordZ*1000" name="Blackhole|BHNumber|" />
+    <set_timer name="DynamicBlackhole" seconds="BlackholeTimer" />
+    <set_variable name="DynamicBlackhole" value="101.0" integer="yes" />
   </event>
   <event name="End Mission" id_arme="3e9b80be-6696-467c-ba4f-26a41d2ae9ee" parent_id_arme="22ead096-32e5-4cf4-9f90-3c7924af9696">
     <if_variable name="Mission End" comparator="EQUALS" value="1.0" />

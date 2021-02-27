@@ -4,7 +4,7 @@
     <set_variable name="Coordinate Y" value="467.0" integer="yes" />
     <set_variable name="Alignment" value="2.0" integer="yes" />
   </start>
-  <folder_arme name="Atlantis System" id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" expanded_arme="" />
+  <folder_arme name="Atlantis System" id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" />
   <folder_arme name="Atlantis Settings" id_arme="6a2258c3-a4b7-41fe-afa3-44ee6c37b2a7" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" />
   <folder_arme name="Atlantis Menu" id_arme="c2a03bcd-ea39-4eef-845c-b59609f1681c" parent_id_arme="6a2258c3-a4b7-41fe-afa3-44ee6c37b2a7" />
   <event name="Atlantis Active" id_arme="337134ea-f9d6-433b-9cce-8a40014d2f9b" parent_id_arme="c2a03bcd-ea39-4eef-845c-b59609f1681c">
@@ -56,7 +56,7 @@
     <set_variable name="sectorSide" value="systemSide" integer="yes" />
     <set_variable name="System Settings" value="0.0" integer="yes" />
   </event>
-  <folder_arme name="Sector I - V" id_arme="3b9ad800-a830-4a7d-a636-a088a510d4c3" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" expanded_arme="" />
+  <folder_arme name="Sector I - V" id_arme="3b9ad800-a830-4a7d-a636-a088a510d4c3" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" />
   <folder_arme name="Atlantis Sector I" id_arme="cbd8d290-e045-4559-b09b-4cd859152557" parent_id_arme="3b9ad800-a830-4a7d-a636-a088a510d4c3" />
   <event name="Create Atlantis Sector I" id_arme="4bdf0701-f314-4648-ae47-c2ecaf3dedcd" parent_id_arme="cbd8d290-e045-4559-b09b-4cd859152557">
     <if_timer_finished name="Transition" />
@@ -130,6 +130,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="0" name2="Waypoint 60 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship1" value="1.0" />
   </event>
@@ -138,6 +139,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="0" name2="Waypoint 60 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship1" value="0.0" />
   </event>
@@ -146,6 +148,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="1" name2="Waypoint 60 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship2" value="1.0" />
   </event>
@@ -154,6 +157,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="1" name2="Waypoint 60 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship2" value="0.0" />
   </event>
@@ -162,6 +166,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="2" name2="Waypoint 60 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship3" value="1.0" />
   </event>
@@ -170,6 +175,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="2" name2="Waypoint 60 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship3" value="0.0" />
   </event>
@@ -178,6 +184,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="3" name2="Waypoint 60 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship4" value="1.0" />
   </event>
@@ -186,6 +193,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="3" name2="Waypoint 60 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship4" value="0.0" />
   </event>
@@ -194,6 +202,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="4" name2="Waypoint 60 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship5" value="1.0" />
   </event>
@@ -202,6 +211,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="4" name2="Waypoint 60 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship5" value="0.0" />
   </event>
@@ -210,6 +220,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="5" name2="Waypoint 60 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship6" value="1.0" />
   </event>
@@ -218,6 +229,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="5" name2="Waypoint 60 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship6" value="0.0" />
   </event>
@@ -226,6 +238,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="6" name2="Waypoint 60 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship7" value="1.0" />
   </event>
@@ -234,6 +247,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="6" name2="Waypoint 60 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship7" value="0.0" />
   </event>
@@ -242,6 +256,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="7" name2="Waypoint 60 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship8" value="1.0" />
   </event>
@@ -250,6 +265,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="7" name2="Waypoint 60 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship8" value="0.0" />
   </event>
@@ -258,6 +274,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="1.0" />
     <if_comms_button text="Activate Gate" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <incoming_comms_text from="Gate System" sideValue="playerSide" type="STATUS">Activating Gate^Locking signal...</incoming_comms_text>
     <set_object_property property="rollDelta" value="1.0" name="Waypoint 60 Gate" />
     <set_timer name="Gate System" seconds="5" />
@@ -269,6 +286,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_comms_button text="Jump" />
     <if_variable name="Gate System" comparator="EQUALS" value="3.0" />
+    <if_variable name="Waypoint 60 Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Atlantis System" value="3.0" integer="yes" />
     <set_variable name="System" value="1.0" />
@@ -818,7 +836,7 @@
     <set_variable name="Atlantis System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
-  <folder_arme name="Sector VI - X" id_arme="599bc9bf-4961-421a-a441-7ecf0231b1cb" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" expanded_arme="" />
+  <folder_arme name="Sector VI - X" id_arme="599bc9bf-4961-421a-a441-7ecf0231b1cb" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" />
   <folder_arme name="Atlantis Sector VI" id_arme="6a51792f-4c5d-4455-afcc-de0c9256ce6f" parent_id_arme="599bc9bf-4961-421a-a441-7ecf0231b1cb" />
   <event name="Create Atlantis Sector VI" id_arme="fcd7a2dc-dda1-4797-8edc-b20eac672770" parent_id_arme="6a51792f-4c5d-4455-afcc-de0c9256ce6f">
     <if_timer_finished name="Transition" />
@@ -911,150 +929,168 @@
     <set_object_property property="rollDelta" value="0.3" name="Al'Mare Gate" />
   </event>
   <folder_arme name="Tracking System" id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd" parent_id_arme="256a569d-302b-40dd-94f1-3f5fcd93909d" />
-  <disabled_event name="Ship1 Activation Range" id_arme="532f3f0f-2e68-4f40-92df-ea572744825d" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  <event name="Ship1 Activation Range" id_arme="532f3f0f-2e68-4f40-92df-ea572744825d" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="0" name2="Al'Mare Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship1" value="1.0" />
-  </disabled_event>
-  <disabled_event name="Ship1 Out of Range" id_arme="39cfe065-a67c-46c6-857d-232a842f5e97" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship1 Out of Range" id_arme="39cfe065-a67c-46c6-857d-232a842f5e97" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="0" name2="Al'Mare Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship1" value="0.0" />
-  </disabled_event>
-  <disabled_event name="Ship2 Activation Range" id_arme="4af4bc78-756a-40d4-b8e6-ed2475368fcb" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship2 Activation Range" id_arme="4af4bc78-756a-40d4-b8e6-ed2475368fcb" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="1" name2="Al'Mare Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship2" value="1.0" />
-  </disabled_event>
-  <disabled_event name="Ship2 Out of Range" id_arme="d08c2c53-26df-4d93-92e7-a25eed901f45" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship2 Out of Range" id_arme="d08c2c53-26df-4d93-92e7-a25eed901f45" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="1" name2="Al'Mare Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship2" value="0.0" />
-  </disabled_event>
-  <disabled_event name="Ship3 Activation Range" id_arme="84bc2934-7ea5-402f-bbeb-be7ec9db0fab" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship3 Activation Range" id_arme="84bc2934-7ea5-402f-bbeb-be7ec9db0fab" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="2" name2="Al'Mare Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship3" value="1.0" />
-  </disabled_event>
-  <disabled_event name="Ship3 Out of Range" id_arme="74d4cec4-ec1c-4fd4-b7d9-7cafa7e5f026" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship3 Out of Range" id_arme="74d4cec4-ec1c-4fd4-b7d9-7cafa7e5f026" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="2" name2="Al'Mare Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship3" value="0.0" />
-  </disabled_event>
-  <disabled_event name="Ship4 Activation Range" id_arme="0e82c2b6-ecd5-4a38-b8ce-d14ffbc2655a" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship4 Activation Range" id_arme="0e82c2b6-ecd5-4a38-b8ce-d14ffbc2655a" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="3" name2="Al'Mare Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship4" value="1.0" />
-  </disabled_event>
-  <disabled_event name="Ship4 Out of Range" id_arme="53f56143-1567-4679-9e24-4f65e3c7872f" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship4 Out of Range" id_arme="53f56143-1567-4679-9e24-4f65e3c7872f" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="3" name2="Al'Mare Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship4" value="0.0" />
-  </disabled_event>
-  <disabled_event name="Ship5 Activation Range" id_arme="7176f189-b8cd-4ec7-a862-bccee153eb46" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship5 Activation Range" id_arme="7176f189-b8cd-4ec7-a862-bccee153eb46" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="4" name2="Al'Mare Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship5" value="1.0" />
-  </disabled_event>
-  <disabled_event name="Ship5 Out of Range" id_arme="dfacdd9e-6492-4e3e-95a3-de979da4a42a" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship5 Out of Range" id_arme="dfacdd9e-6492-4e3e-95a3-de979da4a42a" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="4" name2="Al'Mare Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship5" value="0.0" />
-  </disabled_event>
-  <disabled_event name="Ship6 Activation Range" id_arme="e92fad41-1d0d-4955-8d50-b90def3ba67d" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship6 Activation Range" id_arme="e92fad41-1d0d-4955-8d50-b90def3ba67d" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="5" name2="Al'Mare Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship6" value="1.0" />
-  </disabled_event>
-  <disabled_event name="Ship6 Out of Range" id_arme="422af5c4-49d0-4f40-89f2-af01bf5197dc" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship6 Out of Range" id_arme="422af5c4-49d0-4f40-89f2-af01bf5197dc" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="5" name2="Al'Mare Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship6" value="0.0" />
-  </disabled_event>
-  <disabled_event name="Ship7 Activation Range" id_arme="c6aca568-6709-47f8-806a-c8b21a74d3a0" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship7 Activation Range" id_arme="c6aca568-6709-47f8-806a-c8b21a74d3a0" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="6" name2="Al'Mare Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship7" value="1.0" />
-  </disabled_event>
-  <disabled_event name="Ship7 Out of Range" id_arme="c119f0c4-c686-4ecf-a7e6-387fbffa3bee" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship7 Out of Range" id_arme="c119f0c4-c686-4ecf-a7e6-387fbffa3bee" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="6" name2="Al'Mare Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship7" value="0.0" />
-  </disabled_event>
-  <disabled_event name="Ship8 Activation Range" id_arme="97ffcb04-ed66-43b7-b9fa-1af4e6b1911c" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship8 Activation Range" id_arme="97ffcb04-ed66-43b7-b9fa-1af4e6b1911c" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="7" name2="Al'Mare Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship8" value="1.0" />
-  </disabled_event>
-  <disabled_event name="Ship8 Out of Range" id_arme="1f55bdc2-aab3-44de-96b0-73879daf6489" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
+  </event>
+  <event name="Ship8 Out of Range" id_arme="1f55bdc2-aab3-44de-96b0-73879daf6489" parent_id_arme="1a370a6b-32b8-41fb-a022-a8ada4b04bcd">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="7" name2="Al'Mare Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship8" value="0.0" />
-  </disabled_event>
-  <disabled_event name="Gate Online" id_arme="d969bb13-5ed0-4125-a1ef-df82d1707935" parent_id_arme="256a569d-302b-40dd-94f1-3f5fcd93909d">
+  </event>
+  <event name="Gate Online" id_arme="d969bb13-5ed0-4125-a1ef-df82d1707935" parent_id_arme="256a569d-302b-40dd-94f1-3f5fcd93909d">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="1.0" />
     <if_comms_button text="Activate Gate" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <incoming_comms_text from="Gate System" sideValue="playerSide" type="STATUS">Activating Gate^Locking signal...</incoming_comms_text>
     <set_object_property property="rollDelta" value="1.0" name="Al'Mare Gate" />
     <set_timer name="Gate System" seconds="5" />
     <set_variable name="Gate System" value="2.0" />
     <clear_comms_button text="Activate Gate" sideValue="playerSide" />
-  </disabled_event>
-  <disabled_event name="Jump Initiated" id_arme="42b7ac81-d54a-4369-b59f-98b6f8893bf7" parent_id_arme="256a569d-302b-40dd-94f1-3f5fcd93909d">
+  </event>
+  <event name="Jump Initiated" id_arme="42b7ac81-d54a-4369-b59f-98b6f8893bf7" parent_id_arme="256a569d-302b-40dd-94f1-3f5fcd93909d">
     <if_variable name="Sector" comparator="EQUALS" value="6" />
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_comms_button text="Jump" />
     <if_variable name="Gate System" comparator="EQUALS" value="3.0" />
+    <if_variable name="Al'Mare Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Atlantis System" value="3.0" integer="yes" />
     <set_variable name="System" value="1.0" />
@@ -1065,7 +1101,7 @@
     <set_timer name="Transition" seconds="2" />
     <set_variable name="Gate System" value="0.0" />
     <set_variable name="ExitorRetreat" value="1.0" />
-  </disabled_event>
+  </event>
   <folder_arme name="Sector Entities" id_arme="2fc3d227-ea52-4ff3-9026-807ea05e47ec" parent_id_arme="6a51792f-4c5d-4455-afcc-de0c9256ce6f" />
   <event name="Generate Sector Entities" id_arme="e405349f-2345-4c42-955a-e3f139b540bf" parent_id_arme="2fc3d227-ea52-4ff3-9026-807ea05e47ec">
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
@@ -1260,6 +1296,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="0" name2="Titan Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship1" value="1.0" />
   </event>
@@ -1268,6 +1305,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="0" name2="Titan Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship1" value="0.0" />
   </event>
@@ -1276,6 +1314,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="1" name2="Titan Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship2" value="1.0" />
   </event>
@@ -1284,6 +1323,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="1" name2="Titan Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship2" value="0.0" />
   </event>
@@ -1292,6 +1332,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="2" name2="Titan Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship3" value="1.0" />
   </event>
@@ -1300,6 +1341,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="2" name2="Titan Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship3" value="0.0" />
   </event>
@@ -1308,6 +1350,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="3" name2="Titan Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship4" value="1.0" />
   </event>
@@ -1316,6 +1359,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="3" name2="Titan Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship4" value="0.0" />
   </event>
@@ -1324,6 +1368,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="4" name2="Titan Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship5" value="1.0" />
   </event>
@@ -1332,6 +1377,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="4" name2="Titan Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship5" value="0.0" />
   </event>
@@ -1340,6 +1386,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="5" name2="Titan Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship6" value="1.0" />
   </event>
@@ -1348,6 +1395,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="5" name2="Titan Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship6" value="0.0" />
   </event>
@@ -1356,6 +1404,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="6" name2="Titan Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship7" value="1.0" />
   </event>
@@ -1364,6 +1413,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="6" name2="Titan Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship7" value="0.0" />
   </event>
@@ -1372,6 +1422,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="7" name2="Titan Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship8" value="1.0" />
   </event>
@@ -1380,6 +1431,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="7" name2="Titan Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship8" value="0.0" />
   </event>
@@ -1388,6 +1440,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="1.0" />
     <if_comms_button text="Activate Gate" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <incoming_comms_text from="Gate System" sideValue="playerSide" type="STATUS">Activating Gate^Locking signal...</incoming_comms_text>
     <set_object_property property="rollDelta" value="1.0" name="Titan Gate" />
     <set_timer name="Gate System" seconds="5" />
@@ -1399,6 +1452,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_comms_button text="Jump" />
     <if_variable name="Gate System" comparator="EQUALS" value="3.0" />
+    <if_variable name="Titan Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Atlantis System" value="3.0" integer="yes" />
     <set_variable name="System" value="1.0" />
@@ -1921,7 +1975,7 @@
     <set_variable name="Atlantis System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
-  <folder_arme name="Sector XI - XV" id_arme="c2d2c1f4-a7bd-4165-838b-09f70eed8cf6" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" expanded_arme="" />
+  <folder_arme name="Sector XI - XV" id_arme="c2d2c1f4-a7bd-4165-838b-09f70eed8cf6" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" />
   <folder_arme name="Atlantis Sector XI" id_arme="fe6bd80c-8499-4d8f-9354-29a4cd076b4e" parent_id_arme="c2d2c1f4-a7bd-4165-838b-09f70eed8cf6" />
   <event name="Create Atlantis Sector XI" id_arme="a72d9494-efe0-4a9b-a20a-5dcb77d5e8a0" parent_id_arme="fe6bd80c-8499-4d8f-9354-29a4cd076b4e">
     <if_timer_finished name="Transition" />
@@ -2509,6 +2563,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="0" name2="Waypoint 52 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship1" value="1.0" />
   </event>
@@ -2517,6 +2572,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="0" name2="Waypoint 52 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship1" value="0.0" />
   </event>
@@ -2525,6 +2581,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="1" name2="Waypoint 52 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship2" value="1.0" />
   </event>
@@ -2533,6 +2590,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="1" name2="Waypoint 52 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship2" value="0.0" />
   </event>
@@ -2541,6 +2599,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="2" name2="Waypoint 52 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship3" value="1.0" />
   </event>
@@ -2549,6 +2608,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="2" name2="Waypoint 52 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship3" value="0.0" />
   </event>
@@ -2557,6 +2617,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="3" name2="Waypoint 52 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship4" value="1.0" />
   </event>
@@ -2565,6 +2626,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="3" name2="Waypoint 52 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship4" value="0.0" />
   </event>
@@ -2573,6 +2635,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="4" name2="Waypoint 52 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship5" value="1.0" />
   </event>
@@ -2581,6 +2644,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="4" name2="Waypoint 52 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship5" value="0.0" />
   </event>
@@ -2589,6 +2653,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="5" name2="Waypoint 52 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship6" value="1.0" />
   </event>
@@ -2597,6 +2662,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="5" name2="Waypoint 52 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship6" value="0.0" />
   </event>
@@ -2605,6 +2671,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="6" name2="Waypoint 52 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship7" value="1.0" />
   </event>
@@ -2613,6 +2680,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="6" name2="Waypoint 52 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship7" value="0.0" />
   </event>
@@ -2621,6 +2689,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="7" name2="Waypoint 52 Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship8" value="1.0" />
   </event>
@@ -2629,6 +2698,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="7" name2="Waypoint 52 Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship8" value="0.0" />
   </event>
@@ -2637,6 +2707,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="1.0" />
     <if_comms_button text="Activate Gate" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <incoming_comms_text from="Gate System" sideValue="playerSide" type="STATUS">Activating Gate^Locking signal...</incoming_comms_text>
     <set_object_property property="rollDelta" value="1.0" name="Waypoint 52 Gate" />
     <set_timer name="Gate System" seconds="5" />
@@ -2648,6 +2719,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_comms_button text="Jump" />
     <if_variable name="Gate System" comparator="EQUALS" value="3.0" />
+    <if_variable name="Waypoint 52 Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Atlantis System" value="3.0" integer="yes" />
     <set_variable name="System" value="1.0" />
@@ -2831,7 +2903,7 @@
     <set_variable name="Atlantis System" value="System" integer="yes" />
     <set_variable name="Sector Entities" value="0.0" />
   </event>
-  <folder_arme name="Sector XVI - XX" id_arme="f4f00cda-3862-44ea-997b-ba9fd87ec4d3" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" expanded_arme="" />
+  <folder_arme name="Sector XVI - XX" id_arme="f4f00cda-3862-44ea-997b-ba9fd87ec4d3" parent_id_arme="fcd741e1-19b6-49ff-8b69-bf44dbe150a6" />
   <folder_arme name="Atlantis Sector XVI" id_arme="5b36e449-a996-4f2e-bebc-31b38eb36ce1" parent_id_arme="f4f00cda-3862-44ea-997b-ba9fd87ec4d3" />
   <event name="Create Atlantis Sector XVI" id_arme="dd508fca-c70a-4794-9d88-8d0ca16f06df" parent_id_arme="5b36e449-a996-4f2e-bebc-31b38eb36ce1">
     <if_timer_finished name="Transition" />
@@ -2909,6 +2981,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="0" name2="Cerberus Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship1" value="1.0" />
   </event>
@@ -2917,6 +2990,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="0" name2="Cerberus Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship1" value="0.0" />
   </event>
@@ -2925,6 +2999,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="1" name2="Cerberus Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship2" value="1.0" />
   </event>
@@ -2933,6 +3008,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="1" name2="Cerberus Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship2" value="0.0" />
   </event>
@@ -2941,6 +3017,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="2" name2="Cerberus Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship3" value="1.0" />
   </event>
@@ -2949,6 +3026,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="2" name2="Cerberus Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship3" value="0.0" />
   </event>
@@ -2957,6 +3035,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="3" name2="Cerberus Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship4" value="1.0" />
   </event>
@@ -2965,6 +3044,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="3" name2="Cerberus Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship4" value="0.0" />
   </event>
@@ -2973,6 +3053,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="4" name2="Cerberus Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship5" value="1.0" />
   </event>
@@ -2981,6 +3062,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="4" name2="Cerberus Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship5" value="0.0" />
   </event>
@@ -2989,6 +3071,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="5" name2="Cerberus Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship6" value="1.0" />
   </event>
@@ -2997,6 +3080,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="5" name2="Cerberus Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship6" value="0.0" />
   </event>
@@ -3005,6 +3089,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="6" name2="Cerberus Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship7" value="1.0" />
   </event>
@@ -3013,6 +3098,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="6" name2="Cerberus Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship7" value="0.0" />
   </event>
@@ -3021,6 +3107,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="7" name2="Cerberus Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship8" value="1.0" />
   </event>
@@ -3029,6 +3116,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="7" name2="Cerberus Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship8" value="0.0" />
   </event>
@@ -3037,6 +3125,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="1.0" />
     <if_comms_button text="Activate Gate" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <incoming_comms_text from="Gate System" sideValue="playerSide" type="STATUS">Activating Gate^Locking signal...</incoming_comms_text>
     <set_object_property property="rollDelta" value="1.0" name="Cerberus Gate" />
     <set_timer name="Gate System" seconds="5" />
@@ -3048,6 +3137,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_comms_button text="Jump" />
     <if_variable name="Gate System" comparator="EQUALS" value="3.0" />
+    <if_variable name="Cerberus Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Atlantis System" value="3.0" integer="yes" />
     <set_variable name="System" value="1.0" />
@@ -3363,6 +3453,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="0" name2="Arietis Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship1" value="1.0" />
   </event>
@@ -3371,6 +3462,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship1" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="0" name2="Arietis Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship1" value="0.0" />
   </event>
@@ -3379,6 +3471,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="1" name2="Arietis Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship2" value="1.0" />
   </event>
@@ -3387,6 +3480,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship2" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="1" name2="Arietis Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship2" value="0.0" />
   </event>
@@ -3395,6 +3489,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="2" name2="Arietis Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship3" value="1.0" />
   </event>
@@ -3403,6 +3498,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship3" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="2" name2="Arietis Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship3" value="0.0" />
   </event>
@@ -3411,6 +3507,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="3" name2="Arietis Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship4" value="1.0" />
   </event>
@@ -3419,6 +3516,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship4" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="3" name2="Arietis Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship4" value="0.0" />
   </event>
@@ -3427,6 +3525,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="4" name2="Arietis Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship5" value="1.0" />
   </event>
@@ -3435,6 +3534,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship5" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="4" name2="Arietis Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship5" value="0.0" />
   </event>
@@ -3443,6 +3543,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="5" name2="Arietis Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship6" value="1.0" />
   </event>
@@ -3451,6 +3552,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship6" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="5" name2="Arietis Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship6" value="0.0" />
   </event>
@@ -3459,6 +3561,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="6" name2="Arietis Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship7" value="1.0" />
   </event>
@@ -3467,6 +3570,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship7" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="6" name2="Arietis Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship7" value="0.0" />
   </event>
@@ -3475,6 +3579,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="0.0" />
     <if_distance player_slot1="7" name2="Arietis Gate" comparator="LESS" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange+1" />
     <set_variable name="Gate Tracking Ship8" value="1.0" />
   </event>
@@ -3483,6 +3588,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate Tracking Ship8" comparator="EQUALS" value="1.0" />
     <if_distance player_slot1="7" name2="Arietis Gate" comparator="GREATER" value="4000.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <set_variable name="shipsInrange" value="shipsInrange-1" />
     <set_variable name="Gate Tracking Ship8" value="0.0" />
   </event>
@@ -3491,6 +3597,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_variable name="Gate System" comparator="EQUALS" value="1.0" />
     <if_comms_button text="Activate Gate" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <incoming_comms_text from="Gate System" sideValue="playerSide" type="STATUS">Activating Gate^Locking signal...</incoming_comms_text>
     <set_object_property property="rollDelta" value="1.0" name="Arietis Gate" />
     <set_timer name="Gate System" seconds="5" />
@@ -3502,6 +3609,7 @@
     <if_variable name="Atlantis System" comparator="EQUALS" value="2.0" />
     <if_comms_button text="Jump" />
     <if_variable name="Gate System" comparator="EQUALS" value="3.0" />
+    <if_variable name="Arietis Gate" comparator="EQUALS" value="1.0" />
     <clear_comms_button text="Jump" sideValue="playerSide" />
     <set_variable name="Atlantis System" value="3.0" integer="yes" />
     <set_variable name="System" value="1.0" />
